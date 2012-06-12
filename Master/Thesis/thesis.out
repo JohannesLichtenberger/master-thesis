@@ -1,0 +1,56 @@
+\BOOKMARK [1][-]{chapter*.2}{List of Figures}{}
+\BOOKMARK [1][-]{section*.3}{List of Algorithms}{}
+\BOOKMARK [1][-]{chapter*.4}{Listings}{}
+\BOOKMARK [1][-]{chapter*.5}{List of Tables}{}
+\BOOKMARK [1][-]{section.0.1}{Introduction}{}
+\BOOKMARK [2][-]{subsection.0.1.1}{Motivation}{section.0.1}
+\BOOKMARK [2][-]{subsection.0.1.2}{Problem Statement}{section.0.1}
+\BOOKMARK [2][-]{subsection.0.1.3}{Approach}{section.0.1}
+\BOOKMARK [2][-]{subsection.0.1.4}{Application domains}{section.0.1}
+\BOOKMARK [2][-]{subsection.0.1.5}{Contributions}{section.0.1}
+\BOOKMARK [2][-]{subsection.0.1.6}{Conventions}{section.0.1}
+\BOOKMARK [2][-]{subsection.0.1.7}{Outline}{section.0.1}
+\BOOKMARK [1][-]{section.0.2}{Preliminaries and State-of-the-Art}{}
+\BOOKMARK [2][-]{subsection.0.2.1}{Introduction}{section.0.2}
+\BOOKMARK [2][-]{subsection.0.2.2}{Analysis of differences}{section.0.2}
+\BOOKMARK [2][-]{subsection.0.2.3}{Visualization of differences}{section.0.2}
+\BOOKMARK [1][-]{section.0.3}{Analysis of structural differences}{}
+\BOOKMARK [2][-]{subsection.0.3.1}{Introduction}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.2}{Storage backend}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.3}{ID-less diff-algorithm \(FMSE\) / Preprocessing}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.4}{ID-based diff}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.5}{Traversal of both revisions}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.6}{Diff-Computation}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.7}{Detecting moves}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.8}{Runtime/Space analysis and scalability of the ID-based diffing algorithm}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.9}{Conclusion and Summary}{section.0.3}
+\BOOKMARK [1][-]{section.0.4}{Visualizations}{}
+\BOOKMARK [2][-]{subsection.0.4.1}{Introduction}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.2}{GUI}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.3}{Aggregation}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.4}{Visualizations}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.5}{Comparsion using a new Sunburst-layout algorithm}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.6}{Querying}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.7}{Visualization of moves}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.8}{Small multiple}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.9}{Runtime/Space analysis and scalability of the ID-based diff}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.10}{Conclusion and Summary}{section.0.4}
+\BOOKMARK [1][-]{section.0.5}{Applications}{}
+\BOOKMARK [2][-]{subsection.0.5.1}{Introduction}{section.0.5}
+\BOOKMARK [2][-]{subsection.0.5.2}{LFG}{section.0.5}
+\BOOKMARK [2][-]{subsection.0.5.3}{Wikipedia}{section.0.5}
+\BOOKMARK [2][-]{subsection.0.5.4}{Import of Filesystem-based tree-structure}{section.0.5}
+\BOOKMARK [2][-]{subsection.0.5.5}{Summary}{section.0.5}
+\BOOKMARK [1][-]{section.0.6}{Discussion}{}
+\BOOKMARK [2][-]{subsection.0.6.1}{Introduction}{section.0.6}
+\BOOKMARK [2][-]{subsection.0.6.2}{Evaluation Criteria}{section.0.6}
+\BOOKMARK [1][-]{section.0.7}{Summary, Conclusion and Future Research}{}
+\BOOKMARK [2][-]{subsection.0.7.1}{Summary}{section.0.7}
+\BOOKMARK [2][-]{subsection.0.7.2}{Conclusion}{section.0.7}
+\BOOKMARK [2][-]{subsection.0.7.3}{Future Research}{section.0.7}
+\BOOKMARK [1][-]{section..1}{Treetank}{}
+\BOOKMARK [2][-]{subsection..1.1}{Persistent storage enhancements}{section..1}
+\BOOKMARK [2][-]{subsection..1.2}{ACID properties}{section..1}
+\BOOKMARK [2][-]{subsection..1.3}{Axis}{section..1}
+\BOOKMARK [1][-]{section..2}{Acknowledgements}{}
+\BOOKMARK [1][-]{section*.44}{References}{}

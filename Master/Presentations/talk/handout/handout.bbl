@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{chawathe1996change}
+S.~Chawathe, A.~Rajaraman, H.~Garcia-Molina, and J.~Widom.
+\newblock Change detection in hierarchically structured information.
+\newblock In {\em Proceedings of the 1996 ACM SIGMOD international conference
+  on Management of data}, pages 493--504. ACM, 1996.
+
+\bibitem{hadoop}
+H.~P.~M. Committee.
+\newblock Apache hadoop.
+\newblock \url{http://hadoop.apache.org}.
+
+\bibitem{processing.org}
+B.~Fry and C.~Reas.
+\newblock Processing.org.
+\newblock \url{http://processing.org}.
+
+\bibitem{generative-gestaltung}
+J.~L. C.~L. Hartmut~Bohnacker, Benedikt~Groß.
+\newblock Generative-gestalung : Sunburst-tool.
+\newblock \url{http://www.generative-gestaltung.de/M\_5\_5\_01\_TOOL}, 2009.
+
+\bibitem{hottinger}
+D.~Hottinger and F.~Meyer.
+\newblock Xml-diff-algorithmen.
+\newblock
+  \url{http://www.infsec.ethz.ch/education/projects/archive/XMLDiffReport.pdf}.
+
+\end{thebibliography}

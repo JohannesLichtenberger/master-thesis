@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: handout.aux
+The style file: abbrv.bst
+Database file #1: bibtex.bib
+Too many commas in name 1 of "Hartmut Bohnacker, Benedikt Groß, Julia Laub, Claudius Lazzeroni" for entry generative-gestaltung
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Hartmut Bohnacker, Benedikt Groß, Julia Laub, Claudius Lazzeroni" for entry generative-gestaltung
+while executing---line 1090 of file abbrv.bst
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            521 strings with 4435 characters,
+and the built_in function-call counts, 1439 in all, are:
+= -- 139
+> -- 63
+< -- 1
++ -- 25
+- -- 20
+* -- 65
+:= -- 234
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 25
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 51
+empty$ -- 130
+format.name$ -- 20
+if$ -- 317
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 1
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 44
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 51
+stack$ -- 0
+substring$ -- 57
+swap$ -- 15
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 0
+while$ -- 13
+width$ -- 6
+write$ -- 51
+(There were 2 error messages)

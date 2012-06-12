@@ -1,0 +1,16 @@
+Wie ihr wisst habe ich das Thema Interaktive Visualisierung temporaler Hierarchien. 
+
+Wahrscheinlich fragen sich jetzt einige: Warum das ganze? Was bringt es einem? 
+Auf der nächsten Folie hab ich zwei Revisionen einer XML-Datei erfunden.
+
+Wie man hoffentlich sieht ist es nicht ganz einfach beide Revisionen zu vergleichen. Stellt man sich jetzt vor, dass die Dateien rießig sind verliert man komplett die Übersicht. Des weiteren können rießige Dateien nichtmal von einem XML-Editor angezeigt werden, zumal sie nicht mehr ins RAM passen, insbesondere bei zwei großen Dateien.
+Da Treetank insbesondere als Archiv-XML Datenbanksystem Revisionen kompakt speichert eignet es sich natürlich insbesondere zur Realisierung von interaktiven Visualisierungen für temporale Baumstrukturen.
+
+Ich hoffe das macht schon deutlich wieso Visualisierung, die grafische Elemente nutzt Sinn macht. Statt beide Dateien sequentiell durchgehen zu müssen (was das Model der Visualisierung für einen macht), werden einem explizit die Änderungen vor Augen geführt. Natürlich gibt es auch schon XML diff-Verfahren, aber mit den Repräsentationen kann man nicht interagieren.
+
+Herausforderung ist sicherlich einerseits das revisionierte Preprocessing/Shreddern von realworld Daten in Treetank. Am Beispiel von Wikipedia muss man bspw. die ganze XML-Datei nach Revisionen durchsortieren und weil Wikipedia so groß ist kann das nicht im RAM passieren. Um das Sortieren zu beschleunigen habe ich Hadoop verwendet. Desweiteren musste man aus dem vollen Dump dann jeweils erst die diffs herausfinden.
+Als geeignete Repräsentation habe ich wie letztes mal schon gesagt eine Sunburst-Ansicht gewählt. Im Gegensatz zu einer Treemap kann man eine Treering Metapher verwenden, so dass der Baum nach ausen hin wächst. Zudem ist eine Treemap in dem Fall auch nicht platzsparender, weil für jede Revision eine gesamte Treemap erstellt werden müsste. 
+Eine Sache die tricky ist, ist auch die Treetank-Kodierung, weil die nur lokale Zustände hälte, also Referenzen zu Nachbarknoten, zum Vaterknoten und first child, so dass bei Updates halt nur ein paar Verweise geändert werden müssen.
+
+
+

@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: thesis.aux
+The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: thesis.bib
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in vilanovatimeradartrees
+Warning--empty year in vilanovatimeradartrees
+
+Done.
+You've used 33 entries,
+            4024 wiz_defined-function locations,
+            975 strings with 11362 characters,
+and the built_in function-call counts, 18431 in all, are:
+= -- 1376
+> -- 370
+< -- 120
++ -- 202
+- -- 63
+* -- 824
+:= -- 2821
+add.period$ -- 73
+call.type$ -- 33
+change.case$ -- 33
+chr.to.int$ -- 285
+cite$ -- 35
+duplicate$ -- 1409
+empty$ -- 1684
+format.name$ -- 79
+if$ -- 4164
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 274
+newline$ -- 158
+num.names$ -- 26
+pop$ -- 800
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1390
+stack$ -- 0
+substring$ -- 697
+swap$ -- 981
+text.length$ -- 25
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 33
+warning$ -- 2
+while$ -- 78
+width$ -- 35
+write$ -- 320
+(There were 2 warnings)

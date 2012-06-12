@@ -1,0 +1,284 @@
+% todonotes.sty
+% Author: Henrik Skov Midtiby
+% Source: Midtiby notes:
+%    http://midtiby.blogspot.com/2008/05/updated-todonotes-package.html
+% 2007-09-17: Initial release of the code
+% 2008-04-17: The first version of the package
+% 2008-05-15: Updated the option handling of the package
+% 2008-05-16: Slightly modified by Kjell Magne Fauske to support notes 
+%             in the left margin (for documentstyle book). 
+% 2008-05-28: Added a missingfigure command
+% 2008-06-10: Made a dependency on the calc package
+% 2008-07-11: Delayed the requirements for the hyperref package
+%             untill \begin{document} and added an optional argument
+%             to the todo command for adding inline todonotes (Idea
+%             from Patrick Toche)
+% 2008-07-15: Added some options to the todo macro (Idea: Patrick
+%             Toche) and made the \listoftodos point at the inserted
+%             todos and not only the current / previous section, 
+%             subsection or figure using the \phantomsection macro.
+% 2008-07-28: Modified the behaviour of the inline todonotes, to
+%             avoid empty lines around the inline todonotes.
+%             Added the option colorinlistoftodos which inserts a
+%             small box with the used fillcolor of the todonotes in
+%             the list of todos.
+% 2008-07-30: Fixed a bug with the disable option to the package.
+%
+% ====================
+% Part: Identification
+% ====================
+\ProvidesPackage{todonotes}[2008/07/30]
+
+
+% ==============================
+% Part: The package loading part
+% ==============================
+% Loads the packages that todonotes depends on.
+\RequirePackage{ifthen}
+\RequirePackage{xkeyval}
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}
+%\AtBeginDocument{\RequirePackage{hyperref}}
+\RequirePackage{tikz}
+\RequirePackage{calc}
+
+
+
+% ==================
+% Part: Initial code
+% ==================
+% Here the default values are set
+\newcommand{\@backgroundcolor}{orange}
+\newcommand{\@bordercolor}{black}
+\newcommand{\@textwidth}{\marginparwidth}
+
+
+% ================================================
+% Part: The declaration of options for the package
+% ================================================
+% In this part the various options for
+% the package are defined.
+
+% Make it possible to disable the functionality
+% of the package. If this option is given, the
+% commands \todo{} and \listoftodos are defined
+% as commands with no effect. (But you can still
+% compile you document with these commands).
+\newif{\ifdisabled}
+\DeclareOptionX{disable}{\disabledtrue}
+
+% Show small boxes in the list of todos with the color of the
+% inserted todonotes.
+\newif{\ifcolorinlistoftodos}
+\DeclareOptionX{colorinlistoftodos}{\colorinlistoftodostrue}
+
+% The default style behaves bad when compiled
+% with latex (some text placement problems).
+% The dvistyle option, changes the visual behavior
+% to avoid this text placement problem.
+\newif{\ifdviStyle}
+\DeclareOptionX{dvistyle}{\dviStyletrue}
+
+% Make the background color of the notes as
+% an option.
+\define@key{todonotes.sty}%
+	{color}{\renewcommand{\@backgroundcolor}{#1}}
+
+% Make the color of the notes box color as
+% an option.
+\define@key{todonotes.sty}%
+	{bordercolor}{\renewcommand{\@bordercolor}{#1}}
+
+% Make the text width as an option.
+\define@key{todonotes.sty}%
+	{textwidth}{\renewcommand{\@textwidth}{#1}}
+
+% Finally process the given options.
+\ProcessOptionsX
+
+
+% ============================================================
+% Part: The declaration of options for commands in the package
+% ============================================================
+% In this part the various options for 
+% commands in the package are defined.
+
+
+% Code for handling options to the todo macro
+% Set an arbitrarily fill color
+\newcommand{\fillcolor}{}%
+\define@key{todonotes}{color}{\renewcommand{\fillcolor}{#1}}%
+
+% Set a relative font size
+\newcommand{\sizecommand}{}%
+\define@key{todonotes}{size}{\renewcommand{\sizecommand}{#1}}%
+
+% Should the todo item be included in the list of todos?
+\newif\ifappendtolistoftodos%
+\define@key{todonotes}{list}[]{\appendtolistoftodostrue}%
+\define@key{todonotes}{nolist}[]{\appendtolistoftodosfalse}%
+
+% Should the todo item be displayed inline?
+\newif\ifinlinenote%
+\define@key{todonotes}{inline}[]{\inlinenotetrue}%
+\define@key{todonotes}{noinline}[]{\inlinenotefalse}%
+
+% Should the note in the margin be connected to the insertion point
+% in the text??
+\newif\ifline%
+\define@key{todonotes}{line}[]{\linetrue}%
+\define@key{todonotes}{noline}[]{\linefalse}%
+
+% Preset values of the options
+\presetkeys
+	{todonotes}
+	{color=\@backgroundcolor, noinline, 
+	line, list, size=\normalsize}{}%
+
+
+% ========================
+% Part: The main code part
+% ========================
+\ifdisabled
+	% If the option "disable" was passed to the package
+	% define two empty commands.
+	\newcommand{\listoftodos}{}
+	\newcommand{\todo}[2][]{}
+	\newcommand{\missingfigure}[1]{}
+
+\else % \ifdisabled
+
+% Define the list of todos command
+\newcommand{\listoftodos}
+	{\section*{Todo list} \@starttoc{tdo}}
+% Set the appearance of the list of todos
+\newcommand{\l@todo}
+	{\@dottedtocline{1}{0em}{2.3em}}
+
+
+% Define styles used by the todo command
+\tikzstyle{notestyle} = [
+	draw=\@bordercolor,
+	line width=0.5pt,
+	text width = \@textwidth - 1.6 ex - 1pt,
+	inner sep = 0.8 ex]
+\tikzstyle{notestyleleft} = [
+	notestyle, 
+	left]
+\tikzstyle{connectstyle} = [
+	thick]
+\tikzstyle{inlinenotestyle} = [
+	notestyle, 
+	text width=\textwidth - 1.6 ex - 1 pt]
+
+
+% Define the todo command
+\newcommand{\todo}[2][]{%
+\setkeys{todonotes}{#1}%
+% Add to todo list
+\ifappendtolistoftodos%
+	\phantomsection%
+	\ifcolorinlistoftodos%
+		\addcontentsline{tdo}{todo}{\protect{%
+			\colorbox{\fillcolor}{\textcolor{\fillcolor}{\tiny i}} %
+			#2}}%
+	\else%
+		\addcontentsline{tdo}{todo}{\protect{#2}}%
+	\fi%
+\fi%
+%
+\ifinlinenote%
+	\ifdviStyle%
+	    {\par\noindent\tikz[remember picture] \draw node[inlinenotestyle, %
+		fill=\fillcolor] {};\par}%
+		{\noindent \sizecommand #2}%
+	    {\par\noindent\tikz[remember picture] \draw node[inlinenotestyle, %
+		fill=\fillcolor] {};\par}%
+	\else%
+	    {\par\noindent\tikz[remember picture] \draw node[inlinenotestyle, %
+		fill=\fillcolor] {\sizecommand #2};\par}%
+	\fi%
+\else%
+%
+% Remember where we are
+\begin{tikzpicture}[remember picture, baseline=-0.75ex]%
+    \node [coordinate] (inText) {};%
+\end{tikzpicture}%
+%
+% Make the margin par
+\marginpar[{% Draw note in left margin
+\ifdviStyle%
+    % Using dviStyle
+    \tikz[remember picture] \draw node[notestyle, fill=\fillcolor] {}; \\ %
+    \begin{minipage}{\@textwidth}%
+    \sizecommand #2%
+    \end{minipage} \\%
+    \tikz[remember picture] \draw node[notestyle, fill=\fillcolor] (inNote) {};%
+	\ifline%
+		\begin{tikzpicture}[remember picture, overlay]%
+			\draw[connectstyle, draw=\fillcolor]%
+			([yshift=-0.2cm] inText)%
+			-| ([xshift=0.2cm] inNote.east)%
+			-| (inNote.east);%
+		\end{tikzpicture}%
+	\fi%
+\else%
+    % Using normal style (non dviStyle)
+    \tikz[remember picture] \draw node[notestyle, fill=\fillcolor]
+(inNote) {\sizecommand #2};%
+	\ifline%
+		\begin{tikzpicture}[remember picture, overlay]%
+			\draw[connectstyle, draw=\fillcolor]%
+			([yshift=-0.2cm] inText)%
+			-| ([xshift=0.2cm] inNote.east)%
+			-| (inNote.east);%
+		\end{tikzpicture}%
+	\fi%
+\fi% Ending \ifdviStyle
+}]{% Draw note in right margin
+\ifdviStyle%
+    % Using dviStyle
+    \tikz[remember picture] \draw node[notestyle, fill=\fillcolor] {}; \\ %
+    \begin{minipage}{\@textwidth}%
+    \sizecommand #2%
+    \end{minipage} \\%
+    \tikz[remember picture] \draw node[notestyle, fill=\fillcolor] (inNote) {};%
+	\ifline%
+		\begin{tikzpicture}[remember picture, overlay]%
+			\draw[connectstyle, draw=\fillcolor]%
+			([yshift=-0.2cm] inText)%
+			-| ([xshift=-0.2cm] inNote.west)%
+			-| (inNote.west);%
+		\end{tikzpicture}%
+	\fi%
+    \else%
+    % Using normal style (non dviStyle)
+    \tikz[remember picture] \draw node[notestyle, fill=\fillcolor]
+(inNote) {\sizecommand #2};%
+	\ifline%
+		\begin{tikzpicture}[remember picture, overlay]%
+			\draw[connectstyle, draw=\fillcolor]%
+			([yshift=-0.2cm] inText)%
+			-| ([xshift=-0.2cm] inNote.west)%
+			-| (inNote.west);%
+		\end{tikzpicture}%
+	\fi%
+\fi% Ending \ifdviStyle
+}%
+\fi%
+}%
+
+\newcommand{\missingfigure}[2]{
+\addcontentsline{tdo}{todo}{Figure: \protect{#1}}%
+\begin{tikzpicture}
+\draw[fill=black!40, draw = white, line width=0pt] 
+	(-3, -2.5) rectangle +(\textwidth, 4cm);
+\draw (3, 0) node[right, text width=4cm] {#1};
+\draw[red, fill=white, rounded corners = 5pt, line width=10pt] 
+	(30:2cm) -- (150:2cm) -- (270:2cm) -- cycle;
+\draw (0, 0.3) node {Missing};
+\draw (0, -0.3) node {figure};
+\end{tikzpicture}
+}% Ending \missingfigure command
+\fi % Ending \ifdisabled
+

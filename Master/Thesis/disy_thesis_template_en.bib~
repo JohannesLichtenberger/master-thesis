@@ -1,0 +1,23 @@
+@ARTICLE{Bloom1970Space/Timea,
+  author = {Bloom, Burton H.},
+  title = {Space/Time Trade-offs in Hash Coding with Allowable Errors},
+  journal = {Communications of the ACM},
+  year = {1970},
+  volume = {13},
+  pages = {422--426},
+  number = {7},
+  abstract = {In this paper trade-offs among certain computational factors in hash
+	coding are analyzed. The paradigm problem considered is that of testing
+	a series of messages one-by-one for membership in a given set of
+	messages. Two new hash- coding methods are examined and compared
+	with a particular conventional hash-coding method. The computational
+	factors considered are the size of the hash area (space), the time
+	required to identify a message as a nonmember of the given set (reject
+	time), and an allowable...},
+  file = {:./pdf/Bloom1970SpaceTimea.pdf:PDF},
+  keywords = {filing-bloom-filters},
+  owner = {Thomas Zink},
+  priority = {2},
+  timestamp = {2008.11.19},
+  url = {http://citeseer.ist.psu.edu/bloom70spacetime.html}
+}

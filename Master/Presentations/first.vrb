@@ -1,0 +1,26 @@
+\frametitle {Example}
+\begin{lstlisting}[caption=first revision, frame=trBL]
+<foo>
+  <bar/>
+  <baz>bla</baz>
+  <foo></foo>hello bello<foo bla='blubb'/><do/>
+  <jep>
+    <klar></klar>
+    super
+    <blink/>
+  </jep>
+</foo>
+\end{lstlisting}
+\begin{lstlisting}[caption=second revision, frame=trBL]
+<foo>
+  <bar></bar>
+  <baz>bl</baz>
+  <foo></foo>hello bello<foo bla='bar'/><do/>
+  <jep>
+  <jep>
+    <klar></klar>
+    super
+    <light/>
+  </jep>
+</foo>
+\end{lstlisting}

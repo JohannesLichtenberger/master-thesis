@@ -1,0 +1,265 @@
+%
+% $Id:  ENTER YOUR ID/FILENAME HERE$
+%
+% This template is based on LLNCS.DEM, the demonstration file of the LaTeX macro 
+% package from Springer-Verlag for Lecture Notes in Computer Science, version 2.2 for
+% LaTeX2e (see llncs.dem for usage information).
+% The template uses the additional definitions based on the master-thesis of Alexander 
+% Holupirek (University of Konstanz) and Thomas Zink (University of Konstanz).
+% 
+% This template was adapted and generalized by Sebastian Kay Belle (University of
+% Konstanz) as a generic template for bachelor and master theses (at least for the
+% students of the distributed systems laboratory).
+%
+% Sebastian Kay Belle -- Distributed Systems Laboratory
+% Department of Computer and Information Science -- University of Konstanz
+% 
+
+
+% one-sided document style suited for bachelor/master theses (english)
+\documentclass[a4paper]{llncs} 
+% two-sided document sytel suited for bachelor/master theses (english)
+%\documentclass[twoside,a4paper]{llncs} 
+% one-sided document sytel suited for bachelor/master theses (german)
+%\documentclass[ngerman,a4paper]{llncs} 
+% two-sided document sytel suited for bachelor/master theses (german)
+%\documentclass[ngerman,twoside,a4paper]{llncs} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{tocbibind}
+\usepackage{graphicx}			% graphics, of course
+\usepackage{color}                      % to define colors
+\usepackage{amsmath, amssymb}		% math symbols for sets etc
+\usepackage{multirow}			% for table and tabular, allows multirows and cols
+\usepackage[linesnumbered,ruled,vline,commentsnumbered]{algorithm2e} % extended algorithm package
+%\usepackage{ulem}			% for underlining, also changes \em to \underline
+					% use \mormalem to undo, however,
+					% somehow removes references from toc
+\usepackage{fancyvrb}			% fancy verbatim
+\usepackage{fancyhdr}                  	% fancy header
+\usepackage[colorinlistoftodos]{todonotes} % todo notes
+\usepackage{listings}
+\usepackage{hyperref}			% hypertext references, somehow screws up with figures
+\usepackage[all]{hypcap}
+%\usepackage[svgnames]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SETTINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{figures/}			% somehow, doesn't work, thus use command
+%\newcommand{\gfx}[0]{../gfx/}
+\titlerunning{~}				% set off for llncs	
+\authorrunning{~}				% set off for llncs
+
+\newtheorem{thm}{Lemma}%[]             % lemma definition
+\newcommand{\factor}[0]{10}
+
+% Listing of algorithms (bug in algorithm2e)
+%\renewcommand{\listofalgorithms}{\tocfile{\listalgorithmcfname}{loa}} 
+
+% Bullets for list items
+\renewcommand{\labelitemi}{$\bullet$}
+
+% Listings
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, language=xml, basicstyle=\footnotesize,
+ keywordstyle=\color{blue!80!black!100},}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SETTINGS FOR THE HYPERREF PACKAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{internal-link}{rgb}{0.2, 0.26, 0.43}
+\definecolor{cite-link}{rgb}{0.4, 0.61, 0.46}
+\definecolor{url-link}{rgb}{0.4, 0.46, 0.63}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=internal-link,
+  citecolor=cite-link,
+  urlcolor=url-link
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% KW SETTINGS FOR ALGORITHMS2E (see algorithm2e documentation for details)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define your language keywords here (e.g. \SetKw{To}{to})
+%\SetKw{To}{to}
+%\SetKw{Not}{not}
+% define your data keywords here (e.g. \SetKwData{Counters}{counters})
+% define your function keywords here (e.g. \SetKwFunction{Compress}{Compress})
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HEADER/FOOTER (see the fancyhdr documentation for details)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\headheight}{15pt}
+ 
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+ 
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE,LO]{\textit{\nouppercase{\rightmark}}}
+\fancyfoot[EL,OR]{\thepage}
+ 
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% OTHER DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\dotuline{\bgroup
+  \ifdim\ULdepth=\maxdimen  % Set depth based on font, if not set already
+   \settodepth\ULdepth{(j}\advance\ULdepth.4pt\fi
+  \markoverwith{\begingroup
+  \advance\ULdepth0.08ex
+  \lower\ULdepth\hbox{\kern.15em .\kern.1em}%
+  \endgroup}\ULon}
+
+\def\dashuline{\bgroup
+  \ifdim\ULdepth=\maxdimen  % Set depth based on font, if not set already
+   \settodepth\ULdepth{(j}\advance\ULdepth.4pt\fi
+  \markoverwith{\kern.15em
+  \vtop{\kern\ULdepth \hrule width .3em}%
+  \kern.15em}\ULon}
+
+% --- verbatim environments
+%\VerbatimFootnotes 
+\DefineVerbatimEnvironment{xml}{Verbatim}
+{
+% gobble=2,
+  frame=single,% framerule=0.25pt,
+% xleftmargin=1em, xrightmargin=1em,
+  fontfamily=courier, fontsize=\scriptsize,
+  commandchars=\\\{\}
+}
+\DefineVerbatimEnvironment{fs}{Verbatim}
+{
+% gobble=2,
+  frame=lines, framesep=3mm,
+  labelposition=topline,
+  fontfamily=courier, fontsize=\footnotesize,
+  commandchars=\\\{\}
+}
+\DefineVerbatimEnvironment{xquery}{Verbatim}
+{
+% gobble=2,
+  frame=lines, framesep=3mm,
+  labelposition=topline,
+  %framerule=0.4pt, % default 0.4pt
+  fontfamily=courier, fontsize=\footnotesize,
+  commandchars=\\\{\}
+}
+
+% Definition environment
+\newtheorem{mydef}{Definition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TITLE PAGE -- CHOOSE THE APPROPRIATE TITLE PAGE HERE (AND MODIFY THEM TO YOUR LIKING)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{alph}
+\pagestyle{empty}
+%\pagestyle{plain}
+%\input{titlepage_std_en} % include your titlepage here (standard title page)
+%\input{titlepage_std-signet_en} % include your titlepage here (standard title page with university signet)
+\input{titlepage} % include your titlepage here (unconventional title page with university signet above 
+%\input{titlepage_fancy-teaser_en} % include your titlepage here (unconventional title page with space for a teaser image)
+%\pagestyle{fancy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{fancy}
+\voffset=10mm % optical enhancement!!!
+\pagenumbering{roman} % set the page numbering style to roman numbers
+\input{preamble} % refer your preamble here
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ABSTRACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{page}{1}
+\input{abstract} % refer your abstract here
+\addcontentsline{toc}{section}{\abstractname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TABLE OF CONTENT, LIST OF FIGURES & LIST OF TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{fancy}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+\newpage
+\pagestyle{fancy}
+\addcontentsline{toc}{section}{\listalgorithmcfname}
+\listofalgorithms
+\newpage
+\pagestyle{fancy}
+\addcontentsline{toc}{section}{\lstlistlistingname}
+\lstlistoflistings
+\newpage
+\pagestyle{fancy}
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+\newpage
+\listoftodos
+%\addcontentsline{toc}{section}{\listtodoname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SECTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\pagestyle{fancy}
+\pagenumbering{arabic} % set the page numbering to arabic page numbers
+\setcounter{page}{1}
+\input{introduction} % refer your introduction here
+\cleardoublepage
+\input{relatedwork} 
+\cleardoublepage
+\input{differences}
+\cleardoublepage
+\input{visualizations}
+\cleardoublepage
+\input{applications}
+\cleardoublepage
+\input{discussion}
+\cleardoublepage
+\input{conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\appendix
+\input{treetank}
+\cleardoublepage
+\input{acknowledgements} % refer your acknowledgments here
+%\input{statement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{thesis}
+\addcontentsline{toc}{section}{References}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EOD -- That's it folks!!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
