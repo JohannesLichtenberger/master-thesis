@@ -10,45 +10,45 @@ Warning--empty journal in vilanovatimeradartrees
 Warning--empty year in vilanovatimeradartrees
 
 Done.
-You've used 33 entries,
+You've used 32 entries,
             4024 wiz_defined-function locations,
-            975 strings with 11362 characters,
-and the built_in function-call counts, 18431 in all, are:
-= -- 1376
-> -- 370
+            971 strings with 11273 characters,
+and the built_in function-call counts, 18054 in all, are:
+= -- 1350
+> -- 361
 < -- 120
-+ -- 202
-- -- 63
-* -- 824
-:= -- 2821
-add.period$ -- 73
-call.type$ -- 33
-change.case$ -- 33
++ -- 198
+- -- 61
+* -- 809
+:= -- 2757
+add.period$ -- 71
+call.type$ -- 32
+change.case$ -- 32
 chr.to.int$ -- 285
-cite$ -- 35
-duplicate$ -- 1409
-empty$ -- 1684
-format.name$ -- 79
-if$ -- 4164
+cite$ -- 34
+duplicate$ -- 1377
+empty$ -- 1647
+format.name$ -- 76
+if$ -- 4084
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 274
-newline$ -- 158
-num.names$ -- 26
-pop$ -- 800
+int.to.str$ -- 32
+missing$ -- 266
+newline$ -- 153
+num.names$ -- 25
+pop$ -- 772
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1390
+skip$ -- 1363
 stack$ -- 0
-substring$ -- 697
-swap$ -- 981
+substring$ -- 696
+swap$ -- 964
 text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 33
+type$ -- 32
 warning$ -- 2
-while$ -- 78
-width$ -- 35
-write$ -- 320
+while$ -- 77
+width$ -- 34
+write$ -- 311
 (There were 2 warnings)

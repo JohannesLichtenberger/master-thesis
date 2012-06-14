@@ -1,49 +1,42 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Diff example illustrating the deficiencies of line by line character based diff tools}}{3}{figure.0.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}.}}{8}{figure.0.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces TimeRadarTrees illustration. Presented in \cite {vilanovatimeradartrees}.}}{16}{figure.0.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Spiral Treemap. Presented in \cite {tu2007visualizing}.}}{17}{figure.0.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Treevolution. Presented in \cite {theron2006hierarchical}.}}{18}{figure.0.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces TreeJuxtaposer. Presented in \cite {munzner2003treejuxtaposer}.}}{19}{figure.0.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Code Flows. Presented in \cite {telea2008code}.}}{22}{figure.0.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Ripple presentation. Presented in \cite {ishihara2006ripple}.}}{23}{figure.0.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Ripple representation - label overplotting. Presented in \cite {ishihara2006ripple}.}}{24}{figure.0.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Importing differences encountered through the FMSE ID-based diffing-algorithm.}}{26}{figure.0.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Treetank encoding}}{27}{figure.0.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Two revisions of a tree-structure and the edit-operations involved. By comparing consecutive revisions the edit-operations usually equal the diff-types considering \texttt {REPLACEDOLD/REPLACEDNEW} as one operation just like \texttt {MOVEDFROM/MOVEDTO}.}}{38}{figure.0.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Scaling during different modification-schemas (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{46}{figure.0.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)}}{47}{figure.0.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces MVC-paradigm use. The \emph {TextView} and the \emph {TreeView} use standard Swing components. A \texttt {JTree} Swing-component is used implement the tree-model in the \emph {TreeView}. A \texttt {JTreeCellRenderer} implements the view and controller. It is responsible to translate user actions and to render the cells appropriately. The \texttt {JTextEditPane}-Swing component represents both the view and controller in the \emph {TextView} whereas a new \texttt {StAXDiffSerializer} described later on implements the \texttt {XMLEventReader} StAX interface to support a pull based API. It is thus the model which interacts with Treetank through a open database handle.}}{50}{figure.0.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Two tree-structures aggregated. The numbers denote unique node-IDs and refer to Fig. \ref {fig:diff} in Chapter \ref {sec::differences} just like the changes from revision 1 to 2. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation.}}{51}{figure.0.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces TreeView and TextView side-by-side}}{52}{figure.0.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces SunburstView and TextView side-by-side}}{54}{figure.0.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces SunburstView}}{55}{figure.0.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces SunburstView - adjusted arcs/dotsize parameters}}{57}{figure.0.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces node-link diagram}}{58}{figure.0.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Fisheye transformation}}{59}{figure.0.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Zooming into the visualization}}{60}{figure.0.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces XPath query results displayed in light green}}{61}{figure.0.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces SunburstView - comparison mode.}}{62}{figure.0.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces SunburstCompare-Axis based on the Sunburst-Axis}}{64}{figure.0.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{69}{figure.0.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Comparison without pruning.}}{73}{figure.0.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Pruned by itemsize.}}{74}{figure.0.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Pruned by same hashes.}}{75}{figure.0.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Pruned by hash-value without building items for nodes with same hash-values.}}{76}{figure.0.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Moves visualized using hierarchical edge bundles.}}{79}{figure.0.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Small multiple - differential variant.}}{80}{figure.0.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Small multiple - incremental variant.}}{81}{figure.0.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces GUI-performance.}}{82}{figure.0.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{83}{figure.0.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces LFG comparsion}}{86}{figure.0.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces LFG comparsion revised}}{87}{figure.0.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces Wikipedia comparsion}}{92}{figure.0.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem}}{93}{figure.0.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Wikipedia comparsion pruned by itemsize}}{94}{figure.0.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant}}{95}{figure.0.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces Wikipedia comparsion - depicting differences between revision 73 and 74}}{96}{figure.0.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order.}}{97}{figure.0.44}
-\contentsline {figure}{\numberline {45}{\ignorespaces FSML comparsion on the GUI src-folder}}{98}{figure.0.45}
-\contentsline {figure}{\numberline {46}{\ignorespaces FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes}}{99}{figure.0.46}
-\contentsline {figure}{\numberline {47}{\ignorespaces FSML comparsion of "/home/johannes/Desktop"}}{100}{figure.0.47}
-\contentsline {figure}{\numberline {48}{\ignorespaces FSML comparsion of "/home/johannes/Desktop" pruned by same hashes}}{101}{figure.0.48}
-\contentsline {figure}{\numberline {49}{\ignorespaces FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)}}{102}{figure.0.49}
+\contentsline {figure}{\numberline {1}{\ignorespaces Diff example illustrating the deficiencies of line by line character based diff tools}}{2}{figure.0.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}.}}{6}{figure.0.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Importing differences encountered through the FMSE ID-based diffing-algorithm.}}{16}{figure.0.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Treetank encoding}}{17}{figure.0.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Two revisions of a tree-structure and the edit-operations involved. By comparing consecutive revisions the edit-operations usually equal the diff-types considering \texttt {REPLACEDOLD/REPLACEDNEW} as one operation just like \texttt {MOVEDFROM/MOVEDTO}.}}{27}{figure.0.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Scaling during different modification-schemas (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{35}{figure.0.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)}}{36}{figure.0.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces MVC-paradigm use. The \emph {TextView} and the \emph {TreeView} use standard Swing components. A \texttt {JTree} Swing-component is used implement the tree-model in the \emph {TreeView}. A \texttt {JTreeCellRenderer} implements the view and controller. It is responsible to translate user actions and to render the cells appropriately. The \texttt {JTextEditPane}-Swing component represents both the view and controller in the \emph {TextView} whereas a new \texttt {StAXDiffSerializer} described later on implements the \texttt {XMLEventReader} StAX interface to support a pull based API. It is thus the model which interacts with Treetank through a open database handle.}}{40}{figure.0.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Two tree-structures aggregated. The numbers denote unique node-IDs and refer to Fig. \ref {fig:diff} in Chapter \ref {sec::differences} just like the changes from revision 1 to 2. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation.}}{41}{figure.0.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces TreeView and TextView side-by-side}}{42}{figure.0.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces SunburstView and TextView side-by-side}}{44}{figure.0.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces SunburstView}}{45}{figure.0.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces SunburstView - adjusted arcs/dotsize parameters}}{47}{figure.0.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces node-link diagram}}{48}{figure.0.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Fisheye transformation}}{49}{figure.0.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Zooming into the visualization}}{50}{figure.0.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces XPath query results displayed in light green}}{51}{figure.0.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces SunburstView - comparison mode.}}{52}{figure.0.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces SunburstCompare-Axis based on the Sunburst-Axis}}{54}{figure.0.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{59}{figure.0.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Comparison without pruning.}}{63}{figure.0.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Pruned by itemsize.}}{64}{figure.0.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Pruned by same hashes.}}{65}{figure.0.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Pruned by hash-value without building items for nodes with same hash-values.}}{66}{figure.0.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Moves visualized using hierarchical edge bundles.}}{69}{figure.0.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Small multiple - differential variant.}}{70}{figure.0.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Small multiple - incremental variant.}}{71}{figure.0.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces GUI-performance.}}{72}{figure.0.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{73}{figure.0.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces LFG comparsion}}{76}{figure.0.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces LFG comparsion revised}}{77}{figure.0.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Wikipedia comparsion}}{82}{figure.0.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem}}{83}{figure.0.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Wikipedia comparsion pruned by itemsize}}{84}{figure.0.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant}}{85}{figure.0.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Wikipedia comparsion - depicting differences between revision 73 and 74}}{86}{figure.0.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order.}}{87}{figure.0.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces FSML comparsion on the GUI src-folder}}{88}{figure.0.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes}}{89}{figure.0.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces FSML comparsion of "/home/johannes/Desktop"}}{90}{figure.0.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces FSML comparsion of "/home/johannes/Desktop" pruned by same hashes}}{91}{figure.0.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)}}{92}{figure.0.42}

@@ -1,5 +1,6 @@
 @MISC{TREETANK,
   title = {Treetank},
+  author = {Marc Kramis and Sebastian Graf},
   url = {http://treetank.org},
 }
 
@@ -66,6 +67,17 @@
   title = {Brackit},
   url = {http://code.google.com/p/brackit/},
   author = {TU Kaiserslautern}
+}
+
+@article{tai1979tree,
+  title={The tree-to-tree correction problem},
+  author={Tai, K.C.},
+  journal={Journal of the ACM (JACM)},
+  volume={26},
+  number={3},
+  pages={422--433},
+  year={1979},
+  publisher={ACM}
 }
 
 @MISC{Bundles,
