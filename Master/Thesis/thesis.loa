@@ -1,14 +1,14 @@
-\contentsline {algocf}{\numberline {1}{\ignorespaces LevelOrderAxis (hasNext())}}{20}{algocfline.1}
-\contentsline {algocf}{\numberline {2}{\ignorespaces visitNode(TextNode pNode))}}{21}{algocfline.2}
-\contentsline {algocf}{\numberline {3}{\ignorespaces visitNode(ElementNode pNode))}}{21}{algocfline.3}
-\contentsline {algocf}{\numberline {4}{\ignorespaces insertNextNode()}}{22}{algocfline.4}
-\contentsline {algocf}{\numberline {5}{\ignorespaces FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}}{25}{algocfline.5}
-\contentsline {algocf}{\numberline {6}{\ignorespaces FMSEDeleteVisitor: delete(pWtx, pNode)}}{26}{algocfline.6}
-\contentsline {algocf}{\numberline {7}{\ignorespaces ID-based diff: traversal}}{30}{algocfline.7}
-\contentsline {algocf}{\numberline {8}{\ignorespaces ID-based diff: diff-computation}}{31}{algocfline.8}
-\contentsline {algocf}{\numberline {9}{\ignorespaces ID-based diff: postprocessing to detect moves}}{34}{algocfline.9}
-\contentsline {algocf}{\numberline {10}{\ignorespaces adjusting stacks and depths for movement to next following node for the first DELETED or MOVEDFROM node after another type has been encountered}}{56}{algocfline.10}
-\contentsline {algocf}{\numberline {11}{\ignorespaces Diff-Axis hasNext()-skeleton}}{57}{algocfline.11}
-\contentsline {algocf}{\numberline {12}{\ignorespaces Stack adaptions for next Sunburst item depending on transaction movement in last call of \texttt {hasNext()}}}{58}{algocfline.12}
-\contentsline {algocf}{\numberline {13}{\ignorespaces Calculate depth}}{60}{algocfline.13}
-\contentsline {algocf}{\numberline {14}{\ignorespaces Derives \texttt {descendant-or-self}-count as well as the \texttt {modification}-count}}{62}{algocfline.14}
+\contentsline {algocf}{\numberline {1}{\ignorespaces ID-based diff: traversal}}{23}{algocfline.1}
+\contentsline {algocf}{\numberline {2}{\ignorespaces ID-based diff: diff-computation}}{24}{algocfline.2}
+\contentsline {algocf}{\numberline {3}{\ignorespaces ID-based diff: postprocessing to detect moves}}{27}{algocfline.3}
+\contentsline {algocf}{\numberline {4}{\ignorespaces adjusting stacks and depths for movement to next following node for the first DELETED or MOVEDFROM node after another type has been encountered}}{50}{algocfline.4}
+\contentsline {algocf}{\numberline {5}{\ignorespaces Diff-Axis hasNext()-skeleton}}{51}{algocfline.5}
+\contentsline {algocf}{\numberline {6}{\ignorespaces Stack adaptions for next Sunburst item depending on transaction movement in last call of \texttt {hasNext()}}}{52}{algocfline.6}
+\contentsline {algocf}{\numberline {7}{\ignorespaces Calculate depth}}{54}{algocfline.7}
+\contentsline {algocf}{\numberline {8}{\ignorespaces Derives \texttt {descendant-or-self}-count as well as the \texttt {modification}-count}}{56}{algocfline.8}
+\contentsline {algocf}{\numberline {9}{\ignorespaces LevelOrderAxis (hasNext())}}{97}{algocfline.9}
+\contentsline {algocf}{\numberline {10}{\ignorespaces visitNode(TextNode pNode))}}{98}{algocfline.10}
+\contentsline {algocf}{\numberline {11}{\ignorespaces visitNode(ElementNode pNode))}}{99}{algocfline.11}
+\contentsline {algocf}{\numberline {12}{\ignorespaces insertNextNode()}}{99}{algocfline.12}
+\contentsline {algocf}{\numberline {13}{\ignorespaces FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}}{103}{algocfline.13}
+\contentsline {algocf}{\numberline {14}{\ignorespaces FMSEDeleteVisitor: delete(pWtx, pNode)}}{104}{algocfline.14}

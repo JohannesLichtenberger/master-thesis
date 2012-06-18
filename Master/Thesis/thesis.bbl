@@ -21,6 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{keim2008visual}
+D.~Keim, G.~Andrienko, J.~Fekete, C.~G{\"o}rg, J.~Kohlhammer, and
+  G.~Melan{\c{c}}on, ``Visual analytics: Definition, process, and challenges,''
+  \emph{Information Visualization}, pp. 154--175, 2008.
+
 \bibitem{MOORE}
 \BIBentryALTinterwordspacing
 ``Moore's law.'' [Online]. Available:
@@ -40,10 +45,10 @@ F.~J. Anscombe, ``Graphs in statistical analysis.'' [Online]. Available:
 id=56171835643}
 \BIBentrySTDinterwordspacing
 
-\bibitem{keim2008visual}
-D.~Keim, G.~Andrienko, J.~Fekete, C.~G{\"o}rg, J.~Kohlhammer, and
-  G.~Melan{\c{c}}on, ``Visual analytics: Definition, process, and challenges,''
-  \emph{Information Visualization}, pp. 154--175, 2008.
+\bibitem{XMark}
+\BIBentryALTinterwordspacing
+``Xmark benchmark.'' [Online]. Available: \url{http://www.xml-benchmark.org/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{ronnau2009efficient}
 S.~R{\"o}nnau, G.~Philipp, and U.~Borghoff, ``Efficient change control of xml
@@ -80,19 +85,14 @@ Y.~Wang, D.~DeWitt, and J.~Cai, ``X-diff: An effective change detection
   19th International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax
   Ieee, 2003, pp. 519--530.
 
-\bibitem{RollingHash}
-\BIBentryALTinterwordspacing
-``Rolling hash.'' [Online]. Available:
-  \url{http://en.wikipedia.org/wiki/Rolling_hash}
-\BIBentrySTDinterwordspacing
-
 \bibitem{cobena2002comparative}
 G.~Cob{\'e}na, T.~Abdessalem, and Y.~Hinnach, ``A comparative study for xml
   change detection,'' \emph{Research Report, INRIA Rocquencourt, France}, 2002.
 
-\bibitem{vilanovatimeradartrees}
-A.~Vilanova, A.~Telea, G.~Scheuermann, and T.~M{\"o}ller, ``Timeradartrees:
-  Visualizing dynamic compound digraphs.''
+\bibitem{theron2006hierarchical}
+R.~Ther{\'o}n, ``Hierarchical-temporal data visualization using a tree-ring
+  metaphor,'' in \emph{Smart Graphics}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2006, pp. 70--81.
 
 \bibitem{bremm2011interactive}
 S.~Bremm, T.~von Landesberger, M.~He{\ss}, T.~Schreck, P.~Weil, and
@@ -105,10 +105,11 @@ Y.~Tu and H.~Shen, ``Visualizing changes of hierarchical data using treemaps,''
   \emph{Visualization and Computer Graphics, IEEE Transactions on}, vol.~13,
   no.~6, pp. 1286--1293, 2007.
 
-\bibitem{theron2006hierarchical}
-R.~Ther{\'o}n, ``Hierarchical-temporal data visualization using a tree-ring
-  metaphor,'' in \emph{Smart Graphics}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Springer, 2006, pp. 70--81.
+\bibitem{bruls2000squarified}
+M.~Bruls, K.~Huizing, and J.~Van~Wijk, ``Squarified treemaps,'' in
+  \emph{Proceedings of the joint Eurographics and IEEE TCVG Symposium on
+  Visualization}.\hskip 1em plus 0.5em minus 0.4em\relax Citeseer, 2000, pp.
+  33--42.
 
 \bibitem{munzner2003treejuxtaposer}
 T.~Munzner, F.~Guimbreti{\`e}re, S.~Tasiran, L.~Zhang, and Y.~Z. Zhou,
@@ -126,18 +127,6 @@ M.~Ishihara, K.~Misue, and J.~Tanaka, ``Ripple presentation for tree structures
   with historical information,'' in \emph{Proceedings of the 2006 Asia-Pacific
   Symposium on Information Visualisation-Volume 60}.\hskip 1em plus 0.5em minus
   0.4em\relax Australian Computer Society, Inc., 2006, pp. 153--160.
-
-\bibitem{ZFS}
-\BIBentryALTinterwordspacing
-``Oracle solaris zfs.'' [Online]. Available:
-  \url{http://www.oracle.com/technetwork/server-storage/solaris11/technologies%
-/zfs-338092.html?ssSourceSiteId=ocomen}
-\BIBentrySTDinterwordspacing
-
-\bibitem{XMark}
-\BIBentryALTinterwordspacing
-``Xmark benchmark.'' [Online]. Available: \url{http://www.xml-benchmark.org/}
-\BIBentrySTDinterwordspacing
 
 \bibitem{xmldiff}
 \BIBentryALTinterwordspacing

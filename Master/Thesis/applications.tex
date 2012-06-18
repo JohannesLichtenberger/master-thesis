@@ -261,7 +261,7 @@ In order to take snapshots of a directory with all subdirectories we study two a
 \item FSML representation based on an initial import of a directory with all its subdirectories. Changes in that directory and all subdirectories are afterwards monitored.
 \end{enumerate}
 
-The File System Markup Language is an XML-dialect developed by Alexander Holupirek \cite{FSML} to represent the tree-structure of filesystems by folders and files as well as metadata of certain file-types. 
+The File System Markup Language\cite{FSML} is an XML-dialect developed by Alexander Holupirek to represent the tree-structure of filesystems by folders and files as well as metadata of certain file-types. 
 
 The first approach is considerably simpler than the import of Wikipedia due to the snapshot-creation which results in different files. Therefore we do not have to reorder whole subtrees according to timestamps in the first place to obtain a subsequent import ordered by time. Instead applying the FMSE-algorithm on the latest imported revision and the new XML document is sufficient.
 

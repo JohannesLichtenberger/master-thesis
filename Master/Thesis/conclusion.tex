@@ -27,9 +27,9 @@ In addition to a novel Sunburst layout we implemented three different \emph{Smal
 Many topics are subject to further research. 
 
 \begin{itemize}
-\item First of all we want to incorporate the temporal XPath axis in an XQuery processor, most probably Brackit\cite{Brackit}, which is especially important to further analyse tree-structures. Therefore it will be inevitable to provide indexes for fast response-times of the visualizations.
-\item The plotting of moved nodes will be based on Hierarchical Edge Bundles with a line gradient color, whereas most work has already been done.
-\item Building an index structures for visualizations of consecutive revisions (the SmallMultiples incremental-view).
-\item Writing a proper StAX-implementation to iterate directly through the diffs to better support the \texttt{TextView}.
+\item First of all we want to incorporate the already developed temporal XPath axis in an XQuery processor, most probably Brackit\cite{Brackit}, which is especially important to further analyse temporal evolving tree-structures. Therefore it furthermore will be inevitable to provide indexes for fast response-times of the visualizations. 
+\item Extend the Hierarchical Edge Bundles to use a gradient color to indicate the direction of moves instead of arrows.
+\item Building an index structure for visualizations of consecutive revisions (the SmallMultiple incremental-variant and the SunburstView comparing consecutive revisions).
 \item Evaluation and integration/implementation of various other tree-similarity measures.
+\item Support queries to select interesting regions before invoking the ID-based diff-algorithm.
 \end{itemize} 

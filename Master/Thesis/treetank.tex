@@ -1,6 +1,6 @@
 \section{Treetank}\label{sec::treetank}
 
-\subsection{Persistent storage enhancements}
+\subsection{Persistent storage enhancements}\label{subsec::storage}
 While not exclusively developed for our tree-to-tree comparsion for completeness we want to meantion several techniques which have recently been developed to support the persistent storage of large tree-structures efficiently (with a minimum space overhead).
 
 \begin{itemize}
@@ -25,5 +25,302 @@ Consistency rules have been enhanced while developing our prototype. The followi
 
 \subsection{Axis}
 The axis in Treetank have been changed to adhere to the \texttt{hasNext()} and \texttt{next()} specifications of the \texttt{Iterable} interface. The check if \texttt{getNext()} is true is added to all axis such that \texttt{hasNext()} is idempotent. It simply checks a flag which is set in \texttt{resetToLastKey()} to make sure the transaction points to the node after the last call to \texttt{hasNext()} without changing the node-ID to which to move in the next call to \texttt{next()}. Furthermore the transaction now is not moved forward in \texttt{hasNext()} anymore which is done only when calling \texttt{next()}. Instead a variable denoting the next node-ID is set which is used by the \texttt{next()} implementation to move to the next node. Furthermore \texttt{next()} now also is idempotent, simply checking if it has been called before. When true and \texttt{hasNext()} has not been called immediately before it is first called by \texttt{next()}.
+
+\subsubsection{Levelorder-Axis}\label{subsubsec::levelorderaxis}
+The \texttt{LevelOrderAxis} is described in algorithm \ref{levelOrderAxis}. Just like other axis to traverse certain regions or the whole tree-structure in Treetank it is based on the \texttt{Iterator/Iterable} Java interfaces to support the \texttt{foreach}-loop and iterator-based iteration. All other axis have been extended as described in appendix\ref{sec::treetank}. \emph{mFirstChilds} is a double ended queue to remember all first childs of each node for a subsequent new depth ($depth + 1$). \texttt{processElement()} is invoked to add non structural nodes, that is \texttt{attributes} and \texttt{namespaces} to the queue. After initialization the queue is empty and \emph{mNextKey} is initialized to either the current key (if self is included), the right sibling node key if there is one or the first child node key. The NULL\_NODE\_KEY is a special node key to denote that the traversal is done.
+
+\begin{algorithm}[Hhtbp]
+%\SetAlgoLined
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{boolean mFirst, Deque mFirstChilds, long mKey}
+\Output{node key of next node}
+\BlankLine
+\If{getNext()}{
+  return true\;
+}
+  
+resetToLastKey()\;
+
+\tcp{Setup.}
+INodeReadTrx rtx $\leftarrow$ getTransaction()\;
+IStructNode node $\leftarrow$ rtx.getStructuralNode()\;
+
+\tcp{Determines if it is the first call to hasNext().}
+\If{mFirst == true}{
+  mFirst $\leftarrow$ false\;
+  return processFirstCall()\;
+}
+
+\tcp{Follow right sibling if there is one.}
+\If{node.hasRightSibling()}{
+  processElement()\;
+  \tcp{Add first child to queue.}
+  \If{node.hasFirstChild()}{
+    mFirstChilds.add(node.getFirstChildKey())\;
+  }
+  mKey $\leftarrow$ node.getRightSiblingKey()\;
+  return true\;
+}
+
+\tcp{Iterate over non structural nodes (attributes/namespaces).} 
+\If{mInclude == EInclude.NONSTRUCTURAL}{
+  processElement()\;
+}
+\tcp{Add first child to queue.}
+\If{node.hasFirstChild()}{
+  mFirstChilds.add(node.getFirstChildKey())\;
+}
+
+\tcp{Then follow first child on stack.}
+\If{!mFirstChilds.isEmpty()}{
+  mKey $\leftarrow$ mFirstChilds.removeFirst()\;
+  return true\;
+}
+
+\tcp{Then follow first child if there is one.}
+\If{node.hasFirstChild()}{
+  mKey $\leftarrow$ node.getFirstChildKey()\;
+  return true\;
+}
+
+\tcp{Then end.}
+resetToStartKey()\;
+return false\;
+\caption{LevelOrderAxis (hasNext())}\label{levelOrderAxis}
+\end{algorithm}
+
+\subsection{Edit operations}\label{subsec::operations}
+The \texttt{copy}-operation adds the capability to add whole subtrees of another resource or revision to the currently opened \emph{resource/revision}. Actually three \texttt{copy}-operations exist. Either the subtree is inserted as a \texttt{first\-Child}, \texttt{rightSibling} or \texttt{leftSibling} of the currently selected node. The node to copy must be a structural node, that is either an \texttt{ElementNode} or a \texttt{TextNode}. In case the transaction is located at a \texttt{DocumentRootNode} which is a special document node, which can not be deleted and exists in every revision the read transaction has to move to the first child in the first place.
+
+Algorithm \ref{visitTextNode} describes the handling of \texttt{TextNode}s. However, more interesting are \texttt{ElementNode}s (algorithm \ref{visitElementNode}). The algorithm recursively calls itself (\texttt{mRtx.getNode().acceptVisitor(this)}) to copy the whole subtree. To ensure that only subtrees are copied and no other nodes in document order, the depth starting at zero must be at all times $>0$ except for the root of the subtree to insert.
+
+\begin{algorithm}[Hhtbp]
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{INodeReadTrx mRtx, EInsert mInsert, TextNode pNode}
+\Output{void (none)}
+\BlankLine
+mRtx.moveTo(pNode.getNodeKey())\;
+mInsert.insertNode(mWtx, mRtx)\;
+
+\If{!mFirst $and$ mRtx.getStructuralNode().hasRightSibling()}{
+  mRtx.moveToRightSibling()\;
+  mInsert $\leftarrow$ EInsert.ASRIGHTSIBLING\;
+  mRtx.getNode().acceptVisitor(this)\;
+}\ElseIf{!mFirst}{
+  insertNextNode();
+}
+\caption{visitNode(TextNode pNode))}\label{visitTextNode}
+\end{algorithm}
+
+\begin{algorithm}[Hhtbp]
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{INodeReadTrx mRtx, EInsert mInsert, int mDepth, ElementNode pNode}
+\Output{void (none)}
+\BlankLine
+mRtx.moveTo(pNode.getNodeKey())\;
+mInsert.insertNode(mWtx, mRtx)\;
+mInsert $\leftarrow$ EInsert.ASNONSTRUCTURAL\;
+
+\For{int i $\leftarrow$ 0, nspCount $\leftarrow$ pNode.getNamespaceCount(); i $<$ nspCount; i++}{
+  mRtx.moveToNamespace(i)\;
+  mInsert.insertNode(mWtx, mRtx)\;
+  mRtx.moveToParent()\;
+}
+
+\For{int i $\leftarrow$ 0, attrCount $\leftarrow$ pNode.getAttributeCount(); i $<$ attrCount; i++}{
+  mRtx.moveToAttribute(i)\;
+  mInsert.insertNode(mWtx, mRtx)\;
+  mRtx.moveToParent()\;
+}
+
+\If{pNode.hasFirstChild()}{
+  mFirst $\leftarrow$ false\;
+  mInsert $\leftarrow$ EInsert.ASFIRSTCHILD\;
+  mRtx.moveToFirstChild()\;
+  mDepth+=1\;
+  mRtx.getNode().acceptVisitor(this)\;
+}\ElseIf{!mFirst $and$ paramNode.hasRightSibling()}{
+  mInsert $\leftarrow$ EInsert.ASRIGHTSIBLING\;
+  mRtx.moveToRightSibling()\;
+  mRtx.getNode().acceptVisitor(this)\;
+}\ElseIf{!mFirst}{
+  insertNextNode()\;
+}
+\caption{visitNode(ElementNode pNode))}\label{visitElementNode}
+\end{algorithm}
+
+\begin{algorithm}[Hhtbp]
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{INodeReadTrx mRtx, INodeWriteTrx mWtx, EInsert mInsert}
+\Output{void (none)}
+\BlankLine
+\While{!mRtx.getStructuralNode().hasRightSibling() and mDepth $>$ 0}{
+  mRtx.moveToParent()\;
+  mWtx.moveToParent()\;
+  mDepth-=1\;
+}
+
+\If{Depth $>$ 0}{
+  mInsert $\leftarrow$ EInsert.ASRIGHTSIBLING\;
+  \If{mRtx.getStructuralNode().hasRightSibling()}{
+    mRtx.moveToRightSibling()\;
+    \tcp{Recursion.}
+    mRtx.getNode().acceptVisitor(this)\;
+  }
+}
+\caption{insertNextNode()}\label{insertNextNode}
+\end{algorithm}
+
+The \texttt{move-} operation just like the \texttt{copy-} operation is implemented in three different versions, \texttt{moveSubtreeToFirstChild(long)}, \\\texttt{moveSubtreeToRightSibling(long)} and \texttt{moveSubtreeToLeftSibling(long)}. The third operation is a simple wrapper for the other two, depending on the fact if a left sibling of the current node exists or not. The only parameter is the unique node ID of a node to move along with its descendants. Adjacent text-node merging adds a lot of complexity which affects the childCount and descendantCount of both the old parent node before moving a subtree and the new parent after moving. The move-operations preserve the unique node-ID and therefore are not atomic wrappers for delete- and  subsequent insert-operations or vice versa.
+
+We examine both operations independently as they require different node manipulations of neighbour nodes including the new and old parent node and the first child node. Both operations are defined in terms of moving structural- and non-structural nodes (the latter in subtrees of the moved node), whereas the root-node to move must be a structural node.
+
+First, the following constraints are checked:
+
+\begin{itemize}
+\item The node/subtree to move must be an \texttt{element}- or a \texttt{text}-node.
+\item It is not permitted to move a node to one of its descendants which would introduce , therefore it is checked if the node to move is one of the ancestors of the anchor node.
+\end{itemize}
+
+The two operation require the following node manipulations. The location the node is moved away is subject to the following changes:
+\begin{itemize}
+\item In case of \texttt{moveSubtreeToFirstChild(long)}: Parent node must point to the right sibling node key of the current node if it was the first child.
+\item Decrement child count of parent node.
+\item Collapse text nodes if both the left- and right- sibling are text nodes, therefore remove the right node and append its value to the left sibling. Furthermore adapt its right sibling pointer to the former right sibling of the right sibling text node which has been deleted.
+\item If no text node collapsing involved: adapt right sibling key of former left sibling to the right sibling key of the moved node provided one exists.
+\item If no text node collapsing involved: adapt left sibling key of former right sibling to the left sibling key of the moved node provided one exists.
+\end{itemize}
+
+The node to which the new subtree is inserted is subject to the following changes. \\
+In case of \texttt{moveSubtreeToFirstChild(long)}:
+\begin{itemize}
+\item Increment the child counter of the node to which the new subtree is inserted.
+\item Adapt the first child key of the node to which this node is inserted to point to the new node.
+\item Adapt the left sibling pointer of the former first child to the root node of the inserted subtree.
+\end{itemize}
+
+In case of \texttt{moveSubtreeToRightSibling(long)}:
+\begin{itemize}
+\item Increment the child counter of the parent node.
+\item Adapt the right sibling key to the nodeKey of the moved node.
+\end{itemize}
+
+The node which is moved is changed in the following ways. \\In case of \texttt{moveSubtreeToFirstChild(long)}:
+\begin{itemize}
+\item Adapt the left sibling pointer to \texttt{NULL\_NODE\_KEY}.
+\item Adapt the right sibling pointer to the former first child of the node to which this node is inserted or \texttt{NULL\_NODE\_KEY} if there was not one.
+\item Adapt the parent pointer to point to the node to which this node is inserted.
+\end{itemize}
+
+In case of \texttt{moveSubtreeToRightSibling(long)}:
+\begin{itemize}
+\item Adapt the left sibling pointer to the nodeKey of the node where this node is inserted.
+\item Adapt the right sibling pointer to the right sibling key of the node where this node is inserted.
+\end{itemize}
+
+The implementation of the replace-operation is straigth forward using a delete- followed by an insert-operation chaining the two to provide an atomic operation.
+
+Besides, the \texttt{remove}-operation has been modified to merge adjacent \texttt{TextNode}s if the deleted node has two neighbour text nodes to adhere to the XPath/XQuery Data Model (XDM) and to provide meaningful visualizations. \texttt{insert}-operations as of now check if the new \texttt{TextNode} would yield two consecutive \texttt{TextNode}s and, if so, update the value of the existing node with a concatenation of the old- and new-values instead. Therefore the storage consistently avoids consecutive \texttt{TextNode}s. 
+
+Furthermore a new bulk-insertion method supports the fast insertion of subtrees based on a component which already existed. Hashes are computed in a subsequent postorder traversal of the inserted subtree thus reducing the runtime from $O(n^2)$ to $O(n)$.
+
+\subsection{Visitor implementation}\label{subsec::visitor}
+The axis executes a visitor specific implementation for each visited node. The return value of the methods the visitor has to implement (a visitor specific implementation for each node-type) guides the traversal in the axis. The following result types are currently available:
+
+\begin{itemize}
+\item \texttt{EVisitResult.TERMINATE}, terminates the traversal of the (sub)tree immediately and returns false for upcoming \texttt{hasNext()} calls.
+\item \texttt{EVisitResult.CONTINUE}, continues preorder traversal.
+\item \texttt{EVisitResult.SKIPSUBTREE}, signales that the axis skips traversing the subtree of the current node.
+\item \texttt{EVisitResult.SKIPSIBLINGS}, signales that the axis should move to the next following node in document order which is not a right-sibling of the current node.
+\item \texttt{EVisitResult.POPSKIPSIBLINGS}, is a special type which signals that the element on top of the internal right sibling stack must be popped, which is needed to implement for instance the deletion-visitor for the second FMSE-step.
+\end{itemize}
+
+An implementation must implement a method \texttt{EVisitResult visiNode(NodeType pNode)} for each node type. The deletion-visitor implementation of the method \texttt{EVisitResult visitNode(ElementNode pNode)} is described in algorithm \ref{visitElementNode}. Note that all \texttt{attribute}- and \texttt{namespace}-nodes, which are going to be deleted, must be temporally saved in a sequence. Afterwards they have to be deleted through a sequence traversal. If the nodes instead are deleted in place the \texttt{attribute}- and/or \texttt{namespace}-counter of the parent \texttt{element}-node is decreased immediately and possibly unmatched nodes with the highest index(es) are not going to be deleted. The \texttt{delete(INode)} method described in \ref{deleteNode} deletes the element node along with all its \texttt{attribute}- and \texttt{namespace}-nodes as well as its subtree. During the removal of a structural node (\texttt{element}- or \texttt{text}- node) and its subtree the transaction is either moved to the right sibling of the deleted node, to the left sibling or to the parent, if it exists in the order described. Note that the parent must exist. Treetank moves the transaction either to the right-sibling of the current node to delete if it exists, to the left-sibling if it exists or to the parent node in the given order. For the simple reason that the  transaction is moved to the next node in preorder after invoking the visitor which actually deletes a node, the transaction must be moved to the last node in the \texttt{previous::} axis. Otherwise it will be moved by the remove-operation in the first place \emph{and} the axis subsequently. The \texttt{VisitorDescendantAxis} moves the transaction to the next node in preorder afterwards. The movement is determined and executed after the deletion of the \texttt{element}-node in the method \texttt{delete(pWtx, pNode)} outlined in algorithm \ref{deleteNode}.
+
+\begin{algorithm}[Hhtbp]
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{WriteTransaction mWtx, Matching mMatching, long mStartKey, ElementNode pNode}
+\Output{EVisitResult type}
+\BlankLine
+Long partner $\leftarrow$ mMatching.partner(pNode.getNodeKey())\;
+\If{partner == null}{
+  EVisitResult retVal $\leftarrow$ delete(mWtx, pNode)\;
+  \If{pNode.getNodeKey() == mStartKey}{
+    retVal = EVisitResult.TERMINATE\;
+  }
+  return retVal\;
+}\Else{
+  long nodeKey $\leftarrow$ pNode.getNodeKey()\;
+  List$<$Long$>$ keysToDelete $\leftarrow$
+                new ArrayList$<>$(pNode.getAttributeCount() + pNode.getNamespaceCount())\;
+  \For{int i = 0; i $<$ pNode.getAttributeCount(); i++}{
+    mWtx.moveToAttribute(i)\;
+    long attNodeKey $\leftarrow$ mWtx.getNode().getNodeKey()\;
+    \If{mMatching.partner(attNodeKey) == null}{
+      keysToDelete.add(attNodeKey)\;
+    }
+    mWtx.moveTo(nodeKey)\;
+  }
+  \For{int i = 0; i $<$ pNode.getNamespaceCount(); i++}{
+    mWtx.moveToNamespace(i)\;
+    long namespNodeKey $\leftarrow$ mWtx.getNode().getNodeKey()\;
+    \If{mMatching.partner(namespNodeKey) == null}{
+      keysToDelete.add(namespNodeKey)\;
+    }
+    mWtx.moveTo(nodeKey)\;
+  }
+
+  \ForEach{long keyToDelete : keysToDelete}{
+    mWtx.moveTo(keyToDelete)\;
+    mWtx.remove()\;
+  }
+
+  mWtx.moveTo(nodeKey)\;
+  return EVisitResult.CONTINUE\;
+}
+\caption{FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}\label{visitElementNode}
+\end{algorithm}
+
+\begin{algorithm}[Hhtbp]
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{NodeWriteTrx pWtx, ElementNode pNode}
+\Output{EVisitResult type}
+\BlankLine
+long nodeKey $\leftarrow$ pWtx.getNode().getNodeKey()\;
+\tcp{Case: Has no right and no left sibl. but the parent has a right sibl.}
+pWtx.moveToParent()\;
+IStructNode node = pWtx.getStructuralNode()\;
+\If{node.getChildCount() == 1 AND node.hasRightSibling()}{
+  pWtx.moveTo(nodeKey)\;
+  pWtx.remove()\;
+  return EVisitResult.SKIPSUBTREEPOPSTACK\;
+}
+pWtx.moveTo(nodeKey)\;
+\tcp{Case: Has left sibl. but no right sibl.}
+\If{!pWtx.getStructuralNode().hasRightSibling() AND pWtx.getStructuralNode().hasLeftSibling()}{
+  pWtx.remove()\;
+  return EVisitResult.CONTINUE\;
+}
+\tcp{Case: Has right sibl. and left sibl.}
+\If{pWtx.getStructuralNode().hasRightSibling() AND pWtx.getStructuralNode().hasLeftSibling()}{
+  boolean removeTextNode $\leftarrow$ checkIfTextNodeRemove()\;
+  \If{removeTextNode}{
+    pWtx.remove()\;
+    return EVisitResult.CONTINUE\;
+  }\Else{
+    pWtx.remove()\;
+    pWtx.moveToLeftSibling()\;
+    return EVisitResult.SKIPSUBTREE\;
+  }
+}
+\tcp{Case: Has right sibl. but no left sibl.}
+\If{pWtx.getStructuralNode().hasRightSibling() AND !pWtx.getStructuralNode().hasLeftSibling()}{
+  \tcp{similar to above case (omitted)}
+}
+\tcp{Case: Has no right and no left sibl.}
+mWtx.remove()\;
+return EVisitResult.CONTINUE\;
+\caption{FMSEDeleteVisitor: delete(pWtx, pNode)}\label{deleteNode}
+\end{algorithm}
 
 
