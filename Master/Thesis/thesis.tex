@@ -17,9 +17,9 @@
 
 
 % one-sided document style suited for bachelor/master theses (english)
-\documentclass[a4paper]{llncs} 
+%\documentclass[a4paper]{llncs} 
 % two-sided document sytel suited for bachelor/master theses (english)
-%\documentclass[twoside,a4paper]{llncs} 
+\documentclass[twoside,a4paper]{llncs} 
 % one-sided document sytel suited for bachelor/master theses (german)
 %\documentclass[ngerman,a4paper]{llncs} 
 % two-sided document sytel suited for bachelor/master theses (german)
@@ -30,6 +30,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{tocbibind}
 \usepackage{graphicx}			% graphics, of course
+\usepackage{subfigure}
 \usepackage{color}                      % to define colors
 \usepackage{amsmath, amssymb}		% math symbols for sets etc
 \usepackage{multirow}			% for table and tabular, allows multirows and cols
@@ -239,6 +240,8 @@
 \cleardoublepage
 \appendix
 \input{treetank}
+\cleardoublepage
+\input{xslt}
 \cleardoublepage
 \input{acknowledgements} % refer your acknowledgments here
 %\input{statement}

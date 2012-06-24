@@ -45,6 +45,13 @@ F.~J. Anscombe, ``Graphs in statistical analysis.'' [Online]. Available:
 id=56171835643}
 \BIBentrySTDinterwordspacing
 
+\bibitem{TREETANK}
+\BIBentryALTinterwordspacing
+M.~Kramis and A.~Seabix, ``Treetank, designing a versioned xml storage.''
+  [Online]. Available:
+  \url{http://nbn-resolving.de/urn:nbn:de:bsz:352-opus-126912}
+\BIBentrySTDinterwordspacing
+
 \bibitem{XMark}
 \BIBentryALTinterwordspacing
 ``Xmark benchmark.'' [Online]. Available: \url{http://www.xml-benchmark.org/}
@@ -139,6 +146,19 @@ D.~Hottinger and F.~Meyer, ``Xmldiff report.'' [Online]. Available:
   \url{http://archiv.infsec.ethz.ch/education/projects/archive/XMLDiffReport.p%
 df}
 \BIBentrySTDinterwordspacing
+
+\bibitem{Rolling2011}
+S.~Graf, S.~K. Belle, and M.~Waldvogel, ``Rolling boles, optimal {XML}
+  structure integrity for updating operations,'' in \emph{Proceedings of the
+  20th international conference on World wide web}, ser. WWW '11.\hskip 1em
+  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2011.
+
+\bibitem{Integrity2010}
+S.~Graf, L.~Lewandowski, and M.~Waldvogel, ``Integrity assurance for {RESTful
+  XML},'' in \emph{Proceedings of the 2010 international conference on Advances
+  in conceptual modeling: applications and challenges}, ser. ER'10.\hskip 1em
+  plus 0.5em minus 0.4em\relax Berlin, Heidelberg: Springer-Verlag, 2010, pp.
+  180--189.
 
 \bibitem{docbook}
 \BIBentryALTinterwordspacing

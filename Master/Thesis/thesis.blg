@@ -6,46 +6,49 @@ Database file #1: thesis.bib
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in TREETANK
+Warning--empty year in TREETANK
 
 Done.
-You've used 30 entries,
+You've used 33 entries,
             4024 wiz_defined-function locations,
-            967 strings with 11103 characters,
-and the built_in function-call counts, 17943 in all, are:
-= -- 1359
-> -- 361
-< -- 127
-+ -- 198
-- -- 60
-* -- 809
-:= -- 2725
-add.period$ -- 68
-call.type$ -- 30
-change.case$ -- 30
-chr.to.int$ -- 303
-cite$ -- 30
-duplicate$ -- 1346
-empty$ -- 1623
-format.name$ -- 75
-if$ -- 4081
+            989 strings with 11766 characters,
+and the built_in function-call counts, 19837 in all, are:
+= -- 1500
+> -- 404
+< -- 136
++ -- 220
+- -- 68
+* -- 906
+:= -- 3012
+add.period$ -- 76
+call.type$ -- 33
+change.case$ -- 33
+chr.to.int$ -- 327
+cite$ -- 35
+duplicate$ -- 1496
+empty$ -- 1806
+format.name$ -- 86
+if$ -- 4514
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 256
-newline$ -- 143
-num.names$ -- 25
-pop$ -- 723
+int.to.str$ -- 33
+missing$ -- 285
+newline$ -- 154
+num.names$ -- 28
+pop$ -- 801
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1360
+skip$ -- 1500
 stack$ -- 0
-substring$ -- 736
-swap$ -- 970
-text.length$ -- 26
+substring$ -- 795
+swap$ -- 1070
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 30
-warning$ -- 0
-while$ -- 81
-width$ -- 32
-write$ -- 298
+type$ -- 33
+warning$ -- 2
+while$ -- 88
+width$ -- 35
+write$ -- 326
+(There were 2 warnings)

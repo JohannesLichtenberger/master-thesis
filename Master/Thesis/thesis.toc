@@ -14,11 +14,11 @@
 \contentsline {section}{\numberline {2}Preliminaries and State-of-the-Art}{5}{section.0.2}
 \contentsline {subsection}{\numberline {2.1}Introduction}{5}{subsection.0.2.1}
 \contentsline {subsection}{\numberline {2.2}Storage backend}{5}{subsection.0.2.2}
-\contentsline {subsection}{\numberline {2.3}Analysis of differences}{6}{subsection.0.2.3}
+\contentsline {subsection}{\numberline {2.3}Analysis of differences}{7}{subsection.0.2.3}
 \contentsline {subsubsection}{DocTreeDiff\cite {ronnau2009efficient}}{8}{section*.9}
 \contentsline {subsubsection}{DeltaXML\cite {DELTAXML}}{8}{section*.10}
 \contentsline {subsubsection}{XyDiff\cite {cobena2002detecting}}{8}{section*.11}
-\contentsline {subsubsection}{LaDiff / Fast Match Simple Editscript (FMSE)\cite {chawathe1996change}}{8}{section*.12}
+\contentsline {subsubsection}{LaDiff / Fast Match Simple Editscript (FMSE)\cite {chawathe1996change}}{9}{section*.12}
 \contentsline {subsubsection}{X-Diff\cite {wang2003x}}{10}{section*.13}
 \contentsline {subsubsection}{Faxma\cite {lindholm2006fast}}{10}{section*.14}
 \contentsline {subsubsection}{Summary}{10}{section*.15}
@@ -36,55 +36,55 @@
 \contentsline {subsubsection}{FMSE}{17}{section*.23}
 \contentsline {subsection}{\numberline {3.3}ID-based diffing}{19}{subsection.0.3.3}
 \contentsline {subsubsection}{Hashes}{19}{section*.24}
-\contentsline {subsubsection}{Kind of differences}{21}{section*.25}
-\contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{22}{subsection.0.3.4}
+\contentsline {subsubsection}{Kind of differences}{20}{section*.25}
+\contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{21}{subsection.0.3.4}
 \contentsline {subsection}{\numberline {3.5}Diff-Computation}{22}{subsection.0.3.5}
-\contentsline {subsection}{\numberline {3.6}Detecting moves}{26}{subsection.0.3.6}
-\contentsline {subsubsection}{Impossible to detect moves on the fly}{26}{section*.26}
+\contentsline {subsection}{\numberline {3.6}Detecting moves}{25}{subsection.0.3.6}
+\contentsline {subsubsection}{Impossible to detect moves on the fly}{25}{section*.26}
 \contentsline {subsubsection}{Detection of moves in a postprocessing step}{26}{section*.27}
-\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{28}{subsection.0.3.7}
+\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{27}{subsection.0.3.7}
 \contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{29}{subsection.0.3.8}
 \contentsline {section}{\numberline {4}Visualizations}{33}{section.0.4}
 \contentsline {subsection}{\numberline {4.1}Introduction}{33}{subsection.0.4.1}
-\contentsline {subsection}{\numberline {4.2}GUI}{33}{subsection.0.4.2}
-\contentsline {subsection}{\numberline {4.3}Aggregation}{34}{subsection.0.4.3}
-\contentsline {subsection}{\numberline {4.4}Visualizations}{35}{subsection.0.4.4}
-\contentsline {subsubsection}{Interaction}{40}{section*.28}
-\contentsline {subsubsection}{Querying}{41}{section*.29}
-\contentsline {subsubsection}{Labels}{41}{section*.30}
-\contentsline {subsubsection}{Filtering/Pruning}{42}{section*.31}
-\contentsline {subsection}{\numberline {4.5}Comparsion using a new Sunburst-layout algorithm}{43}{subsection.0.4.5}
-\contentsline {subsubsection}{Sunburst Comparsion-Layout}{44}{section*.32}
-\contentsline {subsubsection}{Short animation}{46}{section*.33}
-\contentsline {subsubsection}{Layout algorithm}{47}{section*.34}
-\contentsline {subsubsection}{Semantic zoom implementation}{52}{section*.35}
-\contentsline {subsubsection}{Filtering/Pruning}{55}{section*.36}
-\contentsline {subsubsection}{Zooming / Details on demand}{60}{section*.37}
-\contentsline {subsubsection}{Similarity measures}{61}{section*.38}
-\contentsline {subsection}{\numberline {4.6}Querying}{61}{subsection.0.4.6}
-\contentsline {subsection}{\numberline {4.7}Visualization of moves}{62}{subsection.0.4.7}
-\contentsline {subsection}{\numberline {4.8}Small multiple}{62}{subsection.0.4.8}
-\contentsline {subsection}{\numberline {4.9}Runtime/Space analysis and scalability of the ID-based diff}{64}{subsection.0.4.9}
-\contentsline {subsection}{\numberline {4.10}Conclusion and Summary}{66}{subsection.0.4.10}
-\contentsline {section}{\numberline {5}Applications}{69}{section.0.5}
-\contentsline {subsection}{\numberline {5.1}Introduction}{69}{subsection.0.5.1}
-\contentsline {subsection}{\numberline {5.2}LFG}{69}{subsection.0.5.2}
-\contentsline {subsection}{\numberline {5.3}Wikipedia}{72}{subsection.0.5.3}
-\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{78}{subsection.0.5.4}
-\contentsline {subsection}{\numberline {5.5}Summary}{85}{subsection.0.5.5}
-\contentsline {section}{\numberline {6}Discussion}{87}{section.0.6}
-\contentsline {subsection}{\numberline {6.1}Introduction}{87}{subsection.0.6.1}
-\contentsline {subsection}{\numberline {6.2}Evaluation Criteria}{88}{subsection.0.6.2}
-\contentsline {section}{\numberline {7}Summary, Conclusion and Future Research}{91}{section.0.7}
-\contentsline {subsection}{\numberline {7.1}Summary}{91}{subsection.0.7.1}
-\contentsline {subsection}{\numberline {7.2}Conclusion}{92}{subsection.0.7.2}
-\contentsline {subsection}{\numberline {7.3}Future Research}{93}{subsection.0.7.3}
-\contentsline {section}{\numberline {A}Treetank}{95}{section..1}
-\contentsline {subsection}{\numberline {A.1}Persistent storage enhancements}{95}{subsection..1.1}
-\contentsline {subsection}{\numberline {A.2}ACID properties}{95}{subsection..1.2}
-\contentsline {subsection}{\numberline {A.3}Axis}{96}{subsection..1.3}
-\contentsline {subsubsection}{Levelorder-Axis}{96}{section*.40}
-\contentsline {subsection}{\numberline {A.4}Edit operations}{96}{subsection..1.4}
-\contentsline {subsection}{\numberline {A.5}Visitor implementation}{101}{subsection..1.5}
-\contentsline {section}{\numberline {B}Acknowledgements}{105}{section..2}
-\contentsline {section}{References}{107}{section*.42}
+\contentsline {subsection}{\numberline {4.2}Aggregation}{33}{subsection.0.4.2}
+\contentsline {subsection}{\numberline {4.3}Visualizations}{34}{subsection.0.4.3}
+\contentsline {subsubsection}{Interaction}{38}{section*.28}
+\contentsline {subsubsection}{Querying}{39}{section*.29}
+\contentsline {subsubsection}{Labels}{39}{section*.30}
+\contentsline {subsubsection}{Filtering/Pruning}{39}{section*.31}
+\contentsline {subsection}{\numberline {4.4}Comparsion using a new Sunburst-layout algorithm}{41}{subsection.0.4.4}
+\contentsline {subsubsection}{Sunburst Comparsion-Layout}{41}{section*.32}
+\contentsline {subsubsection}{Short animation}{42}{section*.33}
+\contentsline {subsubsection}{Layout algorithm}{43}{section*.34}
+\contentsline {subsubsection}{Semantic zoom implementation}{46}{section*.35}
+\contentsline {subsubsection}{Filtering/Pruning}{48}{section*.36}
+\contentsline {subsubsection}{Zooming / Details on demand}{52}{section*.37}
+\contentsline {subsubsection}{Similarity measures}{53}{section*.38}
+\contentsline {subsection}{\numberline {4.5}Querying}{54}{subsection.0.4.5}
+\contentsline {subsection}{\numberline {4.6}Visualization of moves}{54}{subsection.0.4.6}
+\contentsline {subsection}{\numberline {4.7}Small multiple displays}{56}{subsection.0.4.7}
+\contentsline {subsection}{\numberline {4.8}Runtime/Space analysis and scalability of the ID-based diff}{58}{subsection.0.4.8}
+\contentsline {subsection}{\numberline {4.9}Conclusion and Summary}{60}{subsection.0.4.9}
+\contentsline {section}{\numberline {5}Applications}{63}{section.0.5}
+\contentsline {subsection}{\numberline {5.1}Introduction}{63}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {5.2}LFG}{63}{subsection.0.5.2}
+\contentsline {subsection}{\numberline {5.3}Wikipedia}{66}{subsection.0.5.3}
+\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{72}{subsection.0.5.4}
+\contentsline {subsection}{\numberline {5.5}Summary}{79}{subsection.0.5.5}
+\contentsline {section}{\numberline {6}Discussion}{81}{section.0.6}
+\contentsline {subsection}{\numberline {6.1}Introduction}{81}{subsection.0.6.1}
+\contentsline {subsection}{\numberline {6.2}Evaluation Criteria}{82}{subsection.0.6.2}
+\contentsline {section}{\numberline {7}Summary, Conclusion and Future Research}{85}{section.0.7}
+\contentsline {subsection}{\numberline {7.1}Summary}{85}{subsection.0.7.1}
+\contentsline {subsection}{\numberline {7.2}Conclusion}{86}{subsection.0.7.2}
+\contentsline {subsection}{\numberline {7.3}Future Research}{87}{subsection.0.7.3}
+\contentsline {section}{\numberline {A}Treetank}{89}{section..1}
+\contentsline {subsection}{\numberline {A.1}Persistent storage enhancements}{89}{subsection..1.1}
+\contentsline {subsection}{\numberline {A.2}ACID properties}{89}{subsection..1.2}
+\contentsline {subsection}{\numberline {A.3}Axis}{90}{subsection..1.3}
+\contentsline {subsubsection}{Levelorder-Axis}{90}{section*.40}
+\contentsline {subsection}{\numberline {A.4}Edit operations}{90}{subsection..1.4}
+\contentsline {subsection}{\numberline {A.5}Visitor implementation}{94}{subsection..1.5}
+\contentsline {section}{\numberline {B}XSLT stylesheet to combine consecutive pages/revisions}{97}{section..2}
+\contentsline {section}{\numberline {C}Acknowledgements}{99}{section..3}
+\contentsline {section}{References}{101}{section*.42}

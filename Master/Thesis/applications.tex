@@ -132,42 +132,7 @@ Using the \texttt{map}-function means input data has to be split into records. M
 The implementation utilizes a configurable record identifier such that it is adjustable to schema changes in the Wikipedia dump. Furthermore it can simple be adapted to split other XML files based on other record identifier nodes as well.
 
 \item \texttt{XMLMap} just forwards the received key/value pairs.
-\item \texttt{XMLReduce} finally merges consecutive revisions with the same \emph{page-id} and \textbf{timestamp} by means of Saxon, an XSLT/XQuery-processor. The XSLT stylesheet used is pretty small yet maybe not straight forward. It is shown in listing \ref{combine}.
-
-\begin{lstlisting}[caption=XSLT stylesheet to combine consecutive pages/revisions]
-<xsl:stylesheet version="2.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  exclude-result-prefixes="xs">
-
-  <xsl:output method="xml" indent="no" 
-    omit-xml-declaration="yes" />
-  <xsl:strip-space elements="*" />
-
-  <xsl:template match="/">
-    <xsl:copy>
-      <xsl:for-each-group 
-        select="descendant-or-self::page" 
-        group-by="concat(id, revision/timestamp)">
-        <page>
-          <xsl:copy-of select="* except revision" />
-	  <xsl:for-each-group 
-            select="current-group()/revision"
-	    group-by="xs:dateTime(timestamp)">
-	    <xsl:apply-templates 
-              select="current-group()" />
-	  </xsl:for-each-group>
-        </page>
-      </xsl:for-each-group>
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="revision">
-    <xsl:copy-of select="." />
-  </xsl:template>
-</xsl:stylesheet>
-\end{lstlisting}
-\label{combine}
+\item \texttt{XMLReduce} finally merges consecutive revisions with the same \emph{page-id} and \textbf{timestamp} by means of Saxon, an XSLT/XQuery-processor. The XSLT stylesheet used is pretty small yet maybe not straight forward (Appendix \ref{sec::xslt}).
 \end{enumerate}
 
 % import of wikipedia
@@ -179,10 +144,10 @@ The Importer for Wikipedia allows the usage of a timespan (hourly, daily, monthl
 
 Fig. \ref{fig:wikivis} demonstrates the result of importing 50 articles of Wikipedia sorted by article-revisions and an hourly commit \footnote{only hours in which changes occured are reflected}. Revisions 70 and 71 are compared. The \emph{edit-distance} used by our FSME-implementation to determine and update the stored Treetank-data with the encountered differences in the first place works reasonably well, as most text-nodes can be distinguished very well. We directly used the hash-based pruning to enlarge regions of interest. The \emph{TextView} on the right side is particular useful to quickly reveal several changes whereas in the \emph{SunburstView} only the new updated text content in case of \texttt{TextNode} updates is used for the label (and usually the content is too big to be displayed within the arc, especially if the content contains whole paragraphs as is usually the case for Wikipedia). We quickly detect that a lot of paragraphs have changed by looking at the \emph{SunburstView}. Details are depicted by either clicking on an item or scrolling down in the \emph{TextView}. %It is fair to say, that for instance the text-nodes below the \texttt{id}-element parent could be detected as updates as well if all ancestors and neighbour nodes are checked for equality even though the Levenshtein algorithm used to compare text nodes detects too many character edit operations to consider that the nodes are equal. 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/wikipedia-rev7071}}
-\caption{\label{fig:wikivis} Wikipedia comparsion}
+\caption{\label{fig:wikivis} Wikipedia comparsion.}
 \end{figure}
 
 Another visualization (Fig. \ref{fig:wikivis-without-modscale}) depicts what happens if we do not prune and do not include the number of modifications of a node in its subtree to scale the SunburstItems, the segments for each node.
@@ -344,7 +309,7 @@ Fig. \ref{fig:fsml-itemsize-pruning} is an example of mapping a Desktop-folder t
 \caption{\label{fig:fsml-itemsize-pruning} FSML comparsion of "/home/johannes/Desktop"}
 \end{figure}
 
-Most files and directories are unchanged. Usually changed items (besides the processing-subfolder which has been deleted) are rather small, as the subtrees are rather small compared to most unchanged nodes. Pruning by same hashes instead of the itemsize are displayed in Fig. \ref{fig:fsml-pruned-by-samehashes}. The changed subtrees are much better visible. %Two subdirectories matching the simple XPath-query \texttt{//dir[@name='wiki-sorted']} are highlighted. It is immediately obvious that a subtree rooted at the directory named "wiki-sorted" has been deleted and another one has been inserted. The equal subtree-size suggests that the subtree has been moved. On close inspection, for instance using the subtrees rooted at "wiki-sorted" we see that the subtrees are isomorph (Fig. \ref{fig:desktop-screenshot-compare}). This might be due to the directory traversal which seems to be non-deterministic. We can suggest that the directory therefore has been moved. However in future work we aim to detect moves in the first place and therefore also use the appropriate visualization through splines explained in chapter 3. To compare the two subtrees we used two Treetank-GUI instances on the same database/resource. This is possible due to Treetank permitting multiple read-transactions.  
+Most files and directories are unchanged. Usually changed items (besides the processing-subfolder which has been deleted) are rather small, as the subtrees are rather small compared to most unchanged nodes. Pruning by same hashes instead of the itemsize is displayed in Fig. \ref{fig:fsml-pruned-by-samehashes}. The changed subtrees are much better visible. %Two subdirectories matching the simple XPath-query \texttt{//dir[@name='wiki-sorted']} are highlighted. It is immediately obvious that a subtree rooted at the directory named "wiki-sorted" has been deleted and another one has been inserted. The equal subtree-size suggests that the subtree has been moved. On close inspection, for instance using the subtrees rooted at "wiki-sorted" we see that the subtrees are isomorph (Fig. \ref{fig:desktop-screenshot-compare}). This might be due to the directory traversal which seems to be non-deterministic. We can suggest that the directory therefore has been moved. However in future work we aim to detect moves in the first place and therefore also use the appropriate visualization through splines explained in chapter 3. To compare the two subtrees we used two Treetank-GUI instances on the same database/resource. This is possible due to Treetank permitting multiple read-transactions.  
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
@@ -366,9 +331,18 @@ Most files and directories are unchanged. Usually changed items (besides the pro
 %\caption{\label{fig:desktop-screenshot-pruned-hash} FSML comparsion of "/home/johannes/Desktop" pruned by same hashes}
 %\end{figure}
 
-A sequence of revisions can be viewed with the incremental smallmultiple variant (Fig. \ref{fig:fsml-smallmultiples-incremental}). We used the hash-based pruning without keeping nodes with same hashes, to keep the number of items to a minimum. By hovering the items and compare the values and subtree sizes we are able to determine that between revision 2 and 3 in the bottom right view a subtree has been renamed. A \texttt{rename}-operation however is not supported by the Java \texttt{WatchService} such that by using an ext3-filesystem we receive a delete and an insert event.
+A sequence of comparisons between several revisions is viewable with the incremental SmallMultiple variant (Fig. \ref{fig:fsml-smallmultiples-incremental}). We used the hash-based pruning without generating items for nodes with identical hash-values, to keep the number of items to a minimum. By hovering the items and compare the values and subtree sizes we are able to determine that between revision 2 and 3 in the bottom right view a subtree has been renamed. A \texttt{rename}-operation however is not supported by the Java \texttt{WatchService} such that usually, depending on the filesystem a delete- and an insert-event in either order is received.
 
-\begin{figure}[htb]
+Questions such as 
+
+\begin{itemize}
+\item Auditing: Which files are updated/inserted/deleted or not during a sequence of snapshots?
+\item Does an employee adhere to company instructions regarding installed software? (by file-extensions or analysing the binaries and storing an additional attribute with "true" or "false" values)
+\item 
+\item 
+\end{itemize}
+
+\begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/fsml-incremental-pruned-by-samehashes.png}}
 \caption{\label{fig:fsml-smallmultiples-incremental} FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)}

@@ -17,9 +17,9 @@
 
 
 % one-sided document style suited for bachelor/master theses (english)
-\documentclass[a4paper]{llncs} 
+%\documentclass[a4paper]{llncs} 
 % two-sided document sytel suited for bachelor/master theses (english)
-%\documentclass[twoside,a4paper]{llncs} 
+\documentclass[twoside,a4paper]{llncs} 
 % one-sided document sytel suited for bachelor/master theses (german)
 %\documentclass[ngerman,a4paper]{llncs} 
 % two-sided document sytel suited for bachelor/master theses (german)
@@ -206,14 +206,6 @@
 \listoffigures
 \newpage
 \pagestyle{fancy}
-\addcontentsline{toc}{section}{\listalgorithmcfname}
-\listofalgorithms
-\newpage
-\pagestyle{fancy}
-\addcontentsline{toc}{section}{\lstlistlistingname}
-\lstlistoflistings
-\newpage
-\pagestyle{fancy}
 \addcontentsline{toc}{section}{\listtablename}
 \listoftables
 \newpage
@@ -247,6 +239,8 @@
 \cleardoublepage
 \appendix
 \input{treetank}
+\cleardoublepage
+\input{xslt}
 \cleardoublepage
 \input{acknowledgements} % refer your acknowledgments here
 %\input{statement}

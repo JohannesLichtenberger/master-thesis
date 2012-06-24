@@ -35,6 +35,7 @@
 \citation{VISUAL_ANALYTICS}
 \citation{keim2008visual}
 \citation{keim2008visual}
+\citation{TREETANK}
 \citation{XMark}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Preliminaries and State-of-the-Art}{5}{section.0.2}}
 \newlabel{sec::relwork}{{2}{5}{Preliminaries and State-of-the-Art\relax }{section.0.2}{}}
@@ -42,7 +43,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Storage backend}{5}{subsection.0.2.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Visual Analytics Process proposed by Keim et al. Presented in \cite  {keim2008visual}.}}{6}{figure.0.2}}
 \newlabel{fig:visualanalyticsprocess}{{2}{6}{\label {fig:visualanalyticsprocess} Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}}{figure.0.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Analysis of differences}{6}{subsection.0.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Analysis of differences}{7}{subsection.0.2.3}}
 \citation{ronnau2009efficient}
 \citation{DELTAXML}
 \citation{cobena2002detecting}
@@ -54,9 +55,9 @@
 \@writefile{toc}{\contentsline {subsubsection}{DeltaXML\cite  {DELTAXML}}{8}{section*.10}}
 \@writefile{toc}{\contentsline {subsubsection}{XyDiff\cite  {cobena2002detecting}}{8}{section*.11}}
 \newlabel{subsec::ladiff}{{2.3}{8}{LaDiff / Fast Match Simple Editscript (FMSE)\cite {chawathe1996change}\relax }{section*.12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{LaDiff / Fast Match Simple Editscript (FMSE)\cite  {chawathe1996change}}{8}{section*.12}}
 \citation{lindholm2006fast}
 \citation{ronnau2009efficient}
+\@writefile{toc}{\contentsline {subsubsection}{LaDiff / Fast Match Simple Editscript (FMSE)\cite  {chawathe1996change}}{9}{section*.12}}
 \citation{wang2003x}
 \citation{wang2003x}
 \citation{lindholm2006fast}
@@ -100,216 +101,209 @@
 \newlabel{fig:deletionvisitor}{{4}{19}{\label {fig:deletionvisitor} Deletion visitor; two variants are depicted if the node to removed has a left- and a right-sibling. Either both sibling nodes are \texttt {TextNode}s as is the case for node 4 or not (node 10)\relax }{figure.0.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}ID-based diffing}{19}{subsection.0.3.3}}
 \@writefile{toc}{\contentsline {subsubsection}{Hashes}{19}{section*.24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Two revisions of a tree-structure and the edit-operations involved. By comparing consecutive revisions the edit-operations usually equal the diff-types considering \texttt  {REPLACEDOLD/REPLACEDNEW} as one operation just like \texttt  {MOVEDFROM/MOVEDTO}.}}{20}{figure.0.5}}
-\newlabel{fig:diff}{{5}{20}{\label {fig:diff} Two revisions of a tree-structure and the edit-operations involved. By comparing consecutive revisions the edit-operations usually equal the diff-types considering \texttt {REPLACEDOLD/REPLACEDNEW} as one operation just like \texttt {MOVEDFROM/MOVEDTO}}{figure.0.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Kind of differences}{21}{section*.25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{22}{subsection.0.3.4}}
+\@writefile{toc}{\contentsline {subsubsection}{Kind of differences}{20}{section*.25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{21}{subsection.0.3.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  ID-based diffing.}}{22}{figure.0.5}}
+\newlabel{fig:id-diff}{{5}{22}{\label {fig:id-diff} ID-based diffing}{figure.0.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Diff-Computation}{22}{subsection.0.3.5}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces ID-based diff: traversal}}{23}{algocfline.1}}
 \newlabel{overallDiffAlgo}{{1}{23}{Traversal of both revisions\relax }{algocfline.1}{}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces ID-based diff: diff-computation}}{24}{algocfline.2}}
 \newlabel{diffAlgo}{{2}{24}{Diff-Computation\relax }{algocfline.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  ID-based diffing.}}{25}{figure.0.6}}
-\newlabel{fig:id-diff}{{6}{25}{\label {fig:id-diff} ID-based diffing}{figure.0.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Detecting moves}{26}{subsection.0.3.6}}
-\@writefile{toc}{\contentsline {subsubsection}{Impossible to detect moves on the fly}{26}{section*.26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Detecting moves}{25}{subsection.0.3.6}}
+\@writefile{toc}{\contentsline {subsubsection}{Impossible to detect moves on the fly}{25}{section*.26}}
 \@writefile{toc}{\contentsline {subsubsection}{Detection of moves in a postprocessing step}{26}{section*.27}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces ID-based diff: postprocessing to detect moves}}{27}{algocfline.3}}
 \newlabel{diffPostprocessing}{{3}{27}{Detection of moves in a postprocessing step\relax }{algocfline.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{27}{subsection.0.3.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{28}{figure.0.6}}
+\newlabel{fig:100MBscaling}{{6}{28}{Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance}{figure.0.6}{}}
 \newlabel{chap3:comparsion}{{3}{28}{Runtime/Space analysis and scalability of the ID-based diffing algorithm\relax }{table.0.3}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Comparsion of different modification-patterns of a 111 MiB XMark instance (update/insert/delete/replace/move every 1000st, 5000st and 10000st node). Runtime in ms.}}{28}{table.0.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{28}{subsection.0.3.7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{29}{figure.0.7}}
-\newlabel{fig:100MBscaling}{{7}{29}{Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance}{figure.0.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{29}{subsection.0.3.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)}}{29}{figure.0.7}}
+\newlabel{fig:docScaling}{{7}{29}{Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)\relax }{figure.0.7}{}}
 \newlabel{chap3:compDiffInstances}{{4}{29}{Runtime/Space analysis and scalability of the ID-based diffing algorithm\relax }{table.0.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Comparsion of different XMark instances (11 MiB, 111 MiB, 1111 MiB modifying every 1000st, 11000st and 122221st node). Runtime in ms.}}{29}{table.0.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{29}{subsection.0.3.8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)}}{30}{figure.0.8}}
 \newlabel{fig:docScaling}{{8}{30}{Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)\relax }{figure.0.8}{}}
 \newlabel{chap3:compPrunedDiffInstances}{{5}{30}{Runtime/Space analysis and scalability of the ID-based diffing algorithm\relax }{table.0.5}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Comparsion of different XMark instances skipping subtrees of nodes with identical hash-values (11 MiB, 111 MiB, 1111 MiB modifying every 1000st, 11000st and 111000st node). Runtime in ms.}}{30}{table.0.5}}
 \citation{docbook}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)}}{31}{figure.0.9}}
-\newlabel{fig:docScaling}{{9}{31}{Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)\relax }{figure.0.9}{}}
-\citation{BASEX}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Visualizations}{33}{section.0.4}}
 \newlabel{sec::visualizations}{{4}{33}{Visualizations\relax }{section.0.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Introduction}{33}{subsection.0.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}GUI}{33}{subsection.0.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces  MVC-paradigm use. The \emph  {TextView} and the \emph  {TreeView} use standard Swing components. A \texttt  {JTree} Swing-component is used implement the tree-model in the \emph  {TreeView}. A \texttt  {JTreeCellRenderer} implements the view and controller. It is responsible to translate user actions and to render the cells appropriately. The \texttt  {JTextEditPane}-Swing component represents both the view and controller in the \emph  {TextView} whereas a new \texttt  {StAXDiffSerializer} described later on implements the \texttt  {XMLEventReader} StAX interface to support a pull based API. It is thus the model which interacts with Treetank through a open database handle.}}{34}{figure.0.10}}
-\newlabel{fig:mvc}{{10}{34}{\label {fig:mvc} MVC-paradigm use. The \emph {TextView} and the \emph {TreeView} use standard Swing components. A \texttt {JTree} Swing-component is used implement the tree-model in the \emph {TreeView}. A \texttt {JTreeCellRenderer} implements the view and controller. It is responsible to translate user actions and to render the cells appropriately. The \texttt {JTextEditPane}-Swing component represents both the view and controller in the \emph {TextView} whereas a new \texttt {StAXDiffSerializer} described later on implements the \texttt {XMLEventReader} StAX interface to support a pull based API. It is thus the model which interacts with Treetank through a open database handle}{figure.0.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Aggregation}{34}{subsection.0.4.3}}
-\newlabel{subsec::aggregation}{{4.3}{34}{Aggregation\relax }{subsection.0.4.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  Two tree-structures aggregated. The numbers denote unique node-IDs and refer to Fig. \ref  {fig:diff} in Chapter \ref  {sec::differences} just like the changes from revision 1 to 2. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation.}}{35}{figure.0.11}}
-\newlabel{fig:aggregation}{{11}{35}{\label {fig:aggregation} Two tree-structures aggregated. The numbers denote unique node-IDs and refer to Fig. \ref {fig:diff} in Chapter \ref {sec::differences} just like the changes from revision 1 to 2. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation}{figure.0.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Visualizations}{35}{subsection.0.4.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  TreeView and TextView side-by-side}}{36}{figure.0.12}}
-\newlabel{fig:treetextview}{{12}{36}{\label {fig:treetextview} TreeView and TextView side-by-side\relax }{figure.0.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  SunburstView and TextView side-by-side}}{38}{figure.0.13}}
-\newlabel{fig:sunbursttextview}{{13}{38}{\label {fig:sunbursttextview} SunburstView and TextView side-by-side\relax }{figure.0.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  SunburstView}}{39}{figure.0.14}}
-\newlabel{fig:sunburstview}{{14}{39}{\label {fig:sunburstview} SunburstView\relax }{figure.0.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Interaction}{40}{section*.28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  SunburstView - adjusted arcs/dotsize parameters}}{41}{figure.0.15}}
-\newlabel{fig:sunburst-adjusted-scale}{{15}{41}{\label {fig:sunburst-adjusted-scale} SunburstView - adjusted arcs/dotsize parameters\relax }{figure.0.15}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Querying}{41}{section*.29}}
-\@writefile{toc}{\contentsline {subsubsection}{Labels}{41}{section*.30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  node-link diagram}}{42}{figure.0.16}}
-\newlabel{fig:nodelink}{{16}{42}{\label {fig:nodelink} node-link diagram\relax }{figure.0.16}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Filtering/Pruning}{42}{section*.31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces  Fisheye transformation}}{43}{figure.0.17}}
-\newlabel{fig:fisheye}{{17}{43}{\label {fig:fisheye} Fisheye transformation\relax }{figure.0.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Comparsion using a new Sunburst-layout algorithm}{43}{subsection.0.4.5}}
-\newlabel{subsec::comparison}{{4.5}{43}{Comparsion using a new Sunburst-layout algorithm\relax }{subsection.0.4.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces  Zooming into the visualization}}{44}{figure.0.18}}
-\newlabel{fig:zoom}{{18}{44}{\label {fig:zoom} Zooming into the visualization\relax }{figure.0.18}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Sunburst Comparsion-Layout}{44}{section*.32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces  XPath query results displayed in light green}}{45}{figure.0.19}}
-\newlabel{fig:sunburstxpath}{{19}{45}{\label {fig:sunburstxpath} XPath query results displayed in light green\relax }{figure.0.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces  SunburstView - comparison mode.}}{46}{figure.0.20}}
-\newlabel{fig:sunburst}{{20}{46}{\label {fig:sunburst} SunburstView - comparison mode}{figure.0.20}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Short animation}{46}{section*.33}}
-\@writefile{toc}{\contentsline {subsubsection}{Layout algorithm}{47}{section*.34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces  SunburstCompare-Axis based on the Sunburst-Axis}}{48}{figure.0.21}}
-\newlabel{fig:tree-axis}{{21}{48}{\label {fig:tree-axis} SunburstCompare-Axis based on the Sunburst-Axis\relax }{figure.0.21}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces adjusting stacks and depths for movement to next following node for the first DELETED or MOVEDFROM node after another type has been encountered}}{50}{algocfline.4}}
-\newlabel{algo:popStacks}{{4}{50}{Layout algorithm\relax }{algocfline.4}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Diff-Axis hasNext()-skeleton}}{51}{algocfline.5}}
-\newlabel{algo:skeleton}{{5}{51}{Layout algorithm\relax }{algocfline.5}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6}{\ignorespaces Stack adaptions for next Sunburst item depending on transaction movement in last call of \texttt  {hasNext()}}}{52}{algocfline.6}}
-\newlabel{algo:nextitem}{{6}{52}{Layout algorithm\relax }{algocfline.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Semantic zoom implementation}{52}{section*.35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces  Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{53}{figure.0.22}}
-\newlabel{fig:sunburst-layout}{{22}{53}{\label {fig:sunburst-layout} Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9}{figure.0.22}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {7}{\ignorespaces Calculate depth}}{54}{algocfline.7}}
-\newlabel{algo:calcDepth}{{7}{54}{Semantic zoom implementation\relax }{algocfline.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Filtering/Pruning}{55}{section*.36}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {8}{\ignorespaces Derives \texttt  {descendant-or-self}-count as well as the \texttt  {modification}-count}}{56}{algocfline.8}}
-\newlabel{algo:descModCount}{{8}{56}{Semantic zoom implementation\relax }{algocfline.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces  Comparison without pruning.}}{57}{figure.0.23}}
-\newlabel{fig:without-pruning}{{23}{57}{\label {fig:without-pruning} Comparison without pruning}{figure.0.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces  Pruned by itemsize.}}{58}{figure.0.24}}
-\newlabel{fig:pruned-by-itemsize}{{24}{58}{\label {fig:pruned-by-itemsize} Pruned by itemsize}{figure.0.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces  Pruned by same hashes.}}{59}{figure.0.25}}
-\newlabel{fig:pruned-by-hash}{{25}{59}{\label {fig:pruned-by-hash} Pruned by same hashes}{figure.0.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces  Pruned by hash-value without building items for nodes with same hash-values.}}{60}{figure.0.26}}
-\newlabel{fig:pruned-by-hash-without-samehashes}{{26}{60}{\label {fig:pruned-by-hash-without-samehashes} Pruned by hash-value without building items for nodes with same hash-values}{figure.0.26}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Zooming / Details on demand}{60}{section*.37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Aggregation}{33}{subsection.0.4.2}}
+\newlabel{subsec::aggregation}{{4.2}{33}{Aggregation\relax }{subsection.0.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  Two tree-structures aggregated. The numbers denote unique node-IDs. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation.}}{34}{figure.0.9}}
+\newlabel{fig:aggregation}{{9}{34}{\label {fig:aggregation} Two tree-structures aggregated. The numbers denote unique node-IDs. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation}{figure.0.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Visualizations}{34}{subsection.0.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces  TreeView and TextView side-by-side}}{35}{figure.0.10}}
+\newlabel{fig:treetextview}{{10}{35}{\label {fig:treetextview} TreeView and TextView side-by-side\relax }{figure.0.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  SunburstView and TextView side-by-side.}}{36}{figure.0.11}}
+\newlabel{fig:sunbursttextview}{{11}{36}{\label {fig:sunbursttextview} SunburstView and TextView side-by-side}{figure.0.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  SunburstView depicting the structure of "/home/johannes/Desktop".}}{38}{figure.0.12}}
+\newlabel{fig:sunburstview}{{12}{38}{\label {fig:sunburstview} SunburstView depicting the structure of "/home/johannes/Desktop"}{figure.0.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Interaction}{38}{section*.28}}
+\@writefile{toc}{\contentsline {subsubsection}{Querying}{39}{section*.29}}
+\@writefile{toc}{\contentsline {subsubsection}{Labels}{39}{section*.30}}
+\@writefile{toc}{\contentsline {subsubsection}{Filtering/Pruning}{39}{section*.31}}
+\newlabel{fig:fisheye}{{13(a)}{40}{Subfigure 0 13(a)\relax }{subfigure.13.1}{}}
+\newlabel{sub@fig:fisheye}{{(a)}{40}{Subfigure 0 13(a)\relax }{subfigure.13.1}{}}
+\newlabel{fig:zoom}{{13(b)}{40}{Subfigure 0 13(b)\relax }{subfigure.13.2}{}}
+\newlabel{sub@fig:zoom}{{(b)}{40}{Subfigure 0 13(b)\relax }{subfigure.13.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Enlarging regions of interest.}}{40}{figure.0.13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Fisheye transformation}}}{40}{figure.0.13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Zooming into the visualization}}}{40}{figure.0.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  XPath query results displayed in light green}}{41}{figure.0.14}}
+\newlabel{fig:sunburstxpath}{{14}{41}{\label {fig:sunburstxpath} XPath query results displayed in light green\relax }{figure.0.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparsion using a new Sunburst-layout algorithm}{41}{subsection.0.4.4}}
+\newlabel{subsec::comparison}{{4.4}{41}{Comparsion using a new Sunburst-layout algorithm\relax }{subsection.0.4.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Sunburst Comparsion-Layout}{41}{section*.32}}
+\@writefile{toc}{\contentsline {subsubsection}{Short animation}{42}{section*.33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  SunburstView - comparison mode.}}{43}{figure.0.15}}
+\newlabel{fig:sunburst}{{15}{43}{\label {fig:sunburst} SunburstView - comparison mode}{figure.0.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Layout algorithm}{43}{section*.34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  SunburstCompare-Axis based on the Sunburst-Axis}}{44}{figure.0.16}}
+\newlabel{fig:tree-axis}{{16}{44}{\label {fig:tree-axis} SunburstCompare-Axis based on the Sunburst-Axis\relax }{figure.0.16}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces Diff-Axis hasNext()-skeleton}}{45}{algocfline.4}}
+\newlabel{algo:skeleton}{{4}{45}{Layout algorithm\relax }{algocfline.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Semantic zoom implementation}{46}{section*.35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces  Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{47}{figure.0.17}}
+\newlabel{fig:sunburst-layout}{{17}{47}{\label {fig:sunburst-layout} Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9}{figure.0.17}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Calculate depth}}{48}{algocfline.5}}
+\newlabel{algo:calcDepth}{{5}{48}{Semantic zoom implementation\relax }{algocfline.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Filtering/Pruning}{48}{section*.36}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6}{\ignorespaces Derives \texttt  {subtree-size} as well as the number of \texttt  {modifications}}}{49}{algocfline.6}}
+\newlabel{algo:descModCount}{{6}{49}{Semantic zoom implementation\relax }{algocfline.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces  Comparison without pruning.}}{50}{figure.0.18}}
+\newlabel{fig:without-pruning}{{18}{50}{\label {fig:without-pruning} Comparison without pruning}{figure.0.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces  Pruned by itemsize.}}{51}{figure.0.19}}
+\newlabel{fig:pruned-by-itemsize}{{19}{51}{\label {fig:pruned-by-itemsize} Pruned by itemsize}{figure.0.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces  Pruned by same hashes.}}{52}{figure.0.20}}
+\newlabel{fig:pruned-by-hash}{{20}{52}{\label {fig:pruned-by-hash} Pruned by same hashes}{figure.0.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Zooming / Details on demand}{52}{section*.37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces  Pruned by hash-value without building items for nodes with same hash-values.}}{53}{figure.0.21}}
+\newlabel{fig:pruned-by-hash-without-samehashes}{{21}{53}{\label {fig:pruned-by-hash-without-samehashes} Pruned by hash-value without building items for nodes with same hash-values}{figure.0.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Similarity measures}{53}{section*.38}}
 \citation{Brackit}
-\@writefile{toc}{\contentsline {subsubsection}{Similarity measures}{61}{section*.38}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Querying}{61}{subsection.0.4.6}}
 \citation{Bundles}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Visualization of moves}{62}{subsection.0.4.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Small multiple}{62}{subsection.0.4.8}}
-\newlabel{subsec::smallmultiple}{{4.8}{62}{Small multiple\relax }{subsection.0.4.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Querying}{54}{subsection.0.4.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Visualization of moves}{54}{subsection.0.4.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces  Moves visualized using hierarchical edge bundles.}}{55}{figure.0.22}}
+\newlabel{fig:moves}{{22}{55}{\label {fig:moves} Moves visualized using hierarchical edge bundles}{figure.0.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces  Small multiple - differential variant.}}{56}{figure.0.23}}
+\newlabel{fig:smallmultiple-differential}{{23}{56}{\label {fig:smallmultiple-differential} Small multiple - differential variant}{figure.0.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Small multiple displays}{56}{subsection.0.4.7}}
+\newlabel{subsec::smallmultiple}{{4.7}{56}{Small multiple displays\relax }{subsection.0.4.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces  Small multiple - incremental variant.}}{57}{figure.0.24}}
+\newlabel{fig:smallmultiple-incremental}{{24}{57}{\label {fig:smallmultiple-incremental} Small multiple - incremental variant}{figure.0.24}{}}
 \citation{ronnau2009efficient}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces  Moves visualized using hierarchical edge bundles.}}{63}{figure.0.27}}
-\newlabel{fig:moves}{{27}{63}{\label {fig:moves} Moves visualized using hierarchical edge bundles}{figure.0.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces  Small multiple - differential variant.}}{64}{figure.0.28}}
-\newlabel{fig:smallmultiple-differential}{{28}{64}{\label {fig:smallmultiple-differential} Small multiple - differential variant}{figure.0.28}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Runtime/Space analysis and scalability of the ID-based diff}{64}{subsection.0.4.9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces  Small multiple - incremental variant.}}{65}{figure.0.29}}
-\newlabel{fig:smallmultiple-incremental}{{29}{65}{\label {fig:smallmultiple-incremental} Small multiple - incremental variant}{figure.0.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces  GUI-performance.}}{66}{figure.0.30}}
-\newlabel{fig:gui-performance}{{30}{66}{\label {fig:gui-performance} GUI-performance}{figure.0.30}{}}
-\newlabel{chap3:comparsion}{{6}{66}{Runtime/Space analysis and scalability of the ID-based diff\relax }{table.0.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comparsion of different modification-schemas of a 111 MiB XMark instance (change every 1000st, 5000st and 10000st node).}}{66}{table.0.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Conclusion and Summary}{66}{subsection.0.4.10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces  GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{67}{figure.0.31}}
-\newlabel{fig:gui-performance-movedet}{{31}{67}{\label {fig:gui-performance-movedet} GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled}{figure.0.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces  Small multiple - hybrid variant.}}{58}{figure.0.25}}
+\newlabel{fig:wikipedia-smallmultiples-hybrid}{{25}{58}{\label {fig:wikipedia-smallmultiples-hybrid} Small multiple - hybrid variant}{figure.0.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Runtime/Space analysis and scalability of the ID-based diff}{58}{subsection.0.4.8}}
+\newlabel{chap3:comparsion}{{6}{59}{Runtime/Space analysis and scalability of the ID-based diff\relax }{table.0.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comparsion of different modification-schemas of a 111 MiB XMark instance (change every 1000st, 5000st and 10000st node).}}{59}{table.0.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces  GUI-performance.}}{60}{figure.0.26}}
+\newlabel{fig:gui-performance}{{26}{60}{\label {fig:gui-performance} GUI-performance}{figure.0.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Conclusion and Summary}{60}{subsection.0.4.9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces  GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{61}{figure.0.27}}
+\newlabel{fig:gui-performance-movedet}{{27}{61}{\label {fig:gui-performance-movedet} GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled}{figure.0.27}{}}
 \citation{FSML}
 \citation{LFG}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Applications}{69}{section.0.5}}
-\newlabel{sec::applications}{{5}{69}{Applications\relax }{section.0.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Introduction}{69}{subsection.0.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}LFG}{69}{subsection.0.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces  LFG comparsion}}{70}{figure.0.32}}
-\newlabel{fig:lfg}{{32}{70}{\label {fig:lfg} LFG comparsion\relax }{figure.0.32}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}CStructure/FStructure comparsion}{70}{lstlisting.0.1}}
-\newlabel{lst:linguistscomparsion}{{5.2}{70}{LFG\relax }{lstnumber.1.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces  LFG comparsion revised}}{71}{figure.0.33}}
-\newlabel{fig:linguistics}{{33}{71}{\label {fig:linguistics} LFG comparsion revised\relax }{figure.0.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Applications}{63}{section.0.5}}
+\newlabel{sec::applications}{{5}{63}{Applications\relax }{section.0.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Introduction}{63}{subsection.0.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}LFG}{63}{subsection.0.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces  LFG comparsion}}{64}{figure.0.28}}
+\newlabel{fig:lfg}{{28}{64}{\label {fig:lfg} LFG comparsion\relax }{figure.0.28}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}CStructure/FStructure comparsion}{64}{lstlisting.0.1}}
+\newlabel{lst:linguistscomparsion}{{5.2}{64}{LFG\relax }{lstnumber.1.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces  LFG comparsion revised}}{65}{figure.0.29}}
+\newlabel{fig:linguistics}{{29}{65}{\label {fig:linguistics} LFG comparsion revised\relax }{figure.0.29}{}}
 \citation{WikiDump}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Wikipedia}{72}{subsection.0.5.3}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Wikipedia Dump - XML representation}{72}{lstlisting.0.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Wikipedia}{66}{subsection.0.5.3}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Wikipedia Dump - XML representation}{66}{lstlisting.0.2}}
 \citation{Wiki2XML}
-\newlabel{lst:wikixml}{{5.3}{73}{Wikipedia\relax }{lstnumber.2.31}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}XSLT stylesheet to combine consecutive pages/revisions}{74}{lstlisting.0.3}}
-\newlabel{combine}{{3}{75}{Wikipedia\relax }{lstnumber.3.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces  Wikipedia comparsion}}{76}{figure.0.34}}
-\newlabel{fig:wikivis}{{34}{76}{\label {fig:wikivis} Wikipedia comparsion\relax }{figure.0.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces  Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem}}{77}{figure.0.35}}
-\newlabel{fig:wikivis-without-modscale}{{35}{77}{\label {fig:wikivis-without-modscale} Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem\relax }{figure.0.35}{}}
+\newlabel{lst:wikixml}{{5.3}{67}{Wikipedia\relax }{lstnumber.2.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces  Wikipedia comparsion.}}{69}{figure.0.30}}
+\newlabel{fig:wikivis}{{30}{69}{\label {fig:wikivis} Wikipedia comparsion}{figure.0.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces  Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem}}{70}{figure.0.31}}
+\newlabel{fig:wikivis-without-modscale}{{31}{70}{\label {fig:wikivis-without-modscale} Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem\relax }{figure.0.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces  Wikipedia comparsion pruned by itemsize}}{71}{figure.0.32}}
+\newlabel{fig:wikivis-rev90106}{{32}{71}{\label {fig:wikivis-rev90106} Wikipedia comparsion pruned by itemsize\relax }{figure.0.32}{}}
 \citation{FSML}
-\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces  Wikipedia comparsion pruned by itemsize}}{78}{figure.0.36}}
-\newlabel{fig:wikivis-rev90106}{{36}{78}{\label {fig:wikivis-rev90106} Wikipedia comparsion pruned by itemsize\relax }{figure.0.36}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{78}{subsection.0.5.4}}
 \citation{FSML}
-\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces  Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant}}{79}{figure.0.37}}
-\newlabel{fig:wikipedia-incremental}{{37}{79}{\label {fig:wikipedia-incremental} Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant\relax }{figure.0.37}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces  Wikipedia comparsion - depicting differences between revision 73 and 74}}{80}{figure.0.38}}
-\newlabel{fig:wikipedia-rev7374}{{38}{80}{\label {fig:wikipedia-rev7374} Wikipedia comparsion - depicting differences between revision 73 and 74\relax }{figure.0.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces  Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order.}}{81}{figure.0.39}}
-\newlabel{fig:wikipedia-smallmultiple-incremental}{{39}{81}{\label {fig:wikipedia-smallmultiple-incremental} Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order}{figure.0.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces  FSML comparsion on the GUI src-folder}}{82}{figure.0.40}}
-\newlabel{fig:fsml-gui}{{40}{82}{\label {fig:fsml-gui} FSML comparsion on the GUI src-folder\relax }{figure.0.40}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}FSML structure}{82}{lstlisting.0.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces  FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes}}{83}{figure.0.41}}
-\newlabel{fig:fsml-gui-fulldiff}{{41}{83}{\label {fig:fsml-gui-fulldiff} FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes\relax }{figure.0.41}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces  FSML comparsion of "/home/johannes/Desktop"}}{84}{figure.0.42}}
-\newlabel{fig:fsml-itemsize-pruning}{{42}{84}{\label {fig:fsml-itemsize-pruning} FSML comparsion of "/home/johannes/Desktop"\relax }{figure.0.42}{}}
-\newlabel{lst:fsml}{{5.4}{84}{Import of Filesystem-based tree-structure\relax }{lstnumber.4.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces  FSML comparsion of "/home/johannes/Desktop" pruned by same hashes}}{85}{figure.0.43}}
-\newlabel{fig:fsml-pruned-by-samehashes}{{43}{85}{\label {fig:fsml-pruned-by-samehashes} FSML comparsion of "/home/johannes/Desktop" pruned by same hashes\relax }{figure.0.43}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Summary}{85}{subsection.0.5.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces  FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)}}{86}{figure.0.44}}
-\newlabel{fig:fsml-smallmultiples-incremental}{{44}{86}{\label {fig:fsml-smallmultiples-incremental} FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)\relax }{figure.0.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces  Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant}}{72}{figure.0.33}}
+\newlabel{fig:wikipedia-incremental}{{33}{72}{\label {fig:wikipedia-incremental} Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant\relax }{figure.0.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{72}{subsection.0.5.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces  Wikipedia comparsion - depicting differences between revision 73 and 74}}{73}{figure.0.34}}
+\newlabel{fig:wikipedia-rev7374}{{34}{73}{\label {fig:wikipedia-rev7374} Wikipedia comparsion - depicting differences between revision 73 and 74\relax }{figure.0.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces  Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order.}}{74}{figure.0.35}}
+\newlabel{fig:wikipedia-smallmultiple-incremental}{{35}{74}{\label {fig:wikipedia-smallmultiple-incremental} Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order}{figure.0.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces  FSML comparsion on the GUI src-folder}}{75}{figure.0.36}}
+\newlabel{fig:fsml-gui}{{36}{75}{\label {fig:fsml-gui} FSML comparsion on the GUI src-folder\relax }{figure.0.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces  FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes}}{76}{figure.0.37}}
+\newlabel{fig:fsml-gui-fulldiff}{{37}{76}{\label {fig:fsml-gui-fulldiff} FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes\relax }{figure.0.37}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}FSML structure}{76}{lstlisting.0.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces  FSML comparsion of "/home/johannes/Desktop"}}{77}{figure.0.38}}
+\newlabel{fig:fsml-itemsize-pruning}{{38}{77}{\label {fig:fsml-itemsize-pruning} FSML comparsion of "/home/johannes/Desktop"\relax }{figure.0.38}{}}
+\newlabel{lst:fsml}{{5.4}{77}{Import of Filesystem-based tree-structure\relax }{lstnumber.3.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces  FSML comparsion of "/home/johannes/Desktop" pruned by same hashes}}{78}{figure.0.39}}
+\newlabel{fig:fsml-pruned-by-samehashes}{{39}{78}{\label {fig:fsml-pruned-by-samehashes} FSML comparsion of "/home/johannes/Desktop" pruned by same hashes\relax }{figure.0.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces  FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)}}{79}{figure.0.40}}
+\newlabel{fig:fsml-smallmultiples-incremental}{{40}{79}{\label {fig:fsml-smallmultiples-incremental} FSML comparsion of "/home/johannes/Desktop" (SmallMultiples incremental view)\relax }{figure.0.40}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Summary}{79}{subsection.0.5.5}}
 \citation{tu2007visualizing}
 \citation{telea2008code}
 \citation{munzner2003treejuxtaposer}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{87}{section.0.6}}
-\newlabel{sec::discussion}{{6}{87}{Discussion\relax }{section.0.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Introduction}{87}{subsection.0.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Evaluation Criteria}{88}{subsection.0.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{81}{section.0.6}}
+\newlabel{sec::discussion}{{6}{81}{Discussion\relax }{section.0.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Introduction}{81}{subsection.0.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Evaluation Criteria}{82}{subsection.0.6.2}}
 \citation{tu2007visualizing}
 \citation{munzner2003treejuxtaposer}
 \citation{telea2008code}
-\@writefile{tdo}{\contentsline {todo}{{\color@box {}{orange}{\leavevmode {\color  {orange}\relax \fontsize  {5}{6}\selectfont  i}} Nochmal Tabelle mit Vergleich zu allen anderen im related work kapitel beschriebenen visualisierungen}}{90}{section*.39}}
-\pgfsyspdfmark {pgfid1}{9848094}{35884451}
-\pgfsyspdfmark {pgfid2}{5178654}{38172295}
-\pgfsyspdfmark {pgfid3}{8111390}{35672825}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Summary, Conclusion and Future Research}{91}{section.0.7}}
-\newlabel{sec::conclusion}{{7}{91}{Summary, Conclusion and Future Research\relax }{section.0.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Summary}{91}{subsection.0.7.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Conclusion}{92}{subsection.0.7.2}}
+\@writefile{tdo}{\contentsline {todo}{{\color@box {}{orange}{\leavevmode {\color  {orange}\relax \fontsize  {5}{6}\selectfont  i}} Nochmal Tabelle mit Vergleich zu allen anderen im related work kapitel beschriebenen visualisierungen}}{84}{section*.39}}
+\pgfsyspdfmark {pgfid1}{9848094}{38243747}
+\pgfsyspdfmark {pgfid2}{5178654}{40531591}
+\pgfsyspdfmark {pgfid3}{8111390}{38032121}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Summary, Conclusion and Future Research}{85}{section.0.7}}
+\newlabel{sec::conclusion}{{7}{85}{Summary, Conclusion and Future Research\relax }{section.0.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Summary}{85}{subsection.0.7.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Conclusion}{86}{subsection.0.7.2}}
 \citation{Brackit}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Future Research}{93}{subsection.0.7.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Treetank}{95}{section..1}}
-\newlabel{sec::treetank}{{A}{95}{Treetank\relax }{section..1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Persistent storage enhancements}{95}{subsection..1.1}}
-\newlabel{subsec::storage}{{A.1}{95}{Persistent storage enhancements\relax }{subsection..1.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}ACID properties}{95}{subsection..1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Axis}{96}{subsection..1.3}}
-\newlabel{subsubsec::levelorderaxis}{{A.3}{96}{Levelorder-Axis\relax }{section*.40}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Levelorder-Axis}{96}{section*.40}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Edit operations}{96}{subsection..1.4}}
-\newlabel{subsec::operations}{{A.4}{96}{Edit operations\relax }{subsection..1.4}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {9}{\ignorespaces LevelOrderAxis (hasNext())}}{97}{algocfline.9}}
-\newlabel{levelOrderAxis}{{9}{97}{Levelorder-Axis\relax }{algocfline.9}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {10}{\ignorespaces visitNode(TextNode pNode))}}{98}{algocfline.10}}
-\newlabel{visitTextNode}{{10}{98}{Edit operations\relax }{algocfline.10}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {11}{\ignorespaces visitNode(ElementNode pNode))}}{99}{algocfline.11}}
-\newlabel{visitElementNode}{{11}{99}{Edit operations\relax }{algocfline.11}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {12}{\ignorespaces insertNextNode()}}{99}{algocfline.12}}
-\newlabel{insertNextNode}{{12}{99}{Edit operations\relax }{algocfline.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Visitor implementation}{101}{subsection..1.5}}
-\newlabel{subsec::visitor}{{A.5}{101}{Visitor implementation\relax }{subsection..1.5}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {13}{\ignorespaces FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}}{103}{algocfline.13}}
-\newlabel{visitElementNode}{{13}{103}{Visitor implementation\relax }{algocfline.13}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {14}{\ignorespaces FMSEDeleteVisitor: delete(pWtx, pNode)}}{104}{algocfline.14}}
-\newlabel{deleteNode}{{14}{104}{Visitor implementation\relax }{algocfline.14}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Acknowledgements}{105}{section..2}}
-\@writefile{tdo}{\contentsline {todo}{{\color@box {}{orange}{\leavevmode {\color  {orange}\relax \fontsize  {5}{6}\selectfont  i}} FERTIG MACHEN}}{105}{section*.41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Future Research}{87}{subsection.0.7.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Treetank}{89}{section..1}}
+\newlabel{sec::treetank}{{A}{89}{Treetank\relax }{section..1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Persistent storage enhancements}{89}{subsection..1.1}}
+\newlabel{subsec::storage}{{A.1}{89}{Persistent storage enhancements\relax }{subsection..1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}ACID properties}{89}{subsection..1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Axis}{90}{subsection..1.3}}
+\newlabel{subsubsec::levelorderaxis}{{A.3}{90}{Levelorder-Axis\relax }{section*.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Levelorder-Axis}{90}{section*.40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Edit operations}{90}{subsection..1.4}}
+\newlabel{subsec::operations}{{A.4}{90}{Edit operations\relax }{subsection..1.4}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {7}{\ignorespaces LevelOrderAxis (hasNext())}}{91}{algocfline.7}}
+\newlabel{levelOrderAxis}{{7}{91}{Levelorder-Axis\relax }{algocfline.7}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {8}{\ignorespaces visitNode(TextNode pNode))}}{92}{algocfline.8}}
+\newlabel{visitTextNode}{{8}{92}{Edit operations\relax }{algocfline.8}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {9}{\ignorespaces visitNode(ElementNode pNode))}}{93}{algocfline.9}}
+\newlabel{visitElementNode}{{9}{93}{Edit operations\relax }{algocfline.9}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {10}{\ignorespaces insertNextNode()}}{93}{algocfline.10}}
+\newlabel{insertNextNode}{{10}{93}{Edit operations\relax }{algocfline.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Visitor implementation}{94}{subsection..1.5}}
+\newlabel{subsec::visitor}{{A.5}{94}{Visitor implementation\relax }{subsection..1.5}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {11}{\ignorespaces FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}}{95}{algocfline.11}}
+\newlabel{visitElementNode}{{11}{95}{Visitor implementation\relax }{algocfline.11}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {12}{\ignorespaces FMSEDeleteVisitor: delete(pWtx, pNode)}}{96}{algocfline.12}}
+\newlabel{deleteNode}{{12}{96}{Visitor implementation\relax }{algocfline.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}XSLT stylesheet to combine consecutive pages/revisions}{97}{section..2}}
+\newlabel{sec::xslt}{{B}{97}{XSLT stylesheet to combine consecutive pages/revisions\relax }{section..2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}XSLT stylesheet to combine consecutive pages/revisions}{97}{lstlisting..4}}
+\newlabel{combine}{{B}{97}{XSLT stylesheet to combine consecutive pages/revisions\relax }{lstnumber.4.31}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Acknowledgements}{99}{section..3}}
+\@writefile{tdo}{\contentsline {todo}{{\color@box {}{orange}{\leavevmode {\color  {orange}\relax \fontsize  {5}{6}\selectfont  i}} FERTIG MACHEN}}{99}{section*.41}}
 \pgfsyspdfmark {pgfid6}{27237919}{43617699}
 \pgfsyspdfmark {pgfid9}{35267774}{44265322}
 \pgfsyspdfmark {pgfid10}{38200510}{43406073}
@@ -319,30 +313,33 @@
 \bibcite{MOORE}{2}
 \bibcite{VISUAL_ANALYTICS}{3}
 \bibcite{ANSCOMBE}{4}
-\bibcite{XMark}{5}
-\bibcite{ronnau2009efficient}{6}
-\bibcite{DELTAXML}{7}
-\bibcite{cobena2002detecting}{8}
-\bibcite{tai1979tree}{9}
-\bibcite{chawathe1996change}{10}
-\bibcite{lindholm2006fast}{11}
-\bibcite{wang2003x}{12}
-\bibcite{cobena2002comparative}{13}
-\bibcite{theron2006hierarchical}{14}
-\bibcite{bremm2011interactive}{15}
-\bibcite{tu2007visualizing}{16}
-\bibcite{bruls2000squarified}{17}
-\bibcite{munzner2003treejuxtaposer}{18}
-\bibcite{telea2008code}{19}
-\bibcite{ishihara2006ripple}{20}
-\bibcite{xmldiff}{21}
-\bibcite{diffxml}{22}
-\bibcite{docbook}{23}
-\bibcite{BASEX}{24}
-\bibcite{Brackit}{25}
-\bibcite{Bundles}{26}
-\bibcite{FSML}{27}
-\bibcite{LFG}{28}
-\bibcite{WikiDump}{29}
-\bibcite{Wiki2XML}{30}
-\@writefile{toc}{\contentsline {section}{References}{107}{section*.42}}
+\bibcite{TREETANK}{5}
+\bibcite{XMark}{6}
+\bibcite{ronnau2009efficient}{7}
+\bibcite{DELTAXML}{8}
+\bibcite{cobena2002detecting}{9}
+\bibcite{tai1979tree}{10}
+\bibcite{chawathe1996change}{11}
+\bibcite{lindholm2006fast}{12}
+\bibcite{wang2003x}{13}
+\bibcite{cobena2002comparative}{14}
+\bibcite{theron2006hierarchical}{15}
+\bibcite{bremm2011interactive}{16}
+\bibcite{tu2007visualizing}{17}
+\bibcite{bruls2000squarified}{18}
+\bibcite{munzner2003treejuxtaposer}{19}
+\bibcite{telea2008code}{20}
+\bibcite{ishihara2006ripple}{21}
+\bibcite{xmldiff}{22}
+\bibcite{diffxml}{23}
+\bibcite{Rolling2011}{24}
+\bibcite{Integrity2010}{25}
+\bibcite{docbook}{26}
+\bibcite{BASEX}{27}
+\bibcite{Brackit}{28}
+\bibcite{Bundles}{29}
+\bibcite{FSML}{30}
+\bibcite{LFG}{31}
+\bibcite{WikiDump}{32}
+\bibcite{Wiki2XML}{33}
+\@writefile{toc}{\contentsline {section}{References}{101}{section*.42}}

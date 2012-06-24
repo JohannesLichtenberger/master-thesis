@@ -171,52 +171,52 @@ mInsert $\leftarrow$ EInsert.ASNONSTRUCTURAL\;
 \caption{insertNextNode()}\label{insertNextNode}
 \end{algorithm}
 
-The \texttt{move-} operation just like the \texttt{copy-} operation is implemented in three different versions, \texttt{moveSubtreeToFirstChild(long)}, \\\texttt{moveSubtreeToRightSibling(long)} and \texttt{moveSubtreeToLeftSibling(long)}. The third operation is a simple wrapper for the other two, depending on the fact if a left sibling of the current node exists or not. The only parameter is the unique node ID of a node to move along with its descendants. Adjacent text-node merging adds a lot of complexity which affects the childCount and descendantCount of both the old parent node before moving a subtree and the new parent after moving. The move-operations preserve the unique node-ID and therefore are not atomic wrappers for delete- and  subsequent insert-operations or vice versa.
+The \texttt{move-} operation just like the \texttt{copy-} operation is implemented in three different versions, \texttt{moveSubtreeToFirstChild(long)}, \\\texttt{moveSubtreeToRightSibling(long)} and \texttt{moveSubtreeToLeftSibling(long)}. Details are omitted, however the new constraint that at no time no adjacency text nodes are allowed as well as keeping the child-count of parent nodes and the descendant-count of ancestor nodes before and after a move consistent adds a lot of complexity. %The third operation is a simple wrapper for the other two, depending on the fact if a left sibling of the current node exists or not. The only parameter is the unique node ID of a node to move along with its descendants. Adjacent text-node merging adds a lot of complexity which affects the childCount and descendantCount of both the old parent node before moving a subtree and the new parent after moving. The move-operations preserve the unique node-ID and therefore are not atomic wrappers for delete- and  subsequent insert-operations or vice versa.
 
-We examine both operations independently as they require different node manipulations of neighbour nodes including the new and old parent node and the first child node. Both operations are defined in terms of moving structural- and non-structural nodes (the latter in subtrees of the moved node), whereas the root-node to move must be a structural node.
+%We examine both operations independently as they require different node manipulations of neighbour nodes including the new and old parent node and the first child node. Both operations are defined in terms of moving structural- and non-structural nodes (the latter in subtrees of the moved node), whereas the root-node to move must be a structural node.
 
-First, the following constraints are checked:
+%First, the following constraints are checked:
 
-\begin{itemize}
-\item The node/subtree to move must be an \texttt{element}- or a \texttt{text}-node.
-\item It is not permitted to move a node to one of its descendants which would introduce , therefore it is checked if the node to move is one of the ancestors of the anchor node.
-\end{itemize}
+%\begin{itemize}
+%\item The node/subtree to move must be an \texttt{element}- or a \texttt{text}-node.
+%\item It is not permitted to move a node to one of its descendants which would introduce , therefore it is checked if the node to move is one of the ancestors of the anchor node.
+%\end{itemize}
 
-The two operation require the following node manipulations. The location the node is moved away is subject to the following changes:
-\begin{itemize}
-\item In case of \texttt{moveSubtreeToFirstChild(long)}: Parent node must point to the right sibling node key of the current node if it was the first child.
-\item Decrement child count of parent node.
-\item Collapse text nodes if both the left- and right- sibling are text nodes, therefore remove the right node and append its value to the left sibling. Furthermore adapt its right sibling pointer to the former right sibling of the right sibling text node which has been deleted.
-\item If no text node collapsing involved: adapt right sibling key of former left sibling to the right sibling key of the moved node provided one exists.
-\item If no text node collapsing involved: adapt left sibling key of former right sibling to the left sibling key of the moved node provided one exists.
-\end{itemize}
+%The two operation require the following node manipulations. The location the node is moved away is subject to the following changes:
+%\begin{itemize}
+%\item In case of \texttt{moveSubtreeToFirstChild(long)}: Parent node must point to the right sibling node key of the current node if it was the first child.
+%\item Decrement child count of parent node.
+%\item Collapse text nodes if both the left- and right- sibling are text nodes, therefore remove the right node and append its value to the left sibling. Furthermore adapt its right sibling pointer to the former right sibling of the right sibling text node which has been deleted.
+%\item If no text node collapsing involved: adapt right sibling key of former left sibling to the right sibling key of the moved node provided one exists.
+%\item If no text node collapsing involved: adapt left sibling key of former right sibling to the left sibling key of the moved node provided one exists.
+%\end{itemize}
 
-The node to which the new subtree is inserted is subject to the following changes. \\
-In case of \texttt{moveSubtreeToFirstChild(long)}:
-\begin{itemize}
-\item Increment the child counter of the node to which the new subtree is inserted.
-\item Adapt the first child key of the node to which this node is inserted to point to the new node.
-\item Adapt the left sibling pointer of the former first child to the root node of the inserted subtree.
-\end{itemize}
+%The node to which the new subtree is inserted is subject to the following changes. \\
+%In case of \texttt{moveSubtreeToFirstChild(long)}:
+%\begin{itemize}
+%\item Increment the child counter of the node to which the new subtree is inserted.
+%\item Adapt the first child key of the node to which this node is inserted to point to the new node.
+%\item Adapt the left sibling pointer of the former first child to the root node of the inserted subtree.
+%\end{itemize}
 
-In case of \texttt{moveSubtreeToRightSibling(long)}:
-\begin{itemize}
-\item Increment the child counter of the parent node.
-\item Adapt the right sibling key to the nodeKey of the moved node.
-\end{itemize}
+%In case of \texttt{moveSubtreeToRightSibling(long)}:
+%\begin{itemize}
+%\item Increment the child counter of the parent node.
+%\item Adapt the right sibling key to the nodeKey of the moved node.
+%\end{itemize}
 
-The node which is moved is changed in the following ways. \\In case of \texttt{moveSubtreeToFirstChild(long)}:
-\begin{itemize}
-\item Adapt the left sibling pointer to \texttt{NULL\_NODE\_KEY}.
-\item Adapt the right sibling pointer to the former first child of the node to which this node is inserted or \texttt{NULL\_NODE\_KEY} if there was not one.
-\item Adapt the parent pointer to point to the node to which this node is inserted.
-\end{itemize}
+%The node which is moved is changed in the following ways. \\In case of \texttt{moveSubtreeToFirstChild(long)}:
+%\begin{itemize}
+%\item Adapt the left sibling pointer to \texttt{NULL\_NODE\_KEY}.
+%\item Adapt the right sibling pointer to the former first child of the node to which this node is inserted or \texttt{NULL\_NODE\_KEY} if there was not one.
+%\item Adapt the parent pointer to point to the node to which this node is inserted.
+%\end{itemize}
 
-In case of \texttt{moveSubtreeToRightSibling(long)}:
-\begin{itemize}
-\item Adapt the left sibling pointer to the nodeKey of the node where this node is inserted.
-\item Adapt the right sibling pointer to the right sibling key of the node where this node is inserted.
-\end{itemize}
+%In case of \texttt{moveSubtreeToRightSibling(long)}:
+%\begin{itemize}
+%\item Adapt the left sibling pointer to the nodeKey of the node where this node is inserted.
+%\item Adapt the right sibling pointer to the right sibling key of the node where this node is inserted.
+%\end{itemize}
 
 The implementation of the replace-operation is straigth forward using a delete- followed by an insert-operation chaining the two to provide an atomic operation.
 
@@ -225,7 +225,7 @@ Besides, the \texttt{remove}-operation has been modified to merge adjacent \text
 Furthermore a new bulk-insertion method supports the fast insertion of subtrees based on a component which already existed. Hashes are computed in a subsequent postorder traversal of the inserted subtree thus reducing the runtime from $O(n^2)$ to $O(n)$.
 
 \subsection{Visitor implementation}\label{subsec::visitor}
-The axis executes a visitor specific implementation for each visited node. The return value of the methods the visitor has to implement (a visitor specific implementation for each node-type) guides the traversal in the axis. The following result types are currently available:
+A special \texttt{VisitorDescendantAxis} executes a visitor specific implementation for each visited node before moving to the next node in preorder. The return value of the methods a visitor has to implement (a visitor specific implementation for each node-type) guides the traversal in the axis. The following result types are currently available:
 
 \begin{itemize}
 \item \texttt{EVisitResult.TERMINATE}, terminates the traversal of the (sub)tree immediately and returns false for upcoming \texttt{hasNext()} calls.
@@ -235,7 +235,7 @@ The axis executes a visitor specific implementation for each visited node. The r
 \item \texttt{EVisitResult.POPSKIPSIBLINGS}, is a special type which signals that the element on top of the internal right sibling stack must be popped, which is needed to implement for instance the deletion-visitor for the second FMSE-step.
 \end{itemize}
 
-An implementation must implement a method \texttt{EVisitResult visiNode(NodeType pNode)} for each node type. The deletion-visitor implementation of the method \texttt{EVisitResult visitNode(ElementNode pNode)} is described in algorithm \ref{visitElementNode}. Note that all \texttt{attribute}- and \texttt{namespace}-nodes, which are going to be deleted, must be temporally saved in a sequence. Afterwards they have to be deleted through a sequence traversal. If the nodes instead are deleted in place the \texttt{attribute}- and/or \texttt{namespace}-counter of the parent \texttt{element}-node is decreased immediately and possibly unmatched nodes with the highest index(es) are not going to be deleted. The \texttt{delete(INode)} method described in \ref{deleteNode} deletes the element node along with all its \texttt{attribute}- and \texttt{namespace}-nodes as well as its subtree. During the removal of a structural node (\texttt{element}- or \texttt{text}- node) and its subtree the transaction is either moved to the right sibling of the deleted node, to the left sibling or to the parent, if it exists in the order described. Note that the parent must exist. Treetank moves the transaction either to the right-sibling of the current node to delete if it exists, to the left-sibling if it exists or to the parent node in the given order. For the simple reason that the  transaction is moved to the next node in preorder after invoking the visitor which actually deletes a node, the transaction must be moved to the last node in the \texttt{previous::} axis. Otherwise it will be moved by the remove-operation in the first place \emph{and} the axis subsequently. The \texttt{VisitorDescendantAxis} moves the transaction to the next node in preorder afterwards. The movement is determined and executed after the deletion of the \texttt{element}-node in the method \texttt{delete(pWtx, pNode)} outlined in algorithm \ref{deleteNode}.
+An implementation must implement a method \\\texttt{EVisitResult visiNode(NodeType pNode)} for each node type. The deletion-visitor implementation of the method \texttt{EVisitResult visitNode(ElementNode pNode)} is described in algorithm \ref{visitElementNode}. Note that all \texttt{attribute}- and \texttt{namespace}-nodes, which are going to be deleted, must be temporally saved in a sequence. Afterwards they have to be deleted through a sequence traversal. If the nodes instead are deleted in place the \texttt{attribute}- and/or \texttt{namespace}-counter of the parent \texttt{element}-node is decreased immediately and possibly unmatched nodes with the highest index(es) are not going to be deleted. The \texttt{delete(INode)} method described in \ref{deleteNode} deletes the element node along with all its \texttt{attribute}- and \texttt{namespace}-nodes as well as its subtree. During the removal of a structural node (\texttt{element}- or \texttt{text}- node) and its subtree the transaction is either moved to the right sibling of the deleted node, to the left sibling or to the parent, if it exists in the order described. Note that the parent must exist. Treetank moves the transaction either to the right-sibling of the current node to delete if it exists, to the left-sibling if it exists or to the parent node in the given order. For the simple reason that the  transaction is moved to the next node in preorder after invoking the visitor which actually deletes a node, the transaction must be moved to the last node in the \texttt{previous::} axis. Otherwise it will be moved by the remove-operation in the first place \emph{and} the axis subsequently. The \texttt{VisitorDescendantAxis} moves the transaction to the next node in preorder afterwards. The movement is determined and executed after the deletion of the \texttt{element}-node in the method \texttt{delete(pWtx, pNode)} outlined in algorithm \ref{deleteNode}.
 
 \begin{algorithm}[Hhtbp]
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
