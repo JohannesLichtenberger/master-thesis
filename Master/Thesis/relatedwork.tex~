@@ -30,7 +30,7 @@ Our Visual Analytics pipline is largely influenced by the proposal of Keim et al
 \caption{\label{fig:visualanalyticsprocess} Visual Analytics Process proposed by Keim et al. Presented in \cite{keim2008visual}.}
 \end{figure}
 
-%Chapter \ref{sec::differences} describes the addition of new edit-operations in Treetank and two types of diff-algorithms. These fundamental to analytical reasoning and therefore denote Data Mining methods in Fig. \ref{fig:visualanalyticsprocess}. Models underlying the different views are built based on the output of the the difference-algorithms and thus represent directly the model entity in Fig. \ref{fig:visualanalyticsprocess}. Visualizations (Chapter \ref{sec::visualizations} receive user input and build models through invocation of an ID-based diff algorithm. Parameter changes in the GUI of our main visualization, a Sunburst view tailored to tree-structure comparisons, influence and change the models and in turn change the visualizations according to their output. However user interaction might change visualization(s) without having any impact on the model(s).
+%Chapter \ref{sec::differences} describes the addition of new edit-operations in Treetank and two types of diff-algorithms. These fundamental to analytical reasoning and therefore denote Data Mining methods in Fig. \ref{fig:visualanalyticsprocess}. Models underlying the different views are built based on the output of the the difference-algorithms and thus represent directly the model entity in Fig. \ref{fig:visualanalyticsprocess}. Visualizations (Chapter \ref{sec::visualizations} receive user input and build models through invocation of an ID-based diff algorithm. Parameter changes in the GUI of our main visualization, a Sunburst view tailored to tree-structure comparisons, influence and change the models and in turn change the visualizations according to their output. However user interaction t havet change visualization(s) without having any impact on the model(s).
 
 Comparing tree-structures by a Visual Analytics approach requires analytical reasoning through the computation of differences in the first place. In order to support large tree-structures we decided to use a treebased storage system.
 
@@ -58,13 +58,13 @@ A rooted \textbf{tree-structure} is an acyclic connected graph, which starts wit
 A rooted, ordered, labeled tree is a tree-structure which extends the rooted tree-definition by defining a specific order for child nodes (that is extending the parent/child edge relation E) and a label for each node. Furthermore each node has a label. Thus T is an ordered, labeled, tree if $T = (N, E, root(T), \Lambda(n) \in \Sigma)$. $\Sigma$ is a finite alphabet and $n$ is a node in the tree.
 \end{mydef}
 
-Thus a tree is more restricted than a hierarchy based on a directed acyclic graph (DAG) in which every node except the root\footnote{which has no parent} might have one or more parent nodes.
+Thus a tree is more restricted than a hierarchy based on a directed acyclic graph (DAG) in which every node except the root\footnote{which has no parent} has one or more parent nodes.
 
 Many algorithms have been developed to determine differences in tree-structures for instance to provide deltas, which represent a compact version of the changes to the original document.
 
 Next, some essential terms are defined to set the stage for the upcoming sections.
 
-The tree-to-tree correction problem tries to transform a source tree into a destination tree by edit-operations. 
+The tree-to-tree correction problem is to determine a (minimal) sequence or set of edit-operations to transform a source tree into a destination tree. 
 
 \begin{mydef}
 An edit-operation is an atomar operation which changes a tree.
@@ -334,7 +334,7 @@ Most of the visualizations are tailored to specific tasks and are only partly us
 \end{tabular}
 \label{chap2:comparsion}
 \vspace{0.5em} 
-\caption{Comparsion of tree-to-tree differences visualizations, whereas "-" is used to indicate the absence of an attribute and "+" to "+++" implies how good or bad the attribute is supported.}
+\caption{Comparsion of tree-to-tree differences visualizations. "-" indicates the absence of an attribute, "+" to "+++" implies how well or bad the attribute is supported.}
 \end{table}
 
 

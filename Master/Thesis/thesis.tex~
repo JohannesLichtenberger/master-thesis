@@ -30,6 +30,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{tocbibind}
 \usepackage{graphicx}			% graphics, of course
+\usepackage{subfigure}
 \usepackage{color}                      % to define colors
 \usepackage{amsmath, amssymb}		% math symbols for sets etc
 \usepackage{multirow}			% for table and tabular, allows multirows and cols
