@@ -6,7 +6,7 @@
 \contentsline {subsubsection}{Comparison of tree-structures}{1}{section*.6}
 \contentsline {subsection}{\numberline {1.2}Problem Statement}{2}{subsection.0.1.2}
 \contentsline {subsection}{\numberline {1.3}Approach}{2}{subsection.0.1.3}
-\contentsline {subsubsection}{Value of visualizations}{3}{section*.7}
+\contentsline {subsubsection}{Value of visualizations}{2}{section*.7}
 \contentsline {subsubsection}{Generalization and refinement of our research task}{3}{section*.8}
 \contentsline {subsection}{\numberline {1.4}Contributions}{3}{subsection.0.1.4}
 \contentsline {subsection}{\numberline {1.5}Conventions}{4}{subsection.0.1.5}

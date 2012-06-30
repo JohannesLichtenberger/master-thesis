@@ -1,4 +1,4 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Diff example illustrating the deficiencies of line by line character based diff tools}}{2}{figure.0.1}
+\contentsline {figure}{\numberline {1}{\ignorespaces GVim diff of two XML-document revisions illustrating the deficiencies of line by line character based diff-tools.}}{2}{figure.0.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}.}}{6}{figure.0.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Importing differences encountered through the FMSE ID-based diffing-algorithm.}}{16}{figure.0.3}
 \contentsline {figure}{\numberline {4}{\ignorespaces Deletion visitor; two variants are depicted if the node to removed has a left- and a right-sibling. Either both sibling nodes are \texttt {TextNode}s as is the case for node 4 or not (node 10)}}{19}{figure.0.4}
@@ -16,7 +16,7 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces XPath query results displayed in light green}}{41}{figure.0.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces SunburstView - comparison mode.}}{43}{figure.0.15}
 \contentsline {figure}{\numberline {16}{\ignorespaces SunburstCompare-Axis based on the Sunburst-Axis}}{44}{figure.0.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled "unchanged nodes" are unchanged whereas the area between the rectangle named "changed subtrees" includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{47}{figure.0.17}
+\contentsline {figure}{\numberline {17}{\ignorespaces Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled ``unchanged nodes'' are unchanged whereas the area between the rectangle named ``changed subtrees'' and ``unchanged nodes'' includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{47}{figure.0.17}
 \contentsline {figure}{\numberline {18}{\ignorespaces Comparison without pruning.}}{50}{figure.0.18}
 \contentsline {figure}{\numberline {19}{\ignorespaces Pruned by itemsize.}}{51}{figure.0.19}
 \contentsline {figure}{\numberline {20}{\ignorespaces Pruned by same hashes.}}{52}{figure.0.20}
