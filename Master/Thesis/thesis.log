@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  30 JUN 2012 12:05
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  30 JUN 2012 15:22
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -862,12 +862,12 @@ l.201 \newpage
  [7] [8
 
 ] (./introduction.tex
-<figures/gvimdiff.png, id=490, 981.6675pt x 224.84pt>
+<figures/gvimdiff.png, id=491, 981.6675pt x 224.84pt>
 File: figures/gvimdiff.png Graphic file (type png)
 
 <use figures/gvimdiff.png> [1] [2 <./figures/gvimdiff.png>] [3]) [4]
 (./relatedwork.tex
-<figures/visualanalyticsprocess.png, id=528, 379.4175pt x 216.05719pt>
+<figures/visualanalyticsprocess.png, id=529, 379.4175pt x 216.05719pt>
 File: figures/visualanalyticsprocess.png Graphic file (type png)
 
 <use figures/visualanalyticsprocess.png>
@@ -927,17 +927,17 @@ LaTeX Warning: Reference `telea2008code' on page 14 undefined on input line 293
 .
 
 ) [14] (./differences.tex
-<figures/importdata.pdf, id=653, 577.15625pt x 366.36874pt>
+<figures/importdata.pdf, id=654, 577.15625pt x 366.36874pt>
 File: figures/importdata.pdf Graphic file (type pdf)
 
 <use figures/importdata.pdf> [15
 
 ] [16 <./figures/importdata.pdf>] [17]
-<figures/deletionvisitor.pdf, id=695, 541.02126pt x 334.24875pt>
+<figures/deletionvisitor.pdf, id=696, 553.06625pt x 334.24875pt>
 File: figures/deletionvisitor.pdf Graphic file (type pdf)
 
 <use figures/deletionvisitor.pdf> [18] [19 <./figures/deletionvisitor.pdf>]
-[20] [21] <figures/id-diff.pdf, id=737, 541.02126pt x 492.84125pt>
+[20] [21] <figures/id-diff.pdf, id=738, 541.02126pt x 445.665pt>
 File: figures/id-diff.pdf Graphic file (type pdf)
 
 <use figures/id-diff.pdf>
@@ -959,7 +959,7 @@ Underfull \hbox (badness 10000) detected at line 307
  []
 
 
-Underfull \vbox (badness 1874) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
 Overfull \hbox (14.12717pt too wide) in paragraph at lines 312--313
@@ -967,15 +967,15 @@ Overfull \hbox (14.12717pt too wide) in paragraph at lines 312--313
 nt sizes with scaled modification-
  []
 
-<figures/100MB-scaling.pdf, id=840, 466.74374pt x 318.18875pt>
+<figures/100MB-scaling.pdf, id=841, 466.74374pt x 318.18875pt>
 File: figures/100MB-scaling.pdf Graphic file (type pdf)
 
 <use figures/100MB-scaling.pdf>
-<figures/diff-docsize-scale.pdf, id=844, 454.69875pt x 253.94875pt>
+<figures/diff-docsize-scale.pdf, id=845, 454.69875pt x 253.94875pt>
 File: figures/diff-docsize-scale.pdf Graphic file (type pdf)
 
 <use figures/diff-docsize-scale.pdf> [27] [28 <./figures/100MB-scaling.pdf>]
-<figures/diff-docsize-scale-pruned.pdf, id=870, 466.74374pt x 253.94875pt>
+<figures/diff-docsize-scale-pruned.pdf, id=871, 466.74374pt x 253.94875pt>
 File: figures/diff-docsize-scale-pruned.pdf Graphic file (type pdf)
 
 <use figures/diff-docsize-scale-pruned.pdf> [29 <./figures/diff-docsize-scale.p
@@ -988,15 +988,15 @@ RT \OT1/cmr/m/n/10 com-bi-na-tions with the same node-IDs. Move
 [31] [32
 
 ] (./visualizations.tex [33]
-<figures/aggregation.pdf, id=914, 559.08875pt x 445.665pt>
+<figures/aggregation.pdf, id=915, 559.08875pt x 445.665pt>
 File: figures/aggregation.pdf Graphic file (type pdf)
 
 <use figures/aggregation.pdf> [34 <./figures/aggregation.pdf>]
-<figures/treetext.png, id=929, 1220.56pt x 910.40125pt>
+<figures/treetext.png, id=930, 1220.56pt x 910.40125pt>
 File: figures/treetext.png Graphic file (type png)
 
 <use figures/treetext.png>
-<figures/sunbursttextview-overview.png, id=931, 1522.68875pt x 910.40125pt>
+<figures/sunbursttextview-overview.png, id=932, 1522.68875pt x 910.40125pt>
 File: figures/sunbursttextview-overview.png Graphic file (type png)
 
 <use figures/sunbursttextview-overview.png> [35 <./figures/treetext.png>]
@@ -1004,28 +1004,28 @@ Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
 
 [36 <./figures/sunbursttextview-overview.png>]
-<figures/sunburstview-cut.png, id=949, 630.355pt x 672.5125pt>
+<figures/sunburstview-cut.png, id=950, 630.355pt x 672.5125pt>
 File: figures/sunburstview-cut.png Graphic file (type png)
 
 <use figures/sunburstview-cut.png> [37] [38 <./figures/sunburstview-cut.png>]
-<figures/fisheye.png, id=966, 1220.56pt x 910.40125pt>
+<figures/fisheye.png, id=967, 1220.56pt x 910.40125pt>
 File: figures/fisheye.png Graphic file (type png)
 
 <use figures/fisheye.png>
-<figures/zooming.png, id=967, 1220.56pt x 910.40125pt>
+<figures/zooming.png, id=968, 1220.56pt x 910.40125pt>
 File: figures/zooming.png Graphic file (type png)
 
 <use figures/zooming.png>
-<figures/sunburstxpathquery.png, id=969, 1220.56pt x 910.40125pt>
+<figures/sunburstxpathquery.png, id=970, 1220.56pt x 910.40125pt>
 File: figures/sunburstxpathquery.png Graphic file (type png)
 
 <use figures/sunburstxpathquery.png> [39] [40 <./figures/fisheye.png> <./figure
 s/zooming.png>] [41 <./figures/sunburstxpathquery.png>]
-<figures/sunburst.pdf, id=996, 565.11125pt x 508.90125pt>
+<figures/sunburst.pdf, id=997, 565.11125pt x 508.90125pt>
 File: figures/sunburst.pdf Graphic file (type pdf)
 
 <use figures/sunburst.pdf> [42] [43 <./figures/sunburst.pdf>]
-<figures/tree-axis.pdf, id=1016, 430.60875pt x 342.27875pt>
+<figures/tree-axis.pdf, id=1017, 430.60875pt x 342.27875pt>
 File: figures/tree-axis.pdf Graphic file (type pdf)
 
 <use figures/tree-axis.pdf>
@@ -1036,7 +1036,7 @@ Underfull \hbox (badness 10000) detected at line 268
 [][]
  []
 
-[45] <figures/sunburst-layout.pdf, id=1064, 553.06625pt x 484.81125pt>
+[45] <figures/sunburst-layout.pdf, id=1065, 553.06625pt x 484.81125pt>
 File: figures/sunburst-layout.pdf Graphic file (type pdf)
 
 <use figures/sunburst-layout.pdf>
@@ -1054,29 +1054,23 @@ from the \OT1/cmtt/m/n/10 subtree-size
 Underfull \vbox (badness 3803) has occurred while \output is active []
 
  [47 <./figures/sunburst-layout.pdf>]
-Underfull \hbox (badness 3271) in paragraph at lines 397--397
-[]\OT1/cmr/bx/n/10 Algorithm 6\OT1/cmr/m/n/10 : De-rives \OT1/cmtt/m/n/10 subtr
-ee-size \OT1/cmr/m/n/10 as well as the num-ber of
- []
-
-
 Underfull \hbox (badness 10000) detected at line 398
 [][]
  []
 
-<figures/without-pruning.png, id=1092, 961.5925pt x 859.21pt>
+<figures/without-pruning.png, id=1093, 961.5925pt x 859.21pt>
 File: figures/without-pruning.png Graphic file (type png)
 
 <use figures/without-pruning.png> [48]
-<figures/itemsize-pruned.png, id=1117, 911.405pt x 852.18375pt>
+<figures/itemsize-pruned.png, id=1118, 911.405pt x 852.18375pt>
 File: figures/itemsize-pruned.png Graphic file (type png)
 
 <use figures/itemsize-pruned.png> [49]
-<figures/diff-pruned.png, id=1149, 961.5925pt x 859.21pt>
+<figures/diff-pruned.png, id=1150, 961.5925pt x 859.21pt>
 File: figures/diff-pruned.png Graphic file (type png)
 
 <use figures/diff-pruned.png>
-<figures/diff-without-samehashes-pruned.png, id=1151, 906.38625pt x 839.135pt>
+<figures/diff-without-samehashes-pruned.png, id=1152, 906.38625pt x 839.135pt>
 File: figures/diff-without-samehashes-pruned.png Graphic file (type png)
 
 <use figures/diff-without-samehashes-pruned.png> [50 <./figures/without-pruning
@@ -1087,31 +1081,31 @@ Underfull \vbox (badness 1226) has occurred while \output is active []
 Underfull \vbox (badness 2376) has occurred while \output is active []
 
  [53 <./figures/diff-without-samehashes-pruned.png>] [54]
-<figures/moves-cut.png, id=1187, 701.62125pt x 702.625pt>
+<figures/moves-cut.png, id=1188, 701.62125pt x 702.625pt>
 File: figures/moves-cut.png Graphic file (type png)
 
 <use figures/moves-cut.png>
 Underfull \vbox (badness 1122) has occurred while \output is active []
 
  [55 <./figures/moves-cut.png>]
-<figures/smallmultiple-differential.png, id=1195, 1220.56pt x 910.40125pt>
+<figures/smallmultiple-differential.png, id=1196, 1220.56pt x 910.40125pt>
 File: figures/smallmultiple-differential.png Graphic file (type png)
 
 <use figures/smallmultiple-differential.png>
-<figures/smallmultiple-incremental.png, id=1197, 1220.56pt x 910.40125pt>
+<figures/smallmultiple-incremental.png, id=1198, 1220.56pt x 910.40125pt>
 File: figures/smallmultiple-incremental.png Graphic file (type png)
 
 <use figures/smallmultiple-incremental.png> [56 <./figures/smallmultiple-differ
 ential.png>]
-<figures/wikipedia-smallmultiples-hybrid.png, id=1203, 1220.56pt x 910.40125pt>
+<figures/wikipedia-smallmultiples-hybrid.png, id=1204, 1220.56pt x 910.40125pt>
 File: figures/wikipedia-smallmultiples-hybrid.png Graphic file (type png)
 <use figures/wikipedia-smallmultiples-hybrid.png> [57 <./figures/smallmultiple-
 incremental.png>] [58 <./figures/wikipedia-smallmultiples-hybrid.png>]
-<figures/gui-performance.pdf, id=1221, 466.74374pt x 246.9225pt>
+<figures/gui-performance.pdf, id=1222, 466.74374pt x 246.9225pt>
 File: figures/gui-performance.pdf Graphic file (type pdf)
 
 <use figures/gui-performance.pdf>
-<figures/gui-performance-movedet.pdf, id=1222, 454.69875pt x 253.94875pt>
+<figures/gui-performance-movedet.pdf, id=1223, 454.69875pt x 253.94875pt>
 File: figures/gui-performance-movedet.pdf Graphic file (type pdf)
 
 <use figures/gui-performance-movedet.pdf>
@@ -1132,7 +1126,7 @@ Overfull \hbox (1.12706pt too wide) in paragraph at lines 3--4
 dif-fer-ences in tree-structures.
  []
 
-<figures/lfg.png, id=1254, 1220.56pt x 910.40125pt>
+<figures/lfg.png, id=1255, 1220.56pt x 910.40125pt>
 File: figures/lfg.png Graphic file (type png)
  <use figures/lfg.png>
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
@@ -1144,7 +1138,7 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 32.
- [63] [64 <./figures/lfg.png>] <figures/linguistics.png, id=1289, 1206.5075pt x
+ [63] [64 <./figures/lfg.png>] <figures/linguistics.png, id=1290, 1206.5075pt x
  895.345pt>
 File: figures/linguistics.png Graphic file (type png)
 
@@ -1159,30 +1153,30 @@ Overfull \hbox (3.0438pt too wide) in paragraph at lines 127--128
 o this. In Hadoop
  []
 
-[67] [68] <figures/wikipedia-rev7071.png, id=1361, 1350.04375pt x 950.55125pt>
+[67] [68] <figures/wikipedia-rev7071.png, id=1362, 1350.04375pt x 950.55125pt>
 File: figures/wikipedia-rev7071.png Graphic file (type png)
 
 <use figures/wikipedia-rev7071.png>
-<figures/wikipedia-without-pruned-modifications.png, id=1363, 1350.04375pt x 95
+<figures/wikipedia-without-pruned-modifications.png, id=1364, 1350.04375pt x 95
 0.55125pt>
 File: figures/wikipedia-without-pruned-modifications.png Graphic file (type png
 )
  <use figures/wikipedia-without-pruned-modifications.png> [69 <./figures/wikipe
 dia-rev7071.png>]
-<figures/wikipedia-rev90106.png, id=1373, 1382.16376pt x 956.57375pt>
+<figures/wikipedia-rev90106.png, id=1374, 1382.16376pt x 956.57375pt>
 File: figures/wikipedia-rev90106.png Graphic file (type png)
 
 <use figures/wikipedia-rev90106.png> [70 <./figures/wikipedia-without-pruned-mo
 difications.png>]
-<figures/wikipedia-incremental.png, id=1381, 1206.5075pt x 895.345pt>
+<figures/wikipedia-incremental.png, id=1382, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental.png Graphic file (type png)
 
 <use figures/wikipedia-incremental.png>
-<figures/wikipedia-rev7374.png, id=1382, 1372.12625pt x 936.49875pt>
+<figures/wikipedia-rev7374.png, id=1383, 1372.12625pt x 936.49875pt>
 File: figures/wikipedia-rev7374.png Graphic file (type png)
 
 <use figures/wikipedia-rev7374.png>
-<figures/wikipedia-incremental-add.png, id=1384, 1206.5075pt x 895.345pt>
+<figures/wikipedia-incremental-add.png, id=1385, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental-add.png Graphic file (type png)
 
 <use figures/wikipedia-incremental-add.png>
@@ -1200,11 +1194,11 @@ Overfull \hbox (3.6751pt too wide) in paragraph at lines 235--236
  //element()[@st[]mode="0100664"] \OT1/cmr/m/n/10 high-lights
  []
 
-<figures/fsml-gui.png, id=1401, 1392.20125pt x 902.37125pt>
+<figures/fsml-gui.png, id=1402, 1392.20125pt x 902.37125pt>
 File: figures/fsml-gui.png Graphic file (type png)
 
 <use figures/fsml-gui.png> [73 <./figures/wikipedia-rev7374.png>]
-<figures/gui-fsml-fulldiff.png, id=1408, 1439.3775pt x 898.35625pt>
+<figures/gui-fsml-fulldiff.png, id=1409, 1439.3775pt x 898.35625pt>
 File: figures/gui-fsml-fulldiff.png Graphic file (type png)
 
 <use figures/gui-fsml-fulldiff.png>
@@ -1217,16 +1211,16 @@ Overfull \hbox (0.34926pt too wide) in paragraph at lines 302--303
 ate most of the strengths
  []
 
-<figures/fsml-changes-itemsize-pruning.png, id=1442, 1557.82pt x 895.345pt>
+<figures/fsml-changes-itemsize-pruning.png, id=1443, 1557.82pt x 895.345pt>
 File: figures/fsml-changes-itemsize-pruning.png Graphic file (type png)
 
 <use figures/fsml-changes-itemsize-pruning.png> [77 <./figures/fsml-changes-ite
 msize-pruning.png>]
-<figures/fsml-pruned-by-hashes.png, id=1463, 1304.875pt x 894.34125pt>
+<figures/fsml-pruned-by-hashes.png, id=1464, 1304.875pt x 894.34125pt>
 File: figures/fsml-pruned-by-hashes.png Graphic file (type png)
 
 <use figures/fsml-pruned-by-hashes.png>
-<figures/fsml-incremental-pruned-by-samehashes.png, id=1465, 1206.5075pt x 895.
+<figures/fsml-incremental-pruned-by-samehashes.png, id=1466, 1206.5075pt x 895.
 345pt>
 File: figures/fsml-incremental-pruned-by-samehashes.png Graphic file (type png)
 
@@ -1371,9 +1365,9 @@ public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (111 pages, 8083195 bytes).
+Output written on thesis.pdf (111 pages, 8081501 bytes).
 PDF statistics:
- 2034 PDF objects out of 2073 (max. 8388607)
+ 2035 PDF objects out of 2073 (max. 8388607)
  731 named destinations out of 1000 (max. 500000)
  666 words of extra memory for PDF output out of 10000 (max. 10000000)
 

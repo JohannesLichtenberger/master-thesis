@@ -61,7 +61,7 @@ The root node of a tree-structure in a Sunburst-layout is plotted in the middle 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth - 7em]
 {figures/sunburstview-cut}}
-\caption{\label{fig:sunburstview} SunburstView depicting the structure of "/home/johannes/Desktop".}
+\caption{\label{fig:sunburstview} SunburstView depicting the structure of the filesystem directory ``/home/johannes/Desktop''.}
 \end{figure}
 
 In our case the subtree-sizes are mapped onto the extend of each item such that nodes having more descendants get a greater arc and thus occupy more space. The formular is straight forward:
@@ -115,7 +115,7 @@ A well known technique to enlarge small regions is to use transformations of the
 {figures/zooming}
 \label{fig:zoom}
 }
-\caption{Enlarging regions of interest.}
+\caption{Enlarge regions of interest.}
 \end{figure}
 
 In order to manipulate Treetank resources it is even possible to insert XML fragments as right-siblings or first-childs as well as to delete nodes.
@@ -156,7 +156,7 @@ The Sunburst comparison layout is illustrated in Fig. \ref{fig:sunburst}. Nodes 
 \item Consecutive calling the diff-algorithm and merging diffs into a single aggregated tree-structure.
 \item Keeping track of all opened transactions on each revision and resetting the transaction appropriately depending on the revision in which a change has occured to derive node-labels.
 \item Similarly the depth for items in the tree will change very often which involves further state and it is almost not possible to denote the current depth during a preorder traversal of the aggregated tree-structure (depending on the tree-structure itself).
-\item The \texttt{subtree-size}- and \texttt{modification}-count of each nodes' subtree will be cumbersome to calculate.
+\item The \texttt{subtree-size} and \texttt{modification}-count of each nodes' subtree will be cumbersome to calculate.
 \end{itemize}
 
 These and similar complexity considerations formed the idea of introducing small multiple displays of the current view which are described in section \ref{subsec::smallmultiple}.
@@ -170,7 +170,7 @@ After invoking the ID-based diff-algorithm depending on the chosen filtering-met
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth - 12.5em]
 {figures/tree-axis}}
-\caption{\label{fig:tree-axis} SunburstCompare-Axis based on the Sunburst-Axis}
+\caption{\label{fig:tree-axis} SunburstCompare-Axis based on node-pointers.}
 \end{figure}
 
 If the transaction is located at the node with the node-ID/nodeKey 4 the next node returned following pointers is the node denoted by node-ID 6 because node 5 is deleted and thus not referenced and not available in the newer revision. As such it is not sufficient to follow only child-node pointers. Thus additionally the depth of the next diff-tuple must be compared to the current depth. Furthermore the kind of movement must be tracked to adjust datastructures used to determine all Sunburst item attributes required (start-angle, end-angle, number of subtree modifications...).
@@ -394,7 +394,7 @@ boolean done $\leftarrow$ false\;
     index $\leftarrow$ index + 1\;
   }
 }
-\caption{Derives \texttt{subtree-size} as well as the number of \texttt{modifications}}\label{algo:descModCount}
+\caption{Computes the \texttt{subtree-size} of a node as well as the number of \texttt{modifications} in the nodes' subtree.}\label{algo:descModCount}
 \end{algorithm}
 
 \subsubsection{Filtering/Pruning}
@@ -420,7 +420,7 @@ Providing an initial Sunburst overview of huge tree-struc\-tures in reasonable t
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/diff-pruned}}
-\caption{\label{fig:pruned-by-hash} Pruned by same hashes.}
+\caption{\label{fig:pruned-by-hash} Pruned by identical hash-values.}
 \end{figure}
 
 \item \emph{by hash-based diff-algorithm without nodes which have the same hash} This type of pruning is related to the method described above. In addition to pruning nodes in the subtree of nodes which have identical hash-values, items for nodes with identical hash-values are not created, too. As a direct consequence the visualization is much better readability in case of many consecutive nodes with the same hash-value (Fig. \ref{fig:pruned-by-hash-without-samehashes}).
@@ -428,7 +428,7 @@ Providing an initial Sunburst overview of huge tree-struc\-tures in reasonable t
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/diff-without-samehashes-pruned}}
-\caption{\label{fig:pruned-by-hash-without-samehashes} Pruned by hash-value without building items for nodes with same hash-values.}
+\caption{\label{fig:pruned-by-hash-without-samehashes} Pruned by identical hash-values without building items for nodes with same hash-values.}
 \end{figure}
 \end{itemize}
 
@@ -467,7 +467,7 @@ Levenshtein(node_{T_{1}}, node_{T_{2}}) & \textrm{if }node\ is\ \texttt{UPDATED}
 Note that the similarity score is computed based on the diff-tuple which incorporates both nodeKeys. In case of an \texttt{UPDATED} \texttt{text}-node the Levenshtein algorithm is used, which defines a similarity score based on per-character edit-operations to change one string-value into the other one and is normalized between 0 (no similarity) and 1 (same string-value). 
 
 \subsection{Querying}
-XPath 2.0 queries are currently partly supported by our XPath 2.0 engine. We also examined our Saxon binding, which was surprisingly rather slow. However we did not measure time differences which is out of scope of this thesis. Future work might include a Brackit\cite{Brackit} binding which is a "flexible XQuery-based query engine" developed at the TU Kaiserslautern. In contrast to Saxon it is specifically designed to work on top of databases and adding specific indexes for instance will be easy. However this feature is currently reevaluated.
+XPath 2.0 queries are currently partly supported by our XPath 2.0 engine. We also examined our Saxon binding, which was surprisingly rather slow. However we did not measure time differences which is out of scope of this thesis. Future work might include a Brackit\cite{Brackit} binding which is a ``flexible XQuery-based query engine'' developed at the TU Kaiserslautern. In contrast to Saxon it is specifically designed to work on top of databases and adding specific indexes for instance will be easy. However this feature is currently reevaluated.
 
 We provide query capabilities on top of the agglomerated tree-structure and therefore query both compared revisions in parallel. The items are sorted by node-ID in parallel. Once all query results have been collected they are also sorted (the result is a sequence of node-IDs). A subsequent traversal of the items highlights items which are included in the query results.
 

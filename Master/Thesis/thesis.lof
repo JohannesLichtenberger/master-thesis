@@ -1,7 +1,7 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces GVim diff of two XML-document revisions illustrating the deficiencies of line by line character based diff-tools.}}{2}{figure.0.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}.}}{6}{figure.0.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Importing differences encountered through the FMSE ID-based diffing-algorithm.}}{16}{figure.0.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Deletion visitor; two variants are depicted if the node to removed has a left- and a right-sibling. Either both sibling nodes are \texttt {TextNode}s as is the case for node 4 or not (node 10)}}{19}{figure.0.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Deletion visitor; two variants are depicted for the case that the node to removed has a left- and a right-sibling. Either both sibling nodes are \texttt {TextNode}s as is the case for node 4 or not (node 10).}}{19}{figure.0.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces ID-based diffing.}}{22}{figure.0.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{28}{figure.0.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 11000 th node, 1111 MiB $\Leftrightarrow $ modify every 122221th node / Y-axis logarithmic scaled)}}{29}{figure.0.7}
@@ -9,18 +9,18 @@
 \contentsline {figure}{\numberline {9}{\ignorespaces Two tree-structures aggregated. The numbers denote unique node-IDs. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a tree-aggregation.}}{34}{figure.0.9}
 \contentsline {figure}{\numberline {10}{\ignorespaces TreeView and TextView side-by-side}}{35}{figure.0.10}
 \contentsline {figure}{\numberline {11}{\ignorespaces SunburstView and TextView side-by-side.}}{36}{figure.0.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces SunburstView depicting the structure of "/home/johannes/Desktop".}}{38}{figure.0.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Enlarging regions of interest.}}{40}{figure.0.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces SunburstView depicting the structure of the filesystem directory ``/home/johannes/Desktop''.}}{38}{figure.0.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Enlarge regions of interest.}}{40}{figure.0.13}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisheye transformation}}}{40}{figure.0.13}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zooming into the visualization}}}{40}{figure.0.13}
 \contentsline {figure}{\numberline {14}{\ignorespaces XPath query results displayed in light green}}{41}{figure.0.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces SunburstView - comparison mode.}}{43}{figure.0.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces SunburstCompare-Axis based on the Sunburst-Axis}}{44}{figure.0.16}
+\contentsline {figure}{\numberline {16}{\ignorespaces SunburstCompare-Axis based on node-pointers.}}{44}{figure.0.16}
 \contentsline {figure}{\numberline {17}{\ignorespaces Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled ``unchanged nodes'' are unchanged whereas the area between the rectangle named ``changed subtrees'' and ``unchanged nodes'' includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}}{47}{figure.0.17}
 \contentsline {figure}{\numberline {18}{\ignorespaces Comparison without pruning.}}{50}{figure.0.18}
 \contentsline {figure}{\numberline {19}{\ignorespaces Pruned by itemsize.}}{51}{figure.0.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Pruned by same hashes.}}{52}{figure.0.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Pruned by hash-value without building items for nodes with same hash-values.}}{53}{figure.0.21}
+\contentsline {figure}{\numberline {20}{\ignorespaces Pruned by identical hash-values.}}{52}{figure.0.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Pruned by identical hash-values without building items for nodes with identical hash-values.}}{53}{figure.0.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Moves visualized using hierarchical edge bundles.}}{55}{figure.0.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Small multiple - differential variant.}}{56}{figure.0.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces Small multiple - incremental variant.}}{57}{figure.0.24}

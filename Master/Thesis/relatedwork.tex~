@@ -37,7 +37,7 @@ Comparing tree-structures by a Visual Analytics approach requires analytical rea
 \subsection{Storage backend}
 Treetank\cite{TREETANK} is an effective and efficient secure storage system tailored to revisioned tree-structures. Currently it supports the import of XML documents which is commonly referred to as \emph{shredding}. To process stored data the W3C recommendations XPath 2.0, XQuery 1.0 and XSLT 2.0\footnote{parts of the XPath 2.0 recommendation have been implemented, alternatively the Saxon XPath 2.0 binding can be used which also offers the XQuery 1.0 and XSLT 2.0 support}, as well as a cursor like Java-API using transactions is supported. Treetank offers a pointer-based encoding and a transaction-based API to navigate between in the tree-structure or modify nodes similar to DOM.
 
-The architecture is based on three exchangeable vertical aligned layers, a transaction-layer, a node-layer and an I/O-layer. It supports \emph{Snapshot-Isolation} through Multiversion Concurrency Control (MVCC). Furthermore the well known ACID properties are supported (Appendix \ref{subsec::acid}). Several consistency checks as of now guarantee well formed XML during export as well as in a \emph{TextView} XML serialization which is going to be described in Chapter \ref{sec::visualizations}. While importing large XMark-instances \cite{XMark} which are commonly used for benchmarking we encountered a space-overhead due to our pointer based encoding. Appendix \ref{subsec::storage} details a number of enhancements to the persistent storage which came up during writing this theses.
+The architecture is based on three exchangeable vertical aligned layers, a transaction-layer, a node-layer and an I/O-layer. It supports \emph{Snapshot-Isolation} through Multiversion Concurrency Control (MVCC). Furthermore the well known ACID properties are supported (Appendix \ref{subsec::acid}). Several consistency checks as of now guarantee well formed XML during export as well as in a \emph{TextView} XML serialization which is going to be described in Chapter \ref{sec::visualizations}. While importing large XMark-instances \cite{XMark} which are commonly used for benchmarking we encountered a space-overhead due to our pointer based encoding. Appendix \ref{subsec::storage} details a number of persistent storage enhancements.
 
 Treetank does not provide deltas. The revisioning algorithms merge \emph{NodePage}s, with the same unique ID together and override existing nodes with the latest version.  NodePages organize a specified number of nodes in memory. Deleted nodes are introduced to guarantee the correctness after the merge-phase. The combination of NodePages relies on the specific revisioning algorithm. Thus, the merge-phase of NodePages usually refers to the latest full dump of all NodePages or the previous revision. As a direct consequence we are not able to simply use the page-layer or a delta between consecutive revisions. However the introduction of hook-mechanisms in a future version of Treetank will facilitate the generation of deltas. As a result the differences between consecutive revisions in the future will always reflect the update-operations. Yet, such a delta can not be used comparing other revisions.
 
@@ -196,7 +196,7 @@ uses fast sequence aligning transforming the parsed documents into sequences of 
 \subsubsection{Summary}
 The problem in common to all approaches is to efficiently compute a minimum or near minimum edit script to transform the first into the second tree. Unfortunately a guaranteed minimum edit script for the the tree-to-tree correction problem is known to be bound in runtime by \\$O(nm\ min(depth(T1),\ leaves(T1))\ min(depth(T2),\ leaves(T2)))$, with $n$, $m$ denoting the number of nodes of the trees $T1$ , $T2$. Using heuristics speeds up the process but it does in most cases produce non optimal (minimal) edit scripts which might be counterintuitive to humans, because of mismatched nodes which have not been changed. Every diff-algorithm has its strength and pitfalls. Depending on the input and expected modification patterns some algorithms provide better results than others. Even though algorithms are compared in \cite{} we are critical as the size of the delta and the amount of edit-operations might not be the best  All algorithms work best if leaf nodes can be descriminated very well. Comparing document oriented XML thus usually procudes better results in comparison to data centric XML in terms of minimum or near minimum edit-scripts/deltas.
 
-Memory consumption is very important considering larger XML instances ranging from 1Gb and far above. Reducing the cost of computing the LCS which has a large memory footprint might be mandatory but also results in heuristics. A survey of the wide range of algorithms is summarized in \cite{cobena2002comparative}. Several algorithms are described and compared according to the attributes memory consumption, time complexity supported operations and ordered/unordered. Ordered/unordered denotes if anchestor/child relationships and the child order is considered (ordered) or not (unordered). 
+Memory consumption is very important considering large XML instances ranging from 10 MiB to 1 GiB and more. Reducing the cost of computing the LCS which has a large memory footprint might be mandatory but also results in heuristics. A survey of the wide range of algorithms is summarized in \cite{cobena2002comparative}. Several algorithms are described and compared according to the attributes memory consumption, time complexity supported operations and ordered/unordered. Ordered/unordered denotes if anchestor/child relationships and the child order is considered (ordered) or not (unordered). 
 
 In summary a trade-off between the minimality of edit scripts/operations and the memory consumption as well as the time complexity of the algorithm exists. Furthermore no algorithm exists which outperforms and in respect to the edit-script cost produces always better results than the others while comparing trees of different domains and characteristics. It heavily depends on the change pattern of the input document.
 
@@ -204,7 +204,7 @@ In summary a trade-off between the minimality of edit scripts/operations and the
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|} 
 \hline
-& \textbf{runtime comp.} & \textbf{space comp.} & \textbf{tree model} & \textbf{move support}\\
+\textbf{algorithm} & \textbf{runtime complexity} & \textbf{space complexity} & \textbf{tree model} & \textbf{move support}\\
 \hline
 \hline
 \textbf{DeltaXML} & not published & not published & not published & not published\\
@@ -314,7 +314,7 @@ Most of the visualizations are tailored to specific tasks and are only partly us
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|} 
 \hline
-& \textbf{hierarchy} & \textbf{space filling} & \textbf{readability} & \textbf{changes}\\
+\textbf{visualization} & \textbf{hierarchy} & \textbf{space filling} & \textbf{readability} & \textbf{changes}\\
 \hline
 %\hline
 %\textbf{Sunburst} & +++ & ++ & + & +++\\

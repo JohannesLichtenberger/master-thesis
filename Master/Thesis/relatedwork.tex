@@ -196,7 +196,7 @@ uses fast sequence aligning transforming the parsed documents into sequences of 
 \subsubsection{Summary}
 The problem in common to all approaches is to efficiently compute a minimum or near minimum edit script to transform the first into the second tree. Unfortunately a guaranteed minimum edit script for the the tree-to-tree correction problem is known to be bound in runtime by \\$O(nm\ min(depth(T1),\ leaves(T1))\ min(depth(T2),\ leaves(T2)))$, with $n$, $m$ denoting the number of nodes of the trees $T1$ , $T2$. Using heuristics speeds up the process but it does in most cases produce non optimal (minimal) edit scripts which might be counterintuitive to humans, because of mismatched nodes which have not been changed. Every diff-algorithm has its strength and pitfalls. Depending on the input and expected modification patterns some algorithms provide better results than others. Even though algorithms are compared in \cite{} we are critical as the size of the delta and the amount of edit-operations might not be the best  All algorithms work best if leaf nodes can be descriminated very well. Comparing document oriented XML thus usually procudes better results in comparison to data centric XML in terms of minimum or near minimum edit-scripts/deltas.
 
-Memory consumption is very important considering larger XML instances ranging from 1Gb and far above. Reducing the cost of computing the LCS which has a large memory footprint might be mandatory but also results in heuristics. A survey of the wide range of algorithms is summarized in \cite{cobena2002comparative}. Several algorithms are described and compared according to the attributes memory consumption, time complexity supported operations and ordered/unordered. Ordered/unordered denotes if anchestor/child relationships and the child order is considered (ordered) or not (unordered). 
+Memory consumption is very important considering large XML instances ranging from 10 MiB to 1 GiB and more. Reducing the cost of computing the LCS which has a large memory footprint might be mandatory but also results in heuristics. A survey of the wide range of algorithms is summarized in \cite{cobena2002comparative}. Several algorithms are described and compared according to the attributes memory consumption, time complexity supported operations and ordered/unordered. Ordered/unordered denotes if anchestor/child relationships and the child order is considered (ordered) or not (unordered). 
 
 In summary a trade-off between the minimality of edit scripts/operations and the memory consumption as well as the time complexity of the algorithm exists. Furthermore no algorithm exists which outperforms and in respect to the edit-script cost produces always better results than the others while comparing trees of different domains and characteristics. It heavily depends on the change pattern of the input document.
 
@@ -204,20 +204,20 @@ In summary a trade-off between the minimality of edit scripts/operations and the
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|} 
 \hline
-& \textbf{runtime comp.} & \textbf{space comp.} & \textbf{tree model} & \textbf{move support}\\
+\textbf{algorithm} & \textbf{runtime} & \textbf{space} & \textbf{tree model} & \textbf{move support}\\
 \hline
 \hline
 \textbf{DeltaXML} & not published & not published & not published & not published\\
 \hline
-\textbf{XyDiff} & $O(n \log n)$ & $O(n)$ & ordered tree & yes\\
+\textbf{XyDiff} & $O(n \log n)$ & $O(n)$ & ordered & yes\\
 \hline
-\textbf{FMSE} & $O(n e + e^2)$ & $O(n)$ & ordered tree & yes\\
+\textbf{FMSE} & $O(n e + e^2)$ & $O(n)$ & ordered & yes\\
 \hline
-\textbf{X-Diff} & $O(n^2)$ & not published & unordered tree & no\\
+\textbf{X-Diff} & $O(n^2)$ & not published & unordered & no\\
 \hline
-\textbf{DocTreeDiff} & $O(leaves(T)D + n)$ & $O(T+D)$ & ordered tree & yes\\
+\textbf{DocTreeDiff} & $O(leaves(T)D + n)$ & $O(T+D)$ & ordered & yes\\
 \hline
-\textbf{Faxma} & $O(n)$ (average) & not published & ordered tree & no\\
+\textbf{Faxma} & $O(n)$ (average) & not published & ordered & no\\
 & $O(n^2)$ (worst) &  & & \\
 \hline
 \end{tabular}
@@ -314,7 +314,7 @@ Most of the visualizations are tailored to specific tasks and are only partly us
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|} 
 \hline
-& \textbf{hierarchy} & \textbf{space filling} & \textbf{readability} & \textbf{changes}\\
+\textbf{visualization} & \textbf{hierarchy} & \textbf{space filling} & \textbf{readability} & \textbf{changes}\\
 \hline
 %\hline
 %\textbf{Sunburst} & +++ & ++ & + & +++\\
