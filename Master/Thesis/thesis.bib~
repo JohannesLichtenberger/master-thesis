@@ -1,7 +1,7 @@
-@MISC{TREETANK,
-  title = {Treetank},
-  author = {Marc Kramis and Sebastian Graf},
-  url = {http://treetank.org},
+@article{TREETANK,
+  title={Treetank, Designing A Versioned XML Storage},
+  author={Kramis, M. and Seabix, AG},
+  url = {http://nbn-resolving.de/urn:nbn:de:bsz:352-opus-126912},
 }
 
 @MISC{LFG,
@@ -169,7 +169,14 @@
   publisher={Springer}
 }
 
+@MISC{DOM,
+  title = {Document Object Model},
+  url = {http://www.w3.org/DOM/},
+  author = {W3C},
+}
+
 @MISC{ZFS,
+  author = {Oracle},
   title = {Oracle Solaris ZFS},
   url = {http://www.oracle.com/technetwork/server-storage/solaris11/technologies/zfs-338092.html?ssSourceSiteId=ocomen},
 }

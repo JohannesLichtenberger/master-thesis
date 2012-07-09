@@ -12,43 +12,43 @@ Warning--empty year in TREETANK
 Done.
 You've used 33 entries,
             4024 wiz_defined-function locations,
-            989 strings with 11766 characters,
-and the built_in function-call counts, 19837 in all, are:
-= -- 1500
-> -- 404
+            991 strings with 11794 characters,
+and the built_in function-call counts, 19953 in all, are:
+= -- 1514
+> -- 410
 < -- 136
-+ -- 220
-- -- 68
-* -- 906
-:= -- 3012
++ -- 222
+- -- 70
+* -- 910
+:= -- 3046
 add.period$ -- 76
 call.type$ -- 33
 change.case$ -- 33
 chr.to.int$ -- 327
 cite$ -- 35
-duplicate$ -- 1496
-empty$ -- 1806
-format.name$ -- 86
-if$ -- 4514
+duplicate$ -- 1500
+empty$ -- 1810
+format.name$ -- 88
+if$ -- 4536
 int.to.chr$ -- 0
 int.to.str$ -- 33
-missing$ -- 285
+missing$ -- 287
 newline$ -- 154
-num.names$ -- 28
+num.names$ -- 30
 pop$ -- 801
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1500
+skip$ -- 1508
 stack$ -- 0
 substring$ -- 795
-swap$ -- 1070
+swap$ -- 1076
 text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 33
 warning$ -- 2
-while$ -- 88
+while$ -- 90
 width$ -- 35
-write$ -- 326
+write$ -- 328
 (There were 2 warnings)

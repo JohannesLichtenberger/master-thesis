@@ -47,7 +47,7 @@ Table \ref{chap5:comparison} summarizes the visualizations according to the eval
 \end{tabular}
 \label{chap5:comparsion}
 \vspace{0.5em} 
-\caption{Comparsion of tree-to-tree differences visualizations. "-" indicates the absence of an attribute, "+" to "+++" implies how well or bad the attribute is supported.}
+\caption{Comparsion of tree-to-tree comparison visualizations. "-" indicates the absence of an attribute, "+" to "+++" implies how well or bad the attribute is supported.}
 \end{table}
 
 Most proposed visualizations rely on stable unique IDs (the Contrast Treemap\cite{tu2007visualizing}, Code Flows\cite{telea2008code}, TreeJuxtaposer\cite{munzner2003treejuxtaposer} (unique node labels)) and do not include the detection of \texttt{replace}- and \texttt{move}-operations. However Code Flows visualizes moves due to spline connections between matching nodes with the same ID in two adjacent icicle plots. Due to the reliability on unique node IDs these visualizations do not cover trees which do not include unique node-IDs or labels. In contrast our prototype is able to determine and visualize these tree-structures utilizing the FMSE-algorithm to import differences through similarity metrics for leaf- and inner-nodes and a bottom-up LCS computation.

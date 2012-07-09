@@ -29,6 +29,7 @@
 %%% PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{tocbibind}
+\usepackage{rotating}
 \usepackage{graphicx}			% graphics, of course
 \usepackage{subfigure}
 \usepackage{color}                      % to define colors
@@ -187,6 +188,14 @@
 \input{preamble} % refer your preamble here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ACKNOWLEDGEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\setcounter{page}{1}
+\input{acknowledgements} % refer your acknowledgments here
+\addcontentsline{toc}{section}{Acknowledgments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ABSTRACT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -209,8 +218,6 @@
 \pagestyle{fancy}
 \addcontentsline{toc}{section}{\listtablename}
 \listoftables
-\newpage
-\listoftodos
 %\addcontentsline{toc}{section}{\listtodoname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,17 +228,17 @@
 \pagenumbering{arabic} % set the page numbering to arabic page numbers
 \setcounter{page}{1}
 \input{introduction} % refer your introduction here
-\cleardoublepage
+\clearpage
 \input{relatedwork} 
-\cleardoublepage
+\clearpage
 \input{differences}
-\cleardoublepage
+\clearpage
 \input{visualizations}
-\cleardoublepage
+\clearpage
 \input{applications}
-\cleardoublepage
+\clearpage
 \input{discussion}
-\cleardoublepage
+\clearpage
 \input{conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -240,10 +247,8 @@
 \cleardoublepage
 \appendix
 \input{treetank}
-\cleardoublepage
+\clearpage
 \input{xslt}
-\cleardoublepage
-\input{acknowledgements} % refer your acknowledgments here
 %\input{statement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

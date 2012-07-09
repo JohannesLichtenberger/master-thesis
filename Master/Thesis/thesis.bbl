@@ -52,6 +52,12 @@ M.~Kramis and A.~Seabix, ``Treetank, designing a versioned xml storage.''
   \url{http://nbn-resolving.de/urn:nbn:de:bsz:352-opus-126912}
 \BIBentrySTDinterwordspacing
 
+\bibitem{DOM}
+\BIBentryALTinterwordspacing
+W3C, ``Document object model.'' [Online]. Available:
+  \url{http://www.w3.org/DOM/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{XMark}
 \BIBentryALTinterwordspacing
 ``Xmark benchmark.'' [Online]. Available: \url{http://www.xml-benchmark.org/}
@@ -137,7 +143,8 @@ M.~Ishihara, K.~Misue, and J.~Tanaka, ``Ripple presentation for tree structures
 
 \bibitem{xmldiff}
 \BIBentryALTinterwordspacing
-``Logilab - xmldiff.'' [Online]. Available: \url{http://www.logilab.org/859}
+Logilab, ``Logilab - xmldiff.'' [Online]. Available:
+  \url{http://www.logilab.org/859}
 \BIBentrySTDinterwordspacing
 
 \bibitem{diffxml}
@@ -164,11 +171,6 @@ S.~Graf, L.~Lewandowski, and M.~Waldvogel, ``Integrity assurance for {RESTful
 \BIBentryALTinterwordspacing
 O.~D.~T. Committee, ``Docbook.'' [Online]. Available:
   \url{http://www.docbook.org/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{BASEX}
-\BIBentryALTinterwordspacing
-``Basex.'' [Online]. Available: \url{http://basex.org}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Brackit}
