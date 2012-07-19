@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  9 JUL 2012 05:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  19 JUL 2012 16:40
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -738,7 +738,7 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 83.
+Package hyperref Info: Option `colorlinks' set `true' on input line 91.
 \c@mydef=\count177
  (./thesis.aux
 
@@ -753,20 +753,20 @@ LaTeX Warning: Label `chap3:comparsion' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count178
@@ -780,7 +780,7 @@ LaTeX Font Info:    ... okay on input line 167.
 \MPnumerator=\count182
 \everyMPtoPDFconversion=\toks41
 )
-Package hyperref Info: Link coloring ON on input line 167.
+Package hyperref Info: Link coloring ON on input line 175.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
@@ -789,8 +789,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count183
 )
-LaTeX Info: Redefining \ref on input line 167.
-LaTeX Info: Redefining \pageref on input line 167.
+LaTeX Info: Redefining \ref on input line 175.
+LaTeX Info: Redefining \pageref on input line 175.
  (./thesis.out)
 (./thesis.out)
 \@outlinefile=\write5
@@ -834,14 +834,14 @@ Overfull \hbox (31.33708pt too wide) in paragraph at lines 30--34
 (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \newpage
+l.217 \newpage
                [1
 
 ] (./thesis.tocpdfTeX warning (ext4): destination with the same identifier (nam
 e{page.ii}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 ...e {6.1}Introduction}{79}{subsection.0.6.1}
+l.75 ...erline {6.1}Summary}{79}{subsection.0.6.1}
                                                    [2
 
 ])
@@ -858,14 +858,14 @@ l.75 ...e {6.1}Introduction}{79}{subsection.0.6.1}
 \openout8 = `thesis.lot'.
 
  [6] (./introduction.tex
-<figures/gvimdiff.png, id=482, 981.6675pt x 224.84pt>
+<figures/gvimdiff.png, id=472, 981.6675pt x 224.84pt>
 File: figures/gvimdiff.png Graphic file (type png)
 
 <use figures/gvimdiff.png> [1
 
 ] [2 <./figures/gvimdiff.png>] [3]) [4]
 (./relatedwork.tex
-<figures/visualanalyticsprocess.png, id=519, 379.4175pt x 216.05719pt>
+<figures/visualanalyticsprocess.png, id=509, 379.4175pt x 216.05719pt>
 File: figures/visualanalyticsprocess.png Graphic file (type png)
 
 <use figures/visualanalyticsprocess.png>
@@ -922,122 +922,125 @@ Overfull \hbox (3.8215pt too wide) in paragraph at lines 248--249
 al-iza-tion. Most treemap
  []
 
-[12] [13]
-
-LaTeX Warning: Reference `telea2008code' on page 14 undefined on input line 294
-.
-
-) [14] (./differences.tex
-<figures/importdata.pdf, id=646, 577.15625pt x 366.36874pt>
+[12] [13]) [14] (./differences.tex
+<figures/importdata.pdf, id=637, 577.15625pt x 366.36874pt>
 File: figures/importdata.pdf Graphic file (type pdf)
 
 <use figures/importdata.pdf> [15
 
 ] [16 <./figures/importdata.pdf>] [17]
-<figures/deletionvisitor.pdf, id=688, 553.06625pt x 334.24875pt>
+Underfull \vbox (badness 4492) has occurred while \output is active []
+
+ [18]
+<figures/deletionvisitor.pdf, id=683, 553.06625pt x 334.24875pt>
 File: figures/deletionvisitor.pdf Graphic file (type pdf)
 
-<use figures/deletionvisitor.pdf> [18] [19 <./figures/deletionvisitor.pdf>]
-[20] [21] <figures/id-diff.pdf, id=729, 541.02126pt x 445.665pt>
+<use figures/deletionvisitor.pdf> [19]
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [20 <./figures/deletionvisitor.pdf>] [21]
+<figures/id-diff.pdf, id=719, 541.02126pt x 500.87125pt>
 File: figures/id-diff.pdf Graphic file (type pdf)
 
 <use figures/id-diff.pdf>
 Package hyperref Info: bookmark level for unknown algocf defaults to 0 on input
- line 213.
+ line 225.
 
-Underfull \hbox (badness 10000) detected at line 214
+Underfull \hbox (badness 10000) detected at line 226
 [][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 272
+Underfull \hbox (badness 10000) detected at line 284
 [][]
  []
 
-[22 <./figures/id-diff.pdf>] [23] [24] [25]
-Underfull \hbox (badness 10000) detected at line 307
+[22] [23] [24] [25 <./figures/id-diff.pdf>] [26]
+Underfull \hbox (badness 10000) detected at line 319
 [][]
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-Overfull \hbox (14.12717pt too wide) in paragraph at lines 312--313
+[27]
+Overfull \hbox (14.12717pt too wide) in paragraph at lines 324--325
 \OT1/cmr/m/n/10 modification-patterns (Fig. [][]6[][]) and dif-fer-ent doc-u-me
 nt sizes with scaled modification-
  []
 
-<figures/100MB-scaling.pdf, id=833, 466.74374pt x 318.18875pt>
+<figures/100MB-scaling.pdf, id=836, 466.74374pt x 318.18875pt>
 File: figures/100MB-scaling.pdf Graphic file (type pdf)
 
 <use figures/100MB-scaling.pdf>
-<figures/diff-docsize-scale.pdf, id=837, 454.69875pt x 253.94875pt>
+<figures/diff-docsize-scale.pdf, id=840, 454.69875pt x 253.94875pt>
 File: figures/diff-docsize-scale.pdf Graphic file (type pdf)
 
-<use figures/diff-docsize-scale.pdf> [27] [28 <./figures/100MB-scaling.pdf>]
-<figures/diff-docsize-scale-pruned.pdf, id=863, 466.74374pt x 253.94875pt>
+<use figures/diff-docsize-scale.pdf> [28]
+<figures/diff-docsize-scale-pruned.pdf, id=849, 466.74374pt x 253.94875pt>
 File: figures/diff-docsize-scale-pruned.pdf Graphic file (type pdf)
 
-<use figures/diff-docsize-scale-pruned.pdf> [29 <./figures/diff-docsize-scale.p
-df>] [30 <./figures/diff-docsize-scale-pruned.pdf>])
-Overfull \hbox (1.34564pt too wide) in paragraph at lines 403--235
+<use figures/diff-docsize-scale-pruned.pdf>
+Underfull \vbox (badness 2913) has occurred while \output is active []
+
+ [29 <./figures/100MB-scaling.pdf>] [30 <./figures/diff-docsize-scale.pdf>]
+Underfull \vbox (badness 5274) has occurred while \output is active []
+
+ [31 <./figures/diff-docsize-scale-pruned.pdf>])
+Overfull \hbox (1.34564pt too wide) in paragraph at lines 417--243
 \OT1/cmtt/m/n/10 INSERT/DELETE \OT1/cmr/m/n/10 and \OT1/cmtt/m/n/10 DELETE/INSE
 RT \OT1/cmr/m/n/10 com-bi-na-tions with the same node-IDs. Move
  []
 
-[31] (./visualizations.tex [32
+[32] (./visualizations.tex [33
 
 ]
-<figures/aggregation.pdf, id=902, 559.08875pt x 445.665pt>
+<figures/aggregation.pdf, id=897, 559.08875pt x 445.665pt>
 File: figures/aggregation.pdf Graphic file (type pdf)
 
-<use figures/aggregation.pdf> [33 <./figures/aggregation.pdf>]
-<figures/treetext.png, id=917, 1220.56pt x 910.40125pt>
+<use figures/aggregation.pdf> [34 <./figures/aggregation.pdf>]
+<figures/treetext.png, id=913, 1220.56pt x 910.40125pt>
 File: figures/treetext.png Graphic file (type png)
 
 <use figures/treetext.png>
-<figures/sunbursttextview-overview.png, id=919, 1522.68875pt x 910.40125pt>
+<figures/sunbursttextview-overview.png, id=915, 1522.68875pt x 910.40125pt>
 File: figures/sunbursttextview-overview.png Graphic file (type png)
 
-<use figures/sunbursttextview-overview.png> [34 <./figures/treetext.png>]
+<use figures/sunbursttextview-overview.png> [35 <./figures/treetext.png>]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
 
-[35 <./figures/sunbursttextview-overview.png>]
-<figures/sunburstview-cut.png, id=938, 630.355pt x 672.5125pt>
+[36 <./figures/sunbursttextview-overview.png>]
+<figures/sunburstview-cut.png, id=933, 630.355pt x 672.5125pt>
 File: figures/sunburstview-cut.png Graphic file (type png)
 
-<use figures/sunburstview-cut.png> [36] [37 <./figures/sunburstview-cut.png>]
-<figures/fisheye.png, id=955, 1220.56pt x 910.40125pt>
+<use figures/sunburstview-cut.png> [37] [38 <./figures/sunburstview-cut.png>]
+<figures/fisheye.png, id=950, 1220.56pt x 910.40125pt>
 File: figures/fisheye.png Graphic file (type png)
 
 <use figures/fisheye.png>
-<figures/zooming.png, id=956, 1220.56pt x 910.40125pt>
+<figures/zooming.png, id=951, 1220.56pt x 910.40125pt>
 File: figures/zooming.png Graphic file (type png)
 
 <use figures/zooming.png>
-<figures/sunburstxpathquery.png, id=958, 1220.56pt x 910.40125pt>
+<figures/sunburstxpathquery.png, id=953, 1220.56pt x 910.40125pt>
 File: figures/sunburstxpathquery.png Graphic file (type png)
 
-<use figures/sunburstxpathquery.png> [38] [39 <./figures/fisheye.png> <./figure
-s/zooming.png>] [40 <./figures/sunburstxpathquery.png>]
-<figures/sunburst.pdf, id=985, 565.11125pt x 508.90125pt>
+<use figures/sunburstxpathquery.png> [39] [40 <./figures/fisheye.png> <./figure
+s/zooming.png>] [41 <./figures/sunburstxpathquery.png>]
+<figures/sunburst.pdf, id=980, 565.11125pt x 508.90125pt>
 File: figures/sunburst.pdf Graphic file (type pdf)
 
-<use figures/sunburst.pdf> [41] [42 <./figures/sunburst.pdf>]
-<figures/tree-axis.pdf, id=1005, 430.60875pt x 342.27875pt>
+<use figures/sunburst.pdf> [42] [43 <./figures/sunburst.pdf>]
+<figures/tree-axis.pdf, id=1000, 430.60875pt x 342.27875pt>
 File: figures/tree-axis.pdf Graphic file (type pdf)
 
 <use figures/tree-axis.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43 <./figures/tree-axis.pdf>]
+ [44 <./figures/tree-axis.pdf>]
 Underfull \hbox (badness 10000) detected at line 268
 [][]
  []
 
-[44] <figures/sunburst-layout.pdf, id=1052, 553.06625pt x 484.81125pt>
+[45] <figures/sunburst-layout.pdf, id=1047, 553.06625pt x 484.81125pt>
 File: figures/sunburst-layout.pdf Graphic file (type pdf)
 
 <use figures/sunburst-layout.pdf>
@@ -1051,197 +1054,201 @@ Overfull \hbox (0.2653pt too wide) in paragraph at lines 354--355
 from the \OT1/cmtt/m/n/10 subtree-size
  []
 
-[45]
+[46]
 Underfull \vbox (badness 3803) has occurred while \output is active []
 
- [46 <./figures/sunburst-layout.pdf>]
+ [47 <./figures/sunburst-layout.pdf>]
 Underfull \hbox (badness 10000) detected at line 398
 [][]
  []
 
-<figures/without-pruning.png, id=1081, 961.5925pt x 859.21pt>
+<figures/without-pruning.png, id=1076, 961.5925pt x 859.21pt>
 File: figures/without-pruning.png Graphic file (type png)
 
-<use figures/without-pruning.png> [47]
-<figures/itemsize-pruned.png, id=1106, 911.405pt x 852.18375pt>
+<use figures/without-pruning.png> [48]
+<figures/itemsize-pruned.png, id=1101, 911.405pt x 852.18375pt>
 File: figures/itemsize-pruned.png Graphic file (type png)
 
-<use figures/itemsize-pruned.png> [48]
-<figures/diff-pruned.png, id=1138, 961.5925pt x 859.21pt>
+<use figures/itemsize-pruned.png> [49]
+<figures/diff-pruned.png, id=1133, 961.5925pt x 859.21pt>
 File: figures/diff-pruned.png Graphic file (type png)
 
 <use figures/diff-pruned.png>
-<figures/diff-without-samehashes-pruned.png, id=1140, 906.38625pt x 839.135pt>
+<figures/diff-without-samehashes-pruned.png, id=1135, 906.38625pt x 839.135pt>
 File: figures/diff-without-samehashes-pruned.png Graphic file (type png)
 
-<use figures/diff-without-samehashes-pruned.png> [49 <./figures/without-pruning
+<use figures/diff-without-samehashes-pruned.png> [50 <./figures/without-pruning
 .png>]
 Underfull \vbox (badness 1226) has occurred while \output is active []
 
- [50 <./figures/itemsize-pruned.png>] [51 <./figures/diff-pruned.png>]
+ [51 <./figures/itemsize-pruned.png>] [52 <./figures/diff-pruned.png>]
 Underfull \vbox (badness 2376) has occurred while \output is active []
 
- [52 <./figures/diff-without-samehashes-pruned.png>] [53]
-<figures/moves-cut.png, id=1177, 701.62125pt x 702.625pt>
+ [53 <./figures/diff-without-samehashes-pruned.png>] [54]
+<figures/moves-cut.png, id=1172, 701.62125pt x 702.625pt>
 File: figures/moves-cut.png Graphic file (type png)
 
 <use figures/moves-cut.png>
 Underfull \vbox (badness 1122) has occurred while \output is active []
 
- [54 <./figures/moves-cut.png>]
-<figures/smallmultiple-differential.png, id=1185, 1220.56pt x 910.40125pt>
+ [55 <./figures/moves-cut.png>]
+<figures/smallmultiple-differential.png, id=1180, 1220.56pt x 910.40125pt>
 File: figures/smallmultiple-differential.png Graphic file (type png)
 
 <use figures/smallmultiple-differential.png>
-<figures/smallmultiple-incremental.png, id=1187, 1220.56pt x 910.40125pt>
+<figures/smallmultiple-incremental.png, id=1182, 1220.56pt x 910.40125pt>
 File: figures/smallmultiple-incremental.png Graphic file (type png)
 
-<use figures/smallmultiple-incremental.png> [55 <./figures/smallmultiple-differ
+<use figures/smallmultiple-incremental.png> [56 <./figures/smallmultiple-differ
 ential.png>]
-<figures/wikipedia-smallmultiples-hybrid.png, id=1193, 1220.56pt x 910.40125pt>
+<figures/wikipedia-smallmultiples-hybrid.png, id=1188, 1220.56pt x 910.40125pt>
 File: figures/wikipedia-smallmultiples-hybrid.png Graphic file (type png)
-<use figures/wikipedia-smallmultiples-hybrid.png> [56 <./figures/smallmultiple-
-incremental.png>] [57 <./figures/wikipedia-smallmultiples-hybrid.png>]
-<figures/gui-performance.pdf, id=1210, 466.74374pt x 246.9225pt>
+<use figures/wikipedia-smallmultiples-hybrid.png> [57 <./figures/smallmultiple-
+incremental.png>] [58 <./figures/wikipedia-smallmultiples-hybrid.png>]
+<figures/gui-performance.pdf, id=1206, 466.74374pt x 246.9225pt>
 File: figures/gui-performance.pdf Graphic file (type pdf)
 
 <use figures/gui-performance.pdf>
-<figures/gui-performance-movedet.pdf, id=1211, 454.69875pt x 253.94875pt>
+<figures/gui-performance-movedet.pdf, id=1207, 454.69875pt x 253.94875pt>
 File: figures/gui-performance-movedet.pdf Graphic file (type pdf)
 
 <use figures/gui-performance-movedet.pdf>
 Underfull \vbox (badness 2253) has occurred while \output is active []
 
- [58]
+ [59]
 Overfull \hbox (11.9881pt too wide) in paragraph at lines 569--570
 []\OT1/cmr/m/n/10 Moreover three fil-ter-ing tech-niques fa-cil-i-tate the anal
 -y-sis of large tree-structures.
  []
 
-[59 <./figures/gui-performance.pdf>]) [60 <./figures/gui-performance-movedet.pd
+[60 <./figures/gui-performance.pdf>]) [61 <./figures/gui-performance-movedet.pd
 f>] (./applications.tex
 Overfull \hbox (1.12706pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/10 sual An-a-lyt-ics ap-proach of de-tect-ing and vi-su-al-iz-ing 
 dif-fer-ences in tree-structures.
  []
 
-<figures/lfg.png, id=1240, 1220.56pt x 910.40125pt>
+<figures/lfg.png, id=1235, 1220.56pt x 910.40125pt>
 File: figures/lfg.png Graphic file (type png)
  <use figures/lfg.png>
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 31.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 32.
 
-(/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 32.
- [61
+[62
 
-] [62 <./figures/lfg.png>] <figures/linguistics.png, id=1274, 1206.5075pt x 895
-.345pt>
+]
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [63 <./figures/lfg.png>] <figures/linguistics.png, id=1268, 1206.5075pt x 895.
+345pt>
 File: figures/linguistics.png Graphic file (type png)
 
-<use figures/linguistics.png> [63 <./figures/linguistics.png>]
-Overfull \hbox (2.87756pt too wide) in paragraph at lines 88--89
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-[64]
-Overfull \hbox (3.0438pt too wide) in paragraph at lines 127--128
+<use figures/linguistics.png> [64 <./figures/linguistics.png>] [65]
+Overfull \hbox (3.0438pt too wide) in paragraph at lines 90--91
 \OT1/cmr/m/n/10 MapRe-duce frame-works rely on a pro-grammable mech-a-nism to d
 o this. In Hadoop
  []
 
-[65] [66] <figures/wikipedia-rev7071.png, id=1347, 1350.04375pt x 950.55125pt>
+[66] <figures/wikipedia-rev7071.png, id=1304, 1350.04375pt x 950.55125pt>
 File: figures/wikipedia-rev7071.png Graphic file (type png)
 
 <use figures/wikipedia-rev7071.png>
-<figures/wikipedia-without-pruned-modifications.png, id=1349, 1350.04375pt x 95
+<figures/wikipedia-without-pruned-modifications.png, id=1306, 1350.04375pt x 95
 0.55125pt>
 File: figures/wikipedia-without-pruned-modifications.png Graphic file (type png
 )
- <use figures/wikipedia-without-pruned-modifications.png> [67 <./figures/wikipe
-dia-rev7071.png>]
-<figures/wikipedia-rev90106.png, id=1358, 1382.16376pt x 956.57375pt>
+ <use figures/wikipedia-without-pruned-modifications.png> [67]
+<figures/wikipedia-rev90106.png, id=1314, 1382.16376pt x 956.57375pt>
 File: figures/wikipedia-rev90106.png Graphic file (type png)
 
-<use figures/wikipedia-rev90106.png> [68 <./figures/wikipedia-without-pruned-mo
-difications.png>]
-<figures/wikipedia-incremental.png, id=1366, 1206.5075pt x 895.345pt>
+<use figures/wikipedia-rev90106.png>
+<figures/wikipedia-incremental.png, id=1317, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental.png Graphic file (type png)
 
 <use figures/wikipedia-incremental.png>
-<figures/wikipedia-rev7374.png, id=1367, 1372.12625pt x 936.49875pt>
+<figures/wikipedia-rev7374.png, id=1318, 1372.12625pt x 936.49875pt>
 File: figures/wikipedia-rev7374.png Graphic file (type png)
 
 <use figures/wikipedia-rev7374.png>
-<figures/wikipedia-incremental-add.png, id=1369, 1206.5075pt x 895.345pt>
+Underfull \vbox (badness 1917) has occurred while \output is active []
+
+ [68 <./figures/wikipedia-rev7071.png>]
+<figures/wikipedia-incremental-add.png, id=1325, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental-add.png Graphic file (type png)
 
-<use figures/wikipedia-incremental-add.png>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69 <./figures/wikipedia-rev90106.png>]
-Overfull \hbox (7.04378pt too wide) in paragraph at lines 231--232
+<use figures/wikipedia-incremental-add.png> [69 <./figures/wikipedia-without-pr
+uned-modifications.png>]
+Overfull \hbox (7.04378pt too wide) in paragraph at lines 194--195
 []\OT1/cmr/m/n/10 The File Sys-tem Markup Language[[]] is an XML-dialect de-vel
 -oped by Alexan-
  []
 
-[70 <./figures/wikipedia-incremental.png>]
-Overfull \hbox (3.6751pt too wide) in paragraph at lines 235--236
+
+Overfull \hbox (3.6751pt too wide) in paragraph at lines 198--199
 \OT1/cmr/m/it/10 TreeMap\OT1/cmr/m/n/10 -view. The XPath-query \OT1/cmtt/m/n/10
  //element()[@st[]mode="0100664"] \OT1/cmr/m/n/10 high-lights
  []
 
-<figures/fsml-gui.png, id=1387, 1392.20125pt x 902.37125pt>
+<figures/fsml-gui.png, id=1336, 1392.20125pt x 902.37125pt>
 File: figures/fsml-gui.png Graphic file (type png)
 
-<use figures/fsml-gui.png> [71 <./figures/wikipedia-rev7374.png>]
-<figures/gui-fsml-fulldiff.png, id=1394, 1439.3775pt x 898.35625pt>
+<use figures/fsml-gui.png> [70 <./figures/wikipedia-rev90106.png>]
+<figures/gui-fsml-fulldiff.png, id=1345, 1439.3775pt x 898.35625pt>
 File: figures/gui-fsml-fulldiff.png Graphic file (type png)
 
 <use figures/gui-fsml-fulldiff.png>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72 <./figures/wikipedia-incremental-add.png>] [73 <./figures/fsml-gui.png>] [
-74 <./figures/gui-fsml-fulldiff.png>]
-Overfull \hbox (0.34926pt too wide) in paragraph at lines 302--303
+ [71 <./figures/wikipedia-incremental.png>] [72 <./figures/wikipedia-rev7374.pn
+g>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73 <./figures/wikipedia-incremental-add.png>]
+Overfull \hbox (0.34926pt too wide) in paragraph at lines 260--261
 []\OT1/cmr/m/n/10 While this rep-re-sen-ta-tion cur-rently does not in-cor-po-r
 ate most of the strengths
  []
 
-<figures/fsml-changes-itemsize-pruning.png, id=1427, 1557.82pt x 895.345pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74 <./figures/fsml-gui.png>]
+<figures/fsml-changes-itemsize-pruning.png, id=1392, 1557.82pt x 895.345pt>
 File: figures/fsml-changes-itemsize-pruning.png Graphic file (type png)
 
-<use figures/fsml-changes-itemsize-pruning.png> [75 <./figures/fsml-changes-ite
-msize-pruning.png>]
-<figures/fsml-pruned-by-hashes.png, id=1448, 1304.875pt x 894.34125pt>
+<use figures/fsml-changes-itemsize-pruning.png>
+<figures/fsml-pruned-by-hashes.png, id=1394, 1304.875pt x 894.34125pt>
 File: figures/fsml-pruned-by-hashes.png Graphic file (type png)
 
 <use figures/fsml-pruned-by-hashes.png>
-<figures/fsml-incremental-pruned-by-samehashes.png, id=1450, 1206.5075pt x 895.
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+ [75 <./figures/gui-fsml-fulldiff.png>]
+<figures/fsml-incremental-pruned-by-samehashes.png, id=1401, 1206.5075pt x 895.
 345pt>
 File: figures/fsml-incremental-pruned-by-samehashes.png Graphic file (type png)
 
- <use figures/fsml-incremental-pruned-by-samehashes.png> [76 <./figures/fsml-pr
-uned-by-hashes.png>] [77 <./figures/fsml-incremental-pruned-by-samehashes.png>]
-) [78] (./discussion.tex [79
-
-] [80] [81]
-Overfull \hbox (19.3493pt too wide) in paragraph at lines 53--54
-[]\OT1/cmr/m/n/10 Most pro-posed vi-su-al-iza-tions rely on sta-ble unique IDs 
-(the Con-trast Treemap[[]],
- []
-
-) [82] (./conclusion.tex [83
+ <use figures/fsml-incremental-pruned-by-samehashes.png> [76 <./figures/fsml-ch
+anges-itemsize-pruning.png>]) [77 <./figures/fsml-pruned-by-hashes.png>]
+[78 <./figures/fsml-incremental-pruned-by-samehashes.png>] (./conclusion.tex
+[79
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]
-[85]) [86] (./treetank.tex
+ [80]
+[81] [82]
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [83]
+[84] [85pdfTeX warning (ext4): destination with the same identifier (name{Hfoot
+note.18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.85 \item B
+            uilding an index structure for visualizations of consecutive rev...
+]) [86] (./treetank.tex
 Overfull \hbox (7.29362pt too wide) in paragraph at lines 21--22
 \OT1/cmr/m/n/10 times no ad-ja-cent text nodes are cre-ated which is con-sis-te
 nt with the XPath/X-
@@ -1267,14 +1274,41 @@ Underfull \hbox (badness 10000) detected at line 324
  []
 
 [90]) [91] (./xslt.tex
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 3.
+ (/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
-)
-[92
+) [92
+
+] (./wikidump.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--260
+
+ []
+
+[93
+
+] (./tables-rating
+Overfull \hbox (2.7104pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/n/10 ent nodes, through ad-jan-cency or through con-nect-ing nodes v
+ia curves/di-
+ []
+
+
+Overfull \hbox (3.9326pt too wide) in paragraph at lines 23--24
+[]\OT1/cmr/m/n/10 -: The vi-su-al-iza-tion is not ca-pa-ble of vi-su-al-iz-ing 
+struc-tural changes (should
+ []
+
+) [94
 
 ] (./thesis.bbl
 Underfull \hbox (badness 1521) in paragraph at lines 25--28
@@ -1282,29 +1316,26 @@ Underfull \hbox (badness 1521) in paragraph at lines 25--28
 , and
  []
 
-[93
+[95
 
-]) [94] (./thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
+]) [96] (./thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18167 strings out of 493848
- 303735 string characters out of 1152824
- 440626 words of memory out of 3000000
- 20340 multiletter control sequences out of 15000+50000
+ 18175 strings out of 493848
+ 303761 string characters out of 1152824
+ 453627 words of memory out of 3000000
+ 20342 multiletter control sequences out of 15000+50000
  16017 words of font info for 60 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,22n,72p,3072b,1815s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not ex
+ 63i,22n,72p,3072b,1277s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
-, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
 
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texl
@@ -1331,9 +1362,9 @@ public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (103 pages, 8058690 bytes).
+Output written on thesis.pdf (105 pages, 8063756 bytes).
 PDF statistics:
- 1908 PDF objects out of 2073 (max. 8388607)
- 648 named destinations out of 1000 (max. 500000)
- 666 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1917 PDF objects out of 2073 (max. 8388607)
+ 651 named destinations out of 1000 (max. 500000)
+ 650 words of extra memory for PDF output out of 10000 (max. 10000000)
 

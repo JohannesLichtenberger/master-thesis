@@ -188,6 +188,7 @@
 }
 
 @MISC{xmldiff,
+  author = {Logilab},
   title = {Logilab - xmldiff},
   url = {http://www.logilab.org/859},
 }

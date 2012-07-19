@@ -28,7 +28,7 @@ It is immediately obvious by investigating the original XML-documents, that the 
 
 Having a closer look at the input documents reveals changed text-values which due to their short length and to sometimes numerical values have changed completely.
 
-\begin{lstlisting}[caption=CStructure/FStructure comparsion]
+\begin{code}[caption=CStructure/FStructure comparsion]
 <cstructure>                   <cstructure>
   <constraint>                   <constraint>
     <label>subtree</label>         <label>subtree</label>
@@ -44,7 +44,7 @@ Having a closer look at the input documents reveals changed text-values which du
   </constraint>                  </constraint>
   ...                            ...
 </cstructure>                  </cstructure>
-\end{lstlisting}
+\end{code}
 \label{lst:linguistscomparsion}
 
 Thus we changed the leaf-node comparison slightly. Instead of just relying on the Levenshtein-distance for text-node values we also try to match all ancestor \texttt{QName}s \footnote{ancestors are always element nodes, the document-root node is not visited} if the returned normalized value is $<=$ the threshold value defined for the similarity of leaf nodes. Note that only leaf nodes are considered to match if the threshold is $>$ than the predefined threshold.
@@ -64,7 +64,7 @@ However as a direct consequence of this short evaluation it is inevitable to rel
 \begin{enumerate}
 \item Import of the initial XML-document.
 \item Import the first updated XML-document to a temporary resource.
-\item Utilize the internal Treetank diff-algorithm to determine changes based on unique node-IDs. Whenever an edit-operation is encountered the appropriate transaction-method has to be executed. In case of \texttt{element}- and \texttt{text}-nodes it requires how to insert nodes\footnote{remember that Treetank currently is able to insert a node as a right sibling or first child} and where, which is very simple due to the \texttt{transaction.moveTo(long)}-method which can move the transaction/cursor directly to the left-sibling-node of the node to insert if it is available or to the parent. In the first case the node has to be inserted as a right sibling, in the latter case as a first child of the parent node.
+\item Utilize the internal Treetank diff-algorithm to determine changes based on unique node-IDs. Whenever an edit-operation is encountered the appropriate transaction-method has to be executed. %In case of \texttt{element}- and \texttt{text}-nodes it requires how to insert nodes\footnote{remember that Treetank currently is able to insert a node as a right sibling or first child} and where, which is very simple due to the \texttt{transaction.moveTo(long)}-method which can move the transaction/cursor directly to the left-sibling-node of the node to insert if it is available or to the parent. In the first case the node has to be inserted as a right sibling, in the latter case as a first child of the parent node.
 \end{enumerate}
 
 Furthermore this approach applies to every XML-document which incorporates unique node identifiers.
@@ -75,44 +75,7 @@ Next we study the import of several articles from Wikipedia ordered by timestamp
 Wikipedia is studied as an application to demonstrate the feasability of our approach on a large text corpora. However several issues have to be solved during preprocessing.
 
 \begin{itemize}
-\item Wikipedia is dumped as a very large XML-file. "'The XML itself contains complete, raw text of every revision"' \cite{WikiDump} and thus is a full dump instead of an incremental- or differential-dump describing the changes an author performed. Listing \ref{lst:wikixml} depicts a small example of the structure of an Wikipedia XML-dump. Moreover WikiText, which is a proprietary markup format is stored as plain text and not replaced by XML-markup. Thus, the content of an article in each revision is a huge \texttt{TextNode} which includes the full text instead of just denoting the changes and its context in some form. Differences between the actual content of several revisions of an article on a node-granular level can not be found with a state of the art native XML database system, which supports revisioning of the data, as a direct consequence. The database systems' best bet is to generate a character based delta between the two large text-nodes.
-
-\begin{lstlisting}[caption=Wikipedia Dump - XML representation]
-<mediawiki xml:lang="en">
-  <page>
-    <title>Page title</title>
-    <id>67365</id>
-    <restrictions>edit=sysop:move=sysop</restrictions>
-    <revision>
-      <timestamp>2001-01-15T13:15:00Z</timestamp>
-      <contributor><username>Foobar</username></contributor>
-      <comment>I have just one thing to say!</comment>
-      <text>A bunch of [[text]] here.</text>
-      <minor />
-    </revision>
-    <revision>
-      <timestamp>2001-01-15T13:10:27Z</timestamp>
-      <contributor><ip>10.0.0.2</ip></contributor>
-      <comment>new!</comment>
-      <text>An earlier [[revision]].</text>
-    </revision>
-  </page>
-    
-  <page>
-    <title>Talk:Page title</title>
-    <id>127455</id>
-    <revision>
-      <timestamp>2001-01-15T14:03:00Z</timestamp>
-      <contributor><ip>10.0.0.2</ip></contributor>
-      <comment>hey</comment>
-      <text>
-        WHYD YOU LOCK PAGE??!!! i was editing that jerk
-      </text>
-    </revision>
-  </page>
-</mediawiki>
-\end{lstlisting}
-\label{lst:wikixml}
+\item Wikipedia is dumped as a very large XML-file. "'The XML itself contains complete, raw text of every revision"'\cite{WikiDump} (have a look at Appendix \ref{sec::wikidump} for a short example) and thus is a full dump instead of an incremental- or differential-dump describing the changes an author performed. Listing \ref{lst:wikixml} depicts a small example of the structure of an Wikipedia XML-dump. Moreover WikiText, which is a proprietary markup format is stored as plain text and not replaced by XML-markup. Thus, the content of an article in each revision is a huge \texttt{TextNode} which includes the full text instead of just denoting the changes and its context in some form. Differences between the actual content of several revisions of an article on a node-granular level can not be found with a state of the art native XML database system, which supports revisioning of the data, as a direct consequence. The database systems' best bet is to generate a character based delta between the two large text-nodes.
 
 \item Furthermore due to the fact that XPath 2.0 should be usable without requiring an XPath Full Text 1.0 implementation and our overall goal is to analyse the temporal evolution of the stored data, WikiText markup has to be converted into semistructured XML fragments. To accomplish this the Wiki2XML parser from the MODIS team \cite{Wiki2XML} is used.
 
@@ -269,7 +232,7 @@ Therefore moves and renames are not supported out of the box. The path to the di
 
 The FSML-subdialect currently used is very simple. Listing \ref{lst:fsml} provides an example of the simple structure. Directories are mapped to \texttt{dir}-elements, whereas files are mapped to \texttt{file}-elements. Note that the names can't be used to denote the elements, as for instance whitespaces are not permitted in QNames. Thus the labels in the visualizations are optionally based on \texttt{name=""}-attributes.
 
-\begin{lstlisting}[caption=FSML structure]
+\begin{code}[caption=FSML structure]
 <fsml>
   <dir name="Desktop">
     <dir name="Lichtenberger">
@@ -278,16 +241,11 @@ The FSML-subdialect currently used is very simple. Listing \ref{lst:fsml} provid
       </dir>
       <dir name="Master">
         <dir name="Thesis">
-          <dir name="Fig.s">
+          <dir name="figures">
             <file name="fsml-incremental.png" suffix=".png"/>
             ...
           </dir>
-          <dir name="results">
-            <file name="1gb-400" suffix=""/>
-            ...
-          </dir>
           <file name="thesis.tex" suffix=".text"/>
-          <file name="motivation.tex" suffix=".text"/>
           ...
         </dir>
         ...
@@ -296,7 +254,7 @@ The FSML-subdialect currently used is very simple. Listing \ref{lst:fsml} provid
     ...
   </dir>
 </fsml>
-\end{lstlisting}
+\end{code}
 \label{lst:fsml}
 
 While this representation currently does not incorporate most of the strengths FSML usually provides it is easy to add metadata about files and to incorporate text-files. Optionally instances of custom classes are pluggable to provide any type of extensibility. Thus it is possible to provide extractors for certain types of files and to incorporate text-files into the FSML-representation itself, possibly by adding a link to another resource in the fsml-database.
@@ -338,8 +296,6 @@ Questions such as
 \begin{itemize}
 \item Auditing: Which files are updated/inserted/deleted or not during a sequence of snapshots?
 \item Does an employee adhere to company instructions regarding installed software? (by file-extensions or analysing the binaries and storing an additional attribute with "true" or "false" values)
-\item 
-\item 
 \end{itemize}
 
 \begin{figure}[tb]

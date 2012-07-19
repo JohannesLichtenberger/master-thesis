@@ -314,9 +314,9 @@ pWtx.moveTo(nodeKey)\;
   }
 }
 \tcp{Case: Has right sibl. but no left sibl.}
-\If{pWtx.getStructuralNode().hasRightSibling() AND !pWtx.getStructuralNode().hasLeftSibling()}{
-  \tcp{similar to above case (omitted)}
-}
+%\If{pWtx.getStructuralNode().hasRightSibling() AND !pWtx.getStructuralNode().hasLeftSibling()}{
+\tcp{similar to above case (omitted)}
+%}
 \tcp{Case: Has no right and no left sibl.}
 mWtx.remove()\;
 return EVisitResult.CONTINUE\;

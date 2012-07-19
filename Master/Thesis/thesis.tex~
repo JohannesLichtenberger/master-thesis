@@ -68,6 +68,14 @@
 \lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, language=xml, basicstyle=\footnotesize,
  keywordstyle=\color{blue!80!black!100},}
 
+\lstnewenvironment{code}[1][]%
+{
+   \noindent
+   \minipage{\linewidth} 
+   \vspace{0.5\baselineskip}
+   \lstset{basicstyle=\ttfamily\footnotesize,frame=single,#1}}
+{\endminipage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SETTINGS FOR THE HYPERREF PACKAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,7 +201,7 @@
 \newpage
 %\setcounter{page}{1}
 \input{acknowledgements} % refer your acknowledgments here
-\addcontentsline{toc}{section}{Acknowledgments}
+%\addcontentsline{toc}{section}{Acknowledgments}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ABSTRACT
@@ -237,8 +245,6 @@
 \clearpage
 \input{applications}
 \clearpage
-\input{discussion}
-\clearpage
 \input{conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,6 +255,8 @@
 \input{treetank}
 \clearpage
 \input{xslt}
+\clearpage
+\input{wikidump}
 %\input{statement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
