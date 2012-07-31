@@ -14,7 +14,7 @@
 \BOOKMARK [2][-]{subsection.0.2.4}{Visualization of differences}{section.0.2}
 \BOOKMARK [1][-]{section.0.3}{Analysis of structural differences}{}
 \BOOKMARK [2][-]{subsection.0.3.1}{Introduction}{section.0.3}
-\BOOKMARK [2][-]{subsection.0.3.2}{ID-less diff-algorithm \(FMSE\) / Preprocessing}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.2}{ID-less diffing \(FMSE\) / Preprocessing}{section.0.3}
 \BOOKMARK [2][-]{subsection.0.3.3}{ID-based diffing}{section.0.3}
 \BOOKMARK [2][-]{subsection.0.3.4}{Traversal of both revisions}{section.0.3}
 \BOOKMARK [2][-]{subsection.0.3.5}{Diff-Computation}{section.0.3}

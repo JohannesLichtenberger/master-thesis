@@ -21,61 +21,61 @@
 \contentsline {subsubsection}{LaDiff / Fast Match Simple Editscript (FMSE)\cite {chawathe1996change}}{8}{section*.11}
 \contentsline {subsubsection}{X-Diff\cite {wang2003x}}{10}{section*.12}
 \contentsline {subsubsection}{Faxma\cite {lindholm2006fast}}{10}{section*.13}
-\contentsline {subsubsection}{Summary}{10}{section*.14}
+\contentsline {subsubsection}{Summary}{11}{section*.14}
 \contentsline {subsection}{\numberline {2.4}Visualization of differences}{11}{subsection.0.2.4}
-\contentsline {subsubsection}{Treevolution\cite {theron2006hierarchical}}{11}{section*.15}
+\contentsline {subsubsection}{Treevolution\cite {theron2006hierarchical}}{12}{section*.15}
 \contentsline {subsubsection}{Interactive Visual Comparison of Multiple Trees\cite {bremm2011interactive}}{12}{section*.16}
 \contentsline {subsubsection}{Spiral-Treemap/Contrast-Treemap\cite {tu2007visualizing}}{12}{section*.17}
-\contentsline {subsubsection}{TreeJuxtaposer\cite {munzner2003treejuxtaposer}}{12}{section*.18}
+\contentsline {subsubsection}{TreeJuxtaposer\cite {munzner2003treejuxtaposer}}{13}{section*.18}
 \contentsline {subsubsection}{Code Flows: Visualizing Structural Evolution of Source Code\cite {telea2008code}}{13}{section*.19}
 \contentsline {subsubsection}{Ripple presentation for tree structures with historical information\cite {ishihara2006ripple}}{13}{section*.20}
 \contentsline {subsubsection}{Summary}{14}{section*.21}
-\contentsline {section}{\numberline {3}Analysis of structural differences}{15}{section.0.3}
-\contentsline {subsection}{\numberline {3.1}Introduction}{15}{subsection.0.3.1}
-\contentsline {subsection}{\numberline {3.2}ID-less diff-algorithm (FMSE) / Preprocessing}{16}{subsection.0.3.2}
-\contentsline {subsubsection}{FMSE}{17}{section*.22}
-\contentsline {subsection}{\numberline {3.3}ID-based diffing}{19}{subsection.0.3.3}
-\contentsline {subsubsection}{Hashes}{19}{section*.23}
-\contentsline {subsubsection}{Modes to compare differences}{21}{section*.24}
-\contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{22}{subsection.0.3.4}
-\contentsline {subsection}{\numberline {3.5}Diff-Computation}{22}{subsection.0.3.5}
-\contentsline {subsection}{\numberline {3.6}Detecting moves}{26}{subsection.0.3.6}
-\contentsline {subsubsection}{Impossible to detect moves on the fly}{26}{section*.25}
-\contentsline {subsubsection}{Detection of moves in a postprocessing step}{26}{section*.26}
+\contentsline {section}{\numberline {3}Analysis of structural differences}{16}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}Introduction}{16}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}ID-less diffing (FMSE) / Preprocessing}{17}{subsection.0.3.2}
+\contentsline {subsubsection}{FMSE}{19}{section*.22}
+\contentsline {subsection}{\numberline {3.3}ID-based diffing}{20}{subsection.0.3.3}
+\contentsline {subsubsection}{Hashes}{21}{section*.23}
+\contentsline {subsubsection}{Modes to compare differences}{22}{section*.24}
+\contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{23}{subsection.0.3.4}
+\contentsline {subsection}{\numberline {3.5}Diff-Computation}{23}{subsection.0.3.5}
+\contentsline {subsection}{\numberline {3.6}Detecting moves}{27}{subsection.0.3.6}
+\contentsline {subsubsection}{Impossibility to detect moves on the fly}{27}{section*.25}
+\contentsline {subsubsection}{Detection of moves in a postprocessing step}{28}{section*.26}
 \contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{28}{subsection.0.3.7}
-\contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{30}{subsection.0.3.8}
-\contentsline {section}{\numberline {4}Visualizations}{33}{section.0.4}
-\contentsline {subsection}{\numberline {4.1}Introduction}{33}{subsection.0.4.1}
-\contentsline {subsection}{\numberline {4.2}Aggregation}{33}{subsection.0.4.2}
-\contentsline {subsection}{\numberline {4.3}Visualizations}{34}{subsection.0.4.3}
+\contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{31}{subsection.0.3.8}
+\contentsline {section}{\numberline {4}Visualizations}{34}{section.0.4}
+\contentsline {subsection}{\numberline {4.1}Introduction}{34}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {4.2}Aggregation}{34}{subsection.0.4.2}
+\contentsline {subsection}{\numberline {4.3}Visualizations}{35}{subsection.0.4.3}
 \contentsline {subsubsection}{Interaction}{38}{section*.27}
-\contentsline {subsubsection}{Querying}{39}{section*.28}
-\contentsline {subsubsection}{Labels}{39}{section*.29}
-\contentsline {subsubsection}{Filtering/Pruning}{39}{section*.30}
-\contentsline {subsection}{\numberline {4.4}Comparsion using a new Sunburst-layout algorithm}{41}{subsection.0.4.4}
-\contentsline {subsubsection}{Sunburst Comparsion-Layout}{41}{section*.31}
-\contentsline {subsubsection}{Short animation}{42}{section*.32}
-\contentsline {subsubsection}{Layout algorithm}{43}{section*.33}
-\contentsline {subsubsection}{Semantic zoom implementation}{46}{section*.34}
-\contentsline {subsubsection}{Filtering/Pruning}{48}{section*.35}
-\contentsline {subsubsection}{Zooming / Details on demand}{52}{section*.36}
-\contentsline {subsubsection}{Similarity measures}{53}{section*.37}
-\contentsline {subsection}{\numberline {4.5}Querying}{54}{subsection.0.4.5}
-\contentsline {subsection}{\numberline {4.6}Visualization of moves}{54}{subsection.0.4.6}
-\contentsline {subsection}{\numberline {4.7}Small multiple displays}{56}{subsection.0.4.7}
-\contentsline {subsection}{\numberline {4.8}Runtime/Space analysis and scalability of the ID-based diff}{58}{subsection.0.4.8}
+\contentsline {subsubsection}{Querying}{40}{section*.28}
+\contentsline {subsubsection}{Labels}{40}{section*.29}
+\contentsline {subsubsection}{Filtering/Pruning}{40}{section*.30}
+\contentsline {subsection}{\numberline {4.4}Comparsion using a new Sunburst-layout algorithm}{40}{subsection.0.4.4}
+\contentsline {subsubsection}{Sunburst Comparsion-Layout}{42}{section*.31}
+\contentsline {subsubsection}{Short animation}{43}{section*.32}
+\contentsline {subsubsection}{Layout algorithm}{44}{section*.33}
+\contentsline {subsubsection}{Semantic zoom implementation}{47}{section*.34}
+\contentsline {subsubsection}{Filtering/Pruning}{49}{section*.35}
+\contentsline {subsubsection}{Zooming / Details on demand}{53}{section*.36}
+\contentsline {subsubsection}{Similarity measures}{55}{section*.37}
+\contentsline {subsection}{\numberline {4.5}Querying}{55}{subsection.0.4.5}
+\contentsline {subsection}{\numberline {4.6}Visualization of moves}{56}{subsection.0.4.6}
+\contentsline {subsection}{\numberline {4.7}Small multiple displays}{57}{subsection.0.4.7}
+\contentsline {subsection}{\numberline {4.8}Runtime/Space analysis and scalability of the ID-based diff}{59}{subsection.0.4.8}
 \contentsline {subsection}{\numberline {4.9}Conclusion and Summary}{60}{subsection.0.4.9}
-\contentsline {section}{\numberline {5}Applications}{62}{section.0.5}
-\contentsline {subsection}{\numberline {5.1}Introduction}{62}{subsection.0.5.1}
-\contentsline {subsection}{\numberline {5.2}LFG}{62}{subsection.0.5.2}
-\contentsline {subsection}{\numberline {5.3}Wikipedia}{65}{subsection.0.5.3}
-\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{69}{subsection.0.5.4}
-\contentsline {subsection}{\numberline {5.5}Summary}{76}{subsection.0.5.5}
-\contentsline {section}{\numberline {6}Summary, Conclusion and Future Research}{79}{section.0.6}
-\contentsline {subsection}{\numberline {6.1}Summary}{79}{subsection.0.6.1}
-\contentsline {subsection}{\numberline {6.2}Conclusion}{81}{subsection.0.6.2}
-\contentsline {subsubsection}{Evaluation Criteria}{82}{section*.38}
-\contentsline {subsection}{\numberline {6.3}Future Research}{85}{subsection.0.6.3}
+\contentsline {section}{\numberline {5}Applications}{63}{section.0.5}
+\contentsline {subsection}{\numberline {5.1}Introduction}{63}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {5.2}LFG}{63}{subsection.0.5.2}
+\contentsline {subsection}{\numberline {5.3}Wikipedia}{66}{subsection.0.5.3}
+\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{71}{subsection.0.5.4}
+\contentsline {subsection}{\numberline {5.5}Summary}{78}{subsection.0.5.5}
+\contentsline {section}{\numberline {6}Summary, Conclusion and Future Research}{80}{section.0.6}
+\contentsline {subsection}{\numberline {6.1}Summary}{80}{subsection.0.6.1}
+\contentsline {subsection}{\numberline {6.2}Conclusion}{82}{subsection.0.6.2}
+\contentsline {subsubsection}{Evaluation Criteria}{83}{section*.38}
+\contentsline {subsection}{\numberline {6.3}Future Research}{86}{subsection.0.6.3}
 \contentsline {section}{\numberline {A}Treetank}{87}{section..1}
 \contentsline {subsection}{\numberline {A.1}General persistent storage enhancements}{87}{subsection..1.1}
 \contentsline {subsection}{\numberline {A.2}ACID properties}{87}{subsection..1.2}
@@ -83,8 +83,8 @@
 \contentsline {subsubsection}{Levelorder-Axis}{88}{section*.39}
 \contentsline {subsection}{\numberline {A.4}Edit operations}{88}{subsection..1.4}
 \contentsline {subsection}{\numberline {A.5}Visitor}{90}{subsection..1.5}
-\contentsline {subsection}{\numberline {A.6}DeletionVisitor core}{91}{subsection..1.6}
+\contentsline {subsection}{\numberline {A.6}DeletionVisitor core}{90}{subsection..1.6}
 \contentsline {section}{\numberline {B}XSLT stylesheet to combine consecutive pages/revisions}{92}{section..2}
 \contentsline {section}{\numberline {C}Wikipedia Dump - XML structure}{93}{section..3}
 \contentsline {section}{\numberline {D}Visualizations - rating legend}{94}{section..4}
-\contentsline {section}{References}{96}{section*.40}
+\contentsline {section}{References}{97}{section*.40}

@@ -1,0 +1,41 @@
+\section{Visualizations - rating legend}\label{sec::tablelegend}
+\begin{itemize}
+\item space filling:
+\begin{itemize}
+\item -: The visualization is not space filling.
+\item o: The visualization is considered to be space filling. However the visualization lacks space filling properties in the corners of the screen (for instance the SunburstView) or in other areas (Icicle-plots which are a rectangular variant of the SunburstView).
+\item +: The visualization occupies the whole screen space.
+\end{itemize}
+\item hierarchy:
+\begin{itemize}
+\item -: The hierarchy is not displayed via encapsulation of child nodes in parent nodes, through adjancency or through connecting nodes via curves/direct lines (for instance in a matrix).
+\item o: The hierarchy is visualized but edge crossings are possible which results in visual clutter (certain node-link diagrams) or they are visualized through encapsulation in a parent node (Treemaps). In the case of Treemaps it is usually not easy to visually perceive the nesting even if cushing Treemaps reduce the issue.
+\item +: The hierarchy is displayed without any visual clutter and parent/child relationships are easily perceivable. 
+\end{itemize}
+\item labels:
+\begin{itemize}
+\item -: The labels are not present.
+\item o: Labels are plotted, however visual clutter resulting from label overplotting occurs frequently.
+\item +: Labels are plotted without the possibility of label overplotting. 
+\end{itemize}
+\item structural changes:
+\begin{itemize}
+\item -: The visualization is not capable of visualizing structural changes (should never happen).
+\item o: The visualization visualizes unchanged, inserted and deleted nodes. Either no other operations as for instance moves are displayed or all operations are displayed through connecting unchanged nodes via splines. Thus, all changes are only visible through close inspection, especially in case of single node modifications or small subtree changes.
+\item +: The visualization visualizes all update primitives including updates and moves through visual encoding (for instance usually color coding).
+\end{itemize}
+\item non structural changes:
+\begin{itemize}
+\item -: The visualization is not capable of visualizing non-structural changes.
+\item o: The visualization visualizes non structural changes, that is updated values.
+\item +: The visualization is capable of visualizing differences in the value.
+\end{itemize}
+\item pruning/filtering:
+\begin{itemize}
+\item -: The visualization does not allow filtering interesting nodes.
+\item o: The visualization supports culling, either so called frustum culling, that is nodes/items which are not in the viewport are pruned and/or LOC culling. In the latter case items which are too small to be perceivable are not generated.
+\item +: The visualization supports further methods to filter interesting, that is changed nodes.
+\end{itemize}
+\end{itemize}
+
+

@@ -1,6 +1,6 @@
 \section{Treetank}\label{sec::treetank}
 
-\subsection{Persistent storage enhancements}\label{subsec::storage}
+\subsection{General persistent storage enhancements}\label{subsec::storage}
 While not exclusively developed for our tree-to-tree comparsion for completeness we want to meantion several techniques which have recently been developed to support the persistent storage of large tree-structures efficiently (with a minimum space overhead).
 
 \begin{itemize}

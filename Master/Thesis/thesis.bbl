@@ -32,6 +32,12 @@ D.~Keim, G.~Andrienko, J.~Fekete, C.~G{\"o}rg, J.~Kohlhammer, and
   \url{http://en.wikipedia.org/wiki/Moore's_law}
 \BIBentrySTDinterwordspacing
 
+\bibitem{SUBVERSION}
+\BIBentryALTinterwordspacing
+A.~S. Foundation, ``Apache™ subversion®.'' [Online]. Available:
+  \url{http://subversion.apache.org}
+\BIBentrySTDinterwordspacing
+
 \bibitem{VISUAL_ANALYTICS}
 \BIBentryALTinterwordspacing
 J.~J. Thomas and K.~Cook, ``Illuminating the path: The r\&d agenda for visual
@@ -173,6 +179,12 @@ O.~D.~T. Committee, ``Docbook.'' [Online]. Available:
   \url{http://www.docbook.org/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Saxon}
+\BIBentryALTinterwordspacing
+Saxonica, ``Saxon - xslt and xquery processor.'' [Online]. Available:
+  \url{http://www.saxonica.com/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Brackit}
 \BIBentryALTinterwordspacing
 T.~Kaiserslautern, ``Brackit.'' [Online]. Available:
@@ -207,6 +219,12 @@ Wikimedia, ``Wikipedia data dumps.'' [Online]. Available:
 \BIBentryALTinterwordspacing
 M.~Team, ``Wiki2xml.'' [Online]. Available:
   \url{http://www.modis.ispras.ru/texterra/download/wiki2xml.zip}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Hadoop}
+\BIBentryALTinterwordspacing
+A.~S. Foundation, ``Hadoop - mapreduce framework.'' [Online]. Available:
+  \url{http://hadoop.apache.org/mapreduce/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

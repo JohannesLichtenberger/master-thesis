@@ -10,45 +10,45 @@ Warning--empty journal in TREETANK
 Warning--empty year in TREETANK
 
 Done.
-You've used 33 entries,
+You've used 36 entries,
             4024 wiz_defined-function locations,
-            991 strings with 11794 characters,
-and the built_in function-call counts, 19953 in all, are:
-= -- 1514
-> -- 410
+            1005 strings with 12040 characters,
+and the built_in function-call counts, 20943 in all, are:
+= -- 1583
+> -- 422
 < -- 136
-+ -- 222
-- -- 70
-* -- 910
-:= -- 3046
-add.period$ -- 76
-call.type$ -- 33
-change.case$ -- 33
++ -- 228
+- -- 73
+* -- 943
+:= -- 3229
+add.period$ -- 82
+call.type$ -- 36
+change.case$ -- 36
 chr.to.int$ -- 327
-cite$ -- 35
-duplicate$ -- 1500
-empty$ -- 1810
-format.name$ -- 88
-if$ -- 4536
+cite$ -- 38
+duplicate$ -- 1587
+empty$ -- 1915
+format.name$ -- 91
+if$ -- 4743
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 287
-newline$ -- 154
-num.names$ -- 30
-pop$ -- 801
+int.to.str$ -- 36
+missing$ -- 308
+newline$ -- 169
+num.names$ -- 33
+pop$ -- 873
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1508
+skip$ -- 1580
 stack$ -- 0
-substring$ -- 795
-swap$ -- 1076
+substring$ -- 798
+swap$ -- 1118
 text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 33
+type$ -- 36
 warning$ -- 2
-while$ -- 90
-width$ -- 35
-write$ -- 328
+while$ -- 93
+width$ -- 38
+write$ -- 355
 (There were 2 warnings)

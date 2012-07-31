@@ -43,13 +43,16 @@
 \usepackage{fancyhdr}                  	% fancy header
 \usepackage[colorinlistoftodos]{todonotes} % todo notes
 \usepackage{listings}
-\usepackage{hyperref}			% hypertext references, somehow screws up with figures
+%\usepackage[font=small,labelfont=bf,tableposition=top]{caption}
 \usepackage[all]{hypcap}
+\usepackage{hyperref}			% hypertext references, somehow screws up with figures
 %\usepackage[svgnames]{xcolor}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SETTINGS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
 \graphicspath{figures/}			% somehow, doesn't work, thus use command
 %\newcommand{\gfx}[0]{../gfx/}
 \titlerunning{~}				% set off for llncs	

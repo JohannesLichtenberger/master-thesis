@@ -1,3 +1,28 @@
+@MISC{Hadoop,
+  title = {Hadoop - MapReduce Framework},
+  author = {Apache Software Foundation},
+  url= {http://hadoop.apache.org/mapreduce/},
+}
+
+@MISC{Saxon,
+  title = {Saxon - XSLT and XQuery processor},
+  author = {Saxonica},
+  url={http://www.saxonica.com/},
+}
+
+@MISC{SUBVERSION,
+  title={Apache™ Subversion®},
+  author={Apache Software Foundation},
+  url={http://subversion.apache.org},
+}
+
+@book{kramis2007perfidix,
+  title={PERFIDIX: a Generic Java Benchmarking Tool},
+  author={Kramis, M. and Onea, A. and Graf, S.},
+  year={2007},
+  publisher={Bibliothek der Universit{\"a}t Konstanz}
+}
+
 @article{TREETANK,
   title={Treetank, Designing A Versioned XML Storage},
   author={Kramis, M. and Seabix, AG},

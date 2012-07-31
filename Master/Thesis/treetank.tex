@@ -222,7 +222,7 @@ The implementation of the replace-operation is straigth forward using a delete- 
 
 Besides, the \texttt{remove}-operation has been modified to merge adjacent \texttt{TextNode}s if the deleted node has two neighbour text nodes to adhere to the XPath/XQuery Data Model (XDM) and to provide meaningful visualizations. \texttt{insert}-operations as of now check if the new \texttt{TextNode} would yield two consecutive \texttt{TextNode}s and, if so, update the value of the existing node with a concatenation of the old- and new-values instead. Therefore the storage consistently avoids consecutive \texttt{TextNode}s. 
 
-Furthermore a new bulk-insertion method supports a fast bulk insertion of subtrees based on a component which already existed. Hashes are computed in a subsequent postorder traversal of the inserted subtree thus reducing the runtime from $O(n^2)$ to $O(n)$.
+%Furthermore a new bulk-insertion method supports a fast bulk insertion of subtrees based on a component which already existed. Hashes are computed in a subsequent postorder traversal of the inserted subtree thus reducing the runtime from $O(n^2)$ to $O(n)$.
 
 \subsection{Visitor}\label{subsec::visitor}
 A special \texttt{VisitorDescendantAxis} executes a visitor specific implementation for each visited node before moving to the next node in preorder. The return value of the methods a visitor has to implement (a visitor specific implementation for each node-type) guides the traversal in the axis. The following result types are currently available:
