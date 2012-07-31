@@ -18,6 +18,11 @@
 \item o: Labels are plotted, however visual clutter resulting from label overplotting occurs frequently.
 \item +: Labels are plotted without the possibility of label overplotting. 
 \end{itemize}
+\item ID-less comparison:
+\begin{itemize}
+\item -: The visualization is not capable of visualizing tree-structures which do not incorporate unique node-identifiers.
+\item +: The visualization is capable of visualizing tree-structures which do not incorporate unique node-identifiers.
+\end{itemize}
 \item structural changes:
 \begin{itemize}
 \item -: The visualization is not capable of visualizing structural changes (should never happen).
