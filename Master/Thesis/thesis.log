@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  31 JUL 2012 19:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  31 JUL 2012 20:33
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -819,7 +819,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <9> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 31.
 
 
-Overfull \hbox (31.33708pt too wide) in paragraph at lines 30--34
+Overfull \hbox (31.33708pt too wide) in paragraph at lines 30--35
  [][] 
  []
 
@@ -1370,7 +1370,7 @@ public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (106 pages, 8071166 bytes).
+Output written on thesis.pdf (106 pages, 8071494 bytes).
 PDF statistics:
  1937 PDF objects out of 2073 (max. 8388607)
  656 named destinations out of 1000 (max. 500000)

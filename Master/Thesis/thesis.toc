@@ -86,5 +86,5 @@
 \contentsline {subsection}{\numberline {A.6}DeletionVisitor core}{90}{subsection..1.6}
 \contentsline {section}{\numberline {B}XSLT stylesheet to combine consecutive pages/revisions}{92}{section..2}
 \contentsline {section}{\numberline {C}Wikipedia Dump - XML structure}{93}{section..3}
-\contentsline {section}{\numberline {D}Visualizations - rating legend}{94}{section..4}
+\contentsline {section}{\numberline {D}Visualizations - Evaluation legend}{94}{section..4}
 \contentsline {section}{References}{97}{section*.40}
