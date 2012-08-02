@@ -28,7 +28,7 @@
 \contentsline {figure}{\numberline {26}{\ignorespaces GUI-performance.}}{61}{figure.0.26}
 \contentsline {figure}{\numberline {27}{\ignorespaces GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{62}{figure.0.27}
 \contentsline {figure}{\numberline {28}{\ignorespaces LFG comparsion}}{64}{figure.0.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces LFG comparsion revised}}{66}{figure.0.29}
+\contentsline {figure}{\numberline {29}{\ignorespaces LFG comparsion revised}}{65}{figure.0.29}
 \contentsline {figure}{\numberline {30}{\ignorespaces Wikipedia comparsion.}}{69}{figure.0.30}
 \contentsline {figure}{\numberline {31}{\ignorespaces Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem}}{70}{figure.0.31}
 \contentsline {figure}{\numberline {32}{\ignorespaces Wikipedia comparsion pruned by itemsize}}{71}{figure.0.32}

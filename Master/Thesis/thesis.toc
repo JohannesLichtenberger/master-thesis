@@ -69,8 +69,8 @@
 \contentsline {subsection}{\numberline {5.1}Introduction}{63}{subsection.0.5.1}
 \contentsline {subsection}{\numberline {5.2}LFG}{63}{subsection.0.5.2}
 \contentsline {subsection}{\numberline {5.3}Wikipedia}{66}{subsection.0.5.3}
-\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{71}{subsection.0.5.4}
-\contentsline {subsection}{\numberline {5.5}Summary}{78}{subsection.0.5.5}
+\contentsline {subsection}{\numberline {5.4}Import of Filesystem-based tree-structure}{70}{subsection.0.5.4}
+\contentsline {subsection}{\numberline {5.5}Summary}{77}{subsection.0.5.5}
 \contentsline {section}{\numberline {6}Summary, Conclusion and Future Research}{80}{section.0.6}
 \contentsline {subsection}{\numberline {6.1}Summary}{80}{subsection.0.6.1}
 \contentsline {subsection}{\numberline {6.2}Conclusion}{82}{subsection.0.6.2}

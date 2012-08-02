@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  31 JUL 2012 20:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  2 AUG 2012 20:08
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -986,13 +986,7 @@ File: figures/diff-docsize-scale.pdf Graphic file (type pdf)
 File: figures/diff-docsize-scale-pruned.pdf Graphic file (type pdf)
 
 <use figures/diff-docsize-scale-pruned.pdf> [30 <./figures/100MB-scaling.pdf>]
-[31 <./figures/diff-docsize-scale.pdf>]
-Overfull \hbox (14.12383pt too wide) in paragraph at lines 415--416
-\OT1/cmr/m/n/10 based diff-algorithm com-bines \OT1/cmtt/m/n/10 INSERT/DELETE \
-OT1/cmr/m/n/10 and \OT1/cmtt/m/n/10 INSERT/INSERT/DELETE/DELETE
- []
-
-)
+[31 <./figures/diff-docsize-scale.pdf>])
 Overfull \hbox (1.34564pt too wide) in paragraph at lines 417--246
 \OT1/cmtt/m/n/10 INSERT/DELETE \OT1/cmr/m/n/10 and \OT1/cmtt/m/n/10 DELETE/INSE
 RT \OT1/cmr/m/n/10 com-bi-na-tions with the same node-IDs. Move
@@ -1126,29 +1120,23 @@ File: figures/gui-performance.pdf Graphic file (type pdf)
 <figures/gui-performance-movedet.pdf, id=1217, 454.69875pt x 253.94875pt>
 File: figures/gui-performance-movedet.pdf Graphic file (type pdf)
 
-<use figures/gui-performance-movedet.pdf> [60]
-Overfull \hbox (11.9881pt too wide) in paragraph at lines 573--574
-[]\OT1/cmr/m/n/10 Moreover three fil-ter-ing tech-niques fa-cil-i-tate the anal
--y-sis of large tree-structures.
- []
-
-[61 <./figures/gui-performance.pdf>]) [62 <./figures/gui-performance-movedet.pd
-f>] (./applications.tex <figures/lfg.png, id=1245, 1220.56pt x 910.40125pt>
+<use figures/gui-performance-movedet.pdf> [60] [61 <./figures/gui-performance.p
+df>]) [62 <./figures/gui-performance-movedet.pdf>] (./applications.tex
+<figures/lfg.png, id=1245, 1220.56pt x 910.40125pt>
 File: figures/lfg.png Graphic file (type png)
+ <use figures/lfg.png>
+[63
 
-<use figures/lfg.png> [63
-
-]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 31.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [64 <./figures/lfg.png>] <figures/linguistics.png, id=1267, 1206.5075pt x 895.
-345pt>
+] <figures/linguistics.png, id=1260, 1206.5075pt x 895.345pt>
 File: figures/linguistics.png Graphic file (type png)
 
-<use figures/linguistics.png> [65] [66 <./figures/linguistics.png>] [67]
+<use figures/linguistics.png>
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 43.
+ [64 <./figures/lfg.png>]
+Underfull \vbox (badness 2343) has occurred while \output is active []
+
+ [65 <./figures/linguistics.png>] [66] [67]
 <figures/wikipedia-rev7071.png, id=1317, 1350.04375pt x 950.55125pt>
 File: figures/wikipedia-rev7071.png Graphic file (type png)
 
@@ -1162,7 +1150,7 @@ File: figures/wikipedia-without-pruned-modifications.png Graphic file (type png
 File: figures/wikipedia-rev90106.png Graphic file (type png)
 
 <use figures/wikipedia-rev90106.png>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1917) has occurred while \output is active []
 
  [69 <./figures/wikipedia-rev7071.png>]
 <figures/wikipedia-incremental.png, id=1335, 1206.5075pt x 895.345pt>
@@ -1176,10 +1164,8 @@ File: figures/wikipedia-rev7374.png Graphic file (type png)
 <figures/wikipedia-incremental-add.png, id=1338, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental-add.png Graphic file (type png)
 
-<use figures/wikipedia-incremental-add.png>
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
- [70 <./figures/wikipedia-without-pruned-modifications.png>]
+<use figures/wikipedia-incremental-add.png> [70 <./figures/wikipedia-without-pr
+uned-modifications.png>]
 Overfull \hbox (7.04378pt too wide) in paragraph at lines 194--195
 []\OT1/cmr/m/n/10 The File Sys-tem Markup Language[[]] is an XML-dialect de-vel
 -oped by Alexan-
@@ -1190,14 +1176,14 @@ Overfull \hbox (7.04378pt too wide) in paragraph at lines 194--195
 File: figures/fsml-gui.png Graphic file (type png)
 
 <use figures/fsml-gui.png>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [72 <./figures/wikipedia-incremental.png>]
-<figures/gui-fsml-fulldiff.png, id=1363, 1439.3775pt x 898.35625pt>
+<figures/gui-fsml-fulldiff.png, id=1358, 1439.3775pt x 898.35625pt>
 File: figures/gui-fsml-fulldiff.png Graphic file (type png)
 
-<use figures/gui-fsml-fulldiff.png> [73 <./figures/wikipedia-rev7374.png>]
-[74 <./figures/wikipedia-incremental-add.png>]
+<use figures/gui-fsml-fulldiff.png>
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
+ [72 <./figures/wikipedia-incremental.png>] [73 <./figures/wikipedia-rev7374.pn
+g>] [74 <./figures/wikipedia-incremental-add.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [75 <./figures/fsml-gui.png>]
@@ -1206,25 +1192,23 @@ Overfull \hbox (0.34926pt too wide) in paragraph at lines 260--261
 ate most of the strengths
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [76 <./figures/gui-fsml-fulldiff.png>]
-<figures/fsml-changes-itemsize-pruning.png, id=1411, 1557.82pt x 895.345pt>
+<figures/fsml-changes-itemsize-pruning.png, id=1405, 1557.82pt x 895.345pt>
 File: figures/fsml-changes-itemsize-pruning.png Graphic file (type png)
 
 <use figures/fsml-changes-itemsize-pruning.png>
-<figures/fsml-pruned-by-hashes.png, id=1413, 1304.875pt x 894.34125pt>
+<figures/fsml-pruned-by-hashes.png, id=1407, 1304.875pt x 894.34125pt>
 File: figures/fsml-pruned-by-hashes.png Graphic file (type png)
 
-<use figures/fsml-pruned-by-hashes.png> [77 <./figures/fsml-changes-itemsize-pr
-uning.png>]
-<figures/fsml-incremental-pruned-by-samehashes.png, id=1420, 1206.5075pt x 895.
+<use figures/fsml-pruned-by-hashes.png>
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+ [76 <./figures/gui-fsml-fulldiff.png>]
+<figures/fsml-incremental-pruned-by-samehashes.png, id=1415, 1206.5075pt x 895.
 345pt>
 File: figures/fsml-incremental-pruned-by-samehashes.png Graphic file (type png)
 
- <use figures/fsml-incremental-pruned-by-samehashes.png> [78 <./figures/fsml-pr
-uned-by-hashes.png>])
+ <use figures/fsml-incremental-pruned-by-samehashes.png> [77 <./figures/fsml-ch
+anges-itemsize-pruning.png>])
 Overfull \hbox (26.18045pt too wide) in paragraph at lines 314--250
 \OT1/cmr/m/n/10 extension. Some pro-posed axis as \OT1/cmtt/m/n/10 next::\OT1/c
 mr/m/n/10 , \OT1/cmtt/m/n/10 previous::\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 futur
@@ -1238,8 +1222,11 @@ Overfull \hbox (4.23824pt too wide) in paragraph at lines 314--250
  in an XPath/XQuery-
  []
 
-[79 <./figures/fsml-incremental-pruned-by-samehashes.png>] (./conclusion.tex
-[80
+
+Underfull \vbox (badness 6961) has occurred while \output is active []
+
+ [78 <./figures/fsml-pruned-by-hashes.png>] [79 <./figures/fsml-incremental-pru
+ned-by-samehashes.png>] (./conclusion.tex [80
 
 ]
 Underfull \vbox (badness 5105) has occurred while \output is active []
@@ -1370,7 +1357,7 @@ public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (106 pages, 8071494 bytes).
+Output written on thesis.pdf (106 pages, 8071361 bytes).
 PDF statistics:
  1937 PDF objects out of 2073 (max. 8388607)
  656 named destinations out of 1000 (max. 500000)

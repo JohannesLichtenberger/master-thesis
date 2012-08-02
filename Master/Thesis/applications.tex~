@@ -26,7 +26,19 @@ We obtained an XML-export of a collection of different versions of a c-structure
 
 It is immediately obvious by investigating the original XML-documents, that the FMSE-algorithm mismatched nodes in the first place which in effect causes a lot of edit-operations. Nodes are touched which are not changed and vice versa\footnote{note, that the final outcome is nontheless correct in terms of the first tree-structure is correctly edited to represent the second}. Thus, the FMSE-algorithm does not generate a minimum edit-script and executes too many edit-operations especially in case of the deletion and reinsertion of the old- respectively the new-\texttt{cstructure} subtree. In doing so, a subsequent visualization is impractical, for the simple reason that it almost mirrors the update-operations issued by the FMSE-algorithm for consecutive versions. As stated in Chapter \ref{sec::relwork} ID-less algorithms work best if leaf nodes and therefore especially text-nodes are very well distinguishable. That is the initial matching of leaf nodes in most if not all cases really matches unchanged nodes, which is the desired behavior. 
 
-Having a closer look at the input documents reveals a lot of changed or updated text-values (\ref{lst:linguistscomparsion}). Our threshold value for matching subtrees in case of inner nodes is $0.5$ (has to be $> 0.5$ for matching nodes) and thus the arg-elements are not matched.
+Having a close look at the input documents reveals a lot of changed or updated text-values (Listing \ref{lst:linguistscomparsion}). Our threshold value for matching subtrees in case of inner nodes is $0.5$ (has to be $> 0.5$ for matching nodes) and thus the arg-elements are not matched.
+
+For that reason we changed the leaf-node comparison slightly. Instead of just relying on the Levenshtein-distance for text-node values we also try to match all ancestor \texttt{QName}s \footnote{ancestors are always element nodes, the document-root node is not visited} if the returned normalized value is $<=$ the threshold value defined for the similarity of leaf nodes. Note that only leaf nodes are considered to match if the threshold is $>$ than the predefined threshold. Hence, the leaf nodes are matched and "updated" by FMSE instead of deleting/inserting the whole subtree.
+
+The result is depicted in Fig. \ref{fig:linguistics}.
+
+\begin{figure}[tb]
+\center{\includegraphics[width=\textwidth]
+{figures/linguistics.png}}
+\caption{\label{fig:linguistics} LFG comparsion revised}
+\end{figure}
+
+We observe that still many nodes are changed, but by looking at the original XML-documents we observe that indeed a lot of nodes have been updated/deleted/inserted or replaced. For instance by scrolling both XML-documents at the end of the fstructure-subtree a lot of subtrees must have been inserted.
 
 \begin{code}[caption=CStructure/FStructure comparsion]
 <cstructure>                   <cstructure>
@@ -46,18 +58,6 @@ Having a closer look at the input documents reveals a lot of changed or updated 
 </cstructure>                  </cstructure>
 \end{code}
 \label{lst:linguistscomparsion}
-
-For that reason we changed the leaf-node comparison slightly. Instead of just relying on the Levenshtein-distance for text-node values we also try to match all ancestor \texttt{QName}s \footnote{ancestors are always element nodes, the document-root node is not visited} if the returned normalized value is $<=$ the threshold value defined for the similarity of leaf nodes. Note that only leaf nodes are considered to match if the threshold is $>$ than the predefined threshold. Hence, the leaf nodes are matched and "updated" by FMSE instead of deleting/inserting the whole subtree.
-
-The result is depicted in Fig. \ref{fig:linguistics}.
-
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/linguistics.png}}
-\caption{\label{fig:linguistics} LFG comparsion revised}
-\end{figure}
-
-We observe that still many nodes are changed, but by looking at the original XML-documents we observe that indeed a lot of nodes have been updated/deleted/inserted or replaced. For instance by scrolling both XML-documents at the end of the fstructure-subtree a lot of subtrees must have been inserted.
 
 However as a direct consequence of this short evaluation it is inevitable to rely on unique node identifiers if we want to visualize minimal edit-scripts in case of updated leaf node values which are very distinct to the other trees' leaf node values or worse the leaf nodes are very similar. Comparisons based on similarity-metrics are always based on heuristics. Assuming the export of the XML-documents includes unique identifiers of the nodes, importing requires utilization of the internal diff-algorithm to simply store incremental changes, the changes from the old- to the new-revision. The following steps have to be implemented:
 
@@ -311,4 +311,4 @@ The smallmultiple differential-variant should be used to compare similar, differ
 
 The standard \emph{SunburstView} reveals all kinds of differences and furthermore allows two zooming operations. The zooming/panning which transforms the viewing-coordinates through affine transformations may be used if the number of items is small and therefore animations are possible whereas a left-mouseclick on an item transforms the item into a new root-node. As already explained in Chapter \ref{sec::visualizations} this involves either a transformation based on node-copies and adjusting angles or the full pipline has to be passed in case of the itemsize-pruning.
 
-We have merely scratched the surface of the possibilities of our current approach. The small multiple displays will greatly benefit from a temporal XPath-extension. Some proposed axis as \texttt{next::}, \texttt{previous::}, \texttt{future::}, \texttt{past::}, \texttt{revision::} already have been implemented but have to be incorporated in an XPath/XQuery-engine. Furthermore adding the possibility to execute temporal XPath-queries and the highlighting of resulting nodes in the SmallMultiple-Views will allow to track specific kinds of nodes over several revisions. The simple query \\\texttt{//dir[@name='wiki-sorted']/future::node()} will reveal nodes with the attribute \texttt{name='wiki-sorted'} in all future revisions. The context will be based on the currently opened base-revision. 
+We have merely scratched the surface of the possibilities of our current approach. The small multiple displays will greatly benefit from a temporal XPath-extension. Some proposed axis as \texttt{next::}, \texttt{previous::}, \texttt{future::}, \texttt{past::}, \texttt{revision::} already have been implemented but have to be incorporated in an XPath/XQuery-engine. Simple queries as for instance \\\texttt{//dir[@name='wiki-sorted']/future::node()} will reveal nodes with the attribute \texttt{name='wiki-sorted'} in all future revisions. The start-context will be based on the currently opened base-revision. 
