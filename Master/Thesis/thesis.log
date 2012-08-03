@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  3 AUG 2012 07:06
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  3 AUG 2012 07:09
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -919,7 +919,7 @@ Overfull \hbox (3.8215pt too wide) in paragraph at lines 250--251
 al-iza-tion. Most treemap
  []
 
-[12] [13]) [14] [15] (./differences.tex
+[12] [13] [14]) [15] (./differences.tex
 <figures/importdata.pdf, id=646, 577.15625pt x 366.36874pt>
 File: figures/importdata.pdf Graphic file (type pdf)
 
@@ -1357,7 +1357,7 @@ public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (106 pages, 8071564 bytes).
+Output written on thesis.pdf (106 pages, 8071556 bytes).
 PDF statistics:
  1938 PDF objects out of 2073 (max. 8388607)
  656 named destinations out of 1000 (max. 500000)
