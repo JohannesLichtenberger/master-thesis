@@ -46,7 +46,7 @@ Table \ref{chap5:comparsion} summarizes all visualization-approaches according t
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|c|c|c|} 
 \hline
-\centering\textbf{visualization approaches} & \begin{sideways}\textbf{space filling}\end{sideways} & \begin{sideways}\textbf{hierarchy}\end{sideways} & \begin{sideways}\textbf{labels}\end{sideways} & \begin{sideways}\textbf{structural changes}\end{sideways} & \begin{sideways}\textbf{structural changes}\end{sideways} & \begin{sideways}\textbf{non structural changes\ }\end{sideways} & \begin{sideways}\textbf{filtering}\end{sideways}\\
+\centering\textbf{visualization approaches} & \begin{sideways}\textbf{space filling}\end{sideways} & \begin{sideways}\textbf{hierarchy}\end{sideways} & \begin{sideways}\textbf{labels}\end{sideways} & \begin{sideways}\textbf{ID-less comparison}\end{sideways} & \begin{sideways}\textbf{structural changes}\end{sideways} & \begin{sideways}\textbf{non structural changes\ }\end{sideways} & \begin{sideways}\textbf{filtering}\end{sideways}\\
 \hline
 \hline
 \textbf{Sunburst} & o & + & +\footnotemark & + & + & + & +\\
