@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {3.6}Detecting moves}{27}{subsection.0.3.6}
 \contentsline {subsubsection}{Impossibility to detect moves on the fly}{27}{section*.25}
 \contentsline {subsubsection}{Detection of moves in a postprocessing step}{28}{section*.26}
-\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{28}{subsection.0.3.7}
+\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{29}{subsection.0.3.7}
 \contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{31}{subsection.0.3.8}
 \contentsline {section}{\numberline {4}Visualizations}{34}{section.0.4}
 \contentsline {subsection}{\numberline {4.1}Introduction}{34}{subsection.0.4.1}
