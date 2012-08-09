@@ -194,6 +194,12 @@
   publisher={Springer}
 }
 
+@MISC{generativegest,
+  title = {Generative Gestaltung},
+  url = {http://generative-gestaltung.de},
+  author = {Gross, D. and Bohnacker, H. and Laub J. and Lazzeroni, C.},
+}
+
 @MISC{DOM,
   title = {Document Object Model},
   url = {http://www.w3.org/DOM/},

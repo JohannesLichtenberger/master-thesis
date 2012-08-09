@@ -54,17 +54,17 @@ While the \emph{SunburstView} as we will shortly see provides a great overview a
 The diff-algorithm is only ever called once for every visible view\footnote{the only exception are small multiple displays which represents changes among several tree-structures}. The diff-tuples are then broadcasted to all other views which are capable of displaying the aggregated tree-structure.
 
 \item
-The \emph{SunburstView} displays a tree structure in a radial layout (Fig. \ref{fig:sunburstview}). We first describe the basics to display one tree-structure and extend the approach to include the aggregated tree-structure to display the differences between two tree-structures. The Sunburst-layout is a space filling approach, thus aiming for a maximized usage of available screen space for the hierarchical visualization. Furthermore it is an adjacency based approach, drawing child nodes next to their parent node. In contrast, Treemaps enclose child-nodes within parent nodes. Thus a Treemap utilizes available screen space to the full extend as the root node occupies the whole available screen space recursively embedding descendants as rectangles. In contrast, in the Sunburst method corners are left empty due to the radial representation. While this alone on first glance might be a great drawback in addition to circular segments which are more difficult to read regarding node labels and comparisons of item-sizes, the layout is stable even if a lot of changes have to be displayed and the hierarchical structure is much better readable. The Spiral Treemap layout which has been described in Chapter \ref{sec::relwork} is relatively stable but it is still very difficult to track changes which might be scattered through 90° degree changes in direction as well as the complicacy to follow nested rectangles which are arranged in spirals in comparison to the simplicity of a Sunburst layout.
+The \emph{SunburstView} displays a tree structure in a radial layout (Fig. \ref{fig:sunburstview}). We first describe the basics to display one tree-structure and extend our approach to include the aggregated tree-structure in order to display the differences between two tree-structures. The Sunburst-layout is a space filling approach, thus aiming for a maximized usage of available screen space for the hierarchical visualization. Furthermore it is an adjacency based approach, drawing child nodes next to their parent node. In contrast, Treemaps enclose child-nodes within parent nodes. Thus a Treemap utilizes available screen space to the full extend as the root node occupies the whole available screen space recursively embedding descendants as rectangles. In contrast, in the Sunburst method corners are left empty due to the radial representation. While this alone on first glance might be a great drawback in addition to circular segments which are more difficult to read regarding node labels and comparisons of item-sizes, the layout is stable even if a lot of changes have to be displayed and the hierarchical structure is much better readable. The Spiral Treemap layout which has been described in Chapter \ref{sec::relwork} is relatively stable but it is still very difficult to track changes which might be scattered through 90° degree changes in direction as well as the complicacy to follow nested rectangles which are arranged in spirals in comparison to the simplicity of a Sunburst layout.
 
 The root node of a tree-structure in a Sunburst-layout is plotted in the middle of the screen depicted as a circle. Child-nodes of the root node are drawn in circular segments next to their parent. The radius depends on the depth. It shrinks with increasing depth such that the area of circular-segments between two levels does not change. Otherwise items toward the edges occupy more space. However this behaviour can be changed to further visually emphasize changes which will be visualized along the edges (section \ref{subsec::comparison}). The arc of an item, which depicts one node, in the Sunburst layout depends on one or more node-attributes. A relative measure in regard to the other children is used.
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth - 7em]
 {figures/sunburstview-cut}}
-\caption{\label{fig:sunburstview} SunburstView depicting the structure of the authors filesystem directory ``/home/johannes/Desktop''.}
+\caption{\label{fig:sunburstview} SunburstView depicting the tree-structure of the author's desktop.}
 \end{figure}
 
-In our case the subtree-sizes are mapped onto the extend of each item such that nodes having more descendants occupy more space. The formular is straight forward:
+Our implementation is based on a complete rewrite of the work presented in \cite{generativegest}. In our case the subtree-sizes are mapped onto the extend of each item such that nodes having more descendants occupy more space. The formular is straight forward:
 
 \begin{equation}
 extend = \left\{ \begin{array}{cl}
@@ -105,13 +105,13 @@ A well known technique to enlarge small regions is to use transformations of the
 
 \begin{figure}
 \centering
-\subfigure[Fisheye transformation]{
-\includegraphics[width=\textwidth - 3em]
+\subfigure[Fisheye transformation.]{
+\includegraphics[width=\textwidth - 10em]
 {figures/fisheye}
 \label{fig:fisheye}
 }
-\subfigure[Zooming into the visualization]{
-\includegraphics[width=\textwidth - 3em]
+\subfigure[Zooming into the visualization.]{
+\includegraphics[width=\textwidth - 10em]
 {figures/zooming}
 \label{fig:zoom}
 }
@@ -307,7 +307,7 @@ The implementation of the \emph{semantic zoom} with changes highlighted in a ded
 \end{enumerate}
 
 \begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
+\center{\includegraphics[width=\textwidth - 5em]
 {figures/sunburst-layout}}
 \caption{\label{fig:sunburst-layout} Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled ``unchanged nodes'' are unchanged whereas the area between the rectangle named ``changed subtrees'' and ``unchanged nodes'' includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}
 \end{figure}
@@ -400,38 +400,68 @@ boolean done $\leftarrow$ false\;
 \end{algorithm}
 
 \subsubsection{Filtering/Pruning}
-Providing an initial Sunburst overview of huge tree-struc\-tures in reasonable time, ranging from a few seconds to a few minutes, requires pruning techniques to filter nodes of no or least interest. Therefore three types of filtering are provided. Changes in a nodes' subtree are always guaranteed to be visible. The following screenshots in this section are related to Fig. \ref{fig:without-pruning} which depicts the same tree comparison in the SunburstView without filtering nodes.
+Providing an initial Sunburst overview of huge tree-struc\-tures in reasonable time, ranging from a few seconds to a few minutes, requires techniques to prune nodes of no or least interest. Therefore three types of filtering are provided. Changes in a nodes' subtree are always guaranteed to be visible. The following screenshots in this section are related to Fig. \ref{fig:without-pruning} which depicts a visualization of a 111 MiB XMark with random modifications in a SunburstView without filtering nodes.
 
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/without-pruning}}
-\caption{\label{fig:without-pruning} Comparison without pruning.}
+\begin{figure}
+\centering
+\subfigure[Comparison without pruning.]{
+\includegraphics[width=\textwidth - 15em]
+{figures/without-pruning}
+\label{fig:without-pruning}
+}
+\subfigure[Filtered by itemsize.]{
+\includegraphics[width=\textwidth - 15em]
+{figures/itemsize-pruned}
+\label{fig:pruned-by-itemsize}
+}
+\caption{Comparison of no filtering with filtering by itemsize.}
 \end{figure}
+
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 10em]
+%{figures/without-pruning}}
+%\caption{\label{fig:without-pruning} Comparison without pruning.}
+%\end{figure}
 
 \begin{itemize}
 \item \emph{by itemsize} Sunburst items which have no changes in its subtree and are too thin to be perceived individually or too thin to be selected even with the fisheye transformantion are pruned based on a predefined threshold-value. An example is depicted in Fig. \ref{fig:pruned-by-itemsize}. This type of filtering is useful wherever nodes which do not differ are of value but depicting the whole tree will not add any significant value. It considerably speeds up the generation of the Sunburst items in large tree-structures, however it does not affect the diff-calculation. Furthermore, if a new node is selected to drill down into the tree the items have to be rebuild, using the \texttt{Diff}-axis. Thus the optimization to create new items based on the initial set with adjusted angles is not usable. The \text{subtree-size} of each node as well as the number of \texttt{modifications} must be recalculated as well. 
 
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/itemsize-pruned}}
-\caption{\label{fig:pruned-by-itemsize} Pruned by itemsize.}
-\end{figure}
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 10em]
+%{figures/itemsize-pruned}}
+%\caption{\label{fig:pruned-by-itemsize} Pruned by itemsize.}
+%\end{figure}
 
 \item \emph{by hash-based diff-algorithm} The diff-algorithm is invoked with the option to utilize persisted hashes which are created for every resource based on a database-configuration parameter. Per default a fast rolling-hash approach is used. All edit-operations thus only trigger a recomputation of the hashes of the ancestor-nodes based on the hash-value of the edited node. As described in Chapter \ref{sec::differences} everytime the hash values of the compared nodes are identical the traversal of both subtrees is skipped. Thus, items are only created for nodes, which include changed nodes in their subtree as well as for nodes with identical hash-values (Fig. \ref{fig:pruned-by-hash}). This type of pruning is especially useful for large tree-structures, whereas in contrast to the pruning by itemsize it speeds up the diff-computation as well as the item creation, as in both cases subtrees of nodes with identical hash-values are skipped. However, in comparison with the itemsize-based approach sometimes more items have to be created as nodes having identical hash-values are always included.
 
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/diff-pruned}}
-\caption{\label{fig:pruned-by-hash} Pruned by identical hash-values.}
+\begin{figure}
+\centering
+\subfigure[Filtered by identical hash-values.]{
+\includegraphics[width=\textwidth - 16em]
+{figures/diff-pruned}
+\label{fig:pruned-by-hash}
+}
+\subfigure[Filtered by identical hash-values without building items for nodes with identical hash-values.]{
+\includegraphics[width=\textwidth - 16em]
+{figures/diff-without-samehashes-pruned}
+\label{fig:pruned-by-hash-without-samehashes}
+}
+\caption{Comparison.}
 \end{figure}
+
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 10em]
+%{figures/diff-pruned}}
+%\caption{\label{fig:pruned-by-hash} }
+%\end{figure}
 
 \item \emph{by hash-based diff-algorithm without nodes which have the same hash} This type of pruning is related to the method described above. In addition to pruning nodes in the subtree of nodes with identical hash-values, additionally these subtree-roots are pruned, too. As a direct consequence the visualization is much better readability in case of many consecutive nodes with identical hash-values (Fig. \ref{fig:pruned-by-hash-without-samehashes}).
 
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/diff-without-samehashes-pruned}}
-\caption{\label{fig:pruned-by-hash-without-samehashes} Pruned by identical hash-values without building items for nodes with identical hash-values.}
-\end{figure}
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 10em]
+%{figures/diff-without-samehashes-pruned}}
+%\caption{\label{fig:pruned-by-hash-without-samehashes} Pruned by identical hash-values without building items for nodes with identical hash-values.}
+%\end{figure}
 \end{itemize}
 
 Usually the maximum depth of unchanged nodes in the aggregated tree-structure is computed in a pipeline using a concurrent queue if more than two cores are available. Thus the computation is effectively parallelized with the diff-calculation. However, all above filtering types require postprocessing as maximum depth nodes might either be within the subtree of an unchanged node or in case of the itemsize-based filtering might be too thin regarding a threshold value und thus are pruned. Therefore, the maximum depth must be recomputed and the depth of changed nodes must be adapted accordingly. Note, that otherwise too much screen-space is wasted as the subtree-root of changed nodes is plotted between the maximum-depth of unchanged nodes plus two and the maximum depth plus three.
@@ -489,7 +519,7 @@ A simple algorithm computes the LCA through adding elements on top of two stacks
 Fig. \ref{fig:moves} illustrates two move-operations on a subtree in a shakespear XML-document.
 
 \begin{figure}[tb]
-\center{\includegraphics[width=\textwidth - 5em]
+\center{\includegraphics[width=\textwidth - 10em]
 {figures/moves-cut}}
 \caption{\label{fig:moves} Moves visualized using hierarchical edge bundles.}
 \end{figure}
@@ -503,7 +533,7 @@ Small multiple displays of the \emph{SunburstView} provide an overview about the
 \item \emph{differential} The differential variant displays changes related to a base revision. This is especially useful if several tree-structures have to be compared to a common base version. The direction is clockwise. That is the upper left corner displays a SunburstView comparison between revision 0 and 1 (if zero is the base revision which is loaded), the right upper corner displays changes between revision 0 and revision 2 et cetera (Fig. \ref{fig:smallmultiple-differential}).
 
 \begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
+\center{\includegraphics[width=\textwidth - 3em]
 {figures/smallmultiple-differential}}
 \caption{\label{fig:smallmultiple-differential} Small multiple - differential variant.}
 \end{figure}
@@ -511,7 +541,7 @@ Small multiple displays of the \emph{SunburstView} provide an overview about the
 \item \emph{incremental} The incremental variant displays changes related to the last revision in increasing order. Suppose we have loaded revision 2, then in the upper left corner revision 2 and 3 is compared, the upper right corner contains the comparison between revision 3 and 4 et cetera (Fig. \ref{fig:smallmultiple-incremental}).
 
 \begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
+\center{\includegraphics[width=\textwidth - 3em]
 {figures/smallmultiple-incremental}}
 \caption{\label{fig:smallmultiple-incremental} Small multiple - incremental variant.}
 \end{figure}
@@ -519,7 +549,7 @@ Small multiple displays of the \emph{SunburstView} provide an overview about the
 \item \emph{hybrid} The hybrid variant displays changes just like in the incremental variant. However, a diff between the first revision and the last one to display is issued in the first place to get approximately the whole aggregated tree-structure. Upcoming changes in subsequent incremental comparisons are blackened. Furthermore, the colors denoting the changes lighten up in subsequent comparisons such that it is clear in which comparison the nodes are changed. During testing this view proved to be not as useful as we hoped. Nodes which are added in one revision and subsequently removed in another do not appear. In addition the colors denoting the type of change and during which comparison the change occured are too hard to distinguish in most cases.
 
 \begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
+\center{\includegraphics[width=\textwidth - 3em]
 {figures/wikipedia-smallmultiples-hybrid}}
 \caption{\label{fig:wikipedia-smallmultiples-hybrid} Small multiple - hybrid variant.}
 \end{figure}
@@ -529,18 +559,16 @@ The implementation parallizes the computation of the small multiple displays and
 
 The two variants support all filtering methods described earlier. Next we provide a short asymptotic runtime- and space-analysis backed by performance measures.
 
-\subsection{Runtime/Space analysis and scalability of the ID-based diff}
-The runtime of the algorithm currently is bound by determining the subtree-size and modifications in the agglomerated tree-structure for each node. The runtime complexity thus is $O(n^2)$ whereas $n$ is the sum of changed and unchanged nodes between two trees $T1$ and $T2$. However by storing the diff-tuples which only include the depth of the two compared nodes to form a very simple tree-structure we are limited to a preorder traversal. Building a more sophisticated tree-structure based on pointers or sequences denoting child nodes for instance in an in-memory Treetank structure will support a subsequent postorder traversal to determine the subtree-size and modifications for each node reducing the runtime to $O(n)$. Due to using Java7 which is not available for OS X we are not able to measure the performance on computers with four or more cores. However, counting the subtree-size and modifications is started in parallel to building Sunburst items which consumes these through a Java \texttt{BlockingQueue}. Thus we assume adding more cores will speed up the creation of the items considerably as tree-structures often times are rather flat and have a large fan-out instead of being deep with high average levels/depths of the nodes, especially considering document-centric XML \cite{ronnau2009efficient}. The \texttt{subtree-size} of the root-item is the size of the accumulated List or Map of diff-tuples observed from the ID-based diffing algorithm and thus does not need to be computed. The number of \texttt{modifications} of the root-item is also determined on the fly while observing diff-tuples. Fig. \ref{fig:gui-performance} depicts performance measures, the average of ten runs of the Sunburst-visualization on an 11MiB-document and an 111MiB-document of the XMark-benchmark.  The documents are identical to the documents used in Chapter \ref{sec::differences} for benchmarking. Thus we randomly modified the instances after every 1000st node in the 11Mib-document and after every 10000st node in the 111MiB-document. The hardware used is also identical (Core 2 Duo 2666Mhz, 4Gb RAM). It is obvious that the exponential growth in case no pruning is enabled is unacceptable. Showing the 111MiB-document without pruning lasted too long (> 15min for each run) such that we aborted the execution. By reducing the number of Sunburst-items which have to be created considerably each one of the pruning-mechanisms reduces the runtime tremendously. Usually the number of Sunburst-items to create is reduced so much that the exponential time to compute the modifications in each nodes' subtree plus the subtree-size itself is not measurable and the runtime becomes linear. Furthermore as we are currently not able to measure the impact of parallelizing this task with four and more cores we can not measure the impact of parallelization which might also considerably speed up the computation without pruning. We assume that the context switches with only one or two cores in fact slow down the computation and thus introduced a simple threshold value to . 
-
-Fig \ref{fig:gui-performance-movedet} shows benchmarking results comparing the runtime of the fastest pruning, pruning-by-hashes without creating items for identical hashes with move-detection enabled and disabled. We are able to determine that the move-detection usually is fast. Asymptotically it is bound by the size of the agglomerated tree-structure $n$, thus $O(n)$.
-
-In summary we are able to conclude that the hash-based-pruning without creating Sunburst items is by far the fastest and that the move-detection usually does not inhibit the runtime of our algorithms considerably. Furthermore it is required to use pruning whenever the exponential time required to compute subtree-sizes and modifications therein significantly inreases due to a large aggregated tree. Adding more CPUs however should decrease the runtime as the computation of subtreesizes and modifications therein are computed in parallel.
-
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/gui-performance}}
-\caption{\label{fig:gui-performance} GUI-performance.}
+\caption{\label{fig:gui-performance} Sunburst visualization - depicting performance measures on XMark instances with random modifications (11 MiB: modified every 1000st node; 111 MiB: modified every 10000st node).}
 \end{figure}
+
+\subsection{Runtime/Space analysis and scalability of the ID-based diff}
+The runtime of the algorithm currently is bound by determining the subtree-size and modifications in the agglomerated tree-structure for each node. The runtime complexity thus is $O(n^2)$ whereas $n$ is the sum of changed and unchanged nodes between two trees $T1$ and $T2$. However by storing the diff-tuples which only include the depth of the two compared nodes to form a very simple tree-structure we are limited to a preorder traversal. Building a more sophisticated tree-structure based on pointers or sequences denoting child nodes for instance in an in-memory Treetank structure will support a subsequent postorder traversal to determine the subtree-size and modifications for each node reducing the runtime to $O(n)$. Due to using Java7 which is not available for OS X at the time writing this thesis we are not able to measure the impact of having parallelized the task of computing the subtree-size and the modifications therein. Not only the traversal of the whole tree is started in parallel to building Sunburst items which consumes these through a Java \texttt{BlockingQueue}, but also the computation itself for each individual node. Thus we assume adding more cores will speed up the creation of the items considerably as tree-structures often times are rather flat and have a large fan-out instead of being deep with high average levels/depths of the nodes, especially considering document-centric XML\cite{ronnau2009efficient}. In fact we assume that the context switches with only one or two available cores slows down the computation. Thus we introduced a simple threshold value which depends on the number of available cores to switch between a parallel- and a sequential-approach. 
+
+The \texttt{subtree-size} of the root-item is the size of the accumulated List or Map of diff-tuples observed from the ID-based diffing algorithm and thus does not need to be computed. The number of \texttt{modifications} therein is also determined on the fly while observing diff-tuples. Fig. \ref{fig:gui-performance} depicts performance measures, the average of ten runs of the Sunburst-visualization on a 11 MiB XMark-instance and a 111 MiB instance. The documents are identical to the documents used in Chapter \ref{sec::differences} for benchmarking. Thus we randomly modified the instances after every 1000st node in the 11 Mib-document and after every 10000st node in the 111 MiB-document. The hardware used is also identical (Core 2 Duo 2666Mhz, 4Gb RAM). It is obvious that the exponential growth in case no pruning is enabled is unacceptable. Showing the 111 MiB-document without pruning lasted too long ($>$ fifteen minutes for each run) such that we aborted the execution. By reducing the number of Sunburst-items which have to be created each one of the pruning-mechanisms reduces the runtime tremendously. Usually the number of Sunburst-items to create is reduced so much that the exponential time to compute the modifications in each nodes' subtree plus the subtree-size itself is not measurable and the runtime effectively becomes linear. However the only pruning technique which is capable of providing a near linear runtime on very large trees ($>$ 111 MiB) is the hash-based variant which does not generate Sunburst items for nodes with identical hash-values. The other pruning technique which does generate items for nodes with identical hash-values still generates about 750000 items for a 1111 MiB XMark instance and lasted too long ($>$ fifteen minutes once more), possibly because a persistent BerkeleyDB database is used as a fallback after a threshold value of 700000 observed diff-tuples is exceeded. Moreover the Sunburst items must be held in main memory which might not be possible. When the itemsize-based approach is used the diffing-algorithm still has to compare the whole tree-structures and thus even the linear runtime of the diff-algorithm is not enough and we stopped the execution after fifteen minutes. Both filtering-techniques have been executed several times but the visualization was not finished even after twenty minutes. 
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
@@ -550,25 +578,31 @@ In summary we are able to conclude that the hash-based-pruning without creating 
 
 \begin{table}[tb]
 \centering 
-\begin{tabular}[r]{|l|c|c|c|} 
+\begin{tabular}[r]{|l|c|c|c|c|c|} 
 \hline
-& \textbf{1000mods} & \textbf{5000mods} & \textbf{10000mods}\\
+\textbf{document size (in MiB)} & \begin{sideways}\textbf{without}\end{sideways} & \begin{sideways}\textbf{itemsize}\end{sideways} & \begin{sideways}\textbf{hashes}\end{sideways} & \begin{sideways}\textbf{hashes (optimal)}\end{sideways} & \begin{sideways}\textbf{hashes (optimal) / move detection}\end{sideways}\\
 \hline
 \hline
-\textbf{min} & 36265.14 & 35717.34 & 33948.96\\
+\textbf{11 MiB} & 59.13 & 9.13 & 10.49 & 4.92 & 5.09\\
 \hline
-\textbf{max} & 52459.38 & 61860.29 & 44451.06\\
+\textbf{111 MiB} & - & 71.38 & 64.62 & 24.48 & 26.07\\
 \hline
-\textbf{average} & 39167.75 & 37650.67 & 36579.37\\
+\textbf{1111 MiB} & - & - & - & 256.85 & 260.17\\
 \hline
 \end{tabular}
-\label{chap3:comparsion}
+\label{chap3:comparison}
 \vspace{0.5em} 
-\caption{Comparsion of different modification-schemas of a 111 MiB XMark instance (change every 1000st, 5000st and 10000st node).}
+\caption{Comparsion of randomly modified XMark instances with all available filtering techniques. The ``hashes (optimal)'' column denotes the hash-based filtering technique which does not generate Sunburst items for nodes with identical hash-values.}
 \end{table}
 
+Fig \ref{fig:gui-performance-movedet} shows benchmarking results comparing the runtime of the fastest pruning technique, filtering-by-hashes without creating items for identical hashes with move-detection enabled and disabled. We are able to determine that the move-detection usually is fast if the number of items which have to be created is small. Asymptotically it is still bound by the size of the agglomerated tree-structure $n$, thus $O(n^2)$. The algorithm is based on the assumption, that only a small fraction of a tree-structure usually is changed. Therefore unchanged subtrees are skipped from the traversal and the number of items which are going to be created is very small, such that the $O(n^2)$ runtime to compute the subtree-size and the modifications therein is negligible.
+
+In summary we are able to conclude that the hash-based-pruning without creating Sunburst items is by far the fastest and that the move-detection usually does not inhibit the runtime of our algorithms considerably. Furthermore it is required to use pruning whenever the exponential time required to compute subtree-sizes and modifications therein significantly inreases due to a large aggregated tree. Adding more CPUs however should decrease the runtime as the computation of subtree-sizes and modifications therein are computed in parallel. In future work we are eager to determine the impact of a more sophisticated in-memory tree-structure of the agglomerated tree to support a single postorder traversal in order to determine the subtree-size as well as the modifications for each node before generating the Sunburst items and thus reduce the runtime from $O(n^2)$ to $O(n)$.
+
+All runtime measures are summarized in Table \ref{chap3:comparison}.
+
 \subsection{Conclusion and Summary}
-We have introduced a multitude of visualizations ranging from a simple \emph{TextView} displaying syntax highlighted serialized XML in the viewport appending new text during scrolling to a \emph{SunburstView} and several \emph{Smallmultiple} display variants based on the \emph{SunburstView}. The \emph{TextView} supports the visualization of structural differences based on the aggregated tree structure and through a color-coded background depending on the diff-type. However non-structural changes, for instance the similarity between updated String values can not be visualized. Our main contribution is a new Sunburst layout based on the idea of a semantic zoom, which places all changed nodes prominently between two rings and facilitates a global distortion to enlarge changed-subtrees and thus to shrink unchanged subtrees accordingly which are potientially uninteresting. Structural changes are visualized through color coding of the node in the overlaying node-link diagram. The type of diff is indicated through a color-encoding. Furthermore the similarity of \texttt{TextNode} values and \texttt{ElementNode}s are depicted based on predefined functions. Large matched subtrees result in a higher similarity score for element nodes, few character replacements/inserts/deletes increases the similarity score for text nodes.
+We have introduced a multitude of visualizations ranging from a simple \emph{TextView} displaying syntax highlighted serialized XML in the viewport and appending new text during scrolling to a \emph{SunburstView} as well as several small multiple display variants based on the \emph{SunburstView}. The \emph{TextView} supports the visualization of structural differences based on the aggregated tree structure through a color-coded background depicting the type of difference. However non-structural changes, for instance the similarity between updated string values are not visualizable. Our main contribution is a new Sunburst layout based on the idea of a semantic zoom, which places all changed nodes prominently between two rings and facilitates a global distortion to enlarge changed-subtrees and thus to shrink unchanged subtrees accordingly which are potientially uninteresting. Structural changes are visualized through color coding of the node in the overlaying node-link diagram. The type of diff is indicated through a color-encoding. Furthermore the similarity of \texttt{TextNode} values and \texttt{ElementNode}s are depicted based on predefined functions. Large matched subtrees result in a higher similarity score for element nodes, few character replacements/inserts/deletes increases the similarity score for text nodes.
 
 Moreover three filtering techniques facilitate the analysis of large tree-struc\-tures. Pruning by itemsize is useful if changed \emph{and} and unchanged nodes are of importance speeding up the creation of items considerably. However it does not affect the diff-computation. Thus, we also provide hash-based filtering techniques, which utilize the diff-algorithm with the optimization to skip the traversal of subtrees of nodes with identical hash-values. These filtering types usually reduce the number of items even more and accelerate the diff-computation. Note that the hashes include the unique node identifiers and other node-specific content, thus by using an exchangeable cryptographic hash-function th.  
 

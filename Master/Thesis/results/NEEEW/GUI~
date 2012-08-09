@@ -11,12 +11,12 @@ without:
 itemsize: 71.380808761
 hashes: 64.621597971
 hashes-without-same: 24.478860407
-hashes-without-same-movedet: 27.070828072
+hashes-without-same-movedet: 26.070828072
 
 1111MB:
-without:
-itemsize:
-hashes: 
+without: -
+itemsize: -
+hashes: -
 hashes-without-same: 256.846055011
 hashes-without-same-movedet: 260.16919365599998
 

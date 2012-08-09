@@ -21,7 +21,7 @@ We obtained an XML-export of a collection of different versions of a c-structure
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/lfg.png}}
-\caption{\label{fig:lfg} LFG comparsion}
+\caption{\label{fig:lfg} LFG comparsion.}
 \end{figure}
 
 It is immediately obvious by investigating the original XML-documents, that the FMSE-algorithm mismatched nodes in the first place which in effect causes a lot of edit-operations. Nodes are touched which are not changed and vice versa\footnote{note, that the final outcome is nontheless correct in terms of the first tree-structure is correctly edited to represent the second}. Thus, the FMSE-algorithm does not generate a minimum edit-script and executes too many edit-operations especially in case of the deletion and reinsertion of the old- respectively the new-\texttt{cstructure} subtree. In doing so, a subsequent visualization is impractical, for the simple reason that it almost mirrors the update-operations issued by the FMSE-algorithm for consecutive versions. As stated in Chapter \ref{sec::relwork} ID-less algorithms work best if leaf nodes and therefore especially text-nodes are very well distinguishable. That is the initial matching of leaf nodes in most if not all cases really matches unchanged nodes, which is the desired behavior. 
@@ -32,10 +32,18 @@ For that reason we changed the leaf-node comparison slightly. Instead of just re
 
 The result is depicted in Fig. \ref{fig:linguistics}.
 
+However as a direct consequence of this short evaluation it is inevitable to rely on unique node identifiers if we want to visualize minimal edit-scripts in case of updated leaf node values which are very distinct to the other trees' leaf node values or worse the leaf nodes are very similar. Comparisons based on similarity-metrics are always based on heuristics. Assuming the export of the XML-documents includes unique identifiers of the nodes, importing requires utilization of the internal diff-algorithm to simply store incremental changes, the changes from the old- to the new-revision. The following steps have to be implemented:
+
+\begin{enumerate}
+\item Import of the initial XML-document.
+\item Import the first updated XML-document to a temporary resource.
+\item Utilize the internal Treetank diff-algorithm to determine changes based on unique node-IDs. Whenever an edit-operation is encountered the appropriate transaction-method has to be executed. %In case of \texttt{element}- and \texttt{text}-nodes it requires how to insert nodes\footnote{remember that Treetank currently is able to insert a node as a right sibling or first child} and where, which is very simple due to the \texttt{transaction.moveTo(long)}-method which can move the transaction/cursor directly to the left-sibling-node of the node to insert if it is available or to the parent. In the first case the node has to be inserted as a right sibling, in the latter case as a first child of the parent node.
+\end{enumerate}
+
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/linguistics.png}}
-\caption{\label{fig:linguistics} LFG comparsion revised}
+\caption{\label{fig:linguistics} LFG comparsion revised.}
 \end{figure}
 
 We observe that still many nodes are changed, but by looking at the original XML-documents we observe that indeed a lot of nodes have been updated/deleted/inserted or replaced. For instance by scrolling both XML-documents at the end of the fstructure-subtree a lot of subtrees must have been inserted.
@@ -58,14 +66,6 @@ We observe that still many nodes are changed, but by looking at the original XML
 </cstructure>                  </cstructure>
 \end{code}
 \label{lst:linguistscomparsion}
-
-However as a direct consequence of this short evaluation it is inevitable to rely on unique node identifiers if we want to visualize minimal edit-scripts in case of updated leaf node values which are very distinct to the other trees' leaf node values or worse the leaf nodes are very similar. Comparisons based on similarity-metrics are always based on heuristics. Assuming the export of the XML-documents includes unique identifiers of the nodes, importing requires utilization of the internal diff-algorithm to simply store incremental changes, the changes from the old- to the new-revision. The following steps have to be implemented:
-
-\begin{enumerate}
-\item Import of the initial XML-document.
-\item Import the first updated XML-document to a temporary resource.
-\item Utilize the internal Treetank diff-algorithm to determine changes based on unique node-IDs. Whenever an edit-operation is encountered the appropriate transaction-method has to be executed. %In case of \texttt{element}- and \texttt{text}-nodes it requires how to insert nodes\footnote{remember that Treetank currently is able to insert a node as a right sibling or first child} and where, which is very simple due to the \texttt{transaction.moveTo(long)}-method which can move the transaction/cursor directly to the left-sibling-node of the node to insert if it is available or to the parent. In the first case the node has to be inserted as a right sibling, in the latter case as a first child of the parent node.
-\end{enumerate}
 
 Furthermore this approach applies to every XML-document which incorporates unique node identifiers.
 
@@ -101,48 +101,48 @@ The implementation utilizes a configurable record identifier such that it is adj
 % import of wikipedia
 Once the dump is sorted with MapReduce it has to be imported into Treetank. First of all, as we have splitted the data on \texttt{revision}-elements and pre\-pen\-ded the \texttt{page-}metadata we have to construct a new root node, which is simply done by prepending a \texttt{mediawiki} start-tag, then writing the result of the Hadoop-run and appending a corresponding end-tag to a new file. Otherwise it is no valid XML-document and can not be parsed by XML-parsers.
 
-Next, it is the responsibility of a Wikipedia-Importer to import the revisioned file which is now in ascending timestamp order of all revisions from all pages/articles. It utilizes the FSME-implementation described in detail in Chapter \ref{sec::relwork} and \ref{sec::differences} to just import incremental changes between the latest stored revision in Treetank and a shredded List of \texttt{XMLEvent}s in a temporary database/resource. Therefore as data is read-in from the XML document with a StAX-Parser the page-metadata as well as the whole revision-subtree is saved in a simple main-memory collection, a \texttt{List}, assuming the XML-content of an article can be put in main memory. The assumption holds true as every revision can be parsed and rendered in a web-browser. Everytime a \texttt{page} end-tag is encountered the page-id is searched in the already shreddered revision. If it is found the FMSE algorithm is called for the found \texttt{page}-element, such that the encountered differences are shreddered subsequently. In case the XPath expression returns no results, that is the page-ID is not found a new page is going to be appended as a right sibling to the last \texttt{page}-element.
-
-The Importer for Wikipedia allows the usage of a timespan (hourly, daily, monthly, yearly) which is used for the revisioning. Whenever a new timestamp is encountered, which differs from the current timestamp depending on the chosen timespan the transaction is commited.
-
-Fig. \ref{fig:wikivis} demonstrates the result of importing 50 articles of Wikipedia sorted by article-revisions and an hourly commit \footnote{only hours in which changes occured are reflected}. Revisions 70 and 71 are compared. The \emph{edit-distance} used by our FSME-implementation to determine and update the stored Treetank-data with the encountered differences in the first place works reasonably well, as most text-nodes are distinguishable very well. We used the hash-based pruning to enlarge regions of interest. The \emph{TextView} on the right side is particular useful to quickly reveal several changes in particular updated text whereas a label in the \emph{SunburstView} only depicts the new updated text content in case of \texttt{TextNode} updates and usually the content is too big to be displayed within the arc, especially if the content contains whole paragraphs as is usually the case for Wikipedia. Both text values, the old- and the new-value is displayed on mouseover. We quickly detect that a lot of paragraphs have changed by looking at the \emph{SunburstView}. Details are depicted by either hovering an item or scrolling down in the \emph{TextView}. %It is fair to say, that for instance the text-nodes below the \texttt{id}-element parent could be detected as updates as well if all ancestors and neighbour nodes are checked for equality even though the Levenshtein algorithm used to compare text nodes detects too many character edit operations to consider that the nodes are equal. 
-
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/wikipedia-rev7071}}
 \caption{\label{fig:wikivis} Wikipedia comparsion.}
 \end{figure}
 
-Another visualization (Fig. \ref{fig:wikivis-without-modscale}) depicts the situation without pruning and without including the number of modifications of a node in its subtree to scale the Sunburst items, the segments for each node.
+Next, it is the responsibility of a Wikipedia-Importer to import the revisioned file which is now in ascending timestamp order of all revisions from all pages/articles. It utilizes the FSME-implementation described in detail in Chapter \ref{sec::relwork} and \ref{sec::differences} to just import incremental changes between the latest stored revision in Treetank and a shredded List of \texttt{XMLEvent}s in a temporary database/resource. Therefore as data is read-in from the XML document with a StAX-Parser the page-metadata as well as the whole revision-subtree is saved in a simple main-memory collection, a \texttt{List}, assuming the XML-content of an article can be put in main memory. The assumption holds true as every revision can be parsed and rendered in a web-browser. Everytime a \texttt{page} end-tag is encountered the page-id is searched in the already shreddered revision. If it is found the FMSE algorithm is called for the found \texttt{page}-element, such that the encountered differences are shreddered subsequently. In case the XPath expression returns no results, that is the page-ID is not found a new page is going to be appended as a right sibling to the last \texttt{page}-element.
+
+The Importer for Wikipedia allows the usage of a timespan (hourly, daily, monthly, yearly) which is used for the revisioning. Whenever a new timestamp is encountered, which differs from the current timestamp depending on the chosen timespan the transaction is commited.
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/wikipedia-without-pruned-modifications}}
-\caption{\label{fig:wikivis-without-modscale} Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem}
+\caption{\label{fig:wikivis-without-modscale} Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem.}
 \end{figure}
+
+Fig. \ref{fig:wikivis} demonstrates the result of importing 50 articles of Wikipedia sorted by article-revisions and an hourly commit\footnote{only hours in which changes occured are reflected}. Revisions 70 and 71 are compared. The \emph{edit-distance} used by our FSME-implementation to determine and update the stored Treetank-data with the encountered differences in the first place works reasonably well, as most text-nodes are distinguishable very well. We used the hash-based pruning to enlarge regions of interest. The \emph{TextView} on the right side is particular useful to quickly reveal several changes in particular updated text whereas a label in the \emph{SunburstView} only depicts the new updated text content in case of \texttt{TextNode} updates and usually the content is too big to be displayed within the arc, especially if the content contains whole paragraphs as is usually the case for Wikipedia. Both text values, the old- and the new-value is displayed on mouseover. We quickly detect that a lot of paragraphs have changed by looking at the \emph{SunburstView}. Details are depicted by either hovering an item or scrolling down in the \emph{TextView}. %It is fair to say, that for instance the text-nodes below the \texttt{id}-element parent could be detected as updates as well if all ancestors and neighbour nodes are checked for equality even though the Levenshtein algorithm used to compare text nodes detects too many character edit operations to consider that the nodes are equal. 
+
+\begin{figure}[tb]
+\center{\includegraphics[width=\textwidth]
+{figures/wikipedia-rev90106}}
+\caption{\label{fig:wikivis-rev90106} Wikipedia comparsion pruned by itemsize.}
+\end{figure}
+
+Another visualization (Fig. \ref{fig:wikivis-without-modscale}) depicts the situation without pruning and without including the number of modifications of a node in its subtree to scale the Sunburst items, the segments for each node.
 
 The changes in the last page/article are hardly visible. Most items denote unchanged nodes without any modifications in their subtree and thus do not carry any useful information, if we just want to quickly determine changes. This and the fact that we do not include the modification weight to scale items, that is only the subtree size of each node matters, results in considerably reduced itemsizes of changed items.
 
-Despite viewing changes between subsequent revisions which in case of importing only 50 articles most often results in appending or updating one article it is possible to view changes between arbitrary revisions. Fig. \ref{fig:wikivis-rev90106} reveals changes between revision 90 and 106. Thus seven articles have changed and it is very easy to determine regions of interest and to further drill down into the tree through selecting a new root node in the \emph{SunburstView}. The page/article with the name "ArgumentForms" has been changed considerably. The page-nodes which are containers of the whole article do not have enough matching subtree-nodes in common between the two revisions, such that they are not matched, too. The FMSE-algorithm thus deletes the whole article and inserts the article as a new first child of the "wikimedia" root-element. The changes in the other articles mainly either include single paragraphs which are updated or larger subtrees which are replaced. Detailed changes are depicted on demand, that is if we drill down into the tree and/or scroll down in the \emph{TreeView}. The transparent red square in the \emph{SunburstView} in Fig. \ref{fig:wikivis-rev90106} illustrates the article/page to which we have scrolled in the \emph{TextView}.
-
-\begin{figure}[htb]
+\begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
-{figures/wikipedia-rev90106}}
-\caption{\label{fig:wikivis-rev90106} Wikipedia comparsion pruned by itemsize}
+{figures/wikipedia-incremental}}
+\caption{\label{fig:wikipedia-incremental} Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant.}
 \end{figure}
+
+Despite viewing changes between subsequent revisions which in case of importing only 50 articles most often results in appending or updating one article it is possible to view changes between arbitrary revisions. Fig. \ref{fig:wikivis-rev90106} reveals changes between revision 90 and 106. Thus seven articles have changed and it is very easy to determine regions of interest and to further drill down into the tree through selecting a new root node in the \emph{SunburstView}. The page/article with the name "ArgumentForms" has been changed considerably. The page-nodes which are containers of the whole article do not have enough matching subtree-nodes in common between the two revisions, such that they are not matched, too. The FMSE-algorithm thus deletes the whole article and inserts the article as a new first child of the "wikimedia" root-element. The changes in the other articles mainly either include single paragraphs which are updated or larger subtrees which are replaced. Detailed changes are depicted on demand, that is if we drill down into the tree and/or scroll down in the \emph{TreeView}. The transparent red square in the \emph{SunburstView} in Fig. \ref{fig:wikivis-rev90106} illustrates the article/page to which we have scrolled in the \emph{TextView}.
 
 Besides comparing only two revisions small multiple display variants facilitate the comparison between several revisions (currently at most five revisions). Fig. \ref{fig:wikipedia-incremental} illustrates changes between revisions 70,71 (upper left), 71,72 (upper right), 72,73 (bottom right) and 73,74 (bottom left). We are quickly able to determine that except in the SunburstView comparing revisions 73 and 74 all other small multiples change or delete/insert the same article. The comparison between revision 70,71 and 72,73 reveal a lot of updated paragraphs. Between revisions 71 and 72 the same article has been deleted and inserted. We are quickly able to determine that a lot of paragraphs have been added as the inserted article includes more descendants than the article in the old revision. Thus the FMSE-algorithm does not match the page-nodes due to very different subtrees. Repacitulate that in order to match inner nodes, more than at least half of the nodes in both subtrees have to be matched. To gain a better understanding about the differences between revision 73 and 74 we switch to the \emph{SunburstView} in conjunction with the \emph{TextView}. We are able to quickly determine that the deleted and inserted page denotes the same article (autism) once more (Fig. \ref{fig:wikipedia-rev7374}). The article changed from a single paragraph which just included a URL to a slightly more profound description of autism.
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
-{figures/wikipedia-incremental}}
-\caption{\label{fig:wikipedia-incremental} Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant}
-\end{figure}
-
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
 {figures/wikipedia-rev7374}}
-\caption{\label{fig:wikipedia-rev7374} Wikipedia comparsion - depicting differences between revision 73 and 74}
+\caption{\label{fig:wikipedia-rev7374} Wikipedia comparsion - depicting differences between revision 73 and 74.}
 \end{figure}
 
 Fig. \ref{fig:wikipedia-smallmultiple-incremental} finally reveals that between revision 10 and 13 articles are added which is expected. Articles are most probably going to be altered in later revisions once most or all 50 articles have been pre\-pen\-ded. However revision 14 updates an article added in one of the first 10 revisions.
@@ -200,7 +200,7 @@ Fig. \ref{fig:fsml-gui} reveals the differences between revision 0 and 4 using t
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/fsml-gui}}
-\caption{\label{fig:fsml-gui} FSML comparsion on the GUI src-folder}
+\caption{\label{fig:fsml-gui} FSML comparsion of the GUI src-folder.}
 \end{figure}
 
 The alert reader might think that some of the nodes for instance the subtree of the "sunburst"-subtree which are plotted should not have been processed by the ID-based diff algorithm because we are utilizing the hash-based diffing algorithm, but by close inspection it is revealed that these nodes have different hash values (on mouseover the details are revealed, that is type \texttt{DiffType.SAME} instead of \texttt{DiffType.SAMEHASH}). We currently do not color-encode nodes which have identical hash-values differently to nodes with identical node-IDs but different hash-values. Moreover up until now we have always used the ID-based diffing mode which does not include namespace/attribute comparisons. However, once including checks for namespace/attribute equivalence we are able to detect updates of certain nodes (Fig. \ref{fig:fsml-gui-fulldiff}) due to last access time of a file/directory which is denoted through the \texttt{st\_atime}-attribute. Each time either a namespace- or an attribute-node differs the parent \texttt{ElementNode} is emitted as being updated once the full diff mode is enabled.
@@ -208,7 +208,7 @@ The alert reader might think that some of the nodes for instance the subtree of 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/gui-fsml-fulldiff}}
-\caption{\label{fig:fsml-gui-fulldiff} FSML comparsion on the GUI src-folder using a full diff including namespaces and attributes}
+\caption{\label{fig:fsml-gui-fulldiff} FSML comparsion of the GUI src-folder using a full diff including namespaces and attributes.}
 \end{figure}
 
 We conclude, that the preprocessing step of matching nodes in the FMSE-algorithm works reasonably well on FSML-data as no similar \texttt{TextNode}s are included. However we aim to support the extraction of metadata for several kinds of files which might introduce the possibility of mismatches in the future.
@@ -228,7 +228,11 @@ The \texttt{WatchService} detects the following events:
 \item \texttt{ENTRY\_MODIFY}: File has been modified.
 \end{itemize}
 
-Therefore moves and renames are not supported out of the box. The path to the directories and files is translated to an XPath query, which locates the appropriate node in the database/resource. In case a new file or directory has been created a new \texttt{ElementNode} is pre\-pen\-ded as a first child of the parent node as filesystem-trees are unordered. In this case the XPath-query translates the parent-path into the appropriate XPath-query, that is it is of the form \\\texttt{/dir[@name='pathComp1Name']/dir|file[@name='pathComp2Name']}. The \\path component usually denotes a directory whereas the last component might be a directory or file in case of an \texttt{ENTRY\_DELETE} event. Deleted directories have to be removed from a WatchService/Path-mapping in an associative array. Furthermore all paths have to be saved in another datastructure to denote if the deleted path pointed to either a file or directory. Thus another associative array is used to save a Path $\Leftrightarrow$ EPath mapping for inserted nodes. EPath is a Java enum to determine the type (file or directory).
+Therefore moves and renames are not supported out of the box. The path to the directories and files is translated to an XPath query, which locates the appropriate node in the database/resource. In case a new file or directory has been created a new \texttt{ElementNode} is pre\-pen\-ded as a first child of the parent node as filesystem-trees are unordered. In this case the XPath-query translates the parent-path into the appropriate XPath-query, that is it is of the form \\\texttt{/dir[@name='pathComp1Name']/dir|file[@name='pathComp2Name']}. The path component usually denotes a directory whereas the last component might be a directory or file in case of an \texttt{ENTRY\_DELETE} event. Deleted directories have to be removed from a WatchService/Path-mapping in an associative array. Furthermore all paths have to be saved in another datastructure to denote if the deleted path pointed to either a file or directory. Thus another associative array is used to save a Path $\Leftrightarrow$ EPath mapping for inserted nodes. EPath is a Java enum to determine the type (file or directory). 
+
+The FSML-subdialect currently used is very simple. Listing \ref{lst:fsml} provides an example of the simple structure. Directories are mapped to \texttt{dir}-elements, whereas files are mapped to \texttt{file}-elements. Note that the names can not be used without preprocessing to denote the elements, as for instance whitespaces are not permitted in QNames. Thus, either whitespace characters and other not allowed characters are escaped or as in our case saved as attribute-values in \texttt{name=""}-attributes. The labels in the visualizations are optionally based on this special attribute.
+
+While this representation currently does not incorporate most of the strengths FSML usually provides it is easy to add metadata about files and to incorporate text-files. Optionally instances of custom classes are pluggable to provide any type of extensibility. Thus it is possible to provide extractors for certain types of files and to incorporate text-files into the FSML-representation itself, possibly by adding a link to another resource in the fsml-database.
 
 \begin{code}[caption=FSML structure]
 <fsml>
@@ -255,25 +259,37 @@ Therefore moves and renames are not supported out of the box. The path to the di
 \end{code}
 \label{lst:fsml}
 
-The FSML-subdialect currently used is very simple. Listing \ref{lst:fsml} provides an example of the simple structure. Directories are mapped to \texttt{dir}-elements, whereas files are mapped to \texttt{file}-elements. Note that the names can not be used without preprocessing to denote the elements, as for instance whitespaces are not permitted in QNames. Thus, either whitespace characters and other not allowed characters are escaped or as in our case saved as attribute-values in \texttt{name=""}-attributes. The labels in the visualizations are optionally based on this special attribute.
-
-While this representation currently does not incorporate most of the strengths FSML usually provides it is easy to add metadata about files and to incorporate text-files. Optionally instances of custom classes are pluggable to provide any type of extensibility. Thus it is possible to provide extractors for certain types of files and to incorporate text-files into the FSML-representation itself, possibly by adding a link to another resource in the fsml-database.
-
 Fig. \ref{fig:fsml-itemsize-pruning} is an example of mapping the author's Desktop-folder to a database in Treetank (move- and replace-detection is disabled). Subsequent revisions are commited every five minutes.
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
 {figures/fsml-changes-itemsize-pruning.png}}
-\caption{\label{fig:fsml-itemsize-pruning} FSML comparsion of "/home/johannes/Desktop"}
+\caption{\label{fig:fsml-itemsize-pruning} FSML comparsion of the author's desktop.}
 \end{figure}
 
 Most files and directories are unchanged. Usually subtrees of changed items (besides the processing-subfolder which has been deleted) are rather small compared to most unchanged nodes. Thus, we study the effect of changing the filtering method. Pruning by same hashes instead of the itemsize is displayed in Fig. \ref{fig:fsml-pruned-by-samehashes}. Sunburst items for the large subtrees of the unchanged nodes are not generated. As a direct consequence items of interest are enlarged and thus much better visible. %Two subdirectories matching the simple XPath-query \texttt{//dir[@name='wiki-sorted']} are highlighted. It is immediately obvious that a subtree rooted at the directory named "wiki-sorted" has been deleted and another one has been inserted. The equal subtree-size suggests that the subtree has been moved. On close inspection, for instance using the subtrees rooted at "wiki-sorted" we see that the subtrees are isomorph (Fig. \ref{fig:desktop-screenshot-compare}). This might be due to the directory traversal which seems to be non-deterministic. We can suggest that the directory therefore has been moved. However in future work we aim to detect moves in the first place and therefore also use the appropriate visualization through splines explained in chapter 3. To compare the two subtrees we used two Treetank-GUI instances on the same database/resource. This is possible due to Treetank permitting multiple read-transactions.  
 
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/fsml-pruned-by-hashes}}
-\caption{\label{fig:fsml-pruned-by-samehashes} FSML comparsion of "/home/johannes/Desktop" pruned by same hashes}
+\begin{figure}
+\centering
+\subfigure[FSML comparsion of the author's desktop filtered by identical hash-values.]{
+\includegraphics[width=\textwidth - 5em]
+{figures/fsml-pruned-by-hashes}
+\label{fig:fsml-pruned-by-samehashes}
+}
+\subfigure[FSML comparsion of the author's desktop (small multiple displays -- incremental view).]{
+\includegraphics[width=\textwidth - 5em]
+{figures/fsml-incremental-pruned-by-samehashes.png}
+\label{fig:fsml-smallmultiples-incremental}
+}
+\caption{FSML comparison.}
 \end{figure}
+
+
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 7em]
+%{figures/fsml-pruned-by-hashes}}
+%\caption{\label{fig:fsml-pruned-by-samehashes} FSML comparsion of the author's desktop filtered by identical hash-values.}
+%\end{figure}
 
 %\begin{figure}[tb]
 %\center{\includegraphics[width=\textwidth]
@@ -298,11 +314,11 @@ In general we are able to answer questions such as
 \item Does an employee adhere to company instructions regarding installed software? (by file-extensions or analysing the binaries and storing an additional attribute with "true" or "false" values)
 \end{itemize}
 
-\begin{figure}[tb]
-\center{\includegraphics[width=\textwidth]
-{figures/fsml-incremental-pruned-by-samehashes.png}}
-\caption{\label{fig:fsml-smallmultiples-incremental} FSML comparsion of "/home/johannes/Desktop" (small multiple displays -- incremental view)}
-\end{figure}
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 7em]
+%{figures/fsml-incremental-pruned-by-samehashes.png}}
+%\caption{\label{fig:fsml-smallmultiples-incremental} FSML comparsion of the author's desktop (small multiple displays -- incremental view).}
+%\end{figure}
 
 \subsection{Summary}
 This chapter introduced a few use cases for comparing tree-structures. Depending on the activated views different characteristics are revealed. 
@@ -311,4 +327,4 @@ The smallmultiple differential-variant should be used to compare similar, differ
 
 The standard \emph{SunburstView} reveals all kinds of differences and furthermore allows two zooming operations. The zooming/panning which transforms the viewing-coordinates through affine transformations may be used if the number of items is small and therefore animations are possible whereas a left-mouseclick on an item transforms the item into a new root-node. As already explained in Chapter \ref{sec::visualizations} this involves either a transformation based on node-copies and adjusting angles or the full pipline has to be passed in case of the itemsize-pruning.
 
-We have merely scratched the surface of the possibilities of our current approach. The small multiple displays will greatly benefit from a temporal XPath-extension. Some proposed axis as \texttt{next::}, \texttt{previous::}, \texttt{future::}, \texttt{past::}, \texttt{revision::} already have been implemented but have to be incorporated in an XPath/XQuery-engine. Simple queries as for instance \\\texttt{//dir[@name='wiki-sorted']/future::node()} will reveal nodes with the attribute \texttt{name='wiki-sorted'} in all future revisions. The start-context will be based on the currently opened base-revision. 
+We have merely scratched the surface of the possibilities of our current approach. The small multiple displays will greatly benefit from a temporal XPath-extension. Some proposed axis as \texttt{next::}, \texttt{previous::}, \texttt{future::}, \texttt{past::}, \texttt{revision::} already have been implemented but have to be incorporated in an XPath/XQuery-engine. Simple queries as for instance \\\texttt{//dir[@name='wiki-sorted']/future::node()} will reveal nodes with the attribute \\\texttt{name='wiki-sorted'} in all future revisions. The start-context will be based on the currently opened base-revision. 

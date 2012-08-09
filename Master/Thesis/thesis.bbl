@@ -179,6 +179,12 @@ O.~D.~T. Committee, ``Docbook.'' [Online]. Available:
   \url{http://www.docbook.org/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{generativegest}
+\BIBentryALTinterwordspacing
+D.~Gross, H.~Bohnacker, L.~J., and C.~Lazzeroni, ``Generative gestaltung.''
+  [Online]. Available: \url{http://www.generative-gestaltung.de}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Saxon}
 \BIBentryALTinterwordspacing
 Saxonica, ``Saxon - xslt and xquery processor.'' [Online]. Available:

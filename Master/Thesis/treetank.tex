@@ -179,7 +179,7 @@ The \texttt{move-} operation just like the \texttt{copy-} operation is implement
 
 %\begin{itemize}
 %\item The node/subtree to move must be an \texttt{element}- or a \texttt{text}-node.
-%\item It is not permitted to move a node to one of its descendants which would introduce , therefore it is checked if the node to move is one of the ancestors of the anchor node.
+%\item It is not permitted to move a node to one of its descendants which would introduce cicles, therefore it is checked if the node to move is one of the ancestors of the anchor node.
 %\end{itemize}
 
 %The two operation require the following node manipulations. The location the node is moved away is subject to the following changes:
@@ -280,6 +280,8 @@ A special \texttt{VisitorDescendantAxis} executes a visitor specific implementat
 %}
 %\caption{FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}\label{visitElementNode}
 %\end{algorithm}
+\clearpage
+\pagebreak
 \subsection{DeletionVisitor core}\label{subsec::deletionvisitor}
 \begin{algorithm}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
@@ -318,7 +320,7 @@ pWtx.moveTo(nodeKey)\;
 \tcp{similar to above case (omitted)}
 %}
 \tcp{Case: Has no right and no left sibl.}
-mWtx.remove()\;
+pWtx.remove()\;
 return EVisitResult.CONTINUE\;
 \caption{FMSEDeleteVisitor: delete(pWtx)}\label{deleteNode}
 \end{algorithm}

@@ -179,7 +179,7 @@ The \texttt{move-} operation just like the \texttt{copy-} operation is implement
 
 %\begin{itemize}
 %\item The node/subtree to move must be an \texttt{element}- or a \texttt{text}-node.
-%\item It is not permitted to move a node to one of its descendants which would introduce , therefore it is checked if the node to move is one of the ancestors of the anchor node.
+%\item It is not permitted to move a node to one of its descendants which would introduce cicles, therefore it is checked if the node to move is one of the ancestors of the anchor node.
 %\end{itemize}
 
 %The two operation require the following node manipulations. The location the node is moved away is subject to the following changes:
@@ -222,7 +222,7 @@ The implementation of the replace-operation is straigth forward using a delete- 
 
 Besides, the \texttt{remove}-operation has been modified to merge adjacent \texttt{TextNode}s if the deleted node has two neighbour text nodes to adhere to the XPath/XQuery Data Model (XDM) and to provide meaningful visualizations. \texttt{insert}-operations as of now check if the new \texttt{TextNode} would yield two consecutive \texttt{TextNode}s and, if so, update the value of the existing node with a concatenation of the old- and new-values instead. Therefore the storage consistently avoids consecutive \texttt{TextNode}s. 
 
-Furthermore a new bulk-insertion method supports a fast bulk insertion of subtrees based on a component which already existed. Hashes are computed in a subsequent postorder traversal of the inserted subtree thus reducing the runtime from $O(n^2)$ to $O(n)$.
+%Furthermore a new bulk-insertion method supports a fast bulk insertion of subtrees based on a component which already existed. Hashes are computed in a subsequent postorder traversal of the inserted subtree thus reducing the runtime from $O(n^2)$ to $O(n)$.
 
 \subsection{Visitor}\label{subsec::visitor}
 A special \texttt{VisitorDescendantAxis} executes a visitor specific implementation for each visited node before moving to the next node in preorder. The return value of the methods a visitor has to implement (a visitor specific implementation for each node-type) guides the traversal in the axis. The following result types are currently available:
@@ -280,6 +280,7 @@ A special \texttt{VisitorDescendantAxis} executes a visitor specific implementat
 %}
 %\caption{FMSEDeleteVisitor: EVisitResult visit(ElementNode pNode)}\label{visitElementNode}
 %\end{algorithm}
+\pagebreak
 \subsection{DeletionVisitor core}\label{subsec::deletionvisitor}
 \begin{algorithm}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
@@ -318,7 +319,7 @@ pWtx.moveTo(nodeKey)\;
 \tcp{similar to above case (omitted)}
 %}
 \tcp{Case: Has no right and no left sibl.}
-mWtx.remove()\;
+pWtx.remove()\;
 return EVisitResult.CONTINUE\;
 \caption{FMSEDeleteVisitor: delete(pWtx)}\label{deleteNode}
 \end{algorithm}

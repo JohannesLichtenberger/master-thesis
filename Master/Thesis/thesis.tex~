@@ -17,9 +17,23 @@
 
 
 % one-sided document style suited for bachelor/master theses (english)
-%\documentclass[a4paper]{llncs} 
+\documentclass[a4paper, twoside]{llncs}
+%\usepackage[a4paper,inner=3.5cm,outer=2.5cm,top=2.5cm,bottom=2.5cm,pdftex]{geometry}
+%\usepackage[a4paper,inner=3.5cm,outer=2.5cm,pdftex]{geometry}
+\usepackage[hmarginratio=3:2,pdftex]{geometry}
+
+%\documentclass[a4paper,twoside]{llncs} 
+%\documentclass[12pt,a4paper,twoside,openright]{report}
+%\setlength{\oddsidemargin}{-0.4mm} % 25 mm left margin
+%\setlength{\evensidemargin}{\oddsidemargin}
+%\setlength{\textwidth}{160mm}      % 25 mm right margin
+%\setlength{\topmargin}{-5.4mm}     % 20 mm top margin
+%\setlength{\headheight}{5mm}
+%\setlength{\headsep}{5mm}
+%\setlength{\footskip}{10mm}
+%\setlength{\textheight}{237mm}     % 20 mm bottom margin
 % two-sided document sytel suited for bachelor/master theses (english)
-\documentclass[twoside,a4paper]{llncs} 
+%\documentclass[twoside,a4paper]{llncs} 
 % one-sided document sytel suited for bachelor/master theses (german)
 %\documentclass[ngerman,a4paper]{llncs} 
 % two-sided document sytel suited for bachelor/master theses (german)
@@ -51,7 +65,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SETTINGS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+%\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
 
 \graphicspath{figures/}			% somehow, doesn't work, thus use command
 %\newcommand{\gfx}[0]{../gfx/}
@@ -117,7 +131,10 @@
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE,LO]{\textit{\nouppercase{\rightmark}}}
 \fancyfoot[EL,OR]{\thepage}
- 
+%\fancyhead[LE,LO]{\thepage}
+%\fancyhead[RE,RO]{\textit{\nouppercase{\rightmark}}}
+%\fancyfoot[EL,OL]{\thepage}
+
 \fancypagestyle{plain}{ %
 \fancyhf{} % remove everything
 \renewcommand{\headrulewidth}{0pt} % remove lines as well
@@ -188,15 +205,17 @@
 \input{titlepage} % include your titlepage here (unconventional title page with university signet above 
 %\input{titlepage_fancy-teaser_en} % include your titlepage here (unconventional title page with space for a teaser image)
 %\pagestyle{fancy}
+\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PREAMBLE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \pagestyle{fancy}
-\voffset=10mm % optical enhancement!!!
+%\voffset=10mm % optical enhancement!!!
 \pagenumbering{roman} % set the page numbering style to roman numbers
 \input{preamble} % refer your preamble here
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ACKNOWLEDGEMENTS
@@ -229,25 +248,25 @@
 \pagestyle{fancy}
 \addcontentsline{toc}{section}{\listtablename}
 \listoftables
+\cleardoublepage
 %\addcontentsline{toc}{section}{\listtodoname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SECTIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cleardoublepage
 \pagestyle{fancy}
 \pagenumbering{arabic} % set the page numbering to arabic page numbers
 \setcounter{page}{1}
 \input{introduction} % refer your introduction here
-\clearpage
+\cleardoublepage
 \input{relatedwork} 
-\clearpage
+\cleardoublepage
 \input{differences}
-\clearpage
+\cleardoublepage
 \input{visualizations}
-\clearpage
+\cleardoublepage
 \input{applications}
-\clearpage
+\cleardoublepage
 \input{conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -267,7 +286,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+\cleardoublepage
 \bibliographystyle{IEEEtran}
 \bibliography{thesis}
 \addcontentsline{toc}{section}{References}

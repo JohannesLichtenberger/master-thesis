@@ -25,7 +25,7 @@ This implies and confirms the important role of humans in the analysis process. 
 Our Visual Analytics pipline is largely influenced by the proposal of Keim et al. (depicted in Fig. \ref{fig:visualanalyticsprocess}).
 
 \begin{figure}[htb]
-\center{\includegraphics[width=\textwidth - 6em]
+\center{\includegraphics[width=\textwidth - 10em]
 {figures/visualanalyticsprocess}}
 \caption{\label{fig:visualanalyticsprocess} Visual Analytics Process proposed by Keim et al. Presented in \cite{keim2008visual}.}
 \end{figure}
@@ -290,31 +290,6 @@ The Ripple presentation visualizes both evolving hierarchies and categories. Con
 %\caption{\label{fig:ripple} Ripple presentation. Presented in \cite{ishihara2006ripple}.}
 %\end{figure}
 
-\subsubsection{Summary}
-Recently, interactive visualizations of the evolution of tree-structures or different, similar trees have been proposed. Table \ref{chap2:comparsion} summarizes the visualizations according to several attributes. The first column denotes the readability of the hierarchy-representation. The second column indicates if a space filling approach is used and to which extend the whole display space is utilized. The third column characterizes the readability of the visualization including the encoding of differences and labels. The last column is the most significant. It determines to which extent changes are visualized. Even deletions are not considered in some cases which might be due to the use cases of the respective visualization. Note that the scala range from "-", not present to "+++" (best). Chapter \ref{sec::conclusion} presents a detailed more comprehensive analysis in comparison to our system. 
-
-Most of the visualizations are tailored to specific tasks and thus at best only partielly useful for other applications. In fact besides adapting the diff-algorithm described in \cite{telea2008code} none of the proposed systems to the best of our knowledge is able to compare every kind of tree structure due to diff-algorithms which rely on domain characteristics as unique node identifiers/node labels or on change detections which hook into a system. Furthermore we suppose that except TreeJuxtaposer and CodeFlows no other system is able to compare large trees. However, in CodeFlows the filtering of nodes depends on the level of detail (per class-level, function-level...). Thus a global view which filters relevant nodes is not available.
-
-\cite{bremm2011interactive} is the only system capable of visualizing differences at various levels of detail due to linked visualizations.
-
-%The use cases of \emph{TimeRadarTrees} are rather different from the ones addressed in this thesis. While changes of leaf nodes and the relationships between them are in the focus of TimeRadarTrees, determining and visualizing changes of the whole hierarchy is one of the main goals in this thesis.
-
-
-
-%\emph{Ripple presentations} 
-
-%\begin{figure}[tb]
-%\center{\includegraphics[width=\textwidth - 12em]
-%{figures/ripple-clutter}}
-%\caption{\label{fig:ripple-clutter} Ripple representation - label overplotting. Presented in \cite{ishihara2006ripple}.}
-%\end{figure}
-
-%\emph{TreeJuxtaposer} 
-
-%\emph{Code flows}
-
-%\emph{Interactive Visual Comparison of Multiple Trees} 
-
 \begin{table}[tb]
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|} 
@@ -343,6 +318,32 @@ Most of the visualizations are tailored to specific tasks and thus at best only 
 \end{table}
 
 \footnotetext{due to the side by side view which needs a lot of space}
+
+
+\subsubsection{Summary}
+Recently, interactive visualizations of the evolution of tree-structures or different, similar trees have been proposed. Table \ref{chap2:comparsion} summarizes the visualizations according to several attributes. The first column denotes the readability of the hierarchy-representation. The second column indicates if a space filling approach is used and to which extend the whole display space is utilized. The third column characterizes the readability of the visualization including the encoding of differences and labels. The last column is the most significant. It determines to which extent changes are visualized. Even deletions are not considered in some cases which might be due to the use cases of the respective visualization. Note that the scala range from "-", not present to "+++" (best). Chapter \ref{sec::conclusion} presents a detailed more comprehensive analysis in comparison to our system. 
+
+Most of the visualizations are tailored to specific tasks and thus at best only partielly useful for other applications. In fact besides adapting the diff-algorithm described in \cite{telea2008code} none of the proposed systems to the best of our knowledge is able to compare every kind of tree structure due to diff-algorithms which rely on domain characteristics as unique node identifiers/node labels or on change detections which hook into a system. Furthermore we suppose that except TreeJuxtaposer and CodeFlows no other system is able to compare large trees. However, in CodeFlows the filtering of nodes depends on the level of detail (per class-level, function-level...). Thus a global view which filters relevant nodes is not available.
+
+\cite{bremm2011interactive} is the only system capable of visualizing differences at various levels of detail due to linked visualizations.
+
+%The use cases of \emph{TimeRadarTrees} are rather different from the ones addressed in this thesis. While changes of leaf nodes and the relationships between them are in the focus of TimeRadarTrees, determining and visualizing changes of the whole hierarchy is one of the main goals in this thesis.
+
+
+
+%\emph{Ripple presentations} 
+
+%\begin{figure}[tb]
+%\center{\includegraphics[width=\textwidth - 12em]
+%{figures/ripple-clutter}}
+%\caption{\label{fig:ripple-clutter} Ripple representation - label overplotting. Presented in \cite{ishihara2006ripple}.}
+%\end{figure}
+
+%\emph{TreeJuxtaposer} 
+
+%\emph{Code flows}
+
+%\emph{Interactive Visual Comparison of Multiple Trees} 
 
 
 
