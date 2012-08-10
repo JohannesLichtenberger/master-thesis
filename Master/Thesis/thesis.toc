@@ -23,13 +23,13 @@
 \contentsline {subsubsection}{Faxma\cite {lindholm2006fast}}{9}{section*.13}
 \contentsline {subsubsection}{Summary}{9}{section*.14}
 \contentsline {subsection}{\numberline {2.4}Visualization of differences}{10}{subsection.0.2.4}
-\contentsline {subsubsection}{Treevolution\cite {theron2006hierarchical}}{10}{section*.15}
+\contentsline {subsubsection}{Treevolution\cite {theron2006hierarchical}}{11}{section*.15}
 \contentsline {subsubsection}{Interactive Visual Comparison of Multiple Trees\cite {bremm2011interactive}}{11}{section*.16}
 \contentsline {subsubsection}{Spiral-Treemap/Contrast-Treemap\cite {tu2007visualizing}}{11}{section*.17}
-\contentsline {subsubsection}{TreeJuxtaposer\cite {munzner2003treejuxtaposer}}{11}{section*.18}
+\contentsline {subsubsection}{TreeJuxtaposer\cite {munzner2003treejuxtaposer}}{12}{section*.18}
 \contentsline {subsubsection}{Code Flows: Visualizing Structural Evolution of Source Code\cite {telea2008code}}{12}{section*.19}
 \contentsline {subsubsection}{Ripple presentation for tree structures with historical information\cite {ishihara2006ripple}}{12}{section*.20}
-\contentsline {subsubsection}{Summary}{12}{section*.21}
+\contentsline {subsubsection}{Summary}{13}{section*.21}
 \contentsline {section}{\numberline {3}Analysis of structural differences}{15}{section.0.3}
 \contentsline {subsection}{\numberline {3.1}Introduction}{15}{subsection.0.3.1}
 \contentsline {subsection}{\numberline {3.2}ID-less diffing (FMSE) / Preprocessing}{15}{subsection.0.3.2}
@@ -37,29 +37,30 @@
 \contentsline {subsection}{\numberline {3.3}ID-based diffing}{18}{subsection.0.3.3}
 \contentsline {subsubsection}{Hashes}{19}{section*.23}
 \contentsline {subsubsection}{Modes to compare differences}{19}{section*.24}
+\contentsline {subsubsection}{Type of difference between two nodes}{19}{section*.25}
 \contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{20}{subsection.0.3.4}
 \contentsline {subsection}{\numberline {3.5}Diff-Computation}{20}{subsection.0.3.5}
 \contentsline {subsection}{\numberline {3.6}Detecting moves}{24}{subsection.0.3.6}
-\contentsline {subsubsection}{Impossibility to detect moves on the fly}{24}{section*.25}
-\contentsline {subsubsection}{Detection of moves in a postprocessing step}{24}{section*.26}
+\contentsline {subsubsection}{Impossibility to detect moves on the fly}{24}{section*.26}
+\contentsline {subsubsection}{Detection of moves in a postprocessing step}{24}{section*.27}
 \contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{25}{subsection.0.3.7}
-\contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{27}{subsection.0.3.8}
+\contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{28}{subsection.0.3.8}
 \contentsline {section}{\numberline {4}Visualizations}{31}{section.0.4}
 \contentsline {subsection}{\numberline {4.1}Introduction}{31}{subsection.0.4.1}
 \contentsline {subsection}{\numberline {4.2}Aggregation}{31}{subsection.0.4.2}
 \contentsline {subsection}{\numberline {4.3}Visualizations}{31}{subsection.0.4.3}
-\contentsline {subsubsection}{Interaction}{36}{section*.27}
-\contentsline {subsubsection}{Querying}{36}{section*.28}
-\contentsline {subsubsection}{Labels}{36}{section*.29}
-\contentsline {subsubsection}{Filtering/Pruning}{36}{section*.30}
-\contentsline {subsection}{\numberline {4.4}Comparsion using a new Sunburst-layout algorithm}{38}{subsection.0.4.4}
-\contentsline {subsubsection}{Sunburst Comparsion-Layout}{38}{section*.31}
-\contentsline {subsubsection}{Short animation}{39}{section*.32}
-\contentsline {subsubsection}{Layout algorithm}{40}{section*.33}
-\contentsline {subsubsection}{Semantic zoom implementation}{42}{section*.34}
-\contentsline {subsubsection}{Filtering/Pruning}{45}{section*.35}
-\contentsline {subsubsection}{Zooming / Details on demand}{47}{section*.36}
-\contentsline {subsubsection}{Similarity measures}{49}{section*.37}
+\contentsline {subsubsection}{Interaction}{36}{section*.28}
+\contentsline {subsubsection}{Querying}{36}{section*.29}
+\contentsline {subsubsection}{Labels}{36}{section*.30}
+\contentsline {subsubsection}{Filtering/Pruning}{36}{section*.31}
+\contentsline {subsection}{\numberline {4.4}Comparsion based a novel Sunburst-layout algorithm}{38}{subsection.0.4.4}
+\contentsline {subsubsection}{Sunburst comparsion-layout}{38}{section*.32}
+\contentsline {subsubsection}{Short animation}{39}{section*.33}
+\contentsline {subsubsection}{Layout algorithm}{40}{section*.34}
+\contentsline {subsubsection}{Semantic zoom implementation}{42}{section*.35}
+\contentsline {subsubsection}{Filtering/Pruning}{45}{section*.36}
+\contentsline {subsubsection}{Zooming / Details on demand}{47}{section*.37}
+\contentsline {subsubsection}{Similarity measures}{49}{section*.38}
 \contentsline {subsection}{\numberline {4.5}Querying}{49}{subsection.0.4.5}
 \contentsline {subsection}{\numberline {4.6}Visualization of moves}{50}{subsection.0.4.6}
 \contentsline {subsection}{\numberline {4.7}Small multiple displays}{51}{subsection.0.4.7}
@@ -74,17 +75,17 @@
 \contentsline {section}{\numberline {6}Summary, Conclusion and Future Research}{73}{section.0.6}
 \contentsline {subsection}{\numberline {6.1}Summary}{73}{subsection.0.6.1}
 \contentsline {subsection}{\numberline {6.2}Conclusion}{74}{subsection.0.6.2}
-\contentsline {subsubsection}{Evaluation Criteria}{75}{section*.38}
+\contentsline {subsubsection}{Evaluation Criteria}{75}{section*.39}
 \contentsline {subsection}{\numberline {6.3}Future Research}{78}{subsection.0.6.3}
 \contentsline {section}{\numberline {A}Treetank}{79}{section..1}
 \contentsline {subsection}{\numberline {A.1}General persistent storage enhancements}{79}{subsection..1.1}
 \contentsline {subsection}{\numberline {A.2}ACID properties}{79}{subsection..1.2}
 \contentsline {subsection}{\numberline {A.3}Axis}{80}{subsection..1.3}
-\contentsline {subsubsection}{Levelorder-Axis}{80}{section*.39}
+\contentsline {subsubsection}{Levelorder-Axis}{80}{section*.40}
 \contentsline {subsection}{\numberline {A.4}Edit operations}{80}{subsection..1.4}
 \contentsline {subsection}{\numberline {A.5}Visitor}{80}{subsection..1.5}
 \contentsline {subsection}{\numberline {A.6}DeletionVisitor core}{83}{subsection..1.6}
 \contentsline {section}{\numberline {B}XSLT stylesheet to combine consecutive pages/revisions}{84}{section..2}
 \contentsline {section}{\numberline {C}Wikipedia Dump - XML structure}{85}{section..3}
 \contentsline {section}{\numberline {D}Visualizations - Evaluation legend}{86}{section..4}
-\contentsline {section}{References}{88}{section*.40}
+\contentsline {section}{References}{88}{section*.41}

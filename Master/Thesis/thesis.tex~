@@ -44,6 +44,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{tocbibind}
 \usepackage{rotating}
+\usepackage[Latin1]{inputenc}
 \usepackage{graphicx}			% graphics, of course
 \usepackage{subfigure}
 \usepackage{color}                      % to define colors
@@ -232,6 +233,7 @@
 \setcounter{page}{1}
 \input{abstract} % refer your abstract here
 \addcontentsline{toc}{section}{\abstractname}
+\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% TABLE OF CONTENT, LIST OF FIGURES & LIST OF TABLES

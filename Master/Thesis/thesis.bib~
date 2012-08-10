@@ -174,6 +174,25 @@
   year={2009}
 }
 
+@article{Zhang:1989:SFA:76071.76082,
+ author = {Zhang, K. and Shasha, D.},
+ title = {Simple fast algorithms for the editing distance between trees and related problems},
+ journal = {SIAM J. Comput.},
+ issue_date = {Dec. 1989},
+ volume = {18},
+ number = {6},
+ month = dec,
+ year = {1989},
+ issn = {0097-5397},
+ pages = {1245--1262},
+ numpages = {18},
+ url = {http://dx.doi.org/10.1137/0218082},
+ doi = {10.1137/0218082},
+ acmid = {76082},
+ publisher = {Society for Industrial and Applied Mathematics},
+ address = {Philadelphia, PA, USA},
+} 
+
 @MISC{VISUAL_ANALYTICS,
   author = {James J. Thomas and K.A. Cook},
   title = {Illuminating the Path: The R\&D Agenda for Visual Analytics},
@@ -196,7 +215,7 @@
 
 @MISC{generativegest,
   title = {Generative Gestaltung},
-  url = {http://generative-gestaltung.de},
+  url = {http://www.generative-gestaltung.de},
   author = {Gross, D. and Bohnacker, H. and Laub J. and Lazzeroni, C.},
 }
 

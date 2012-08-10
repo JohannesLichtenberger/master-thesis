@@ -25,7 +25,7 @@
 \BOOKMARK [2][-]{subsection.0.4.1}{Introduction}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.2}{Aggregation}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.3}{Visualizations}{section.0.4}
-\BOOKMARK [2][-]{subsection.0.4.4}{Comparsion using a new Sunburst-layout algorithm}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.4}{Comparsion based a novel Sunburst-layout algorithm}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.5}{Querying}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.6}{Visualization of moves}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.7}{Small multiple displays}{section.0.4}
@@ -51,4 +51,4 @@
 \BOOKMARK [1][-]{section..2}{XSLT stylesheet to combine consecutive pages/revisions}{}
 \BOOKMARK [1][-]{section..3}{Wikipedia Dump - XML structure}{}
 \BOOKMARK [1][-]{section..4}{Visualizations - Evaluation legend}{}
-\BOOKMARK [1][-]{section*.40}{References}{}
+\BOOKMARK [1][-]{section*.41}{References}{}

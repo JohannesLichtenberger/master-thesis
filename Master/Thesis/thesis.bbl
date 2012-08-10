@@ -104,6 +104,14 @@ Y.~Wang, D.~DeWitt, and J.~Cai, ``X-diff: An effective change detection
   19th International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax
   Ieee, 2003, pp. 519--530.
 
+\bibitem{Zhang:1989:SFA:76071.76082}
+\BIBentryALTinterwordspacing
+K.~Zhang and D.~Shasha, ``Simple fast algorithms for the editing distance
+  between trees and related problems,'' \emph{SIAM J. Comput.}, vol.~18, no.~6,
+  pp. 1245--1262, Dec. 1989. [Online]. Available:
+  \url{http://dx.doi.org/10.1137/0218082}
+\BIBentrySTDinterwordspacing
+
 \bibitem{cobena2002comparative}
 G.~Cob{\'e}na, T.~Abdessalem, and Y.~Hinnach, ``A comparative study for xml
   change detection,'' \emph{Research Report, INRIA Rocquencourt, France}, 2002.
