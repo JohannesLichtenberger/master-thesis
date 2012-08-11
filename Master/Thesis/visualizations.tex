@@ -577,9 +577,9 @@ The \texttt{subtree-size} of the root-item is the size of the accumulated List o
 
 \begin{table}[tb]
 \centering 
-\begin{tabular}[r]{|l|c|c|c|c|c|} 
+\begin{tabularx}{0.7\textwidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|} 
 \hline
-\textbf{document size (in MiB)} & \begin{sideways}\textbf{without}\end{sideways} & \begin{sideways}\textbf{itemsize}\end{sideways} & \begin{sideways}\textbf{hashes}\end{sideways} & \begin{sideways}\textbf{hashes (optimal)}\end{sideways} & \begin{sideways}\textbf{hashes (optimal) / move detection}\end{sideways}\\
+\textbf{document size (in MiB)} & \begin{sideways}\textbf{without filtering}\end{sideways} & \begin{sideways}\textbf{itemsize-based filtering}\end{sideways} & \begin{sideways}\textbf{hash-based filtering}\end{sideways} & \begin{sideways}\textbf{hash-based filtering (optimal)}\end{sideways} & \begin{sideways}\textbf{hash-based filtering (optimal) / move detection}\end{sideways}\\
 \hline
 \hline
 \textbf{11 MiB} & 59.13 & 9.13 & 10.49 & 4.92 & 5.09\\
@@ -588,7 +588,7 @@ The \texttt{subtree-size} of the root-item is the size of the accumulated List o
 \hline
 \textbf{1111 MiB} & - & - & - & 256.85 & 260.17\\
 \hline
-\end{tabular}
+\end{tabularx}
 \label{chap3:comparison}
 \vspace{0.5em} 
 \caption{Comparsion of randomly modified XMark instances with all available filtering techniques. The ``hashes (optimal)'' column denotes the hash-based filtering technique which does not generate Sunburst items for nodes with identical hash-values.}

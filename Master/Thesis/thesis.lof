@@ -28,17 +28,17 @@
 \contentsline {figure}{\numberline {22}{\ignorespaces Small multiple - hybrid variant.}}{53}{figure.0.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Sunburst visualization - depicting performance measures on XMark instances with random modifications (11 MiB: modified every 1000st node; 111 MiB: modified every 10000st node).}}{54}{figure.0.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{55}{figure.0.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces LFG comparsion.}}{58}{figure.0.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces LFG comparsion revised.}}{59}{figure.0.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Wikipedia comparsion.}}{61}{figure.0.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem.}}{62}{figure.0.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Wikipedia comparsion pruned by itemsize.}}{63}{figure.0.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant.}}{64}{figure.0.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Wikipedia comparsion - depicting differences between revision 73 and 74.}}{65}{figure.0.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order.}}{66}{figure.0.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces FSML comparsion of the GUI src-folder.}}{67}{figure.0.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces FSML comparsion of the GUI src-folder using a full diff including namespaces and attributes.}}{68}{figure.0.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces FSML comparsion of the author's desktop.}}{70}{figure.0.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces FSML comparison.}}{71}{figure.0.36}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FSML comparsion of the author's desktop filtered by identical hash-values.}}}{71}{figure.0.36}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {FSML comparsion of the author's desktop (small multiple displays -- incremental view).}}}{71}{figure.0.36}
+\contentsline {figure}{\numberline {25}{\ignorespaces LFG comparsion.}}{60}{figure.0.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces LFG comparsion revised.}}{61}{figure.0.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Wikipedia comparsion.}}{63}{figure.0.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Wikipedia comparsion without pruning and including the modification weight to determine the size of a SunburstItem.}}{64}{figure.0.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Wikipedia comparsion pruned by itemsize.}}{65}{figure.0.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Wikipedia comparsion - depicting differences through the incremental smallmulltiple variant.}}{66}{figure.0.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Wikipedia comparsion - depicting differences between revision 73 and 74.}}{67}{figure.0.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Wikipedia comparsion - incremental smallmultiple variant depicting changes between revisions 10,11,12,13 and 14 from the upper left to the bottom left in clockwise order.}}{68}{figure.0.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces FSML comparsion of the GUI src-folder.}}{69}{figure.0.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces FSML comparsion of the GUI src-folder using a full diff including namespaces and attributes.}}{70}{figure.0.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces FSML comparsion of the author's desktop.}}{72}{figure.0.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces FSML comparison.}}{73}{figure.0.36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FSML comparsion of the author's desktop filtered by identical hash-values.}}}{73}{figure.0.36}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {FSML comparsion of the author's desktop (small multiple displays -- incremental view).}}}{73}{figure.0.36}

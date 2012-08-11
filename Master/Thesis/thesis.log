@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  11 AUG 2012 02:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  11 AUG 2012 02:51
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -1003,7 +1003,7 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 112.
+Package hyperref Info: Option `colorlinks' set `true' on input line 114.
 \c@mydef=\count183
  (./thesis.aux
 
@@ -1015,20 +1015,20 @@ LaTeX Warning: Label `fig:docScaling' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 201.
+LaTeX Font Info:    ... okay on input line 201.
 
 *geometry detected driver: pdftex*
 -------------------- Geometry parameters
@@ -1101,12 +1101,12 @@ Package ucs Warning: ***************************
 (ucs)                ***************************
 (ucs)                Activating compatibility mode.
 (ucs)                ***************************
-(ucs)                 on input line 199.
+(ucs)                 on input line 201.
 
 (/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 )
-Package hyperref Info: Link coloring ON on input line 199.
+Package hyperref Info: Link coloring ON on input line 201.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -1116,8 +1116,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count189
 )
-LaTeX Info: Redefining \ref on input line 199.
-LaTeX Info: Redefining \pageref on input line 199.
+LaTeX Info: Redefining \ref on input line 201.
+LaTeX Info: Redefining \pageref on input line 201.
  (./thesis.out)
 (./thesis.out)
 \@outlinefile=\write5
@@ -1165,14 +1165,14 @@ c-tive vi-su-al-iza-tions. A novel Sunburst-
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.239 \cleardoublepage
+l.241 \cleardoublepage
                        [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.239 \cleardoublepage
+l.241 \cleardoublepage
                        [2
 
 ] (./thesis.toc [3
@@ -1280,7 +1280,7 @@ ed.pdf>])
 [29] [30
 
 ] (./visualizations.tex
-<figures/aggregation.pdf, id=859, 559.08875pt x 445.665pt>
+<figures/aggregation.pdf, id=859, 538.01pt x 441.65pt>
 File: figures/aggregation.pdf Graphic file (type pdf)
 
 <use figures/aggregation.pdf> [31]
@@ -1292,9 +1292,7 @@ File: figures/treetext.png Graphic file (type png)
 File: figures/sunbursttextview-overview.png Graphic file (type png)
 
 <use figures/sunbursttextview-overview.png> [32 <./figures/aggregation.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33 <./figures/treetext.png>] [34 <./figures/sunbursttextview-overview.png>]
+[33 <./figures/treetext.png>] [34 <./figures/sunbursttextview-overview.png>]
 <figures/sunburstview-cut.png, id=897, 630.355pt x 672.5125pt>
 File: figures/sunburstview-cut.png Graphic file (type png)
 
@@ -1342,7 +1340,7 @@ Underfull \hbox (badness 10000) detected at line 267
 [][]
  []
 
-[42] <figures/sunburst-layout.pdf, id=1004, 553.06625pt x 476.78125pt>
+[42] <figures/sunburst-layout.pdf, id=1004, 559.08875pt x 484.81125pt>
 File: figures/sunburst-layout.pdf Graphic file (type pdf)
 
 <use figures/sunburst-layout.pdf>
@@ -1398,74 +1396,75 @@ File: figures/gui-performance.pdf Graphic file (type pdf)
 File: figures/gui-performance-movedet.pdf Graphic file (type pdf)
 
 <use figures/gui-performance-movedet.pdf> [54 <./figures/gui-performance.pdf>]
-[55 <./figures/gui-performance-movedet.pdf>]) [56] (./applications.tex
-<figures/lfg.png, id=1190, 1220.56pt x 910.40125pt>
-File: figures/lfg.png Graphic file (type png)
- <use figures/lfg.png>
-[57
+[55 <./figures/gui-performance-movedet.pdf>]) [56] [57] [58
 
-] <figures/linguistics.png, id=1203, 1206.5075pt x 895.345pt>
+]
+(./applications.tex <figures/lfg.png, id=1198, 1220.56pt x 910.40125pt>
+File: figures/lfg.png Graphic file (type png)
+
+<use figures/lfg.png> [59]
+<figures/linguistics.png, id=1211, 1206.5075pt x 895.345pt>
 File: figures/linguistics.png Graphic file (type png)
 
-<use figures/linguistics.png> [58 <./figures/lfg.png>]
+<use figures/linguistics.png> [60 <./figures/lfg.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 51.
 
 Underfull \vbox (badness 6608) has occurred while \output is active []
 
- [59 <./figures/linguistics.png>] [60]
-<figures/wikipedia-rev7071.png, id=1246, 1350.04375pt x 950.55125pt>
+ [61 <./figures/linguistics.png>] [62]
+<figures/wikipedia-rev7071.png, id=1255, 1350.04375pt x 950.55125pt>
 File: figures/wikipedia-rev7071.png Graphic file (type png)
 
-<use figures/wikipedia-rev7071.png> [61 <./figures/wikipedia-rev7071.png>]
-<figures/wikipedia-without-pruned-modifications.png, id=1258, 1350.04375pt x 95
+<use figures/wikipedia-rev7071.png> [63 <./figures/wikipedia-rev7071.png>]
+<figures/wikipedia-without-pruned-modifications.png, id=1266, 1350.04375pt x 95
 0.55125pt>
 File: figures/wikipedia-without-pruned-modifications.png Graphic file (type png
 )
- <use figures/wikipedia-without-pruned-modifications.png> [62 <./figures/wikipe
+ <use figures/wikipedia-without-pruned-modifications.png> [64 <./figures/wikipe
 dia-without-pruned-modifications.png>]
-<figures/wikipedia-rev90106.png, id=1265, 1382.16376pt x 956.57375pt>
+<figures/wikipedia-rev90106.png, id=1273, 1382.16376pt x 956.57375pt>
 File: figures/wikipedia-rev90106.png Graphic file (type png)
 
 <use figures/wikipedia-rev90106.png>
-<figures/wikipedia-incremental.png, id=1267, 1206.5075pt x 895.345pt>
+<figures/wikipedia-incremental.png, id=1275, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental.png Graphic file (type png)
 
-<use figures/wikipedia-incremental.png> [63 <./figures/wikipedia-rev90106.png>]
-<figures/wikipedia-rev7374.png, id=1277, 1372.12625pt x 936.49875pt>
+<use figures/wikipedia-incremental.png> [65 <./figures/wikipedia-rev90106.png>]
+<figures/wikipedia-rev7374.png, id=1285, 1372.12625pt x 936.49875pt>
 File: figures/wikipedia-rev7374.png Graphic file (type png)
 
 <use figures/wikipedia-rev7374.png>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64 <./figures/wikipedia-incremental.png>]
-<figures/wikipedia-incremental-add.png, id=1284, 1206.5075pt x 895.345pt>
+ [66 <./figures/wikipedia-incremental.png>]
+<figures/wikipedia-incremental-add.png, id=1292, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental-add.png Graphic file (type png)
 
-<use figures/wikipedia-incremental-add.png> [65 <./figures/wikipedia-rev7374.pn
-g>] <figures/fsml-gui.png, id=1296, 1392.20125pt x 902.37125pt>
+<use figures/wikipedia-incremental-add.png> [67 <./figures/wikipedia-rev7374.pn
+g>] <figures/fsml-gui.png, id=1305, 1392.20125pt x 902.37125pt>
 File: figures/fsml-gui.png Graphic file (type png)
 
-<use figures/fsml-gui.png> [66 <./figures/wikipedia-incremental-add.png>]
-<figures/gui-fsml-fulldiff.png, id=1303, 1439.3775pt x 898.35625pt>
+<use figures/fsml-gui.png> [68 <./figures/wikipedia-incremental-add.png>]
+<figures/gui-fsml-fulldiff.png, id=1312, 1439.3775pt x 898.35625pt>
 File: figures/gui-fsml-fulldiff.png Graphic file (type png)
 
-<use figures/gui-fsml-fulldiff.png> [67 <./figures/fsml-gui.png>]
+<use figures/gui-fsml-fulldiff.png> [69 <./figures/fsml-gui.png>]
 Overfull \hbox (6.54938pt too wide) in paragraph at lines 231--232
 \OT1/cmtt/m/n/10 /dir[@name='pathComp1Name']/dir|file[@name='pathComp2Name']\OT
 1/cmr/m/n/10 . The path com-po-nent usu-
  []
 
-[68 <./figures/gui-fsml-fulldiff.png>]
-<figures/fsml-changes-itemsize-pruning.png, id=1319, 1557.82pt x 895.345pt>
+[70 <./figures/gui-fsml-fulldiff.png>]
+<figures/fsml-changes-itemsize-pruning.png, id=1327, 1557.82pt x 895.345pt>
 File: figures/fsml-changes-itemsize-pruning.png Graphic file (type png)
 
 <use figures/fsml-changes-itemsize-pruning.png>
-<figures/fsml-pruned-by-hashes.png, id=1321, 1304.875pt x 894.34125pt>
+<figures/fsml-pruned-by-hashes.png, id=1329, 1304.875pt x 894.34125pt>
 File: figures/fsml-pruned-by-hashes.png Graphic file (type png)
 
 <use figures/fsml-pruned-by-hashes.png>
-<figures/fsml-incremental-pruned-by-samehashes.png, id=1322, 1206.5075pt x 895.
+<figures/fsml-incremental-pruned-by-samehashes.png, id=1330, 1206.5075pt x 895.
 345pt>
 File: figures/fsml-incremental-pruned-by-samehashes.png Graphic file (type png)
 
@@ -1473,17 +1472,17 @@ File: figures/fsml-incremental-pruned-by-samehashes.png Graphic file (type png)
 
 LaTeX Warning: Float too large for page by 1.8681pt on input line 285.
 
-[69]) [70 <./figures/fsml-changes-itemsize-pruning.png>] [71 <./figures/fsml-pr
+[71]) [72 <./figures/fsml-changes-itemsize-pruning.png>] [73 <./figures/fsml-pr
 uned-by-hashes.png> <./figures/fsml-incremental-pruned-by-samehashes.png>]
-[72] (./conclusion.tex [73
+[74] (./conclusion.tex [75
 
-] [74] [75] [76] [77]) [78] (./treetank.tex
+] [76] [77] [78] [79]) [80] (./treetank.tex
 Overfull \hbox (0.99557pt too wide) in paragraph at lines 12--13
 \OT1/cmr/m/n/10 an XPath- or XQuery- Op-ti-mizer to use the in-dex for queries 
 as \OT1/cmtt/m/n/10 count(//@attribute='foo')
  []
 
-[79
+[81
 
 ]
 Overfull \hbox (1.49594pt too wide) in paragraph at lines 30--31
@@ -1496,12 +1495,12 @@ Underfull \hbox (badness 10000) detected at line 90
 [][]
  []
 
-[80] [81] [82]
+[82] [83] [84]
 Underfull \hbox (badness 10000) detected at line 326
 [][]
  []
 
-) [83
+) [85
 
 ] (./xslt.tex
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 3.
@@ -1517,16 +1516,16 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
-) [84
+) [86
 
 ] (./wikidump.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 3--287
+Underfull \hbox (badness 10000) in paragraph at lines 3--289
 
  []
 
-[85
+[87
 
-] (./tables-rating) [86
+] (./tables-rating) [88
 
 ] (./thesis.bbl
 (/usr/share/texmf-texlive/tex/latex/ucs/data/uni-33.def
@@ -1534,9 +1533,9 @@ File: uni-33.def 2004/10/17 UCS: Unicode data U+2100..U+21FF
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
- [87
+ [89
 
-]) [88]
+]) [90]
 (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
@@ -1546,10 +1545,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20103 strings out of 493848
- 326725 string characters out of 1152824
- 473465 words of memory out of 3000000
- 22233 multiletter control sequences out of 15000+50000
+ 20107 strings out of 493848
+ 326760 string characters out of 1152824
+ 473499 words of memory out of 3000000
+ 22235 multiletter control sequences out of 15000+50000
  16366 words of font info for 61 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  63i,22n,72p,2987b,1404s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1579,9 +1578,9 @@ fonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
 ti7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (100 pages, 8045499 bytes).
+Output written on thesis.pdf (102 pages, 8046795 bytes).
 PDF statistics:
- 1855 PDF objects out of 2073 (max. 8388607)
- 638 named destinations out of 1000 (max. 500000)
+ 1863 PDF objects out of 2073 (max. 8388607)
+ 640 named destinations out of 1000 (max. 500000)
  645 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,4 +4,4 @@
 \contentsline {table}{\numberline {4}{\ignorespaces Comparsion of different XMark instances (11 MiB, 111 MiB, 1111 MiB modifying every 1000st, 10000st and 100000st node). Runtime in ms.}}{27}{table.0.4}
 \contentsline {table}{\numberline {5}{\ignorespaces Comparsion of different XMark instances skipping subtrees of nodes with identical hash-values (11 MiB, 111 MiB, 1111 MiB modifying every 1000st, 10000st and 100000st node). Runtime in ms.}}{28}{table.0.5}
 \contentsline {table}{\numberline {6}{\ignorespaces Comparsion of randomly modified XMark instances with all available filtering techniques. The ``hashes (optimal)'' column denotes the hash-based filtering technique which does not generate Sunburst items for nodes with identical hash-values.}}{56}{table.0.6}
-\contentsline {table}{\numberline {7}{\ignorespaces Comparsion of tree-to-tree comparison visualizations. Appendix \ref {sec::tablelegend} provides a detailed legend.}}{77}{table.0.7}
+\contentsline {table}{\numberline {7}{\ignorespaces Comparsion of tree-to-tree comparison visualizations. Appendix \ref {sec::tablelegend} provides a detailed legend.}}{79}{table.0.7}

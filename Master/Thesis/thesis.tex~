@@ -47,6 +47,7 @@
 \usepackage{ucs}
 \usepackage[utf8]{inputenc}
 \usepackage{tabularx}
+\usepackage[roman]{parnotes}
 \usepackage{graphicx}			% graphics, of course
 \usepackage{subfigure}
 \usepackage{color}                      % to define colors
@@ -74,6 +75,8 @@
 %\newcommand{\gfx}[0]{../gfx/}
 \titlerunning{~}				% set off for llncs	
 \authorrunning{~}				% set off for llncs
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 \newtheorem{thm}{Lemma}%[]             % lemma definition
 \newcommand{\factor}[0]{10}
