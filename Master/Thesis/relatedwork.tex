@@ -209,8 +209,9 @@ Memory consumption is very important considering large XML instances ranging fro
 In summary a trade-off between the number of edit-operations, the memory consumption and the runtime complexity of the algorithm exists. Furthermore no algorithm exists which outperforms and in respect to the edit-script cost produces always better results than the others while comparing trees of different domains and characteristics. It heavily depends on the change pattern of the input document and parameters of the algorihm if provided. Due to the different granularity of the edit-operations among the approaches the size of the delta and the number of different types of edit-operations is not always a good evaluation critera. To be fair the cost of applying all edit-operations must be determined. Thus, the cost of insertions and deletions is always defined on the subtree-sizes.
 
 \begin{table}[tb]
+\begin{minipage}{\linewidth}
 \centering 
-\begin{tabular}[r]{|l|c|c|c|c|} 
+\begin{tabularx}{0.9\textwidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|} 
 \hline
 \textbf{algorithm} & \textbf{runtime} & \textbf{space} & \textbf{tree model} & \textbf{move support}\\
 \hline
@@ -228,10 +229,11 @@ In summary a trade-off between the number of edit-operations, the memory consump
 \textbf{Faxma} & $O(n)$ (average) & not published & ordered & no\\
 & $O(n^2)$ (worst) &  & & \\
 \hline
-\end{tabular}
+\end{tabularx}
 \label{chap2:comparsion}
 \vspace{0.5em} 
 \caption{Comparsion of tree-to-tree difference algorithms.}
+\end{minipage}
 \end{table}
 
 \subsection{Visualization of differences}
@@ -297,15 +299,16 @@ The Ripple presentation visualizes both evolving hierarchies and categories. Con
 %\end{figure}
 
 \begin{table}[tb]
+\begin{minipage}{\linewidth}
 \centering 
-\begin{tabular}[r]{|l|c|c|c|c|} 
+\begin{tabularx}{0.9\textwidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|} 
 \hline
 \textbf{visualization} & \textbf{hierarchy} & \textbf{space filling} & \textbf{readability} & \textbf{changes}\\
 \hline
 %\hline
 %\textbf{Sunburst} & +++ & ++ & + & +++\\
 \hline
-\textbf{Spiral-/Contrast-Treemap} & + & ++\footnotemark & ++ & ++\\
+\textbf{Spiral-/Contrast-Treemap} & + & ++\footnote{due to the side by side view which needs a lot of space} & ++ & ++\\
 \hline
 \textbf{Treevolution} & + & - & + & +\\
 \hline
@@ -317,13 +320,12 @@ The Ripple presentation visualizes both evolving hierarchies and categories. Con
 \hline
 \textbf{IVCoMT} & +++ & - & ++ & ++ \\
 \hline
-\end{tabular}
+\end{tabularx}
 \label{chap2:comparsion}
 \vspace{0.5em} 
 \caption{Comparsion of tree-to-tree comparison visualizations. "-" indicates the absence of an attribute, "+" to "+++" implies how well or bad the attribute is supported.}
+\end{minipage}
 \end{table}
-
-\footnotetext{due to the side by side view which needs a lot of space}
 
 \subsubsection{Summary}
 Recently, interactive visualizations of the evolution of tree-structures or different, similar trees have been proposed. Table \ref{chap2:comparsion} summarizes the visualizations according to several attributes. The first column denotes the readability of the hierarchy-representation. The second column indicates if a space filling approach is used and to which extend the whole display space is utilized. The third column characterizes the readability of the visualization including the encoding of differences and labels. The last column is the most significant. It determines to which extent changes are visualized. Even deletions are not considered in some cases which might be due to the use cases of the respective visualization. Note that the scala range from "-", not present to "+++" (best). Chapter \ref{sec::conclusion} presents a detailed more comprehensive analysis in comparison to our system. 

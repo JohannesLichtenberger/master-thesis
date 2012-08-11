@@ -44,7 +44,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{tocbibind}
 \usepackage{rotating}
-\usepackage[Latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
 \usepackage{graphicx}			% graphics, of course
 \usepackage{subfigure}
 \usepackage{color}                      % to define colors
