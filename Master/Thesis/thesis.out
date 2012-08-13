@@ -7,7 +7,7 @@
 \BOOKMARK [2][-]{subsection.0.1.4}{Contributions}{section.0.1}
 \BOOKMARK [2][-]{subsection.0.1.5}{Conventions}{section.0.1}
 \BOOKMARK [2][-]{subsection.0.1.6}{Outline}{section.0.1}
-\BOOKMARK [1][-]{section.0.2}{Preliminaries and State-of-the-Art}{}
+\BOOKMARK [1][-]{section.0.2}{Preliminaries and State of the Art}{}
 \BOOKMARK [2][-]{subsection.0.2.1}{Introduction}{section.0.2}
 \BOOKMARK [2][-]{subsection.0.2.2}{Storage backend}{section.0.2}
 \BOOKMARK [2][-]{subsection.0.2.3}{Analysis of differences}{section.0.2}
@@ -25,7 +25,7 @@
 \BOOKMARK [2][-]{subsection.0.4.1}{Introduction}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.2}{Aggregation}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.3}{Visualizations}{section.0.4}
-\BOOKMARK [2][-]{subsection.0.4.4}{Comparsion based a novel Sunburst-layout algorithm}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.4}{Comparing trees with a novel Sunburst-layout algorithm based on a semantic zoom}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.5}{Querying}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.6}{Visualization of moves}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.7}{Small multiple displays}{section.0.4}
@@ -51,4 +51,4 @@
 \BOOKMARK [1][-]{section..2}{XSLT stylesheet to combine consecutive pages/revisions}{}
 \BOOKMARK [1][-]{section..3}{Wikipedia Dump - XML structure}{}
 \BOOKMARK [1][-]{section..4}{Visualizations - Evaluation legend}{}
-\BOOKMARK [1][-]{section*.41}{References}{}
+\BOOKMARK [1][-]{section*.42}{References}{}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  11 AUG 2012 02:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  13 AUG 2012 09:43
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -436,10 +436,6 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@delta=\dimen136
 \TX@cols=\count120
 \TX@ftn=\toks29
-) (./parnotes.sty
-Package: parnotes 2012/01/03 rev. 1 Notes after every paragraph, or elsewhere
-\c@PN@t=\count121
-\c@PN@n=\count122
 )
 (/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
@@ -449,10 +445,10 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigbottomskip=\skip51
 \subfigcapmargin=\dimen138
 \subfiglabelskip=\skip52
-\c@subfigure=\count123
-\c@lofdepth=\count124
-\c@subtable=\count125
-\c@lotdepth=\count126
+\c@subfigure=\count121
+\c@lofdepth=\count122
+\c@subtable=\count123
+\c@lotdepth=\count124
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -489,13 +485,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count127
+\inf@bad=\count125
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count128
-\leftroot@=\count129
+\uproot@=\count126
+\leftroot@=\count127
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count130
-\DOTSCASE@=\count131
+\classnum@=\count128
+\DOTSCASE@=\count129
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -508,15 +504,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 
 Package amsmath Warning: Unable to redefine math accent \vec.
 
-\macc@depth=\count132
-\c@MaxMatrixCols=\count133
+\macc@depth=\count130
+\c@MaxMatrixCols=\count131
 \dotsspace@=\muskip10
-\c@parentequation=\count134
-\dspbrk@lvl=\count135
+\c@parentequation=\count132
+\dspbrk@lvl=\count133
 \tag@help=\toks31
-\row@=\count136
-\column@=\count137
-\maxfields@=\count138
+\row@=\count134
+\column@=\count135
+\maxfields@=\count136
 \andhelp@=\toks32
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -545,7 +541,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 (/usr/share/texmf-texlive/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2005/10/04 v3.9 algorithms environments
-\c@AlgoLine=\count139
+\c@AlgoLine=\count137
 
 (/usr/share/texmf-texlive/tex/latex/tools/xspace.sty
 Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
@@ -572,8 +568,8 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \AlCapSkip=\skip65
 \AlCapHSkip=\skip66
 \algocf@capbox=\box60
-\c@algocfline=\count140
-\c@algocf=\count141
+\c@algocfline=\count138
+\c@algocf=\count139
 \algocf@algoframe=\box61
 \algocf@algobox=\box62
 ) (/usr/share/texmf-texlive/tex/latex/fancyvrb/fancyvrb.sty
@@ -581,11 +577,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count142
+\FV@CodeLineNo=\count140
 \FV@InFile=\read1
 \FV@TabBox=\box63
-\c@FancyVerbLine=\count143
-\FV@StepNumber=\count144
+\c@FancyVerbLine=\count141
+\FV@StepNumber=\count142
 \FV@OutFile=\write3
 ) (/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip67
@@ -606,7 +602,7 @@ Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 (/usr/share/texmf-texlive/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks35
 \XKV@tempa@toks=\toks36
-\XKV@depth=\count145
+\XKV@depth=\count143
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
@@ -623,8 +619,8 @@ O)
 Package: xcolor-patch 2009/10/02 xcolor patch
 ))
 \@linkdim=\dimen152
-\Hy@linkcounter=\count146
-\Hy@pagecounter=\count147
+\Hy@linkcounter=\count144
+\Hy@pagecounter=\count145
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
@@ -691,7 +687,7 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 )))
-\Fld@menulength=\count148
+\Fld@menulength=\count146
 \Field@Width=\dimen153
 \Fld@charsize=\dimen154
 \Field@toks=\toks37
@@ -706,13 +702,13 @@ Package hyperref Info: PDF/A mode OFF on input line 4407.
 (/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 )
-\Hy@abspage=\count149
-\c@Item=\count150
+\Hy@abspage=\count147
+\c@Item=\count148
 )
 *hyperref using default driver hpdftex*
 (/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
-\Fld@listcount=\count151
+\Fld@listcount=\count149
 )
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
@@ -771,10 +767,10 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 \pgf@yc=\dimen162
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count152
-\c@pgf@countb=\count153
-\c@pgf@countc=\count154
-\c@pgf@countd=\count155
+\c@pgf@counta=\count150
+\c@pgf@countb=\count151
+\c@pgf@countc=\count152
+\c@pgf@countd=\count153
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -789,8 +785,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count156
-\pgfsyssoftpath@bigbuffer@items=\count157
+\pgfsyssoftpath@smallbuffer@items=\count154
+\pgfsyssoftpath@bigbuffer@items=\count155
 )
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -803,7 +799,7 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen163
-\pgfmath@count=\count158
+\pgfmath@count=\count156
 \pgfmath@box=\box65
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
@@ -818,7 +814,7 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count159
+\c@pgfmathroundto@lastzeros=\count157
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
@@ -852,7 +848,7 @@ File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box66
 \pgf@hbox=\box67
 \pgf@layerbox@main=\box68
-\pgf@picture@serial@count=\count160
+\pgf@picture@serial@count=\count158
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
@@ -879,7 +875,7 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen186
-\pgf@sys@shading@range@num=\count161
+\pgf@sys@shading@range@num=\count159
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
@@ -927,7 +923,7 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count162
+\pgf@plot@mark@count=\count160
 \pgfplotmarksize=\dimen191
 )
 \tikz@lastx=\dimen192
@@ -938,53 +934,53 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikzsiblingdistance=\dimen197
 \tikz@figbox=\box71
 \tikz@tempbox=\box72
-\tikztreelevel=\count163
-\tikznumberofchildren=\count164
-\tikznumberofcurrentchild=\count165
-\tikz@fig@count=\count166
+\tikztreelevel=\count161
+\tikznumberofchildren=\count162
+\tikznumberofcurrentchild=\count163
+\tikz@fig@count=\count164
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count167
-\pgfmatrixcurrentcolumn=\count168
-\pgf@matrix@numberofcolumns=\count169
+\pgfmatrixcurrentrow=\count165
+\pgfmatrixcurrentcolumn=\count166
+\pgf@matrix@numberofcolumns=\count167
 )
-\tikz@expandcount=\count170
+\tikz@expandcount=\count168
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 ))) (/usr/share/texmf-texlive/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count171
-\calc@Bcount=\count172
+\calc@Acount=\count169
+\calc@Bcount=\count170
 \calc@Adimen=\dimen198
 \calc@Bdimen=\dimen199
 \calc@Askip=\skip76
 \calc@Bskip=\skip77
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count173
+\calc@Ccount=\count171
 \calc@Cskip=\skip78
 ))
 (/usr/share/texmf-texlive/tex/latex/listings/listings.sty
-\lst@mode=\count174
+\lst@mode=\count172
 \lst@gtempboxa=\box73
 \lst@token=\toks47
-\lst@length=\count175
+\lst@length=\count173
 \lst@currlwidth=\dimen200
-\lst@column=\count176
-\lst@pos=\count177
+\lst@column=\count174
+\lst@pos=\count175
 \lst@lostspace=\dimen201
 \lst@width=\dimen202
-\lst@newlines=\count178
-\lst@lineno=\count179
+\lst@newlines=\count176
+\lst@lineno=\count177
 \lst@maxwidth=\dimen203
 
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count180
-\lst@skipnumbers=\count181
+\c@lstnumber=\count178
+\lst@skipnumbers=\count179
 \lst@framebox=\box74
 )
 (/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
@@ -995,7 +991,7 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 (/usr/share/texmf-texlive/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
 )
-\c@thm=\count182
+\c@thm=\count180
 
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -1004,13 +1000,16 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 114.
-\c@mydef=\count183
+\c@mydef=\count181
  (./thesis.aux
 
-LaTeX Warning: Label `chap2:comparsion' multiply defined.
+LaTeX Warning: Label `chap2:Comparison' multiply defined.
 
 
 LaTeX Warning: Label `fig:docScaling' multiply defined.
+
+
+LaTeX Warning: Label `chap3:comparison' multiply defined.
 
 )
 \openout1 = `thesis.aux'.
@@ -1072,15 +1071,15 @@ driver: pdftex
 -----------------------
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count184
+\scratchcounter=\count182
 \scratchdimen=\dimen204
 \scratchbox=\box75
-\nofMPsegments=\count185
-\nofMParguments=\count186
+\nofMPsegments=\count183
+\nofMParguments=\count184
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count187
+\MPscratchCnt=\count185
 \MPscratchDim=\dimen205
-\MPnumerator=\count188
+\MPnumerator=\count186
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
@@ -1114,7 +1113,7 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count189
+\c@section@level=\count187
 )
 LaTeX Info: Redefining \ref on input line 201.
 LaTeX Info: Redefining \pageref on input line 201.
@@ -1125,7 +1124,7 @@ LaTeX Info: Redefining \pageref on input line 201.
 
 \AtBeginShipoutBox=\box76
  ABD: EveryShipout initializing macros
-\c@lstlisting=\count190
+\c@lstlisting=\count188
  (./titlepage.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
@@ -1193,24 +1192,18 @@ l.241 \cleardoublepage
  [7] [8
 
 ] (./introduction.tex
-<figures/gvimdiff.png, id=465, 981.6675pt x 224.84pt>
+<figures/gvimdiff.png, id=464, 981.6675pt x 224.84pt>
 File: figures/gvimdiff.png Graphic file (type png)
 
 <use figures/gvimdiff.png> [1] [2 <./figures/gvimdiff.png>] [3]) [4]
 (./relatedwork.tex
-<figures/visualanalyticsprocess.png, id=502, 379.4175pt x 216.05719pt>
+<figures/visualanalyticsprocess.png, id=501, 379.4175pt x 216.05719pt>
 File: figures/visualanalyticsprocess.png Graphic file (type png)
 
 <use figures/visualanalyticsprocess.png>
 Overfull \hbox (7.33041pt too wide) in paragraph at lines 35--36
 []\OT1/cmr/m/n/10 Comparing tree-structures by a Vi-sual An-a-lyt-ics ap-proach
  re-quires an-a-lyt-i-cal rea-son-ing through
- []
-
-
-Overfull \hbox (0.19136pt too wide) in paragraph at lines 38--39
-\OT1/cmr/m/n/10 Treetank[[]] is an ef-fec-tive and ef-fi-cient se-cure stor-age
- sys-tem tai-lored to re-vi-sioned tree-structures.
  []
 
 [5
@@ -1222,81 +1215,84 @@ File: uni-0.def 2004/10/17 UCS: Unicode data U+0000..U+00FF
 [13] [14
 
 ] (./differences.tex [15] [16] [17]
-<figures/deletionvisitor.pdf, id=664, 553.06625pt x 334.24875pt>
+<figures/deletionvisitor.pdf, id=657, 553.06625pt x 334.24875pt>
 File: figures/deletionvisitor.pdf Graphic file (type pdf)
 
 <use figures/deletionvisitor.pdf> [18 <./figures/deletionvisitor.pdf>] [19]
-<figures/id-diff.pdf, id=693, 541.02126pt x 500.87125pt>
+[20] <figures/id-diff.pdf, id=697, 541.02126pt x 500.87125pt>
 File: figures/id-diff.pdf Graphic file (type pdf)
 
 <use figures/id-diff.pdf>
 Package hyperref Info: bookmark level for unknown algocf defaults to 0 on input
- line 228.
+ line 234.
 
-Underfull \hbox (badness 10000) detected at line 229
+Underfull \hbox (badness 10000) detected at line 235
 [][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 287
+[21 <./figures/id-diff.pdf>] [22]
+Underfull \hbox (badness 10000) detected at line 293
 [][]
  []
 
-[20] [21] [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23 <./figures/id-diff.pdf>]
-Underfull \hbox (badness 10000) detected at line 320
+[23] [24]
+Underfull \hbox (badness 10000) detected at line 326
 [][]
  []
 
-[24]
+[25]
 
-LaTeX Warning: Citation `kramis2007perfidix' on page 25 undefined on input line
- 327.
+LaTeX Warning: Citation `kramis2007perfidix' on page 26 undefined on input line
+ 333.
 
-[25] <figures/100MB-scaling.pdf, id=810, 457.71pt x 260.975pt>
+<figures/100MB-scaling.pdf, id=809, 457.71pt x 260.975pt>
 File: figures/100MB-scaling.pdf Graphic file (type pdf)
 
 <use figures/100MB-scaling.pdf>
-<figures/diff-docsize-scale.pdf, id=812, 454.69875pt x 253.94875pt>
+<figures/diff-docsize-scale.pdf, id=811, 454.69875pt x 253.94875pt>
 File: figures/diff-docsize-scale.pdf Graphic file (type pdf)
 
 <use figures/diff-docsize-scale.pdf> [26 <./figures/100MB-scaling.pdf>]
-<figures/diff-docsize-scale-pruned.pdf, id=825, 466.74374pt x 253.94875pt>
+<figures/diff-docsize-scale-pruned.pdf, id=824, 466.74374pt x 253.94875pt>
 File: figures/diff-docsize-scale-pruned.pdf Graphic file (type pdf)
 
-<use figures/diff-docsize-scale-pruned.pdf>
-Overfull \hbox (1.60814pt too wide) in paragraph at lines 472--473
+<use figures/diff-docsize-scale-pruned.pdf> [27 <./figures/diff-docsize-scale.p
+df>]
+Overfull \hbox (1.60814pt too wide) in paragraph at lines 478--479
 \OT1/cmr/m/n/10 We mo-ti-vated the im-port of dif-fer-ences in Tree-tank be-twe
 en full dumps of tem-po-ral tree-structures
  []
 
+[28 <./figures/diff-docsize-scale-pruned.pdf>]) [29] [30
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27 <./figures/diff-docsize-scale.pdf>] [28 <./figures/diff-docsize-scale-prun
-ed.pdf>])
-[29] [30
-
-] (./visualizations.tex
-<figures/aggregation.pdf, id=859, 538.01pt x 441.65pt>
+] (./visualizations.tex <figures/aggregation.pdf, id=858, 538.01pt x 441.65pt>
 File: figures/aggregation.pdf Graphic file (type pdf)
 
 <use figures/aggregation.pdf> [31]
-<figures/treetext.png, id=866, 1220.56pt x 910.40125pt>
+<figures/treetext.png, id=865, 1220.56pt x 910.40125pt>
 File: figures/treetext.png Graphic file (type png)
 
 <use figures/treetext.png>
-<figures/sunbursttextview-overview.png, id=868, 1522.68875pt x 910.40125pt>
+<figures/sunbursttextview-overview.png, id=867, 1522.68875pt x 910.40125pt>
 File: figures/sunbursttextview-overview.png Graphic file (type png)
 
-<use figures/sunbursttextview-overview.png> [32 <./figures/aggregation.pdf>]
-[33 <./figures/treetext.png>] [34 <./figures/sunbursttextview-overview.png>]
-<figures/sunburstview-cut.png, id=897, 630.355pt x 672.5125pt>
+<use figures/sunbursttextview-overview.png>
+Underfull \vbox (badness 2359) has occurred while \output is active []
+
+ [32 <./figures/aggregation.pdf>] [33 <./figures/treetext.png>]
+<figures/sunburstview-cut.png, id=892, 630.355pt x 672.5125pt>
 File: figures/sunburstview-cut.png Graphic file (type png)
 
-<use figures/sunburstview-cut.png> [35 <./figures/sunburstview-cut.png>]
+<use figures/sunburstview-cut.png>
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+ [34 <./figures/sunbursttextview-overview.png>] [35 <./figures/sunburstview-cut
+.png>]
+Overfull \hbox (0.83032pt too wide) in paragraph at lines 96--97
+\OT1/cmr/m/n/10 which is used in-ter-change-ably in the fol-low-ing sec-tions, 
+a linear-, square-root- and logarithmic-
+ []
+
 <figures/fisheye.png, id=909, 1220.56pt x 910.40125pt>
 File: figures/fisheye.png Graphic file (type png)
 
@@ -1314,29 +1310,23 @@ s/zooming.png>] [38 <./figures/sunburstxpathquery.png>]
 File: figures/sunburst.pdf Graphic file (type pdf)
 
 <use figures/sunburst.pdf>
-Overfull \hbox (2.74706pt too wide) in paragraph at lines 155--156
+Overfull \hbox (2.74706pt too wide) in paragraph at lines 156--157
 []\OT1/cmr/m/n/10 Consecutive call-ing the diff-algorithm and merg-ing diffs in
 to a sin-gle ag-gre-gated tree-structure. 
  []
 
-
-Overfull \hbox (6.06584pt too wide) in paragraph at lines 167--168
+[39]
+Overfull \hbox (6.06584pt too wide) in paragraph at lines 168--169
  \OT1/cmr/bx/n/10 Lay-out al-go-rithm[] \OT1/cmr/m/n/10 Af-ter in-vok-ing the I
 D-based diffing-algorithm and col-lect-ing ob-served changes,
  []
 
-[39] [40 <./figures/sunburst.pdf>]
-<figures/tree-axis.pdf, id=956, 430.60875pt x 342.27875pt>
+[40 <./figures/sunburst.pdf>]
+<figures/tree-axis.pdf, id=957, 430.60875pt x 342.27875pt>
 File: figures/tree-axis.pdf Graphic file (type pdf)
 
-<use figures/tree-axis.pdf>
-Overfull \hbox (9.02477pt too wide) in paragraph at lines 224--225
-[]\OT1/cmr/m/n/10 The com-plete al-go-rithm there-fore is omit-ted as we de-vel
--oped a sec-ond, in com-par-sion lightweight
- []
-
-[41 <./figures/tree-axis.pdf>]
-Underfull \hbox (badness 10000) detected at line 267
+<use figures/tree-axis.pdf> [41 <./figures/tree-axis.pdf>]
+Underfull \hbox (badness 10000) detected at line 268
 [][]
  []
 
@@ -1344,34 +1334,38 @@ Underfull \hbox (badness 10000) detected at line 267
 File: figures/sunburst-layout.pdf Graphic file (type pdf)
 
 <use figures/sunburst-layout.pdf>
-Underfull \hbox (badness 10000) detected at line 345
+Underfull \hbox (badness 10000) detected at line 346
 [][]
  []
 
-[43 <./figures/sunburst-layout.pdf>] [44]
-Underfull \hbox (badness 10000) detected at line 399
+[43]
+Underfull \hbox (badness 10000) detected at line 400
 [][]
  []
 
-<figures/without-pruning.png, id=1049, 961.5925pt x 859.21pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <./figures/sunburst-layout.pdf>]
+<figures/without-pruning.png, id=1035, 961.5925pt x 859.21pt>
 File: figures/without-pruning.png Graphic file (type png)
 
 <use figures/without-pruning.png>
-<figures/itemsize-pruned.png, id=1050, 911.405pt x 852.18375pt>
+<figures/itemsize-pruned.png, id=1036, 911.405pt x 852.18375pt>
 File: figures/itemsize-pruned.png Graphic file (type png)
 
 <use figures/itemsize-pruned.png> [45] [46 <./figures/without-pruning.png> <./f
 igures/itemsize-pruned.png>]
-<figures/diff-pruned.png, id=1093, 961.5925pt x 859.21pt>
+<figures/diff-pruned.png, id=1071, 961.5925pt x 859.21pt>
 File: figures/diff-pruned.png Graphic file (type png)
 
 <use figures/diff-pruned.png>
-<figures/diff-without-samehashes-pruned.png, id=1094, 906.38625pt x 839.135pt>
+<figures/diff-without-samehashes-pruned.png, id=1072, 906.38625pt x 839.135pt>
 File: figures/diff-without-samehashes-pruned.png Graphic file (type png)
 
 <use figures/diff-without-samehashes-pruned.png> [47] [48 <./figures/diff-prune
 d.png> <./figures/diff-without-samehashes-pruned.png>] [49]
-<figures/moves-cut.png, id=1125, 701.62125pt x 702.625pt>
+<figures/moves-cut.png, id=1123, 701.62125pt x 702.625pt>
 File: figures/moves-cut.png Graphic file (type png)
 
 <use figures/moves-cut.png> [50 <./figures/moves-cut.png>]
@@ -1379,101 +1373,122 @@ File: figures/moves-cut.png Graphic file (type png)
 File: figures/smallmultiple-differential.png Graphic file (type png)
 
 <use figures/smallmultiple-differential.png>
-<figures/smallmultiple-incremental.png, id=1136, 1220.56pt x 910.40125pt>
+<figures/smallmultiple-incremental.png, id=1135, 1220.56pt x 910.40125pt>
 File: figures/smallmultiple-incremental.png Graphic file (type png)
 
-<use figures/smallmultiple-incremental.png>
-<figures/wikipedia-smallmultiples-hybrid.png, id=1137, 1220.56pt x 910.40125pt>
+<use figures/smallmultiple-incremental.png> [51 <./figures/smallmultiple-differ
+ential.png>]
+<figures/wikipedia-smallmultiples-hybrid.png, id=1145, 1220.56pt x 910.40125pt>
 File: figures/wikipedia-smallmultiples-hybrid.png Graphic file (type png)
-<use figures/wikipedia-smallmultiples-hybrid.png> [51 <./figures/smallmultiple-
-differential.png>]
-<figures/gui-performance.pdf, id=1145, 466.74374pt x 246.9225pt>
+<use figures/wikipedia-smallmultiples-hybrid.png> [52 <./figures/smallmultiple-
+incremental.png>]
+<figures/gui-performance.pdf, id=1153, 466.74374pt x 246.9225pt>
 File: figures/gui-performance.pdf Graphic file (type pdf)
 
-<use figures/gui-performance.pdf> [52 <./figures/smallmultiple-incremental.png>
-] [53 <./figures/wikipedia-smallmultiples-hybrid.png>]
-<figures/gui-performance-movedet.pdf, id=1159, 454.69875pt x 253.94875pt>
+<use figures/gui-performance.pdf> [53 <./figures/wikipedia-smallmultiples-hybri
+d.png>]
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+ [54 <./figures/gui-performance.pdf>]
+<figures/gui-performance-movedet.pdf, id=1171, 454.69875pt x 253.94875pt>
 File: figures/gui-performance-movedet.pdf Graphic file (type pdf)
 
-<use figures/gui-performance-movedet.pdf> [54 <./figures/gui-performance.pdf>]
+<use figures/gui-performance-movedet.pdf>
+Overfull \hbox (1.88277pt too wide) in paragraph at lines 594--594
+ []|\OT1/cmr/m/n/9 256.85| 
+ []
+
+
+Overfull \hbox (1.88277pt too wide) in paragraph at lines 594--594
+ []|\OT1/cmr/m/n/9 260.17| 
+ []
+
 [55 <./figures/gui-performance-movedet.pdf>]) [56] [57] [58
 
 ]
-(./applications.tex <figures/lfg.png, id=1198, 1220.56pt x 910.40125pt>
+(./applications.tex <figures/lfg.png, id=1201, 1220.56pt x 910.40125pt>
 File: figures/lfg.png Graphic file (type png)
 
-<use figures/lfg.png> [59]
-<figures/linguistics.png, id=1211, 1206.5075pt x 895.345pt>
+<use figures/lfg.png>
+<figures/linguistics.png, id=1202, 1206.5075pt x 895.345pt>
 File: figures/linguistics.png Graphic file (type png)
 
-<use figures/linguistics.png> [60 <./figures/lfg.png>]
+<use figures/linguistics.png> [59] [60 <./figures/lfg.png> <./figures/linguisti
+cs.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 51.
-
-Underfull \vbox (badness 6608) has occurred while \output is active []
-
- [61 <./figures/linguistics.png>] [62]
-<figures/wikipedia-rev7071.png, id=1255, 1350.04375pt x 950.55125pt>
+nput line 66.
+ [61] [62]
+<figures/wikipedia-rev7071.png, id=1264, 1350.04375pt x 950.55125pt>
 File: figures/wikipedia-rev7071.png Graphic file (type png)
 
-<use figures/wikipedia-rev7071.png> [63 <./figures/wikipedia-rev7071.png>]
-<figures/wikipedia-without-pruned-modifications.png, id=1266, 1350.04375pt x 95
+<use figures/wikipedia-rev7071.png>
+<figures/wikipedia-without-pruned-modifications.png, id=1267, 1350.04375pt x 95
 0.55125pt>
 File: figures/wikipedia-without-pruned-modifications.png Graphic file (type png
 )
- <use figures/wikipedia-without-pruned-modifications.png> [64 <./figures/wikipe
-dia-without-pruned-modifications.png>]
-<figures/wikipedia-rev90106.png, id=1273, 1382.16376pt x 956.57375pt>
+ <use figures/wikipedia-without-pruned-modifications.png> [63 <./figures/wikipe
+dia-rev7071.png>]
+<figures/wikipedia-rev90106.png, id=1274, 1382.16376pt x 956.57375pt>
 File: figures/wikipedia-rev90106.png Graphic file (type png)
 
 <use figures/wikipedia-rev90106.png>
-<figures/wikipedia-incremental.png, id=1275, 1206.5075pt x 895.345pt>
+Underfull \vbox (badness 3503) has occurred while \output is active []
+
+ [64 <./figures/wikipedia-without-pruned-modifications.png>]
+<figures/wikipedia-incremental.png, id=1281, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental.png Graphic file (type png)
 
-<use figures/wikipedia-incremental.png> [65 <./figures/wikipedia-rev90106.png>]
-<figures/wikipedia-rev7374.png, id=1285, 1372.12625pt x 936.49875pt>
+<use figures/wikipedia-incremental.png>
+Underfull \vbox (badness 8170) has occurred while \output is active []
+
+ [65 <./figures/wikipedia-rev90106.png>]
+<figures/wikipedia-rev7374.png, id=1291, 1372.12625pt x 936.49875pt>
 File: figures/wikipedia-rev7374.png Graphic file (type png)
 
 <use figures/wikipedia-rev7374.png>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66 <./figures/wikipedia-incremental.png>]
-<figures/wikipedia-incremental-add.png, id=1292, 1206.5075pt x 895.345pt>
+<figures/wikipedia-incremental-add.png, id=1293, 1206.5075pt x 895.345pt>
 File: figures/wikipedia-incremental-add.png Graphic file (type png)
 
-<use figures/wikipedia-incremental-add.png> [67 <./figures/wikipedia-rev7374.pn
-g>] <figures/fsml-gui.png, id=1305, 1392.20125pt x 902.37125pt>
+<use figures/wikipedia-incremental-add.png>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66 <./figures/wikipedia-incremental.png>] [67 <./figures/wikipedia-rev7374.pn
+g>]
+<figures/fsml-gui.png, id=1313, 1392.20125pt x 902.37125pt>
 File: figures/fsml-gui.png Graphic file (type png)
 
-<use figures/fsml-gui.png> [68 <./figures/wikipedia-incremental-add.png>]
-<figures/gui-fsml-fulldiff.png, id=1312, 1439.3775pt x 898.35625pt>
+<use figures/fsml-gui.png>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68 <./figures/wikipedia-incremental-add.png>]
+<figures/gui-fsml-fulldiff.png, id=1320, 1439.3775pt x 898.35625pt>
 File: figures/gui-fsml-fulldiff.png Graphic file (type png)
 
 <use figures/gui-fsml-fulldiff.png> [69 <./figures/fsml-gui.png>]
-Overfull \hbox (6.54938pt too wide) in paragraph at lines 231--232
+Overfull \hbox (6.54938pt too wide) in paragraph at lines 246--247
 \OT1/cmtt/m/n/10 /dir[@name='pathComp1Name']/dir|file[@name='pathComp2Name']\OT
 1/cmr/m/n/10 . The path com-po-nent usu-
  []
 
 [70 <./figures/gui-fsml-fulldiff.png>]
-<figures/fsml-changes-itemsize-pruning.png, id=1327, 1557.82pt x 895.345pt>
+<figures/fsml-changes-itemsize-pruning.png, id=1335, 1557.82pt x 895.345pt>
 File: figures/fsml-changes-itemsize-pruning.png Graphic file (type png)
 
 <use figures/fsml-changes-itemsize-pruning.png>
-<figures/fsml-pruned-by-hashes.png, id=1329, 1304.875pt x 894.34125pt>
+<figures/fsml-pruned-by-hashes.png, id=1337, 1304.875pt x 894.34125pt>
 File: figures/fsml-pruned-by-hashes.png Graphic file (type png)
 
 <use figures/fsml-pruned-by-hashes.png>
-<figures/fsml-incremental-pruned-by-samehashes.png, id=1330, 1206.5075pt x 895.
+<figures/fsml-incremental-pruned-by-samehashes.png, id=1338, 1206.5075pt x 895.
 345pt>
 File: figures/fsml-incremental-pruned-by-samehashes.png Graphic file (type png)
 
  <use figures/fsml-incremental-pruned-by-samehashes.png>
 
-LaTeX Warning: Float too large for page by 1.8681pt on input line 285.
+LaTeX Warning: Float too large for page by 1.8681pt on input line 300.
 
-[71]) [72 <./figures/fsml-changes-itemsize-pruning.png>] [73 <./figures/fsml-pr
-uned-by-hashes.png> <./figures/fsml-incremental-pruned-by-samehashes.png>]
+[71] [72 <./figures/fsml-changes-itemsize-pruning.png>] [73 <./figures/fsml-pru
+ned-by-hashes.png> <./figures/fsml-incremental-pruned-by-samehashes.png>])
 [74] (./conclusion.tex [75
 
 ] [76] [77] [78] [79]) [80] (./treetank.tex
@@ -1545,13 +1560,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20107 strings out of 493848
- 326760 string characters out of 1152824
- 473499 words of memory out of 3000000
- 22235 multiletter control sequences out of 15000+50000
+ 20071 strings out of 493848
+ 326334 string characters out of 1152824
+ 473229 words of memory out of 3000000
+ 22200 multiletter control sequences out of 15000+50000
  16366 words of font info for 61 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,22n,72p,2987b,1404s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,22n,72p,2989b,1404s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-texlive/fonts/
@@ -1578,9 +1593,9 @@ fonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
 ti7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (102 pages, 8046795 bytes).
+Output written on thesis.pdf (102 pages, 8052981 bytes).
 PDF statistics:
- 1863 PDF objects out of 2073 (max. 8388607)
- 640 named destinations out of 1000 (max. 500000)
+ 1871 PDF objects out of 2073 (max. 8388607)
+ 642 named destinations out of 1000 (max. 500000)
  645 words of extra memory for PDF output out of 10000 (max. 10000000)
 
