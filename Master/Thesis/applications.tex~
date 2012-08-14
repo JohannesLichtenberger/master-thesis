@@ -247,9 +247,7 @@ Therefore moves and even renames are not supported out of the box. The path to t
 
 The FSML sub-dialect currently used is very simple (Listing \ref{lst:fsml}). Directories are mapped to \texttt{dir}-elements, whereas files are mapped to \texttt{file}-elements. Note, that the names are not useable without preprocessing to denote the element's name, as for instance whitespace is not permitted in \texttt{QName}s. Thus, either whitespace-characters and other not permitted characters are escaped or as in our case stored in \texttt{name=""}-attributes. The labels in the visualizations are optionally based on this special attribute.
 
-While this representation currently does not incorporate most of the strengths FSML usually provides it is easy to add metadata about files and to incorporate text-files. Optionally instances of custom classes are pluggable to provide any type of extensibility. Thus it is possible to provide extractors for certain types of files and to incorporate text-files into the FSML-representation itself, for instance by adding a link to another resource in the fsml-database.
-
-\begin{code}[caption=FSML structure]
+\begin{code}[caption={FSML structure.},label={lst:fsml}]
 <fsml>
   <dir name="Desktop">
     <dir name="Lichtenberger">
@@ -272,7 +270,8 @@ While this representation currently does not incorporate most of the strengths F
   </dir>
 </fsml>
 \end{code}
-\label{lst:fsml}
+
+While this representation currently does not incorporate most of the strengths FSML usually provides it is easy to add metadata about files and to incorporate text-files. Optionally instances of custom classes are pluggable to provide any type of extensibility. Thus it is possible to provide extractors for certain types of files and to incorporate text-files into the FSML-representation itself, for instance by adding a link to another resource in the fsml-database.
 
 Fig. \ref{fig:fsml-item-size-pruning} is an example of mapping the author's Desktop-folder to a database in Treetank (move- and replace-detection is disabled). Subsequent revisions are committed every five minutes.
 
