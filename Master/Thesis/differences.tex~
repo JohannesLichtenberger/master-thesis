@@ -90,7 +90,7 @@ Having described the preliminaries the next section describes the FMSE implement
 \begin{itemize}
 \item \texttt{text}-nodes are matched based on their String-value. The Levenshtein algo\-rithm is used to compute a similarity measure of the values, which returns the minimal character update-costs normalized between 0 and 1 according to the text-length.
 
-\item \texttt{attribute}-nodes add the capability are first compared based on \texttt{QName}-equality. In case the \texttt{QName}s differ they are compared using the normalized Levenshtein distance once more. Furthermore in both cases the parent element's \texttt{QName} is compared using Levenshtein. In order to reduce the number of edit-operations in case attributes are mismatched it is possible to check all or at least a specific number of ancestor nodes either using Levenshtein or any other distance-metric (or simply for equality). However, if the number of attributes is high this will certainly slow down the FMSE-computation in Treetank as it does not use hierarchical node-IDs.
+\item \texttt{attribute}-nodes are first compared based on \texttt{QName}-equality. In case the \texttt{QName}s differ they are compared using the normalized Levenshtein distance once more. Furthermore in both cases the parent element's \texttt{QName} is compared using Levenshtein. In order to reduce the number of edit-operations in case attributes are mismatched it is possible to check all or at least a specific number of ancestor nodes either using Levenshtein or any other distance-metric (or simply for equality). However, if the number of attributes is high this will certainly slow down the FMSE-computation in Treetank as it does not use hierarchical node-IDs.
 
 \item \texttt{namespace}-nodes are almost identically compared (special kind of attributes to provide the ability to add nodes from different namespaces). 
 
@@ -330,10 +330,6 @@ An optional post-processing step is required to detect moves. The two basic diff
 \subsection{Runtime/Space analysis and scalability of the ID-based diffing algorithm}
 The runtime of the ID-based diff algorithm is $O(n+m)$ whereas $n$ is the number of nodes in the first tree and $m$ the number of nodes in the second tree. It is thus a fast linear diff-computation in comparison to the FMSE-algorithm ($O(n*e+e^2)$, $n$ is the number of unchanged nodes and $e$ the number of changed nodes) which is used in the first place to determine the differences which are imported. The space-consumption is $O(1)$ and in case the replace-operation is enabled at worst $O(k)$. $k$ is the sum of the subtrees which are cached (at most 4 subtrees). However the space consumption of an aggregated tree-structure which is going to be described in the next chapter is $O((u+v)*k)$. $u$ is the number of unchanged nodes, $v$ is the number of changed nodes and $k$ is tuple relevant stuff (type of diff, the nodes and the depths in both trees). Thus the asymptotic space consumption is linear depending only on the number of unchanged and changed nodes.
 
-Our performance evaluation involves measuring the scaling during random modification-patterns (Fig. \ref{fig:100MBscaling}) and different document sizes with scaled modi\-fication-patterns (Fig. \ref{fig:docScaling}). The modification-patterns are increased in the same scale as the document sizes such that the documents are modified with approximately the same number of modifications. The hardware used is a common notebook with 4Gb RAM and a Core 2 Duo 2,66 Ghz CPU. All performance-measures are executed 20 times with Perfidix\cite{kramis2007perfidix}, a benchmarking framework developed by Marc Kramis and Sebastian Graf. Fig. \ref{fig:100MBscaling} shows that the number of modifications minimally affects the runtime. The runtime decreases linear as less modifications between two revisions are encountered. However the linear decrease is minimal due to a few less value- and node-ID-comparisons.
-
-Fig. \ref{fig:docScaling} (Table \ref{chap3:compDiffInstances}) depicts the scaling during different document sizes and modification schemes. The scale is logarithmic, thus we are able to identify the linear runtime due to increased document sizes. It therefore emphasizes the asymptotic bound.
-
 \begin{figure}[tb]
 \centering
 \includegraphics[width=\textwidth]{figures/100MB-scaling}
@@ -359,6 +355,11 @@ Fig. \ref{fig:docScaling} (Table \ref{chap3:compDiffInstances}) depicts the scal
 \vspace{0.5em} 
 \caption{comparison of different modification-patterns of a 111 MiB XMark instance (update/insert/delete/replace/move every 1000st, 5000st and 10000st node). Runtime in ms.}
 \end{table}
+
+
+Our performance evaluation involves measuring the scaling during random modification-patterns (Fig. \ref{fig:100MBscaling}) and different document sizes with scaled modi\-fication-patterns (Fig. \ref{fig:docScaling}). The modification-patterns are increased in the same scale as the document sizes such that the documents are modified with approximately the same number of modifications. The hardware used is a common notebook with 4Gb RAM and a Core 2 Duo 2,66 Ghz CPU. All performance-measures are executed 20 times with Perfidix\cite{kramis2007perfidix}, a benchmarking framework developed by Marc Kramis and Sebastian Graf. Fig. \ref{fig:100MBscaling} shows that the number of modifications minimally affects the runtime. The runtime decreases linear as less modifications between two revisions are encountered. However the linear decrease is minimal due to a few less value- and node-ID-comparisons.
+
+Fig. \ref{fig:docScaling} (Table \ref{chap3:compDiffInstances}) depicts the scaling during different document sizes and modification schemes. The scale is logarithmic, thus we are able to identify the linear runtime due to increased document sizes. It therefore emphasizes the asymptotic bound.
 
 %\begin{table}[tb]
 %\centering 
