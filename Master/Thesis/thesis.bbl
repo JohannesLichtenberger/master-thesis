@@ -181,6 +181,11 @@ S.~Graf, L.~Lewandowski, and M.~Waldvogel, ``Integrity assurance for {RESTful
   plus 0.5em minus 0.4em\relax Berlin, Heidelberg: Springer-Verlag, 2010, pp.
   180--189.
 
+\bibitem{kramis2007perfidix}
+M.~Kramis, A.~Onea, and S.~Graf, \emph{PERFIDIX: a Generic Java Benchmarking
+  Tool}.\hskip 1em plus 0.5em minus 0.4em\relax Bibliothek der Universit{\"a}t
+  Konstanz, 2007.
+
 \bibitem{docbook}
 \BIBentryALTinterwordspacing
 O.~D.~T. Committee, ``Docbook.'' [Online]. Available:
