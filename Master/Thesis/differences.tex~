@@ -450,7 +450,7 @@ Table \ref{chap3:compPrunedDiffInstances} shows the comparison based on the same
 \end{tabular}
 \label{chap3:compPrunedDiffInstances}
 \vspace{0.5em} 
-\caption{comparison of different XMark instances skipping subtrees of nodes with identical hash-values (11 MiB, 111 MiB, 1111 MiB modifying every 1000st, 10000st and 100000st node). Runtime in ms.}
+\caption{Comparison of different XMark instances skipping subtrees of nodes with identical hash-values (11 MiB, 111 MiB, 1111 MiB modify every 1000th, 10000th and 100000th node). Runtime in ms.}
 \end{table}
 
 %\begin{table}[tb]

@@ -1,4 +1,4 @@
-\section{Preliminaries and State-of-the-Art}\label{sec::relwork} %Analysis \& visualization of differences in tree-structured data}\label{sec::hierarchicaldata}
+\section{Preliminaries and State of the Art}\label{sec::relwork} %Analysis \& visualization of differences in tree-structured data}\label{sec::hierarchicaldata}
 
 \subsection{Introduction}
 Today's storage capabilities facilitate the storage of a constantly growing amount of data which is most often collected and stored without filtering or preprocessing.
@@ -160,7 +160,7 @@ When the assumption which assures the generation of a minimum edit-script does n
 
 It becomes apparent by investigating the analysis of Rönnau et al.\cite{ronnau2009efficient} that the result of mismatched leaf-nodes in contrast to other algorithms yields many moves (compared to more inserts/deletes in other algorithms). However, moves in Treetank without generating hashes and storing the number of descendants of each node during import are a constant time ($O(1)$) operation due to the pointer-based approach. Even with hashing enabled which provides inevitable performance-boosts for our internal ID-based diffing algorithm which is used in a subsequent step by our visualizations, only ancestor nodes are affected and thus linear time is needed (however much faster than a deletion and insertion which in addition requires traversing the whole subtree two times).
 
-The runtime complexity is $O(n*e+e^2)$ and the space complexity is $O(n)$ whereas $n$ is the number of unchanged nodes and $e$ is the number of different/changed nodes.
+The runtime complexity is $O(n \cdot e + e^2)$ and the space complexity is $O(n)$ whereas $n$ is the number of unchanged nodes and $e$ is the number of different/changed nodes.
 
 \subsubsection{X-Diff\cite{wang2003x}}
 operates on unordered, labeled trees. Thus the order of child nodes does not matter. Despite using an unordered tree-model which is not suitable in many cases as for instance document centric XML, updates on element nodes to the best of our knowledge are not defined as the signature for \texttt{TextNode}s does not use their values. However updating an internal node is crucial due to otherwise potentially large subtree delete- and insert-operations even though only a single node is updated.
@@ -220,7 +220,7 @@ In summary a trade-off between the number of edit-operations, the memory consump
 \hline
 \textbf{XyDiff} & $O(n \log n)$ & $O(n)$ & ordered & yes\\
 \hline
-\textbf{FMSE} & $O(n e + e^2)$ & $O(n)$ & ordered & yes\\
+\textbf{FMSE} & $O(n \cdot e + e^2)$ & $O(n)$ & ordered & yes\\
 \hline
 \textbf{X-Diff} & $O(n^2)$ & not published & unordered & no\\
 \hline
