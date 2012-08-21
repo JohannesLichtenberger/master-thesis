@@ -594,7 +594,7 @@ The \texttt{subtree-size} of the root-item is the size of the accumulated List o
 \end{tabularx}
 \label{chap3:comparison}
 \vspace{0.5em} 
-\caption{comparison of randomly modified XMark instances with all available filtering techniques. The ``hashes (optimal)'' column denotes the hash-based filtering technique which does not generate Sunburst items for nodes with identical hash-values.}
+\caption{Comparison of randomly modified XMark instances with all available filtering techniques. The ``hashes (optimal)'' column denotes the hash-based filtering technique which does not generate Sunburst items for nodes with identical hash-values.}
 \end{table}
 
 Fig \ref{fig:gui-performance-movedet} shows benchmarking results comparing the runtime of the fastest pruning technique, filtering-by-hashes without creating items for identical hashes with move-detection enabled and disabled. We are able to determine that the move-detection usually is fast if the number of items which have to be created is small. Asymptotically it is still bound by the size of the agglomerated tree-structure $n$, thus $O(n^2)$. The algorithm is based on the assumption, that only a small fraction of a tree-structure usually is changed. Therefore unchanged subtrees are skipped from the traversal and the number of items which are going to be created is very small, such that the $O(n^2)$ runtime to compute the subtree-size and the modifications therein is negligible.

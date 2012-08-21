@@ -309,7 +309,7 @@ The implementation of the \emph{semantic zoom} with changes highlighted in a ded
 \begin{figure}[tb]
 \center{\includegraphics[width=.95\textwidth]
 {figures/sunburst-layout}}
-\caption{\label{fig:sunburst-layout} Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled ``unchanged nodes'' are unchanged whereas the area between the rectangle named ``changed subtrees'' and ``unchanged nodes'' includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}
+\caption{\label{fig:sunburst-layout} Sunburst-layout depicting changes in the depth. All nodes above the grey rectangle labeled ``unchanged nodes'' are unchanged whereas the area between the rectangle named ``changed subtrees'' and ``unchanged node'' includes all changed subtrees. However it also includes changed nodes below an updated node as for instance node 9.}
 \end{figure}
 
 Algorithm \ref{algo:calcDepth} determines if and how the depth must be adjusted. The first and second case is handled by the first \texttt{if}-clause, whereas the transition back to the original depth is handled by the \texttt{elseif}-clause. An instance variable \emph{mTempKey} is used to determine when to switch back. It is the node-ID of the first node in the XPath \texttt{following::}-axis. \emph{mTempKey} is adapted in the third case such that it eventually contains the node-ID of an unchanged node. An \texttt{UPDATED} node most probably includes unchanged nodes in its subtree if it is an internal \texttt{element}-node. In this case the depth of the parent node plus one is used instead of the original depth such that the updated node \emph{as well as} its subtree are dislocated.
