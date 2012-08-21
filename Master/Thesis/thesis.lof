@@ -1,7 +1,7 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces GVim diff of two XML-document revisions illustrating the deficiencies of line by line character based diff-tools.}}{2}{figure.0.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}.}}{5}{figure.0.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Deletion visitor; two variants are depicted for the case that the node to removed has a left- and a right-sibling. Either both sibling nodes are \texttt {TextNode}s as is the case for node 4 or not (node 10).}}{18}{figure.0.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces ID-based diffing.}}{21}{figure.0.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces ID-based diffing.}}{22}{figure.0.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{26}{figure.0.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 10000 th node, 1111 MiB $\Leftrightarrow $ modify every 100000th node / Y-axis logarithmic scaled.)}}{27}{figure.0.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 10000th node, 1111 MiB $\Leftrightarrow $ modify every 100000th node. Y-axis logarithmic scaled)}}{28}{figure.0.7}

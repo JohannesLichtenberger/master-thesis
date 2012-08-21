@@ -72,7 +72,7 @@ The nodes are matched during a bottom-up (postorder) traversal searching for a L
 \item Merging or avoidance of adjacent text nodes at any time.
 \end{itemize}
 
-The \texttt{LevelOrderAxis} and the other operations are described in Appendix \ref{subsubsec::levelorderaxis} and \ref{subsec::operations}. The granularity of the operations id important. 
+The \texttt{LevelOrderAxis} and the other operations are described in Appendix \ref{subsubsec::levelorderaxis} and \ref{subsec::operations}. The granularity of the operations is important. 
 
 \begin{itemize}
 \item The \texttt{insert}-operation is defined on leaf-nodes. It is not possible to insert inner nodes, however this is only an implementation restriction and simplifies our identifier-based diffing algorithm. Due to the pointer-based encoding of Treetank, however it is possible to include an insert-operation to insert nodes between inner nodes in constant time. Currently, the only workaround is an insert followed by a move.
@@ -85,7 +85,7 @@ The \texttt{LevelOrderAxis} and the other operations are described in Appendix \
 
 Having described the preliminaries the next section describes the FMSE implementation itself.
 
-\subsubsection{FMSE} The FMSE implementation first saves node-types and the according node-IDs in two associative arrays during a postorder traversal. Next, the algorithm determines a longest common subsequence of matching nodes. leaf-nodes are compared first, then inner nodes. Thus the inorder-traversal described in \cite{chawathe1996change} must be replaced by a postorder-traversal. Otherwise, some leaf-nodes required to determine the similarity of inner nodes are not processed beforehand. The matching of nodes involves two different similarity-metrics as described in the last chapter. However our implementation bears some explanation, as the matching is crucial and the changes applied by FMSE are propagated to a subsequent ID-based diffing-algorithm:
+\subsubsection{FMSE} The FMSE implementation first saves node-types and the according node-IDs in two associative arrays during a postorder traversal. Next, the algorithm determines a longest common subsequence of matching nodes. Leaf-nodes are compared first, then inner nodes. Thus the inorder-traversal described in \cite{chawathe1996change} must be replaced by a postorder-traversal. Otherwise, some leaf-nodes required to determine the similarity of inner nodes are not processed beforehand. The matching of nodes involves two different similarity-metrics as described in the last chapter. However our implementation bears some explanation, as the matching is crucial and the changes applied by FMSE are propagated to a subsequent ID-based diffing-algorithm:
 
 \begin{itemize}
 \item \texttt{text}-nodes are matched based on their String-value. The Levenshtein algo\-rithm is used to compute a similarity measure of the values, which returns the minimal character update-costs normalized between 0 and 1 according to the text-length.

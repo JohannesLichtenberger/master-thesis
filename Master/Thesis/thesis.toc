@@ -34,16 +34,16 @@
 \contentsline {subsection}{\numberline {3.1}Introduction}{15}{subsection.0.3.1}
 \contentsline {subsection}{\numberline {3.2}ID-less diffing (FMSE) / Preprocessing}{15}{subsection.0.3.2}
 \contentsline {subsubsection}{FMSE}{16}{section*.22}
-\contentsline {subsection}{\numberline {3.3}ID-based diffing}{19}{subsection.0.3.3}
+\contentsline {subsection}{\numberline {3.3}ID-based diffing}{18}{subsection.0.3.3}
 \contentsline {subsubsection}{Hashes}{19}{section*.23}
 \contentsline {subsubsection}{Modes to compare differences}{19}{section*.24}
-\contentsline {subsubsection}{Type of difference between two nodes}{20}{section*.25}
+\contentsline {subsubsection}{Type of difference between two nodes}{19}{section*.25}
 \contentsline {subsection}{\numberline {3.4}Traversal of both revisions}{20}{subsection.0.3.4}
-\contentsline {subsection}{\numberline {3.5}Diff-Computation}{21}{subsection.0.3.5}
-\contentsline {subsection}{\numberline {3.6}Detecting moves}{23}{subsection.0.3.6}
-\contentsline {subsubsection}{Impossibility to detect moves on the fly}{23}{section*.26}
+\contentsline {subsection}{\numberline {3.5}Diff-Computation}{22}{subsection.0.3.5}
+\contentsline {subsection}{\numberline {3.6}Detecting moves}{24}{subsection.0.3.6}
+\contentsline {subsubsection}{Impossibility to detect moves on the fly}{24}{section*.26}
 \contentsline {subsubsection}{Detection of moves in a post-processing step}{25}{section*.27}
-\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{26}{subsection.0.3.7}
+\contentsline {subsection}{\numberline {3.7}Runtime/Space analysis and scalability of the ID-based diffing algorithm}{25}{subsection.0.3.7}
 \contentsline {subsection}{\numberline {3.8}Conclusion and Summary}{28}{subsection.0.3.8}
 \contentsline {section}{\numberline {4}Visualizations}{31}{section.0.4}
 \contentsline {subsection}{\numberline {4.1}Introduction}{31}{subsection.0.4.1}
