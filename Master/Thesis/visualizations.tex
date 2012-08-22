@@ -340,7 +340,7 @@ int depth $\leftarrow$ pDepth\;
   }
 }\ElseIf{(pDiff == DiffType.SAME OR pDiff == DiffType.SAMEHASH) AND pDiffCont.getNewNodeKey() == mTempKey}{
   \tcp{Case 2.}
-  depth $\leftarrow$ pDiffCont.getDepth().getNewDepth() - mInitDepth\;
+  depth $\leftarrow$ pDiffCont.getNewDepth() - mInitDepth\;
 }
 \caption{Calculate depth}\label{algo:calcDepth}
 \end{algorithm}
@@ -455,7 +455,7 @@ Providing an initial Sunburst overview of huge tree-struc\-tures in reasonable t
 %\caption{\label{fig:pruned-by-hash} }
 %\end{figure}
 
-\item \emph{by hash-based diff-algorithm without nodes having identical hash-values} This type of pruning is related to the method described above. In addition to pruning nodes in the subtree of nodes with identical hash-values, additionally these subtree-roots are pruned, too. As a direct consequence the visualization is much better readability in case of many consecutive nodes with identical hash-values (Fig. \ref{fig:pruned-by-hash-without-samehashes}).
+\item \emph{by hash-based diff-algorithm without nodes having identical hash-values} This type of pruning is related to the method described above. In addition to pruning nodes in the subtree of nodes with identical hash-values, these subtree-roots are pruned, too. As a direct consequence the visualization is much better readability in case of many consecutive nodes with identical hash-values (Fig. \ref{fig:pruned-by-hash-without-samehashes}).
 
 %\begin{figure}[tb]
 %\center{\includegraphics[width=\textwidth - 10em]
