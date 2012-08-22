@@ -97,7 +97,7 @@ Wikipedia is studied as an application to demonstrate the feasibility of our app
 \end{itemize}
 
 \begin{enumerate}
-\item \texttt{Map} is a function that splits the problem into subproblems are distributed among worker nodes in a cluster. Logically it is a function of the form \texttt{$Map(k1,v1) \rightarrow list(k2,v2)$} where $k1$ is an input key, $v1$ is an input value and the output from the function is a list of key/value pairs (\texttt{list(k2, v2)}). After that the MapReduce framework shuffles (groups and sorts) the values according to the keys.
+\item \texttt{Map} is a function that splits the problem into subproblems which are distributed among worker nodes in a cluster. Logically it is a function of the form \texttt{$Map(k1,v1) \rightarrow list(k2,v2)$} where $k1$ is an input key, $v1$ is an input value and the output from the function is a list of key/value pairs (\texttt{list(k2, v2)}). After that the MapReduce framework shuffles (groups and sorts) the values according to the keys.
 \item \texttt{Reduce} is a function of the form: \texttt{$Reduce(k2, list (v2)) \rightarrow list(v3)$}. It receives a key as well as a list of grouped values and performs a computation which returns another list of values.
 \end{enumerate}
 

@@ -29,7 +29,7 @@
 \BOOKMARK [2][-]{subsection.0.4.5}{Querying}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.6}{Visualization of moves}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.7}{Small multiple displays}{section.0.4}
-\BOOKMARK [2][-]{subsection.0.4.8}{Runtime/Space analysis and scalability of the ID-based diff}{section.0.4}
+\BOOKMARK [2][-]{subsection.0.4.8}{Runtime/Space analysis and scalability of the Sunburst comparison-mode with different pruning mechanisms}{section.0.4}
 \BOOKMARK [2][-]{subsection.0.4.9}{Conclusion and Summary}{section.0.4}
 \BOOKMARK [1][-]{section.0.5}{Applications}{}
 \BOOKMARK [2][-]{subsection.0.5.1}{Introduction}{section.0.5}

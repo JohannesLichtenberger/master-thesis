@@ -43,6 +43,24 @@ It is immediately obvious by investigating the original XML-documents (for insta
 
 Having a close look at the input documents reveals a lot of changed or updated \texttt{text}-values (Listing \ref{lst:linguistscomparison}). Our threshold value for matching subtrees in case of inner nodes is $0.5$ (has to be $> 0.5$ for matching nodes) and thus the arg-elements are not matched.
 
+\begin{code}[caption={CStructure comparison.},label={lst:linguistscomparison}]
+<cstructure>                   <cstructure>
+  <constraint>                   <constraint>
+    <label>subtree</label>         <label>subtree</label>
+    <arg no="1">102</arg>          <arg no="1">163</arg>
+    <arg no="2">ROOT</arg>         <arg no="2">ROOT</arg>   
+    <arg no="3">-</arg>            <arg no="3">-</arg>
+    <arg no="4">83</arg>           <arg no="4">145</arg>
+  </constraint>                  </constraint>
+  <constraint>                   <constraint>
+    <label>phi</label>             <label>phi</label>
+    <arg no="1">102</arg>          <arg no="1">163</arg>
+    <arg no="2">var:0</arg>        <arg no="2">var:0</arg>
+  </constraint>                  </constraint>
+  ...                            ...
+</cstructure>                  </cstructure>
+\end{code}
+
 For that reason we changed the leaf-node comparison slightly. Instead of just relying on the Levenshtein-distance for text-node values we also try to match all ancestor\footnote{ancestors are always element nodes, the document-root node is not visited} \texttt{QName}s if the returned normalized value is $\leq$ the threshold value defined for the similarity of leaf-nodes. Note that leaf-nodes are matching candidates while determining a LCS if the threshold is greater than the predefined threshold. Hence, the leaf-nodes are matched and "updated" by FMSE instead of deleting/inserting the whole subtree.
 
 The result is depicted in Fig. \ref{fig:linguistics}.
@@ -63,25 +81,6 @@ However as a direct consequence of this short evaluation it is inevitable to rel
 %\caption{\label{fig:linguistics} LFG comparison revised.}
 %\end{figure}
 
-\begin{code}[caption={CStructure comparison.},label={lst:linguistscomparison}]
-<cstructure>                   <cstructure>
-  <constraint>                   <constraint>
-    <label>subtree</label>         <label>subtree</label>
-    <arg no="1">102</arg>          <arg no="1">163</arg>
-    <arg no="2">ROOT</arg>         <arg no="2">ROOT</arg>   
-    <arg no="3">-</arg>            <arg no="3">-</arg>
-    <arg no="4">83</arg>           <arg no="4">145</arg>
-  </constraint>                  </constraint>
-  <constraint>                   <constraint>
-    <label>phi</label>             <label>phi</label>
-    <arg no="1">102</arg>          <arg no="1">163</arg>
-    <arg no="2">var:0</arg>        <arg no="2">var:0</arg>
-  </constraint>                  </constraint>
-  ...                            ...
-</cstructure>                  </cstructure>
-\end{code}
-%\label{lst:linguistscomparison}
-
 Furthermore this approach applies to every XML-document which incorporates unique node identifiers.
 
 Next, we study the import of several articles from Wikipedia ordered by the timestamp of their revisions. 
@@ -98,7 +97,7 @@ Wikipedia is studied as an application to demonstrate the feasibility of our app
 \end{itemize}
 
 \begin{enumerate}
-\item \texttt{Map} is a function that splits the problem into subproblems are distributed among worker nodes in a cluster. Logically it is a function of the form \texttt{$Map(k1,v1) \rightarrow list(k2,v2)$} where $k1$ is an input key, $v1$ is an input value and the output from the function is a list of key/value pairs (\texttt{list(k2, v2)}). After that the MapReduce framework shuffles (groups and sorts) the values according to the keys.
+\item \texttt{Map} is a function that splits the problem into subproblems wich are distributed among worker nodes in a cluster. Logically it is a function of the form \texttt{$Map(k1,v1) \rightarrow list(k2,v2)$} where $k1$ is an input key, $v1$ is an input value and the output from the function is a list of key/value pairs (\texttt{list(k2, v2)}). After that the MapReduce framework shuffles (groups and sorts) the values according to the keys.
 \item \texttt{Reduce} is a function of the form: \texttt{$Reduce(k2, list (v2)) \rightarrow list(v3)$}. It receives a key as well as a list of grouped values and performs a computation which returns another list of values.
 \end{enumerate}
 

@@ -65,7 +65,7 @@
 \contentsline {subsection}{\numberline {4.5}Querying}{50}{subsection.0.4.5}
 \contentsline {subsection}{\numberline {4.6}Visualization of moves}{50}{subsection.0.4.6}
 \contentsline {subsection}{\numberline {4.7}Small multiple displays}{51}{subsection.0.4.7}
-\contentsline {subsection}{\numberline {4.8}Runtime/Space analysis and scalability of the ID-based diff}{53}{subsection.0.4.8}
+\contentsline {subsection}{\numberline {4.8}Runtime/Space analysis and scalability of the Sunburst comparison-mode with different pruning mechanisms}{53}{subsection.0.4.8}
 \contentsline {subsection}{\numberline {4.9}Conclusion and Summary}{55}{subsection.0.4.9}
 \contentsline {section}{\numberline {5}Applications}{59}{section.0.5}
 \contentsline {subsection}{\numberline {5.1}Introduction}{59}{subsection.0.5.1}

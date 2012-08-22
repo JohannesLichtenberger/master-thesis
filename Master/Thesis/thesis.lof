@@ -2,8 +2,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Visual Analytics Process proposed by Keim et al. Presented in \cite {keim2008visual}.}}{5}{figure.0.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Deletion visitor; two variants are depicted for the case that the node to removed has a left- and a right-sibling. Either both sibling nodes are \texttt {TextNode}s as is the case for node 4 or not (node 10).}}{18}{figure.0.3}
 \contentsline {figure}{\numberline {4}{\ignorespaces ID-based diffing.}}{22}{figure.0.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Scaling during different modification-patterns (update/insert/delete/replace/move every 1000st, 5000st and 10000st node) in a 111 MiB XMark instance.}}{26}{figure.0.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 10000 th node, 1111 MiB $\Leftrightarrow $ modify every 100000th node / Y-axis logarithmic scaled.)}}{27}{figure.0.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Scaling during different modification-patterns (update/insert/delete/replace/move every 1000th, 5000th and 10000th node) in a 111 MiB XMark instance.}}{26}{figure.0.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 10000th node, 1111 MiB $\Leftrightarrow $ modify every 100000th node / Y-axis logarithmic scaled.)}}{27}{figure.0.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Different document sizes with modification-count scaled accordingly (11 MiB $\Leftrightarrow $ modifiy every 1000th node, 111 MiB $\Leftrightarrow $ modify every 10000th node, 1111 MiB $\Leftrightarrow $ modify every 100000th node. Y-axis logarithmic scaled)}}{28}{figure.0.7}
 \contentsline {figure}{\numberline {8}{\ignorespaces Two tree-structures aggregated. The numbers denote unique node-IDs. Both revisions are input to the ID-based diff-algorithm. The output represents diff-tuples including the node-IDs from both nodes which are compared in each step, the type of diff and the depths of both nodes. Storing the observed diff-tuples in an ordered data-structure forms a simple tree-aggregation.}}{32}{figure.0.8}
 \contentsline {figure}{\numberline {9}{\ignorespaces ExplorerView and TextView side-by-side.}}{33}{figure.0.9}
@@ -26,7 +26,7 @@
 \contentsline {figure}{\numberline {20}{\ignorespaces Small multiple - differential variant.}}{51}{figure.0.20}
 \contentsline {figure}{\numberline {21}{\ignorespaces Small multiple - incremental variant.}}{52}{figure.0.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Small multiple - hybrid variant.}}{53}{figure.0.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Sunburst visualization - depicting performance measures on XMark instances with random modifications (11 MiB: modified every 1000st node; 111 MiB: modified every 10000st node).}}{54}{figure.0.23}
+\contentsline {figure}{\numberline {23}{\ignorespaces Sunburst visualization - depicting performance measures on XMark instances with random modifications (11 MiB: modified every 1000th node; 111 MiB: modified every 10000th node).}}{54}{figure.0.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces GUI-performance using hash-based pruning without adding identical hash-values and move-detection enabled/disabled.}}{55}{figure.0.24}
 \contentsline {figure}{\numberline {25}{\ignorespaces Comparison of two imported XML revisions, exported from the LFG framework.}}{60}{figure.0.25}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {LFG comparison.}}}{60}{figure.0.25}
