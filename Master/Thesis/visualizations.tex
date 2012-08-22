@@ -26,7 +26,7 @@ As described in the motivation humans are best in interpreting visual content. T
 
 \begin{itemize}
 \item
-First, a \emph{ExplorerView} displays nodes just like visual front-ends for filesystems as illustrated on the left side in Fig. \ref{fig:treetextview}. Nodes either can be expanded to show all child nodes which are inside the current view-port or collapsed to hide children. The visible subtree of a selected node is marked with a background color. Currently the view is not able to incorporate the aggregation and thus is not further described.
+First, an \emph{ExplorerView} displays nodes just like visual front-ends for filesystems as illustrated on the left side in Fig. \ref{fig:treetextview}. Nodes either can be expanded to show all child nodes which are inside the current view-port or collapsed to hide children. The visible subtree of a selected node is marked with a background color. Currently the view is not able to incorporate the aggregation and thus is not further described.
 
 \begin{figure}[tb]
 \center{\includegraphics[width=\textwidth]
@@ -126,7 +126,7 @@ XPath is usable to query the tree-structure for specific nodes. Result sequences
 \end{figure}
 
 \subsubsection{Labels}
-Whenever the Sunburst items sufficiently large and an adaptable scale to draw the arcs for each depth is greater than a predefined value, labels are drawn. Labels in the top half of the visualization, that is if the center of the item is greater than $\pi$, are drawn at the start-angle in clockwise direction, otherwise they are drawn at the end-angle in counter clockwise direction. Furthermore the font-size is limited to a range between two values, whereas the size is decreased with an increased depth. 
+Whenever the Sunburst items are sufficiently large and an adaptable scale to draw the arcs for each depth is greater than a predefined value, labels are drawn. Labels in the top half of the visualization, that is if the center of the item is greater than $\pi$, are drawn at the start-angle in clockwise direction, otherwise they are drawn at the end-angle in counter clockwise direction. Furthermore the font-size is limited to a range between two values, whereas the size is decreased with an increased depth. 
 
 \subsubsection{Filtering/Pruning}
 The standard \emph{SunburstView} optionally filters the tree by depth. While this filtering is not perfect in circumstances where the fanout is very large, it works very well to keep the number of generated Sunburst items small. Furthermore the view currently is used as an entry point to the comparison view which is also based on the Sunburst-layout whereas it is planned to back-port the filtering by item-size.
