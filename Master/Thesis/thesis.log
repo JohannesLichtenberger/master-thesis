@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  23 AUG 2012 04:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.7)  23 AUG 2012 04:52
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -1401,10 +1401,10 @@ Overfull \hbox (1.88277pt too wide) in paragraph at lines 594--594
  []|\OT1/cmr/m/n/9 260.17| 
  []
 
-[55 <./figures/gui-performance-movedet.pdf>]
+[55 <./figures/gui-performance-movedet.pdf>])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56])
+ [56]
 [57] [58
 
 ] (./applications.tex
@@ -1584,7 +1584,7 @@ fonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
 ti7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (102 pages, 8051841 bytes).
+Output written on thesis.pdf (102 pages, 8051681 bytes).
 PDF statistics:
  1874 PDF objects out of 2073 (max. 8388607)
  643 named destinations out of 1000 (max. 500000)
