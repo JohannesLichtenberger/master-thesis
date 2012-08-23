@@ -68,7 +68,7 @@ Table \ref{chap5:comparison} summarizes all visualization-approaches according t
 \end{tabularx}
 \label{chap5:comparison}
 \vspace{0.5em} 
-\caption{comparison of tree-to-tree comparison visualizations. Appendix \ref{sec::tablelegend} provides a detailed legend.}
+\caption{Comparing tree-to-tree difference visualizations. Appendix \ref{sec::tablelegend} provides a detailed legend.}
 \end{minipage}
 \end{table}
 
@@ -76,7 +76,7 @@ Table \ref{chap5:comparison} summarizes all visualization-approaches according t
 %\footnotetext{rotating however might prevent some labels from overplotting}
 %\footnotetext{the matrix view}
 
-Most proposed visualizations rely on stable unique IDs (the Contrast\\Treemap\cite{tu2007visualizing}, Code Flows\cite{telea2008code}, TreeJuxtaposer\cite{munzner2003treejuxtaposer} (unique node labels)) and do not include the detection of \texttt{replace}- and \texttt{move}-operations. However Code Flows visualizes moves due to spline connections between matching nodes with the same ID in two adjacent icicle plots. Due to the reliability on unique node IDs these visualizations do not cover trees which do not include unique node-IDs or labels. In contrast our prototype is able to determine and visualize these tree-structures utilizing the FMSE-algorithm to import differences through similarity metrics for each type of supported nodes utilized by a bottom-up LCS computation to determine matching node candidates.
+Most proposed visualizations rely on stable unique IDs (the Contrast\\Treemap\cite{tu2007visualizing}, Code Flows\cite{telea2008code}, TreeJuxtaposer\cite{munzner2003treejuxtaposer} (unique node labels)) and do not include the detection of \texttt{replace}- and \texttt{move}-operations. However, Code Flows visualizes moves due to spline connections between matching nodes with the same ID in two adjacent icicle plots. Due to the reliability on unique node IDs these visualizations do not cover trees which do not include unique node-IDs or labels. In contrast our prototype is able to determine differences between these tree-structures and visualizes them utilizing the FMSE-algorithm to import differences through similarity metrics for each type of supported node. The FMSE-algorithm utilizes a bottom-up LCS computation to determine matching node candidates.
 
 Interactive Visual Comparison of Multiple Trees(IVCoMT\cite{bremm2011interactive}) provides the ability to compare multiple trees through various linked views allowing the comparison on different levels of detail. However we assume that the similarity metrics are defined for phylogenetic trees which have unique labels and that the visualizations are tailored to many small trees in comparison to a few very large tree-structures or a temporal evolving tree as in our case.
 
