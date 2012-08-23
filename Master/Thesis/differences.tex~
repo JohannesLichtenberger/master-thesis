@@ -424,7 +424,7 @@ Fig. \ref{fig:docScaling} (Table \ref{chap3:compDiffInstances}) depicts the scal
 %\caption{Comparison of different XMark instances (11 MiB, 111 MiB, 1111 MiB modifying every 1000st, 11000st and 122221st node). Runtime in ms.}
 %\end{table}
 
-Table \ref{chap3:compPrunedDiffInstances} shows the comparison based on the same documents as in Table \ref{chap3:compDiffInstances} however this time utilizing the hashes to skip the traversal of unchanged subtrees (nodes with identical hash-values and node-IDs). The runtime approximately halves in this example. It is obvious that the gain in speed depends on the subtree-sizes to skip. In the worst case modifications occur at leaf-nodes in large, deep subtrees. In this case the hash-based optimization does not gain any speedup (in the 11 MiB XMark document with all leaf-nodes updated approximately 4062.52ms in the average case compared to 4064.96ms for the hash-based optimization after 20 runs). In the best case modifications occur near the root node of large, deep subtrees (in the 11 MiB XMark document with nodes at depth 2 updated, the runtime drops from 31979.92ms to 12280.01ms in the average case after 20 runs). However, the XMark synthetic documents are not very deep, such that usually only a few nodes or in case of empty elements even no nodes at all are skipped for after identifying identical hash-values.
+Table \ref{chap3:compPrunedDiffInstances} shows the comparison based on the same documents as in Table \ref{chap3:compDiffInstances} however this time utilizing the hashes to skip the traversal of unchanged subtrees (nodes with identical hash-values and node-IDs). The runtime approximately halves in this example. It is obvious that the gain in speed depends on the subtree-sizes to skip. In the worst case modifications occur at leaf-nodes in large, deep subtrees. In this case the hash-based optimization does not gain any speedup (in the 11 MiB XMark document with all leaf-nodes updated approximately 4062.52ms in the average case compared to 4064.96ms for the hash-based optimization after 20 runs). In the best case modifications occur near the root node of large, deep subtrees (in the 11 MiB XMark document with nodes at depth 2 updated, the runtime drops from 31979.92ms to 12280.01ms in the average case after 20 runs). However, the XMark synthetic documents are not very deep, such that usually only a few nodes or in case of empty elements even no nodes at all are skipped after identifying identical hash-values.
 
 \begin{figure}[tb]
 \centering
@@ -437,7 +437,7 @@ Table \ref{chap3:compPrunedDiffInstances} shows the comparison based on the same
 \centering 
 \begin{tabular}[r]{|l|c|c|c|c|c|} 
 \hline
-\textbf{document size} & \textbf{min} & \textbf{max} & \textbf{average} & \textbf{stddef} & \textbf{conf95}\\
+\textbf{document size} & \textbf{min} & \textbf{max} & \textbf{average} & \textbf{stddev} & \textbf{conf95}\\
 \hline
 \hline
 %\textbf{11 MiB} & 1239.01 & 3698.94 & 1408.74 & 627.11 & [2958.82-5610.53] \\
