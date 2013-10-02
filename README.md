@@ -1,4 +1,4 @@
-master-thesis
+master's-thesis
 =============
 
-Master Thesis - A Visual Analytics Approach for Comparing Tree-Structures.
+Master's Thesis - A Visual Analytics Approach for Comparing Tree-Structures.
